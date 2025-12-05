@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "LPMQ";
+  src: url("https://cdn.jsdelivr.net/gh/abdulabdi/lpmq-font@master/LPMQ.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-arabic: "LPMQ", "serif";
+}
