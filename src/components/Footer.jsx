@@ -1,16 +1,19 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                e
-              </div>
+              <img
+                src={logo}
+                alt="e-Furqan Logo"
+                className="w-10 h-10 object-contain"
+              />
               <span className="text-2xl font-bold text-white tracking-tight">
                 e-Furqan
               </span>
@@ -19,8 +22,7 @@ const Footer = () => {
               Platform pembelajaran Al-Qur'an terintegrasi yang memudahkan umat
               untuk mempelajari, memahami, dan mengamalkan Al-Qur'an.
             </p>
-            <div className="flex space-x-4">
-              {/* Social Icons Placeholders */}
+            {/* <div className="flex space-x-4">
               {[1, 2, 3, 4].map((i) => (
                 <a
                   key={i}
@@ -36,7 +38,7 @@ const Footer = () => {
                   </svg>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Links Column 1 */}
@@ -94,7 +96,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Column */}
-          <div>
+          {/* <div>
             <h4 className="text-white font-bold text-lg mb-6">Berlangganan</h4>
             <p className="text-gray-400 mb-4">
               Dapatkan update terbaru tentang fitur dan artikel islami.
@@ -109,7 +111,7 @@ const Footer = () => {
                 Subscribe
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">

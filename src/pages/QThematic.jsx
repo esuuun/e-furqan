@@ -61,7 +61,7 @@ const themes = [
     description: "Mengenal Asmaul Husna dan sifat-sifat keagungan Allah SWT.",
     count: "100+ Ayat",
     image:
-      "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://bimamedia-cms.ap-south-1.linodeobjects.com/sarungbhs.co.id/2025/01/29/l-ilustrasi-99-asmaul-husna-116920250129135332.jpeg",
   },
   {
     title: "Golongan Manusia",
@@ -69,8 +69,7 @@ const themes = [
     description:
       "Karakteristik orang mukmin, kafir, dan munafik dalam Al-Qur'an.",
     count: "150+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1564121211835-e88c852648ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "golonganManusia.png",
   },
   {
     title: "Malaikat, Kitab, dan Rasul",
@@ -78,8 +77,7 @@ const themes = [
     description:
       "Keimanan kepada malaikat, kitab-kitab samawi, dan para utusan Allah.",
     count: "120+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "malaikatKitabRasul.png",
   },
   {
     title: "Taqdir dan Hari Akhir",
@@ -87,24 +85,21 @@ const themes = [
       "https://qthematic.e-furqan.com/courses/taqdir-dan-hari-akhir/",
     description: "Ketetapan Allah dan peristiwa dahsyat di hari kiamat.",
     count: "200+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "takdirHariAkhir.png",
   },
   {
     title: "Nabi Muhammad ﷺ",
     externalUrl: "https://qthematic.e-furqan.com/courses/nabi-muhammad-saw/",
     description: "Riwayat hidup, dakwah, dan kemuliaan akhlak Rasulullah ﷺ.",
     count: "300+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "nabiMuhammad.png",
   },
   {
     title: "Kisah Dalam Al-Quran",
     externalUrl: "https://qthematic.e-furqan.com/courses/kisah-dalam-al-quran/",
     description: "Pelajaran dari umat terdahulu dan kisah-kisah penuh hikmah.",
     count: "250+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "kisahAlquran.png",
   },
   {
     title: "Taqwa, Jihad, dan Ibadah",
@@ -113,56 +108,49 @@ const themes = [
     description:
       "Perintah bertakwa, berjuang di jalan Allah, dan tata cara ibadah.",
     count: "180+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "taqwaJihadIbadah.png",
   },
   {
     title: "Akhlak Terpuji",
     externalUrl: "https://qthematic.e-furqan.com/courses/akhlak-terpuji-2/",
     description: "Sifat-sifat mulia seperti sabar, jujur, dan amanah.",
     count: "140+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "akhlakTerpuji.png",
   },
   {
     title: "Akhlak Tercela",
     externalUrl: "https://qthematic.e-furqan.com/courses/akhlah-tercela/",
     description: "Larangan sifat sombong, dengki, dan perilaku buruk lainnya.",
     count: "130+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1511895426328-dc8714191300?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "akhlakTercela.png",
   },
   {
     title: "Hukum Keluarga",
     externalUrl: "https://qthematic.e-furqan.com/courses/hukum-keluarga/",
     description: "Pernikahan, perceraian, waris, dan hak-hak anggota keluarga.",
     count: "90+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "hukumKeluarga.png",
   },
   {
     title: "Hukum Muamalat",
     externalUrl: "https://qthematic.e-furqan.com/courses/hukum-muamalat/",
     description: "Prinsip ekonomi Islam, jual beli, hutang piutang, dan riba.",
     count: "110+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1564121211835-e88c852648ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "hukumMuamalat.png",
   },
   {
     title: "Hukum Pidana",
     externalUrl: "https://qthematic.e-furqan.com/courses/hukum-pidana/",
     description: "Qishash, hudud, dan keadilan hukum dalam Islam.",
     count: "60+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1519817650390-64a93db51149?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "hukumPidana.png",
   },
   {
     title: "Hukum Pemerintahan",
     externalUrl: "https://qthematic.e-furqan.com/courses/hukum-pemerintahan/",
     description: "Kepemimpinan, musyawarah, dan keadilan sosial.",
     count: "50+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1542816417-0983c9c9ad53?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "hukumPemerintahan.png",
   },
   {
     title: "Hukum Makanan dan Pakaian",
@@ -170,33 +158,28 @@ const themes = [
       "https://qthematic.e-furqan.com/courses/hukum-makanan-pakaian/",
     description: "Halal haram makanan dan adab berpakaian.",
     count: "40+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "hukumMakananPakaian.png",
   },
   {
     title: "Manusia",
-    externalUrl:
-      "https://qthematic.e-furqan.com/courses/hukum-makanan-pakaian/",
+    externalUrl: "https://qthematic.e-furqan.com/courses/15-manusia/",
     description: "Penciptaan manusia, tujuan hidup, dan potensi diri.",
     count: "160+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "manusia.png",
   },
   {
     title: "Alam",
     externalUrl: "https://qthematic.e-furqan.com/courses/16-alam/",
     description: "Fenomena alam semesta sebagai tanda kekuasaan Allah.",
     count: "170+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "alam.png",
   },
   {
     title: "Jin dan Iblis",
     externalUrl: "https://qthematic.e-furqan.com/courses/17-jin-dan-iblis/",
     description: "Hakikat jin, tipu daya iblis, dan cara berlindung darinya.",
     count: "30+ Ayat",
-    image:
-      "https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "jinIblis.png",
   },
 ];
 
@@ -230,14 +213,14 @@ const QThematic = () => {
             Ayat demi ayat dibahas menurut tema kehidupan, memudahkan Anda
             memahami pesan Al-Qur'an secara utuh dan mendalam.
           </p>
-          <div className="flex justify-center gap-4">
+          {/* <div className="flex justify-center gap-4">
             <button className="px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/30 transform hover:-translate-y-1">
               Mulai Belajar
             </button>
             <button className="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-semibold hover:bg-gray-50 transition hover:border-gray-300">
               Lihat Demo
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -250,23 +233,27 @@ const QThematic = () => {
               <p className="text-gray-500 font-medium">Tema Utama</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">2000+</p>
+              <p className="text-4xl font-bold text-emerald-600 mb-2">110</p>
+              <p className="text-gray-500 font-medium">Subtema</p>
+            </div>
+            <div>
+              <p className="text-4xl font-bold text-emerald-600 mb-2">6236</p>
               <p className="text-gray-500 font-medium">Ayat Terpilih</p>
             </div>
             <div>
               <p className="text-4xl font-bold text-emerald-600 mb-2">100%</p>
               <p className="text-gray-500 font-medium">Valid & Shahih</p>
             </div>
-            <div>
+            {/* <div>
               <p className="text-4xl font-bold text-emerald-600 mb-2">PDF</p>
               <p className="text-gray-500 font-medium">Unduh Materi</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
       {/* Features Grid */}
-      <main className="grow container mx-auto px-6 py-24">
+      {/* <main className="grow container mx-auto px-6 py-24">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Fitur Unggulan
@@ -298,10 +285,10 @@ const QThematic = () => {
             </div>
           ))}
         </div>
-      </main>
+      </main> */}
 
       {/* Course List Section */}
-      <section className="bg-gray-50 py-24">
+      <section id="tema" className="bg-gray-50 py-24">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -392,9 +379,11 @@ const QThematic = () => {
             Dapatkan pemahaman yang lebih dalam tentang Al-Qur'an dengan metode
             yang terstruktur dan mudah dipahami.
           </p>
-          <button className="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
-            Akses Materi Gratis
-          </button>
+          <a href="#tema">
+            <button className="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+              Akses Materi Gratis
+            </button>
+          </a>
         </div>
       </section>
 

@@ -1,0 +1,82 @@
+export const menuData = [
+  {
+    id: "harf-amil",
+    title: "Harf Amil",
+    items: [
+      { title: "Harf Jar", path: "harf jar.html" },
+      { title: "Harf Jazm", path: "harf jazm.html" },
+      { title: "Harf Nashab", path: "harf nashab.html" },
+      { title: "Harf Syarth Jazim", path: "harf syarth jazim.html" },
+    ],
+  },
+  {
+    id: "jabatan-kata",
+    title: "Jabatan Kata",
+    items: [
+      { title: "Annaa dkk", path: "annaa dkk.html" },
+      { title: "Inna dan Saudarinya", path: "inna dan saudarinya.html" },
+      { title: "Inna dkk", path: "inna dkk.html" },
+      { title: "Kaana dan Saudarinya", path: "kaana dan saudarinya.html" },
+      { title: "Kalimat Dasar 1", path: "kalimat dasar 1.html" },
+      { title: "Komprehensif Irab", path: "komprehensif irab.htm" },
+      { title: "Majrurat", path: "majrurat.html" },
+      { title: "Manshubat Al Asma", path: "manshubat al asma.html" },
+      { title: "Manshubat Al Haal", path: "manshubat al haal.html" },
+      {
+        title: "Manshubat Al-Maf'ul al-Muthlaq",
+        path: "Manshubat Al-Maf_ul al-Muthlaq.html",
+      },
+      {
+        title: "Manshubat Al-Maf'ul li Ajlih",
+        path: "Manshubat Al-Maf_ul li Ajlih.html",
+      },
+      { title: "Manshubat Azh Zharf", path: "Manshubat azh zharf.html" },
+      { title: "Manshubat Maful Bih", path: "manshubat maful bih.html" },
+      { title: "Manshubat Tamyiz", path: "manshubat tamyiz.html" },
+      { title: "Marfuat Al Asma", path: "marfuat al asma.html" },
+      { title: "Naat", path: "naat.html" },
+      { title: "Struktur Kalimat Dasar", path: "struktur kalimat dasar.html" },
+      { title: "Tawabi 1", path: "tawabi 1.html" },
+      { title: "Tawabi 2", path: "tawabi 2.html" },
+      { title: "Tawabi 3", path: "tawabi 3.html" },
+      { title: "Tawabi 4", path: "tawabi 4.html" },
+      { title: "Tawabi Al Athaf", path: "Tawabi al athaf.html" },
+      { title: "Tawabi Badal", path: "tawabi badal.html" },
+      { title: "Tawabi Taukid", path: "tawabi taukid.html" },
+    ],
+  },
+  {
+    id: "jamid-mabny",
+    title: "Jamid Mabny",
+    items: [
+      { title: "Dhamir", path: "dhamir.html" },
+      { title: "Fiil Jamid", path: "fiil jamid.html" },
+      { title: "Isim Fiil", path: "isimfiil.html" },
+      { title: "Istifham", path: "istifham.html" },
+      { title: "Isyarah", path: "isyarah.html" },
+      { title: "Mws", path: "mws.html" },
+      { title: "Syarath", path: "syarath.html" },
+    ],
+  },
+  {
+    id: "jamid-murab",
+    title: "Jamid Mu'rab",
+    items: [
+      { title: "Adad", path: "adad.html" },
+      { title: "Isim Alam", path: "isim alam.html" },
+      { title: "Jinis", path: "jinis.html" },
+      { title: "Zharaf", path: "zharaf.html" },
+    ],
+  },
+  {
+    id: "shorof",
+    title: "Shorof",
+    items: [
+      {
+        title: "Pelajaran Fiil Interactive",
+        path: "pelajaran_fiil_interactive.html",
+      },
+      { title: "Setting Shorof", path: "setting shorof.html" },
+    ],
+  },
+];

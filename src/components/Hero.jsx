@@ -12,7 +12,7 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 text-center lg:text-left">
             <div className="inline-block px-4 py-1.5 mb-6 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold tracking-wide">
-              ✨ Platform Pembelajaran Al-Qur'an #1
+              ✨ Platform Pembelajaran Al-Qur'an
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
               Gerbang Pembelajaran <br />
@@ -26,15 +26,12 @@ const Hero = () => {
               Shorof, Mushaf, Data, Video, Sains, dan Tematis. Belajar Al-Qur'an
               kini lebih mudah dan menyenangkan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button className="px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/30 transform hover:-translate-y-1">
                 Mulai Belajar Gratis
               </button>
-              <button className="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-semibold hover:bg-gray-50 transition hover:border-gray-300">
-                Lihat Demo
-              </button>
-            </div>
-            <div className="mt-10 flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-500">
+            </div> */}
+            {/* <div className="mt-10 flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-500">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div
@@ -44,7 +41,7 @@ const Hero = () => {
                 ))}
               </div>
               <p>Dipercaya oleh 10,000+ Pengguna</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="lg:w-1/2 relative">

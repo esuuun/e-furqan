@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Isim Jenis (Drag & Drop)</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Baris 1: Judul Kolom */
+        .info-row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            border-bottom: 2px solid #d6d8db;
+        }
+        .info-col {
+            flex: 1;
+            padding: 5px;
+        }
+        .info-col h3 {
+            margin: 0;
+            font-size: 0.9em;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        /* Baris 2: Pilihan Jawaban (Draggable) */
+        .options-row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f9fa;
+            padding: 15px 10px;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        .options-col {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .draggable {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: grab;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .draggable:active {
+            cursor: grabbing;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: scale(1.1);
+        }
+        .draggable.dragging {
+            opacity: 0.5;
+        }
+
+        /* Baris 3: Kotak Jawaban (Dropzone) */
+        .dropzone-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .dropzone {
+            flex: 1;
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #6c757d;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .dropzone.drag-over {
+            background-color: #e0e0e0;
+            border-color: #007bff;
+        }
+        .dropzone.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .dropzone.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .dropzone .draggable {
+            cursor: default;
+            background-color: #5a6268;
+        }
+        .dropzone.correct .draggable { background-color: #155724; }
+        .dropzone.incorrect .draggable { background-color: #721c24; }
+
+        /* Baris 4 & 5: Ayat dan Terjemahan */
+        .verse-row {
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 2.2em;
+            direction: rtl;
+            text-align: center;
+            line-height: 1.8;
+            border: 1px solid #ced4da;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .isim {
+            color: red;
+            font-weight: bold;
+        }
+        .translation-row {
+            background-color: #f8f9fa;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        #feedback {
+            text-align: center;
+            font-weight: bold;
+            min-height: 24px;
+            margin-bottom: 15px;
+        }
+        #feedback.correct { color: #28a745; }
+        #feedback.incorrect { color: #dc3545; }
+
+        .controls { text-align: center; }
+        #next-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #next-btn:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Latihan Analisis Isim Jenis</h1>
+
+        <!-- Baris 1: Judul Kolom -->
+        <div class="info-row">
+            <div class="info-col"><h3>I'rab</h3></div>
+            <div class="info-col"><h3>Kejelasan</h3></div>
+            <div class="info-col"><h3>Jenis Kelamin</h3></div>
+            <div class="info-col"><h3>Jumlah</h3></div>
+        </div>
+
+        <!-- Baris 2: Pilihan Jawaban -->
+        <div class="options-row">
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="MAR">MAR</div>
+                <div class="draggable" draggable="true" data-value="MAN">MAN</div>
+                <div class="draggable" draggable="true" data-value="MAJ">MAJ</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="NKH">NKH</div>
+                <div class="draggable" draggable="true" data-value="MRF">MRF</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="L">L</div>
+                <div class="draggable" draggable="true" data-value="P">P</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="1">1</div>
+                <div class="draggable" draggable="true" data-value="2">2</div>
+                <div class="draggable" draggable="true" data-value="3">3</div>
+            </div>
+        </div>
+
+        <!-- Baris 3: Kotak Jawaban -->
+        <div class="dropzone-row">
+            <div class="dropzone" data-category="irab"></div>
+            <div class="dropzone" data-category="kejelasan"></div>
+            <div class="dropzone" data-category="gender"></div>
+            <div class="dropzone" data-category="jumlah"></div>
+        </div>
+        
+        <div id="feedback"></div>
+
+        <!-- Baris 4: Ayat -->
+        <div class="verse-row" id="verse-display"></div>
+
+        <!-- Baris 5: Terjemahan -->
+        <div class="translation-row" id="translation-display"></div>
+
+        <!-- Tombol Kontrol -->
+        <div class="controls">
+            <button id="next-btn">Periksa Jawaban</button>
+        </div>
+    </div>
+
+    <script>
+        const ayatData = [
+            {
+                verse: `وَجَاءَ مِنْ أَقْصَى الْمَدِينَةِ <span class="isim">رَجُلٌ</span> يَسْعَىٰ`,
+                translation: `Dan datanglah dari ujung kota seorang laki-laki dengan bergegas. (QS. Yasin: 20)`,
+                answers: { irab: "MAR", kejelasan: "NKH", gender: "L", jumlah: "1" }
+            },
+            {
+                verse: `خَلَقَ <span class="isim">الْإِنْسَانَ</span> مِنْ عَلَقٍ`,
+                translation: `Dia telah menciptakan manusia dari segumpal darah. (QS. Al-'Alaq: 2)`,
+                answers: { irab: "MAN", kejelasan: "MRF", gender: "L", jumlah: "1" }
+            },
+            {
+                verse: `مِنْ <span class="isim">شَرِّ</span> الْوَسْوَاسِ الْخَنَّاسِ`,
+                translation: `Dari kejahatan (bisikan) syaitan yang biasa bersembunyi. (QS. An-Nas: 4)`,
+                answers: { irab: "MAJ", kejelasan: "MRF", gender: "L", jumlah: "1" }
+            },
+            {
+                verse: `قَالَ <span class="isim">رَجُلَانِ</span> مِنَ الَّذِينَ يَخَافُونَ`,
+                translation: `Berkatalah dua orang laki-laki di antara orang-orang yang takut (kepada Allah). (QS. Al-Ma'idah: 23)`,
+                answers: { irab: "MAR", kejelasan: "NKH", gender: "L", jumlah: "2" }
+            },
+            {
+                verse: `خَتَمَ اللَّهُ عَلَىٰ <span class="isim">قُلُوبِهِمْ</span>`,
+                translation: `Allah telah mengunci mati hati mereka. (QS. Al-Baqarah: 7)`,
+                answers: { irab: "MAJ", kejelasan: "MRF", gender: "L", jumlah: "3" }
+            }
+        ];
+
+        const draggables = document.querySelectorAll('.draggable');
+        const dropzones = document.querySelectorAll('.dropzone');
+        const verseDisplayEl = document.getElementById('verse-display');
+        const translationDisplayEl = document.getElementById('translation-display');
+        const nextBtn = document.getElementById('next-btn');
+        const feedbackEl = document.getElementById('feedback');
+
+        let currentIndex = 0;
+        let isAnswerChecked = false;
+
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', () => {
+                draggable.classList.add('dragging');
+            });
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('dragging');
+            });
+        });
+
+        dropzones.forEach(dropzone => {
+            dropzone.addEventListener('dragover', e => {
+                e.preventDefault();
+                dropzone.classList.add('drag-over');
+            });
+            dropzone.addEventListener('dragleave', () => {
+                dropzone.classList.remove('drag-over');
+            });
+            dropzone.addEventListener('drop', e => {
+                e.preventDefault();
+                dropzone.classList.remove('drag-over');
+                const dragged = document.querySelector('.dragging');
+                if (dragged) {
+                    dropzone.innerHTML = ''; 
+                    const clone = dragged.cloneNode(true);
+                    clone.classList.remove('dragging');
+                    clone.style.cursor = 'default';
+                    dropzone.appendChild(clone);
+                }
+            });
+        });
+
+        function loadQuestion() {
+            isAnswerChecked = false;
+            const data = ayatData[currentIndex];
+            verseDisplayEl.innerHTML = data.verse;
+            translationDisplayEl.textContent = data.translation;
+            
+            nextBtn.textContent = 'Periksa Jawaban';
+            feedbackEl.textContent = '';
+            feedbackEl.className = '';
+            dropzones.forEach(dz => {
+                dz.className = 'dropzone';
+                dz.innerHTML = '';
+            });
+        }
+
+        function checkAnswer() {
+            const correctAnswers = ayatData[currentIndex].answers;
+            let allCorrect = true;
+
+            dropzones.forEach(dz => {
+                const category = dz.dataset.category;
+                const droppedItem = dz.querySelector('.draggable');
+                
+                if (droppedItem && droppedItem.dataset.value === correctAnswers[category]) {
+                    dz.classList.add('correct');
+                } else {
+                    dz.classList.add('incorrect');
+                    allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                feedbackEl.textContent = 'Jawaban Benar! Silakan lanjut.';
+                feedbackEl.className = 'correct';
+                nextBtn.textContent = 'Berikutnya';
+                isAnswerChecked = true;
+            } else {
+                feedbackEl.textContent = 'Masih ada yang kurang tepat, coba lagi!';
+                feedbackEl.className = 'incorrect';
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (isAnswerChecked) {
+                currentIndex = (currentIndex + 1) % ayatData.length;
+                loadQuestion();
+            } else {
+                checkAnswer();
+            }
+        });
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>

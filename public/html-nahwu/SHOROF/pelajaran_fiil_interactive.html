@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Mencocokkan Baris</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            direction: ltr;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 10px;
+        }
+        h1, p {
+            direction: ltr;
+        }
+        
+        .split-table-container {
+            display: flex;
+            margin: 25px auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        .fixed-column {
+            flex-shrink: 0;
+            width: 140px;
+        }
+
+        .scrollable-part {
+            overflow-x: auto;
+            flex-grow: 1;
+        }
+
+        .split-table-container table {
+            border-collapse: collapse;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
+        .split-table-container th, .split-table-container td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .split-table-container thead th {
+            background-color: #009879;
+            color: #ffffff;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .fixed-column table {
+            border-right: 2px solid #007a63;
+        }
+        .scrollable-part table {
+            min-width: 950px;
+        }
+
+        tbody td:not(:first-child) {
+            cursor: grab;
+        }
+        .fixed-column td, .validation-cell {
+            cursor: not-allowed;
+            font-weight: bold;
+            background-color: #e9ecef;
+        }
+        tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        .validation-cell {
+            font-size: 1.5em;
+        }
+        .dragging {
+            opacity: 0.5;
+            background: #cce5ff;
+        }
+        .drag-over {
+            border: 2px dashed #007bff;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .action-button {
+            background-color: #009879;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+        .action-button:hover {
+            background-color: #007a63;
+        }
+        .action-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Latihan Mencocokkan Baris</h1>
+    <p>Isi dari setiap kolom telah diacak. Susun kembali sel ke baris yang benar.</p>
+    <p>Drag and drop sel di dalam <b>kolom yang sama</b> untuk menukarnya.</p>
+
+    <div class="split-table-container">
+        <!-- Section 1: Fixed Column -->
+        <div class="fixed-column">
+            <table id="fixed-table">
+                <thead>
+                    <tr>
+                        <th>KATA</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fixed data goes here -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Section 2: Scrollable Columns -->
+        <div class="scrollable-part">
+            <table id="scrollable-table">
+                <thead>
+                    <tr>
+                        <th>AKAR</th>
+                        <th>MASHDAR</th>
+                        <th>ARTI MASHDAR</th>
+                        <th>POLA</th>
+                        <th>SUBJECT</th>
+                        <th>AKTIF/PASIF</th>
+                        <th>ARTI KATA</th>
+                        <th>VALIDASI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Scrollable data goes here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button id="prevButton" class="action-button">5 Kata Sebelumnya</button>
+        <button id="shuffleButton" class="action-button">Acak Ulang Latihan</button>
+        <button id="nextButton" class="action-button">5 Kata Berikutnya</button>
+    </div>
+
+    <script>
+        const allData = [
+            // Set 1 (1-5)
+            ['يَكْتُبُ', 'ك ت ب', 'كِتَابَة', 'TULISAN', 'يَفْعُلُ', 'هُوَ', 'AKTIF', 'Dia (lk) sedang menulis'],
+            ['تَشْرَبُ', 'ش ر ب', 'شُرْب', 'MINUMAN', 'تَفْعَلُ', 'هِيَ', 'AKTIF', 'Dia (pr) sedang minum'],
+            ['أَقْرَأُ', 'ق ر أ', 'قِرَاءَة', 'BACAAN', 'أَفْعَلُ', 'أَنَا', 'AKTIF', 'Saya sedang membaca'],
+            ['نَجْلِسُ', 'ج ل س', 'جُلُوس', 'DUDUK', 'نَفْعِلُ', 'نَحْنُ', 'AKTIF', 'Kami sedang duduk'],
+            ['يَذْهَبُونَ', 'ذ ه ب', 'ذَهَاب', 'PERGI', 'يَفْعَلُونَ', 'هُمْ', 'AKTIF', 'Mereka (lk) sedang pergi'],
+            // Set 2 (6-10)
+            ['فَتَحَ', 'ف ت ح', 'فَتْح', 'MEMBUKA', 'فَعَلَ', 'هُوَ', 'AKTIF', 'Dia (lk) telah membuka'],
+            ['دَخَلْتِ', 'د خ ل', 'دُخُول', 'MASUK', 'فَعَلْتِ', 'أَنْتِ', 'AKTIF', 'Kamu (pr) telah masuk'],
+            ['خَرَجْنَا', 'خ ر ج', 'خُرُوج', 'KELUAR', 'فَعَلْنَا', 'نَحْنُ', 'AKTIF', 'Kami telah keluar'],
+            ['أَكَلَتْ', 'أ ك ل', 'أَكْل', 'MAKANAN', 'فَعَلَتْ', 'هِيَ', 'AKTIF', 'Dia (pr) telah makan'],
+            ['سَمِعُوا', 'س م ع', 'سَمْع', 'MENDENGAR', 'فَعِلُوا', 'هُمْ', 'AKTIF', 'Mereka (lk) telah mendengar'],
+            // Set 3 (11-15)
+            ['يَرْجِعُ', 'ر ج ع', 'رُجُوع', 'KEMBALI', 'يَفْعِلُ', 'هُوَ', 'AKTIF', 'Dia (lk) sedang kembali'],
+            ['تَعْمَلِينَ', 'ع م ل', 'عَمَل', 'PEKERJAAN', 'تَفْعَلِينَ', 'أَنْتِ', 'AKTIF', 'Kamu (pr) sedang bekerja'],
+            ['أَفْهَمُ', 'ف ه م', 'فَهْم', 'PEMAHAMAN', 'أَفْعَلُ', 'أَنَا', 'AKTIF', 'Saya sedang mengerti'],
+            ['نَنْظُرُ', 'ن ظ ر', 'نَظَر', 'MELIHAT', 'نَفْعُلُ', 'نَحْنُ', 'AKTIF', 'Kami sedang melihat'],
+            ['يَلْبَسْنَ', 'ل ب س', 'لُبْس', 'PAKAIAN', 'يَفْعَلْنَ', 'هُنَّ', 'AKTIF', 'Mereka (pr) sedang memakai'],
+            // Set 4 (16-20)
+            ['ضَرَبْتُمْ', 'ض ر ب', 'ضَرْب', 'PUKULAN', 'فَعَلْتُمْ', 'أَنْتُمْ', 'AKTIF', 'Kalian (lk) telah memukul'],
+            ['يَغْسِلَانِ', 'غ س ل', 'غَسْل', 'CUCIAN', 'يَفْعِلَانِ', 'هُمَا', 'AKTIF', 'Mereka berdua sedang mencuci'],
+            ['طَبَخْتُ', 'ط ب خ', 'طَبْخ', 'MASAKAN', 'فَعَلْتُ', 'أَنَا', 'AKTIF', 'Saya telah memasak'],
+            ['تَرْكَبِينَ', 'ر ك ب', 'رُكُوب', 'MENAIKI', 'تَفْعَلِينَ', 'أَنْتِ', 'AKTIF', 'Kamu (pr) sedang menaiki'],
+            ['قَتَلُوا', 'ق ت ل', 'قَتْل', 'PEMBUNUHAN', 'فَعَلُوا', 'هُمْ', 'AKTIF', 'Mereka (lk) telah membunuh']
+        ];
+
+        const fixedTableBody = document.querySelector('#fixed-table tbody');
+        const scrollableTableBody = document.querySelector('#scrollable-table tbody');
+        const itemsPerPage = 5;
+        let currentIndex = 0;
+        let currentDataSet = [];
+        let draggedCell = null;
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function synchronizeRowHeights() {
+            const fixedRows = fixedTableBody.querySelectorAll('tr');
+            const scrollableRows = scrollableTableBody.querySelectorAll('tr');
+            const rowCount = Math.min(fixedRows.length, scrollableRows.length);
+
+            for (let i = 0; i < rowCount; i++) {
+                const fixedRow = fixedRows[i];
+                const scrollableRow = scrollableRows[i];
+
+                // Reset heights to allow browser to recalculate
+                fixedRow.style.height = 'auto';
+                scrollableRow.style.height = 'auto';
+
+                // Get the calculated heights
+                const fixedRowHeight = fixedRow.getBoundingClientRect().height;
+                const scrollableRowHeight = scrollableRow.getBoundingClientRect().height;
+
+                // Set both to the max height
+                const maxHeight = Math.max(fixedRowHeight, scrollableRowHeight);
+                fixedRow.style.height = `${maxHeight}px`;
+                scrollableRow.style.height = `${maxHeight}px`;
+            }
+        }
+
+        function validateRow(scrollableRow) {
+            const rowIndex = Array.from(scrollableTableBody.children).indexOf(scrollableRow);
+            if (rowIndex === -1) return;
+
+            const correctRowData = currentDataSet[rowIndex];
+            const currentCells = scrollableRow.querySelectorAll('td');
+            const validationCell = currentCells[currentCells.length - 1];
+
+            let isCorrect = true;
+            for (let i = 1; i < correctRowData.length; i++) {
+                if (currentCells[i - 1].innerHTML !== correctRowData[i]) {
+                    isCorrect = false;
+                    break;
+                }
+            }
+
+            validationCell.innerHTML = isCorrect ? '✅' : '❌';
+            validationCell.style.backgroundColor = isCorrect ? '#d4edda' : '#f8d7da';
+        }
+
+        function setupTable() {
+            fixedTableBody.innerHTML = '';
+            scrollableTableBody.innerHTML = '';
+            currentDataSet = allData.slice(currentIndex, currentIndex + itemsPerPage);
+            
+            const shuffledData = JSON.parse(JSON.stringify(currentDataSet));
+
+            const numCols = shuffledData[0].length;
+            for (let col = 1; col < numCols; col++) {
+                const columnValues = shuffledData.map(row => row[col]);
+                const shuffledColumn = shuffleArray(columnValues);
+                shuffledData.forEach((row, rowIndex) => {
+                    row[col] = shuffledColumn[rowIndex];
+                });
+            }
+
+            shuffledData.forEach(rowData => {
+                const fixedRow = document.createElement('tr');
+                const scrollableRow = document.createElement('tr');
+
+                const fixedCell = document.createElement('td');
+                fixedCell.innerHTML = rowData[0];
+                fixedRow.appendChild(fixedCell);
+
+                for (let i = 1; i < rowData.length; i++) {
+                    const cell = document.createElement('td');
+                    cell.innerHTML = rowData[i];
+                    cell.draggable = true;
+                    scrollableRow.appendChild(cell);
+                }
+                
+                const validationCell = document.createElement('td');
+                validationCell.classList.add('validation-cell');
+                validationCell.draggable = false;
+                scrollableRow.appendChild(validationCell);
+                
+                fixedTableBody.appendChild(fixedRow);
+                scrollableTableBody.appendChild(scrollableRow);
+            });
+            
+            addDragDropListeners();
+            scrollableTableBody.querySelectorAll('tr').forEach(validateRow);
+            updateButtonStates();
+            synchronizeRowHeights(); // <-- PANGGIL FUNGSI PENYAMA TINGGI DI SINI
+        }
+
+        function addDragDropListeners() {
+            const cells = document.querySelectorAll('#scrollable-table tbody td[draggable="true"]');
+            cells.forEach(cell => {
+                cell.addEventListener('dragstart', handleDragStart);
+                cell.addEventListener('dragover', handleDragOver);
+                cell.addEventListener('drop', handleDrop);
+                cell.addEventListener('dragend', handleDragEnd);
+            });
+        }
+
+        function handleDragStart(e) {
+            draggedCell = e.target;
+            setTimeout(() => e.target.classList.add('dragging'), 0);
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            const targetCell = e.target.closest('td');
+            if (targetCell && targetCell.cellIndex === draggedCell.cellIndex) {
+                 targetCell.classList.add('drag-over');
+            }
+        }
+        
+        function handleDrop(e) {
+            e.preventDefault();
+            const dropZone = e.target.closest('td');
+            if (!dropZone || !dropZone.draggable || dropZone === draggedCell || dropZone.cellIndex !== draggedCell.cellIndex) {
+                return;
+            }
+            
+            const tempHTML = draggedCell.innerHTML;
+            draggedCell.innerHTML = dropZone.innerHTML;
+            dropZone.innerHTML = tempHTML;
+
+            validateRow(draggedCell.parentElement);
+            validateRow(dropZone.parentElement);
+        }
+
+        function handleDragEnd(e) {
+            e.target.classList.remove('dragging');
+            document.querySelectorAll('.drag-over').forEach(el => el.classList.remove('drag-over'));
+        }
+
+        function updateButtonStates() {
+            document.getElementById('prevButton').disabled = (currentIndex === 0);
+            document.getElementById('nextButton').disabled = (currentIndex + itemsPerPage >= allData.length);
+        }
+
+        document.getElementById('shuffleButton').addEventListener('click', setupTable);
+        
+        document.getElementById('nextButton').addEventListener('click', () => {
+            if (currentIndex + itemsPerPage < allData.length) {
+                currentIndex += itemsPerPage;
+                setupTable();
+            }
+        });
+
+        document.getElementById('prevButton').addEventListener('click', () => {
+            if (currentIndex - itemsPerPage >= 0) {
+                currentIndex -= itemsPerPage;
+                setupTable();
+            }
+        });
+        
+        document.addEventListener('DOMContentLoaded', setupTable);
+    </script>
+
+</body>
+</html>

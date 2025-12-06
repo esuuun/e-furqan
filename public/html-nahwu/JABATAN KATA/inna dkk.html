@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Inna wa Akhawatuha</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Baris 1: Judul Kolom */
+        .info-row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            border-bottom: 2px solid #d6d8db;
+        }
+        .info-col {
+            flex: 1;
+            padding: 5px;
+        }
+        .info-col h3 {
+            margin: 0;
+            font-size: 0.9em;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        /* Baris 2: Pilihan Jawaban (Draggable) */
+        .options-row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f9fa;
+            padding: 15px 10px;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        .options-col {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .draggable {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: grab;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .draggable:active {
+            cursor: grabbing;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: scale(1.1);
+        }
+        .draggable.dragging {
+            opacity: 0.5;
+        }
+
+        /* Baris 3: Kotak Jawaban (Dropzone) */
+        .dropzone-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .dropzone {
+            flex: 1;
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #6c757d;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .dropzone.drag-over {
+            background-color: #e0e0e0;
+            border-color: #007bff;
+        }
+        .dropzone.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .dropzone.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .dropzone .draggable {
+            cursor: default;
+            background-color: #5a6268;
+        }
+        .dropzone.correct .draggable { background-color: #155724; }
+        .dropzone.incorrect .draggable { background-color: #721c24; }
+
+        /* Baris 4 & 5: Ayat dan Terjemahan */
+        .verse-row {
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 2.2em;
+            direction: rtl;
+            text-align: center;
+            line-height: 1.8;
+            border: 1px solid #ced4da;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .harf { color: red; font-weight: bold; }
+        .isim-inna { color: blue; font-weight: bold; }
+        .khabar-inna { color: green; font-weight: bold; }
+        .translation-row {
+            background-color: #f8f9fa;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        #feedback {
+            text-align: center;
+            font-weight: bold;
+            min-height: 24px;
+            margin-bottom: 15px;
+        }
+        #feedback.correct { color: #28a745; }
+        #feedback.incorrect { color: #dc3545; }
+
+        .controls { text-align: center; }
+        #next-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #next-btn:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Latihan Inna wa Akhawatuha</h1>
+
+        <!-- Baris 1: Judul Kolom -->
+        <div class="info-row">
+            <div class="info-col"><h3>Harf Nashab</h3></div>
+            <div class="info-col"><h3>I'rab Isim</h3></div>
+            <div class="info-col"><h3>I'rab Khabar</h3></div>
+            <div class="info-col"><h3>Makna Harf</h3></div>
+        </div>
+
+        <!-- Baris 2: Pilihan Jawaban -->
+        <div class="options-row">
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="إِنَّ">إِنَّ</div>
+                <div class="draggable" draggable="true" data-value="أَنَّ">أَنَّ</div>
+                <div class="draggable" draggable="true" data-value="كَأَنَّ">كَأَنَّ</div>
+                <div class="draggable" draggable="true" data-value="لَٰكِنَّ">لَٰكِنَّ</div>
+                <div class="draggable" draggable="true" data-value="لَعَلَّ">لَعَلَّ</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="MAR">MAR</div>
+                <div class="draggable" draggable="true" data-value="MAN">MAN</div>
+                <div class="draggable" draggable="true" data-value="MAJ">MAJ</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="MAR">MAR</div>
+                <div class="draggable" draggable="true" data-value="MAN">MAN</div>
+                <div class="draggable" draggable="true" data-value="MAJ">MAJ</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="TAUKID">PENEGASAN</div>
+                <div class="draggable" draggable="true" data-value="TASYBIH">PERUMPAMAAN</div>
+                <div class="draggable" draggable="true" data-value="ISTIDRAK">KOREKSI/TETAPI</div>
+                <div class="draggable" draggable="true" data-value="TARAJJI">PENGHARAPAN</div>
+            </div>
+        </div>
+
+        <!-- Baris 3: Kotak Jawaban -->
+        <div class="dropzone-row">
+            <div class="dropzone" data-category="harf"></div>
+            <div class="dropzone" data-category="irab_isim"></div>
+            <div class="dropzone" data-category="irab_khabar"></div>
+            <div class="dropzone" data-category="makna"></div>
+        </div>
+        
+        <div id="feedback"></div>
+
+        <!-- Baris 4: Ayat -->
+        <div class="verse-row" id="verse-display"></div>
+
+        <!-- Baris 5: Terjemahan -->
+        <div class="translation-row" id="translation-display"></div>
+
+        <!-- Tombol Kontrol -->
+        <div class="controls">
+            <button id="next-btn">Periksa Jawaban</button>
+        </div>
+    </div>
+
+    <script>
+        const ayatData = [
+            {
+                verse: `<span class="harf">إِنَّ</span> <span class="isim-inna">اللَّهَ</span> <span class="khabar-inna">غَفُورٌ رَحِيمٌ</span>`,
+                translation: `Sesungguhnya Allah Maha Pengampun lagi Maha Penyayang. (QS. Al-Baqarah: 173)`,
+                answers: { harf: "إِنَّ", irab_isim: "MAN", irab_khabar: "MAR", makna: "TAUKID" }
+            },
+            {
+                verse: `ذَٰلِكَ <span class="harf">بِأَنَّ</span> <span class="isim-inna">اللَّهَ</span> <span class="khabar-inna">هُوَ الْحَقُّ</span>`,
+                translation: `Yang demikian itu, adalah karena sesungguhnya Allah, Dialah (Tuhan) Yang Haq. (QS. Al-Hajj: 62)`,
+                answers: { harf: "أَنَّ", irab_isim: "MAN", irab_khabar: "MAR", makna: "TAUKID" }
+            },
+            {
+                verse: `<span class="harf">كَأَنَّ</span><span class="isim-inna">هُنَّ</span> <span class="khabar-inna">الْيَاقُوتُ وَالْمَرْجَانُ</span>`,
+                translation: `Seakan-akan bidadari itu permata yakut dan marjan. (QS. Ar-Rahman: 58)`,
+                answers: { harf: "كَأَنَّ", irab_isim: "MAN", irab_khabar: "MAR", makna: "TASYBIH" }
+            },
+            {
+                verse: `وَمَا كَفَرَ سُلَيْمَانُ <span class="harf">وَلَٰكِنَّ</span> <span class="isim-inna">الشَّيَاطِينَ</span> <span class="khabar-inna">كَفَرُوا</span>`,
+                translation: `Sulaiman itu tidak kafir, akan tetapi syaitan-syaitan itulah yang kafir. (QS. Al-Baqarah: 102)`,
+                answers: { harf: "لَٰكِنَّ", irab_isim: "MAN", irab_khabar: "MAR", makna: "ISTIDRAK" }
+            },
+            {
+                verse: `وَمَا يُدْرِيكَ <span class="harf">لَعَلَّ</span> <span class="isim-inna">السَّاعَةَ</span> <span class="khabar-inna">قَرِيبٌ</span>`,
+                translation: `Dan tahukah kamu, boleh jadi hari kiamat itu sudah dekat. (QS. Asy-Syura: 17)`,
+                answers: { harf: "لَعَلَّ", irab_isim: "MAN", irab_khabar: "MAR", makna: "TARAJJI" }
+            }
+        ];
+
+        const draggables = document.querySelectorAll('.draggable');
+        const dropzones = document.querySelectorAll('.dropzone');
+        const verseDisplayEl = document.getElementById('verse-display');
+        const translationDisplayEl = document.getElementById('translation-display');
+        const nextBtn = document.getElementById('next-btn');
+        const feedbackEl = document.getElementById('feedback');
+
+        let currentIndex = 0;
+        let isAnswerChecked = false;
+
+        draggables.forEach(draggable => {
+            draggable.addEventListener('dragstart', () => {
+                draggable.classList.add('dragging');
+            });
+            draggable.addEventListener('dragend', () => {
+                draggable.classList.remove('dragging');
+            });
+        });
+
+        dropzones.forEach(dropzone => {
+            dropzone.addEventListener('dragover', e => {
+                e.preventDefault();
+                dropzone.classList.add('drag-over');
+            });
+            dropzone.addEventListener('dragleave', () => {
+                dropzone.classList.remove('drag-over');
+            });
+            dropzone.addEventListener('drop', e => {
+                e.preventDefault();
+                dropzone.classList.remove('drag-over');
+                const dragged = document.querySelector('.dragging');
+                if (dragged) {
+                    dropzone.innerHTML = ''; 
+                    const clone = dragged.cloneNode(true);
+                    clone.classList.remove('dragging');
+                    clone.style.cursor = 'default';
+                    dropzone.appendChild(clone);
+                }
+            });
+        });
+
+        function loadQuestion() {
+            isAnswerChecked = false;
+            const data = ayatData[currentIndex];
+            verseDisplayEl.innerHTML = data.verse;
+            translationDisplayEl.textContent = data.translation;
+            
+            nextBtn.textContent = 'Periksa Jawaban';
+            feedbackEl.textContent = '';
+            feedbackEl.className = '';
+            dropzones.forEach(dz => {
+                dz.className = 'dropzone';
+                dz.innerHTML = '';
+            });
+        }
+
+        function checkAnswer() {
+            const correctAnswers = ayatData[currentIndex].answers;
+            let allCorrect = true;
+
+            dropzones.forEach(dz => {
+                const category = dz.dataset.category;
+                const droppedItem = dz.querySelector('.draggable');
+                let droppedValue = '';
+                if(droppedItem) {
+                    droppedValue = category === 'harf' ? droppedItem.textContent : droppedItem.dataset.value;
+                }
+                
+                if (droppedItem && droppedValue === correctAnswers[category]) {
+                    dz.classList.add('correct');
+                } else {
+                    dz.classList.add('incorrect');
+                    allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                feedbackEl.textContent = 'Jawaban Benar! Silakan lanjut.';
+                feedbackEl.className = 'correct';
+                nextBtn.textContent = 'Berikutnya';
+                isAnswerChecked = true;
+            } else {
+                feedbackEl.textContent = 'Masih ada yang kurang tepat, coba lagi!';
+                feedbackEl.className = 'incorrect';
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (isAnswerChecked) {
+                currentIndex = (currentIndex + 1) % ayatData.length;
+                loadQuestion();
+            } else {
+                checkAnswer();
+            }
+        });
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>

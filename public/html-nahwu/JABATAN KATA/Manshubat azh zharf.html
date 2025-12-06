@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Manshubat: Azh-Zharf</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Baris 1: Judul Kolom */
+        .info-row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            border-bottom: 2px solid #d6d8db;
+        }
+        .info-col {
+            flex: 1;
+            padding: 5px;
+        }
+        .info-col h3 {
+            margin: 0;
+            font-size: 0.9em;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        /* Baris 2: Pilihan Jawaban (Draggable) */
+        .options-row {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f9fa;
+            padding: 15px 10px;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 20px;
+        }
+        .options-col {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .draggable {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: grab;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .draggable:active {
+            cursor: grabbing;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: scale(1.1);
+        }
+        .draggable.dragging {
+            opacity: 0.5;
+        }
+
+        /* Baris 3: Kotak Jawaban (Dropzone) */
+        .dropzone-row {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .dropzone {
+            flex: 1;
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            min-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #6c757d;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .dropzone.drag-over {
+            background-color: #e0e0e0;
+            border-color: #007bff;
+        }
+        .dropzone.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .dropzone.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .dropzone .draggable {
+            cursor: default;
+            background-color: #5a6268;
+        }
+        .dropzone.correct .draggable { background-color: #155724; }
+        .dropzone.incorrect .draggable { background-color: #721c24; }
+
+        /* Baris 4 & 5: Ayat dan Terjemahan */
+        .verse-row {
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 2.2em;
+            direction: rtl;
+            text-align: center;
+            line-height: 1.8;
+            border: 1px solid #ced4da;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .zharf { color: limegreen; font-weight: bold; }
+        .translation-row {
+            background-color: #f8f9fa;
+            font-style: italic;
+            color: #555;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        #feedback {
+            text-align: center;
+            font-weight: bold;
+            min-height: 24px;
+            margin-bottom: 15px;
+        }
+        #feedback.correct { color: #28a745; }
+        #feedback.incorrect { color: #dc3545; }
+
+        .controls { text-align: center; }
+        #next-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #next-btn:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Latihan Manshubat: Azh-Zharf (Keterangan Waktu & Tempat)</h1>
+
+        <!-- Baris 1: Judul Kolom -->
+        <div class="info-row">
+            <div class="info-col"><h3>Jenis Zharf</h3></div>
+            <div class="info-col"><h3>I'rab-nya</h3></div>
+            <div class="info-col"><h3>Kata Keterangan</h3></div>
+        </div>
+
+        <!-- Baris 2: Pilihan Jawaban -->
+        <div class="options-row">
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="ZAMAN (WAKTU)">ZAMAN (WAKTU)</div>
+                <div class="draggable" draggable="true" data-value="MAKAN (TEMPAT)">MAKAN (TEMPAT)</div>
+            </div>
+            <div class="options-col">
+                <div class="draggable" draggable="true" data-value="MANSHUB">MANSHUB</div>
+            </div>
+            <div class="options-col" id="zharf-options">
+                <!-- Zharf options will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <!-- Baris 3: Kotak Jawaban -->
+        <div class="dropzone-row">
+            <div class="dropzone" data-category="jenis"></div>
+            <div class="dropzone" data-category="irab"></div>
+            <div class="dropzone" data-category="kata"></div>
+        </div>
+        
+        <div id="feedback"></div>
+
+        <!-- Baris 4: Ayat -->
+        <div class="verse-row" id="verse-display"></div>
+
+        <!-- Baris 5: Terjemahan -->
+        <div class="translation-row" id="translation-display"></div>
+
+        <!-- Tombol Kontrol -->
+        <div class="controls">
+            <button id="next-btn">Periksa Jawaban</button>
+        </div>
+    </div>
+
+    <script>
+        const ayatData = [
+            {
+                verse: `قَالُوا لَبِثْنَا <span class="zharf">يَوْمًا</span> أَوْ بَعْضَ يَوْمٍ`,
+                translation: `Mereka menjawab: 'Kami tinggal (di sini) sehari atau setengah hari'. (QS. Al-Kahf: 19)`,
+                zharf_word: `يَوْمًا`,
+                answers: { jenis: "ZAMAN (WAKTU)", irab: "MANSHUB", kata: "يَوْمًا" }
+            },
+            {
+                verse: `وَجَاءُوا أَبَاهُمْ <span class="zharf">عِشَاءً</span> يَبْكُونَ`,
+                translation: `Kemudian mereka datang kepada ayah mereka di waktu isya sambil menangis. (QS. Yusuf: 16)`,
+                zharf_word: `عِشَاءً`,
+                answers: { jenis: "ZAMAN (WAKTU)", irab: "MANSHUB", kata: "عِشَاءً" }
+            },
+            {
+                verse: `وَ<span class="zharf">فَوْقَ</span> كُلِّ ذِي عِلْمٍ عَلِيمٌ`,
+                translation: `Dan di atas tiap-tiap orang yang berpengetahuan itu ada lagi Yang Maha Mengetahui. (QS. Yusuf: 76)`,
+                zharf_word: `فَوْقَ`,
+                answers: { jenis: "MAKAN (TEMPAT)", irab: "MANSHUB", kata: "فَوْقَ" }
+            },
+            {
+                verse: `وَالرَّكْبُ <span class="zharf">أَسْفَلَ</span> مِنْكُمْ`,
+                translation: `...sedang kafilah itu berada di bawahmu. (QS. Al-Anfal: 42)`,
+                zharf_word: `أَسْفَلَ`,
+                answers: { jenis: "MAKAN (TEMPAT)", irab: "MANSHUB", kata: "أَسْفَلَ" }
+            },
+            {
+                verse: `فَوَلِّ وَجْهَكَ <span class="zharf">شَطْرَ</span> الْمَسْجِدِ الْحَرَامِ`,
+                translation: `Maka hadapkanlah wajahmu ke arah Masjidil Haram. (QS. Al-Baqarah: 144)`,
+                zharf_word: `شَطْرَ`,
+                answers: { jenis: "MAKAN (TEMPAT)", irab: "MANSHUB", kata: "شَطْرَ" }
+            }
+        ];
+
+        const dropzones = document.querySelectorAll('.dropzone');
+        const verseDisplayEl = document.getElementById('verse-display');
+        const translationDisplayEl = document.getElementById('translation-display');
+        const nextBtn = document.getElementById('next-btn');
+        const feedbackEl = document.getElementById('feedback');
+        const zharfOptionsContainer = document.getElementById('zharf-options');
+
+        let currentIndex = 0;
+        let isAnswerChecked = false;
+
+        function setupDraggables() {
+            const draggables = document.querySelectorAll('.draggable');
+            draggables.forEach(draggable => {
+                draggable.addEventListener('dragstart', () => {
+                    draggable.classList.add('dragging');
+                });
+                draggable.addEventListener('dragend', () => {
+                    draggable.classList.remove('dragging');
+                });
+            });
+        }
+
+        dropzones.forEach(dropzone => {
+            dropzone.addEventListener('dragover', e => {
+                e.preventDefault();
+                dropzone.classList.add('drag-over');
+            });
+            dropzone.addEventListener('dragleave', () => {
+                dropzone.classList.remove('drag-over');
+            });
+            dropzone.addEventListener('drop', e => {
+                e.preventDefault();
+                dropzone.classList.remove('drag-over');
+                const dragged = document.querySelector('.dragging');
+                if (dragged) {
+                    dropzone.innerHTML = ''; 
+                    const clone = dragged.cloneNode(true);
+                    clone.classList.remove('dragging');
+                    clone.style.cursor = 'default';
+                    dropzone.appendChild(clone);
+                }
+            });
+        });
+
+        function createOptions(container, allWords, correctWord) {
+            container.innerHTML = '';
+            let options = [correctWord];
+            let otherWords = allWords.filter(w => w !== correctWord);
+            // Shuffle otherWords
+            for (let i = otherWords.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [otherWords[i], otherWords[j]] = [otherWords[j], otherWords[i]];
+            }
+            options.push(...otherWords.slice(0, 2));
+            // Shuffle final options
+             for (let i = options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [options[i], options[j]] = [options[j], options[i]];
+            }
+
+            options.forEach(word => {
+                const div = document.createElement('div');
+                div.className = 'draggable';
+                div.draggable = true;
+                div.dataset.value = word;
+                div.textContent = word;
+                container.appendChild(div);
+            });
+        }
+
+        function loadQuestion() {
+            isAnswerChecked = false;
+            const data = ayatData[currentIndex];
+            verseDisplayEl.innerHTML = data.verse;
+            translationDisplayEl.innerHTML = data.translation;
+            
+            // Dynamically create options
+            const allZharfWords = [...new Set(ayatData.map(item => item.zharf_word))];
+            createOptions(zharfOptionsContainer, allZharfWords, data.zharf_word);
+            
+            setupDraggables();
+
+            nextBtn.textContent = 'Periksa Jawaban';
+            feedbackEl.textContent = '';
+            feedbackEl.className = '';
+            dropzones.forEach(dz => {
+                dz.className = 'dropzone';
+                dz.innerHTML = '';
+            });
+        }
+
+        function checkAnswer() {
+            const correctAnswers = ayatData[currentIndex].answers;
+            let allCorrect = true;
+
+            dropzones.forEach(dz => {
+                const category = dz.dataset.category;
+                const droppedItem = dz.querySelector('.draggable');
+                let droppedValue = droppedItem ? droppedItem.dataset.value : '';
+                
+                if (droppedItem && droppedValue === correctAnswers[category]) {
+                    dz.classList.add('correct');
+                } else {
+                    dz.classList.add('incorrect');
+                    allCorrect = false;
+                }
+            });
+
+            if (allCorrect) {
+                feedbackEl.textContent = 'Jawaban Benar! Silakan lanjut.';
+                feedbackEl.className = 'correct';
+                nextBtn.textContent = 'Berikutnya';
+                isAnswerChecked = true;
+            } else {
+                feedbackEl.textContent = 'Masih ada yang kurang tepat, coba lagi!';
+                feedbackEl.className = 'incorrect';
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (isAnswerChecked) {
+                currentIndex = (currentIndex + 1) % ayatData.length;
+                loadQuestion();
+            } else {
+                checkAnswer();
+            }
+        });
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>

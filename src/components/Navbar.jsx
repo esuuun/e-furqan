@@ -50,12 +50,6 @@ const Navbar = () => {
           >
             Fitur
           </a>
-          <Link
-            to="/qmushaf"
-            className="text-gray-600 hover:text-emerald-600 font-medium transition"
-          >
-            Mushaf
-          </Link>
           <a
             href="/#contact"
             className="text-gray-600 hover:text-emerald-600 font-medium transition"
@@ -64,14 +58,14 @@ const Navbar = () => {
           </a>
         </div>
 
-        <div className="hidden md:flex items-center space-x-4">
+        {/* <div className="hidden md:flex items-center space-x-4">
           <button className="text-gray-600 hover:text-emerald-600 font-medium transition">
             Masuk
           </button>
           <button className="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-medium hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/20">
             Daftar Sekarang
           </button>
-        </div>
+        </div> */}
 
         <button className="md:hidden text-gray-600 focus:outline-none">
           <svg
