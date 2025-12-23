@@ -12,3 +12,71 @@
 @theme {
   --font-arabic: "LPMQ", "serif";
 }
+
+/* Lesson Content Styles - Adapted from Reference */
+.lesson-content h2 {
+  @apply text-2xl font-bold text-emerald-700 mt-8 mb-4 border-b border-emerald-200 pb-2 inline-block;
+  font-family: "Poppins", sans-serif;
+  scroll-margin-top: 180px;
+}
+
+.lesson-content h3 {
+  @apply text-xl font-bold text-gray-800 mt-6 mb-3;
+  font-family: "Poppins", sans-serif;
+  scroll-margin-top: 180px;
+}
+
+.lesson-content p,
+.lesson-content li {
+  @apply text-gray-700 leading-relaxed mb-4 text-lg;
+}
+
+.lesson-content .toc-list {
+  @apply list-none bg-emerald-50 p-6 rounded-xl border border-emerald-100 my-6;
+}
+
+.lesson-content .toc-list li {
+  @apply py-2 border-b border-emerald-100/50 text-emerald-800 font-medium mb-0;
+}
+
+.lesson-content .toc-list li:last-child {
+  @apply border-b-0;
+}
+
+.lesson-content .toc-list li::before {
+  content: "✦";
+  @apply text-emerald-500 mr-3;
+}
+
+.lesson-content .quran-quote {
+  @apply bg-emerald-50/50 rounded-2xl p-8 my-8 border-l-4 border-emerald-500 shadow-sm;
+}
+
+.lesson-content .arabic {
+  @apply font-arabic text-3xl text-right leading-loose text-gray-800 mb-4 block;
+}
+
+.lesson-content .translation {
+  @apply italic text-gray-600 mb-2 block text-base;
+}
+
+.lesson-content .source {
+  @apply block text-right font-bold text-emerald-600 text-sm uppercase tracking-wider mt-4;
+}
+
+.lesson-content .divider {
+  @apply border-0 h-px bg-gradient-to-r from-transparent via-emerald-200 to-transparent my-10;
+}
+
+.lesson-content .note-box {
+  @apply bg-blue-50 border border-blue-200 rounded-xl p-6 my-6;
+}
+
+.lesson-content .note-box strong {
+  @apply text-blue-700 block mb-2;
+}
+
+/* Audio Highlight */
+.highlight-text {
+  @apply bg-yellow-200 transition-colors duration-300 rounded px-1;
+}

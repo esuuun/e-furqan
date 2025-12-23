@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import courseData from "../data/thematicData";
 
 const features = [
   {
@@ -54,141 +55,57 @@ const features = [
   },
 ];
 
-const themes = [
-  {
-    title: "Sifat Allah",
-    externalUrl: "https://qthematic.e-furqan.com/courses/al-quran-tematis-2-2/",
-    description: "Mengenal Asmaul Husna dan sifat-sifat keagungan Allah SWT.",
-    count: "100+ Ayat",
-    image:
-      "https://bimamedia-cms.ap-south-1.linodeobjects.com/sarungbhs.co.id/2025/01/29/l-ilustrasi-99-asmaul-husna-116920250129135332.jpeg",
-  },
-  {
-    title: "Golongan Manusia",
-    externalUrl: "https://qthematic.e-furqan.com/courses/al-quran-tematis-2-3/",
-    description:
-      "Karakteristik orang mukmin, kafir, dan munafik dalam Al-Qur'an.",
-    count: "150+ Ayat",
-    image: "golonganManusia.png",
-  },
-  {
-    title: "Malaikat, Kitab, dan Rasul",
-    externalUrl: "https://qthematic.e-furqan.com/courses/al-quran-tematis-2-4/",
-    description:
-      "Keimanan kepada malaikat, kitab-kitab samawi, dan para utusan Allah.",
-    count: "120+ Ayat",
-    image: "malaikatKitabRasul.png",
-  },
-  {
-    title: "Taqdir dan Hari Akhir",
-    externalUrl:
-      "https://qthematic.e-furqan.com/courses/taqdir-dan-hari-akhir/",
-    description: "Ketetapan Allah dan peristiwa dahsyat di hari kiamat.",
-    count: "200+ Ayat",
-    image: "takdirHariAkhir.png",
-  },
-  {
-    title: "Nabi Muhammad ﷺ",
-    externalUrl: "https://qthematic.e-furqan.com/courses/nabi-muhammad-saw/",
-    description: "Riwayat hidup, dakwah, dan kemuliaan akhlak Rasulullah ﷺ.",
-    count: "300+ Ayat",
-    image: "nabiMuhammad.png",
-  },
-  {
-    title: "Kisah Dalam Al-Quran",
-    externalUrl: "https://qthematic.e-furqan.com/courses/kisah-dalam-al-quran/",
-    description: "Pelajaran dari umat terdahulu dan kisah-kisah penuh hikmah.",
-    count: "250+ Ayat",
-    image: "kisahAlquran.png",
-  },
-  {
-    title: "Taqwa, Jihad, dan Ibadah",
-    externalUrl:
-      "https://qthematic.e-furqan.com/courses/taqwa-jihad-dan-ibadah/",
-    description:
-      "Perintah bertakwa, berjuang di jalan Allah, dan tata cara ibadah.",
-    count: "180+ Ayat",
-    image: "taqwaJihadIbadah.png",
-  },
-  {
-    title: "Akhlak Terpuji",
-    externalUrl: "https://qthematic.e-furqan.com/courses/akhlak-terpuji-2/",
-    description: "Sifat-sifat mulia seperti sabar, jujur, dan amanah.",
-    count: "140+ Ayat",
-    image: "akhlakTerpuji.png",
-  },
-  {
-    title: "Akhlak Tercela",
-    externalUrl: "https://qthematic.e-furqan.com/courses/akhlah-tercela/",
-    description: "Larangan sifat sombong, dengki, dan perilaku buruk lainnya.",
-    count: "130+ Ayat",
-    image: "akhlakTercela.png",
-  },
-  {
-    title: "Hukum Keluarga",
-    externalUrl: "https://qthematic.e-furqan.com/courses/hukum-keluarga/",
-    description: "Pernikahan, perceraian, waris, dan hak-hak anggota keluarga.",
-    count: "90+ Ayat",
-    image: "hukumKeluarga.png",
-  },
-  {
-    title: "Hukum Muamalat",
-    externalUrl: "https://qthematic.e-furqan.com/courses/hukum-muamalat/",
-    description: "Prinsip ekonomi Islam, jual beli, hutang piutang, dan riba.",
-    count: "110+ Ayat",
-    image: "hukumMuamalat.png",
-  },
-  {
-    title: "Hukum Pidana",
-    externalUrl: "https://qthematic.e-furqan.com/courses/hukum-pidana/",
-    description: "Qishash, hudud, dan keadilan hukum dalam Islam.",
-    count: "60+ Ayat",
-    image: "hukumPidana.png",
-  },
-  {
-    title: "Hukum Pemerintahan",
-    externalUrl: "https://qthematic.e-furqan.com/courses/hukum-pemerintahan/",
-    description: "Kepemimpinan, musyawarah, dan keadilan sosial.",
-    count: "50+ Ayat",
-    image: "hukumPemerintahan.png",
-  },
-  {
-    title: "Hukum Makanan dan Pakaian",
-    externalUrl:
-      "https://qthematic.e-furqan.com/courses/hukum-makanan-pakaian/",
-    description: "Halal haram makanan dan adab berpakaian.",
-    count: "40+ Ayat",
-    image: "hukumMakananPakaian.png",
-  },
-  {
-    title: "Manusia",
-    externalUrl: "https://qthematic.e-furqan.com/courses/15-manusia/",
-    description: "Penciptaan manusia, tujuan hidup, dan potensi diri.",
-    count: "160+ Ayat",
-    image: "manusia.png",
-  },
-  {
-    title: "Alam",
-    externalUrl: "https://qthematic.e-furqan.com/courses/16-alam/",
-    description: "Fenomena alam semesta sebagai tanda kekuasaan Allah.",
-    count: "170+ Ayat",
-    image: "alam.png",
-  },
-  {
-    title: "Jin dan Iblis",
-    externalUrl: "https://qthematic.e-furqan.com/courses/17-jin-dan-iblis/",
-    description: "Hakikat jin, tipu daya iblis, dan cara berlindung darinya.",
-    count: "30+ Ayat",
-    image: "jinIblis.png",
-  },
-];
-
 const QThematic = () => {
   const [visibleCount, setVisibleCount] = useState(6);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 6);
   };
+
+  const filteredData = courseData.filter((theme) => {
+    const query = searchQuery.toLowerCase();
+    if (!query) return true;
+
+    // Check theme level
+    if ((theme.title || "").toLowerCase().includes(query)) return true;
+    if ((theme.description || "").toLowerCase().includes(query)) return true;
+
+    // Check subjects and topics level
+    return theme.subjects?.some(
+      (subject) =>
+        (subject.title || "").toLowerCase().includes(query) ||
+        subject.topics?.some(
+          (topic) =>
+            (topic.title || "").toLowerCase().includes(query) ||
+            (topic.content || "").toLowerCase().includes(query)
+        )
+    );
+  });
+
+  const getThemeImage = (index) => {
+    const images = [
+      "https://bimamedia-cms.ap-south-1.linodeobjects.com/sarungbhs.co.id/2025/01/29/l-ilustrasi-99-asmaul-husna-116920250129135332.jpeg",
+      "golonganManusia.png",
+      "malaikatKitabRasul.png",
+      "takdirHariAkhir.png",
+      "nabiMuhammad.png",
+      "kisahAlquran.png",
+      "taqwaJihadIbadah.png",
+      "akhlakTerpuji.png",
+      "akhlakTercela.png",
+      "hukumKeluarga.png",
+      "hukumMuamalat.png",
+      "hukumPidana.png",
+      "hukumPemerintahan.png",
+      "hukumMakananPakaian.png",
+      "manusia.png",
+      "alam.png",
+      "jinIblis.png",
+    ];
+    return images[index % images.length];
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
       <Navbar />
@@ -213,14 +130,6 @@ const QThematic = () => {
             Ayat demi ayat dibahas menurut tema kehidupan, memudahkan Anda
             memahami pesan Al-Qur'an secara utuh dan mendalam.
           </p>
-          {/* <div className="flex justify-center gap-4">
-            <button className="px-8 py-4 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/30 transform hover:-translate-y-1">
-              Mulai Belajar
-            </button>
-            <button className="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-semibold hover:bg-gray-50 transition hover:border-gray-300">
-              Lihat Demo
-            </button>
-          </div> */}
         </div>
       </div>
 
@@ -229,11 +138,18 @@ const QThematic = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">17</p>
+              <p className="text-4xl font-bold text-emerald-600 mb-2">
+                {courseData.length}
+              </p>
               <p className="text-gray-500 font-medium">Tema Utama</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">110</p>
+              <p className="text-4xl font-bold text-emerald-600 mb-2">
+                {courseData.reduce(
+                  (acc, theme) => acc + theme.subjects.length,
+                  0
+                )}
+              </p>
               <p className="text-gray-500 font-medium">Subtema</p>
             </div>
             <div>
@@ -244,53 +160,14 @@ const QThematic = () => {
               <p className="text-4xl font-bold text-emerald-600 mb-2">100%</p>
               <p className="text-gray-500 font-medium">Valid & Shahih</p>
             </div>
-            {/* <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">PDF</p>
-              <p className="text-gray-500 font-medium">Unduh Materi</p>
-            </div> */}
           </div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      {/* <main className="grow container mx-auto px-6 py-24">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Fitur Unggulan
-          </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Platform komprehensif untuk mendalami Al-Qur'an dengan metode yang
-            modern dan mudah dipahami.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-20 h-20 bg-emerald-50 rounded-bl-full -mr-6 -mt-6 transition-transform group-hover:scale-110"></div>
-              <div className="relative z-10">
-                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-2xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </main> */}
-
       {/* Course List Section */}
       <section id="tema" className="bg-gray-50 py-24">
         <div className="container mx-auto px-6">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
                 Daftar Tema
@@ -299,29 +176,51 @@ const QThematic = () => {
                 Jelajahi berbagai tema menarik dari Al-Qur'an
               </p>
             </div>
-            <button className="text-emerald-600 font-semibold hover:text-emerald-700">
-              Lihat Semua Tema →
-            </button>
+
+            <div className="relative w-full md:w-72">
+              <input
+                type="text"
+                placeholder="Cari tema..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              />
+              <svg
+                className="w-5 h-5 absolute left-3 top-2.5 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {themes.slice(0, visibleCount).map((theme, index) => (
-              <a
-                href={theme.externalUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
+            {filteredData.slice(0, visibleCount).map((theme, index) => (
+              <Link
+                to={`/qthematic/${theme.id}${
+                  searchQuery
+                    ? `?search=${encodeURIComponent(searchQuery)}`
+                    : ""
+                }`}
+                key={theme.id}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group cursor-pointer block"
               >
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
                   <img
-                    src={theme.image}
+                    src={getThemeImage(index)}
                     alt={theme.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-emerald-600 z-20 shadow-sm">
-                    {theme.count}
+                    {theme.subjects.length} Subtema
                   </div>
                 </div>
                 <div className="p-6">
@@ -348,11 +247,11 @@ const QThematic = () => {
                     </svg>
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
 
-          {visibleCount < themes.length && (
+          {visibleCount < filteredData.length && (
             <div className="mt-12 text-center">
               <button
                 onClick={handleLoadMore}
