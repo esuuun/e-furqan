@@ -1,285 +1,241 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SurahSelector from "../components/qtahfidz/SurahSelector";
-import AyatSelector from "../components/qtahfidz/AyatSelector";
+import SurahSelectorLocal from "../components/qtahfidz/SurahSelectorLocal";
+import AyatSelectorDropdown from "../components/qtahfidz/AyatSelectorDropdown";
+import quranData from "../data/quran-data";
 
 const QMushaf = () => {
-  const [csvData, setCsvData] = useState([]);
+  const [cardsData, setCardsData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedSurah, setSelectedSurah] = useState(1);
-  const [selectedAyat, setSelectedAyat] = useState(null);
-  const [surahInfo, setSurahInfo] = useState(null);
+  const [selectedSurah, setSelectedSurah] = useState("");
+  const [selectedAyat, setSelectedAyat] = useState("all");
+  
+  const cardRefs = useRef({});
 
-  // Fetch and parse CSV
   useEffect(() => {
-    fetch("/Master Mushaf.csv")
-      .then((response) => response.text())
-      .then((text) => {
-        const rows = text.split("\n").slice(1); // Skip header
-        const parsedData = rows
-          .map((row) => {
-            // Regex to split by comma ignoring quotes
-            const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-            if (cols.length < 12) return null;
-            return {
-              arti: cols[1]?.replace(/^"|"$/g, ""),
-              ilal: cols[2],
-              bentuk_kata: cols[3],
-              irab: cols[4]?.replace(/^"|"$/g, ""),
-              pola_irab: cols[5],
-              arti_akar: cols[6],
-              akar: cols[7],
-              akhiran: cols[8],
-              awalan: cols[9],
-              mushaf: cols[10],
-              surat: parseInt(cols[11]),
-              ayat: parseInt(cols[12]),
-            };
-          })
-          .filter((row) => row && row.surat);
-        setCsvData(parsedData);
+    fetch("/quran-cards-data.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setCardsData(data);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Error loading CSV:", err);
+        console.error("Error loading data:", err);
         setLoading(false);
       });
   }, []);
 
-  // Fetch Surah Info (for name, etc)
-  useEffect(() => {
-    if (selectedSurah) {
-      fetch(`https://quran-api.santrikoding.com/api/surah/${selectedSurah}`)
-        .then((res) => res.json())
-        .then((data) => setSurahInfo(data));
+  // We don't need distinctSurat anymore for the dropdown, 
+  // but we might want to filter quranData to only show surahs that exist in cardsData?
+  // For now, let's show all surahs from quranData, but if selected surah has no cards, it will just show empty.
+  // Or better, we can filter quranData.
+  
+  const availableSurahIds = useMemo(() => {
+    return new Set(cardsData.map((d) => d.surat));
+  }, [cardsData]);
+
+  const filteredQuranData = useMemo(() => {
+    // If cardsData is loaded, filter quranData to only include surahs present in cardsData
+    // If cardsData is empty (loading), maybe show all or none.
+    if (cardsData.length === 0) return quranData;
+    return quranData.filter(s => availableSurahIds.has(s.id));
+  }, [cardsData, availableSurahIds]);
+
+
+  const distinctAyat = useMemo(() => {
+    if (!selectedSurah) return [];
+    return [...new Set(cardsData
+      .filter((d) => String(d.surat) === String(selectedSurah))
+      .map((d) => d.ayat))]
+      .sort((a, b) => a - b);
+  }, [cardsData, selectedSurah]);
+
+  const filteredCards = useMemo(() => {
+    if (!selectedSurah) return [];
+    let filtered = cardsData.filter((d) => String(d.surat) === String(selectedSurah));
+    if (selectedAyat !== "all") {
+      filtered = filtered.filter((d) => String(d.ayat) === String(selectedAyat));
     }
-  }, [selectedSurah]);
+    return filtered;
+  }, [cardsData, selectedSurah, selectedAyat]);
 
-  const filteredData = useMemo(() => {
-    if (!csvData.length) return {};
-
-    const surahWords = csvData.filter(
-      (row) =>
-        row.surat === selectedSurah &&
-        !/^\d+$/.test(row.arti) && // Filter out verse numbers in meaning
-        !/^\d+$/.test(row.mushaf) // Filter out verse numbers in arabic text
-    );
-
-    // Group by Ayat
-    const verses = {};
-    surahWords.forEach((word) => {
-      if (!verses[word.ayat]) verses[word.ayat] = [];
-      verses[word.ayat].push(word);
-    });
-
-    return verses;
-  }, [csvData, selectedSurah]);
-
-  const handleSelectSurah = (id) => {
+  const handleSurahChange = (id) => {
     setSelectedSurah(id);
-    setSelectedAyat(null);
+    setSelectedAyat("all");
   };
 
+  const handleAyatChange = (val) => {
+    setSelectedAyat(val);
+  };
+
+  const scrollToCard = (index) => {
+    const el = cardRefs.current[index];
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      // Optional: Add a temporary highlight class
+      el.classList.add("ring-2", "ring-emerald-400", "ring-offset-2");
+      setTimeout(() => {
+        el.classList.remove("ring-2", "ring-emerald-400", "ring-offset-2");
+      }, 1500);
+    }
+  };
+
+  // Helper to safely get value
+  const getVal = (item, key) => (item[key] ? item[key] : "-");
+
+  // Fields configuration based on cards.html logic
+  const fields = [
+    { key: 'akhiran', label: 'Akhiran' },
+    { key: 'awalan', label: 'Awalan' },
+    { key: 'kt_kar', label: 'Kata/Akar' },
+    { key: 'irab', label: "I'rab / Pola" },
+    { key: 'teori', label: 'Teori' },
+    { key: 'bentuk_kata', label: 'Bentuk Kata' },
+    { key: 'ilal', label: "I'lal" },
+    { key: 'arti', label: 'Arti' },
+    { key: 'terjemah', label: 'Terjemah', fullWidth: true }
+  ];
+
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans">
+    <div className="min-h-screen flex flex-col bg-gray-50 font-sans">
       <Navbar />
 
-      {/* Hero / Header */}
-      <div className="relative bg-linear-to-br from-emerald-50 via-white to-teal-50 pt-32 pb-12">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50"></div>
-          <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-teal-100 rounded-full blur-3xl opacity-50"></div>
-        </div>
-
+      {/* Hero Section (Adapted from original) */}
+      <div className="relative bg-gradient-to-br from-emerald-50 via-white to-teal-50 pt-32 pb-12">
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="inline-block px-4 py-1.5 mb-6 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold tracking-wide">
             📖 qMushaf Digital
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            Analisis Kata per Kata <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-teal-600">
-              Al-Qur'an
-            </span>
+            Analisis Kata per Kata
           </h1>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Pelajari struktur bahasa, akar kata, dan terjemahan setiap lafadz
-            dalam Al-Qur'an secara mendalam.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Pelajari struktur bahasa Al-Qur'an dengan detail morfologi dan sintaksis yang lengkap.
           </p>
-
-          <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 max-w-3xl mx-auto flex flex-col md:flex-row gap-4">
-            <div className="flex-1">
-              <SurahSelector
-                selectedSurah={selectedSurah}
-                onSelectSurah={handleSelectSurah}
-              />
-            </div>
-            <div className="w-full md:w-48">
-              <AyatSelector
-                totalAyat={surahInfo ? surahInfo.jumlah_ayat : 0}
-                selectedAyat={selectedAyat}
-                onSelectAyat={setSelectedAyat}
-                disabled={!surahInfo}
-              />
-            </div>
-          </div>
         </div>
       </div>
 
-      <main className="grow container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 py-8 flex-grow">
+        {/* Controls */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-8">
+          <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
+            <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+              <div className="w-full md:w-72">
+                <SurahSelectorLocal
+                  surahs={filteredQuranData}
+                  selectedSurahId={selectedSurah}
+                  onSelectSurah={handleSurahChange}
+                />
+              </div>
+
+              <div className="w-full md:w-48">
+                <AyatSelectorDropdown
+                  availableAyats={distinctAyat}
+                  selectedAyat={selectedAyat}
+                  onSelectAyat={handleAyatChange}
+                  disabled={!selectedSurah || loading}
+                />
+              </div>
+            </div>
+
+            <div className="text-emerald-600 font-semibold bg-emerald-50 px-4 py-2 rounded-lg">
+              {loading ? "Memuat Data..." : `${filteredCards.length} Kartu`}
+            </div>
+          </div>
+        </div>
+
+        {/* Content */}
         {loading ? (
-          <div className="text-center py-20">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-emerald-500 border-t-transparent"></div>
-            <p className="mt-4 text-gray-500">Memuat data Mushaf...</p>
-            <p className="text-xs text-gray-400 mt-2">
-              (Proses ini mungkin memakan waktu beberapa detik karena memuat
-              database kata)
-            </p>
+          <div className="flex justify-center py-20">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600"></div>
+          </div>
+        ) : !selectedSurah ? (
+          <div className="text-center py-20 text-gray-500">
+            Silakan pilih surat untuk memulai.
           </div>
         ) : (
-          <div className="space-y-12 max-w-5xl mx-auto">
-            {Object.entries(filteredData).map(([ayatNum, words]) => {
-              if (selectedAyat && parseInt(ayatNum) !== selectedAyat)
-                return null;
+          <>
+            {/* Full Verse Display */}
+            {selectedAyat !== "all" && filteredCards.length > 0 && (
+              <div className="bg-white rounded-2xl p-8 mb-10 border border-emerald-100 shadow-lg shadow-emerald-50/50 text-center">
+                <div className="font-amiri text-4xl md:text-5xl text-gray-800 leading-loose mb-8 flex flex-wrap justify-center gap-x-3 dir-rtl" dir="rtl">
+                  {filteredCards.map((item, idx) => (
+                    <span
+                      key={idx}
+                      onClick={() => scrollToCard(idx)}
+                      className="cursor-pointer hover:text-emerald-600 hover:bg-emerald-50 rounded px-2 transition-all duration-200"
+                      title="Lihat detail kata"
+                    >
+                      {item.lafdz}
+                    </span>
+                  ))}
+                </div>
+                <div className="text-xl text-gray-600 font-medium italic max-w-4xl mx-auto leading-relaxed">
+                  {filteredCards
+                    .map((item) => item.terjemah)
+                    .filter((t) => t && t !== "-")
+                    .join(" ")
+                    .replace(/\s+/g, " ")
+                    .trim()}
+                </div>
+              </div>
+            )}
 
-              return (
+            {/* Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" dir="rtl">
+              {filteredCards.map((item, index) => (
                 <div
-                  key={ayatNum}
-                  className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
+                  key={index}
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className="flex flex-col gap-4 dir-ltr transition-all duration-300"
+                  dir="ltr"
                 >
-                  <div className="bg-gray-50 px-6 py-4 border-b border-gray-100 flex items-center gap-3">
-                    <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">
-                      Ayat {ayatNum}
-                    </span>
-                    <span className="text-gray-500 text-sm font-medium">
-                      {surahInfo?.nama_latin}
-                    </span>
+                  {/* Verse Header (Arabic Word) */}
+                  <div className="bg-gradient-to-br from-emerald-50 to-white border border-emerald-100 rounded-xl p-6 text-center shadow-sm">
+                    <div className="font-amiri text-5xl text-emerald-800 drop-shadow-sm" dir="rtl">
+                      {getVal(item, "lafdz")}
+                    </div>
                   </div>
 
-                  <div className="p-8">
-                    {/* Arabic Text Full */}
-                    <div className="text-right mb-10" dir="rtl">
-                      <p className="text-4xl font-arabic leading-loose text-gray-800">
-                        {words.map((w) => w.mushaf).join(" ")}
-                      </p>
+                  {/* Card Details */}
+                  <div className="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+                    <div className="bg-gray-50 px-5 py-3 flex justify-between items-center border-b border-gray-100">
+                      <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">
+                        Surat: {getVal(item, "surat")}
+                      </span>
+                      <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">
+                        Ayat: {getVal(item, "ayat")}
+                      </span>
                     </div>
 
-                    {/* Word Analysis Grid */}
-                    <div
-                      className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
-                      dir="rtl"
-                    >
-                      {words.map((word, idx) => (
-                        <div
-                          key={idx}
-                          className="bg-white border border-gray-200 rounded-2xl p-6 hover:border-emerald-400 hover:shadow-lg transition-all group"
-                        >
-                          {/* Card Header */}
-                          <div className="flex justify-between items-center mb-6 border-b border-gray-100 pb-4">
-                            <span className="bg-emerald-600 text-white text-sm font-bold px-3 py-1 rounded-lg shadow-sm shadow-emerald-200">
-                              #{idx + 1}
-                            </span>
-                            <span className="text-sm text-emerald-600 font-bold">
-                              Surah {word.surat}, Ayat {word.ayat}
-                            </span>
-                          </div>
-
-                          {/* Arabic Word */}
-                          <div className="text-center mb-8">
-                            <p className="text-5xl font-arabic text-gray-800 leading-relaxed group-hover:text-emerald-600 transition-colors drop-shadow-sm">
-                              {word.mushaf}
-                            </p>
-                          </div>
-
-                          {/* Details Grid */}
-                          <div className="grid grid-cols-2 gap-3">
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                Awalan
-                              </p>
-                              <p className="text-gray-800 font-medium text-sm font-arabic">
-                                {word.awalan === "*" ? "-" : word.awalan}
-                              </p>
+                    <div className="p-5 grid grid-cols-2 gap-4 text-sm flex-grow">
+                      {fields.map((f) => {
+                        const val = getVal(item, f.key);
+                        if (val === "-" && f.key !== "terjemah") return null;
+                        
+                        return (
+                          <div 
+                            key={f.key} 
+                            className={`flex flex-col border-b border-gray-100 pb-2 last:border-0 ${f.fullWidth ? 'col-span-2 text-center mt-2 pt-2 border-t' : ''}`}
+                          >
+                            <div className="text-[10px] font-bold text-emerald-600 uppercase mb-1 tracking-wide">
+                              {f.label}
                             </div>
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                Akhiran
-                              </p>
-                              <p className="text-gray-800 font-medium text-sm font-arabic">
-                                {word.akhiran === "*" ? "-" : word.akhiran}
-                              </p>
-                            </div>
-
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                Akar Kata
-                              </p>
-                              <p className="text-gray-800 font-medium text-lg font-arabic">
-                                {word.akar === "*" ? "-" : word.akar}
-                              </p>
-                            </div>
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                Arti Akar
-                              </p>
-                              <p className="text-gray-800 font-medium text-sm wrap-break-word">
-                                {word.arti_akar || "-"}
-                              </p>
-                            </div>
-
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                Pola I'rab
-                              </p>
-                              <p className="text-gray-800 font-medium text-lg font-arabic wrap-break-word">
-                                {word.pola_irab || "-"}
-                              </p>
-                            </div>
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                I'rab
-                              </p>
-                              <p className="text-gray-800 font-medium text-sm wrap-break-word">
-                                {word.irab || "-"}
-                              </p>
-                            </div>
-
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                Bentuk Kata
-                              </p>
-                              <p className="text-gray-800 font-medium text-sm wrap-break-word">
-                                {word.bentuk_kata || "-"}
-                              </p>
-                            </div>
-                            <div className="bg-gray-50 p-3 rounded-xl">
-                              <p className="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">
-                                I'lal
-                              </p>
-                              <p className="text-gray-800 font-medium text-sm wrap-break-word">
-                                {word.ilal || "-"}
-                              </p>
-                            </div>
-
-                            <div className="col-span-2 bg-emerald-50 p-4 rounded-xl border border-emerald-100">
-                              <p className="text-[10px] text-emerald-600 uppercase font-bold tracking-wider mb-1">
-                                Arti Kata
-                              </p>
-                              <p className="text-gray-900 font-bold text-base">
-                                {word.arti}
-                              </p>
+                            <div className={`font-medium text-gray-700 ${f.key === 'terjemah' ? 'text-base italic text-emerald-800' : ''}`}>
+                              {val}
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          </>
         )}
-      </main>
+      </div>
       <Footer />
     </div>
   );
