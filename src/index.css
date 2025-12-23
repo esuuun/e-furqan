@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "LPMQ";
-  src: url("https://cdn.jsdelivr.net/gh/abdulabdi/lpmq-font@master/LPMQ.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@theme {
+  --font-arabic: "Amiri", "Scheherazade New", "Traditional Arabic", serif;
 }
 
-@theme {
-  --font-arabic: "LPMQ", "serif";
+.font-arabic {
+  font-family: "Amiri", "Scheherazade New", "Traditional Arabic", serif;
+}
+
+.font-amiri {
+  font-family: "Amiri", serif;
 }
 
 /* Lesson Content Styles - Adapted from Reference */

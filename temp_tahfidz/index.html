@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Tahfidz Interaktif – 30 Juz</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <header>
+      <h1>🧩 Game Tahfidz Interaktif – Al-Qur'an 30 Juz</h1>
+      <div class="sub">Pilih Surat dan Ayat, dengarkan, lalu susun kata-katanya.</div>
+
+      <div class="selection-bar">
+        <div class="control-group">
+          <label for="surahSelect">Pilih Surat</label>
+          <select id="surahSelect">
+            <option value="" disabled selected>Memuat Surat...</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label>Pilih Ayat</label>
+          <div class="ayah-selector-wrapper">
+            <button id="btnAyahSelector" class="btn-outline">Semua Ayat</button>
+
+            <!-- Dropdown/Modal for Ayah Selection -->
+            <div id="ayahDropdown" class="ayah-dropdown hidden">
+              <div class="ayah-dropdown-header">
+                <label><input type="checkbox" id="checkAll" checked> Pilih Semua</label>
+                <button id="btnCloseAyahDropdown" class="btn-xs">Selesai</button>
+              </div>
+              <div id="ayahGrid" class="ayah-grid">
+                <!-- Generated Javascript -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="btnLoadGame" class="btn-primary">Mulai Game</button>
+      </div>
+    </header>
+
+    <div id="gameArea" class="grid">
+      <!-- Game Cards will be rendered here -->
+      <div class="placeholder-msg">Silakan pilih surat dan klik "Mulai Game"</div>
+    </div>
+  </div>
+
+  <script src="quran-data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,43 +1,79 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SurahSelector from "../components/qtahfidz/SurahSelector";
-import AyatSelector from "../components/qtahfidz/AyatSelector";
-import AyatCard from "../components/qtahfidz/AyatCard";
+import SurahSelectorLocal from "../components/qtahfidz/SurahSelectorLocal";
+import AyatGridSelector from "../components/qtahfidz/AyatGridSelector";
+import DraggableAyatCard from "../components/qtahfidz/DraggableAyatCard";
+import quranData from "../data/quran-data";
 
 const QTahfidz = () => {
-  const [selectedSurah, setSelectedSurah] = useState(89); // Default Al-Fajr
-  const [selectedAyat, setSelectedAyat] = useState(null);
-  const [surahData, setSurahData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [selectedSurahId, setSelectedSurahId] = useState(62); // Default Al-Jumu'ah
+  const [selectedAyahs, setSelectedAyahs] = useState([]);
+  const [gameStarted, setGameStarted] = useState(false);
 
-  useEffect(() => {
-    if (selectedSurah) {
-      fetch(`https://quran-api.santrikoding.com/api/surah/${selectedSurah}`)
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.status) {
-            setSurahData(data);
-            setSelectedAyat(null); // Reset ayat selection when surah changes
-          }
-        })
-        .catch((err) => console.error(err))
-        .finally(() => setLoading(false));
-    }
-  }, [selectedSurah]);
+  // Get current Surah data
+  const currentSurah = quranData.find((s) => s.id === selectedSurahId);
 
-  const handleSelectSurah = (id) => {
-    if (id !== selectedSurah) {
-      setLoading(true);
-      setSelectedSurah(id);
+  // Reset selection when Surah changes
+  const handleSurahChange = (id) => {
+    setSelectedSurahId(id);
+    setSelectedAyahs([]);
+    setGameStarted(false);
+  };
+
+  // Handle Start Game
+  const handleStartGame = () => {
+    if (selectedAyahs.length > 0) {
+      setGameStarted(true);
+      // Scroll to game area
+      setTimeout(() => {
+        document
+          .getElementById("game-area")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
     }
   };
 
-  const filteredVerses = surahData
-    ? selectedAyat
-      ? surahData.ayat.filter((_, index) => index + 1 === selectedAyat)
-      : surahData.ayat
-    : [];
+  // Handle Reset
+  const handleReset = () => {
+    setGameStarted(false);
+    setSelectedAyahs([]);
+  };
+
+  // Helper to process verses (split long ones)
+  const getProcessedVerses = () => {
+    if (!currentSurah) return [];
+
+    const versesToRender = [];
+
+    selectedAyahs.forEach((ayahNum) => {
+      const verse = currentSurah.verses.find((v) => v.id === ayahNum);
+      if (!verse) return;
+
+      const cleanText = verse.text.replace(/[\u200B-\u200D\uFEFF]/g, "").trim();
+      const words = cleanText.split(/\s+/).filter((w) => w.length > 0);
+
+      if (words.length <= 15) {
+        versesToRender.push(verse);
+      } else {
+        const chunkSize = 12;
+        let chunkIndex = 1;
+        for (let i = 0; i < words.length; i += chunkSize) {
+          const chunkText = words.slice(i, i + chunkSize).join(" ");
+          versesToRender.push({
+            id: `${verse.id}.${chunkIndex}`,
+            text: chunkText,
+            originalId: verse.id,
+          });
+          chunkIndex++;
+        }
+      }
+    });
+
+    return versesToRender;
+  };
+
+  const processedVerses = gameStarted ? getProcessedVerses() : [];
 
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
@@ -61,75 +97,83 @@ const QTahfidz = () => {
             </span>
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Metode interaktif menyusun ayat untuk memperkuat hafalan Anda.
-            Dengarkan, susun, dan cek hafalanmu.
+            Pilih surah dan ayat, lalu susun potongan ayat untuk menguji
+            hafalanmu.
           </p>
 
           {/* Controls */}
-          <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 max-w-3xl mx-auto flex flex-col md:flex-row gap-4">
-            <div className="flex-1">
-              <SurahSelector
-                selectedSurah={selectedSurah}
-                onSelectSurah={handleSelectSurah}
-              />
+          <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="md:col-span-1">
+                <SurahSelectorLocal
+                  surahs={quranData}
+                  selectedSurahId={selectedSurahId}
+                  onSelectSurah={handleSurahChange}
+                />
+              </div>
+              <div className="md:col-span-2">
+                {currentSurah && (
+                  <AyatGridSelector
+                    surah={currentSurah}
+                    selectedAyahs={selectedAyahs}
+                    onSelectionChange={setSelectedAyahs}
+                  />
+                )}
+              </div>
             </div>
-            <div className="w-full md:w-48">
-              <AyatSelector
-                totalAyat={surahData ? surahData.jumlah_ayat : 0}
-                selectedAyat={selectedAyat}
-                onSelectAyat={setSelectedAyat}
-                disabled={!surahData}
-              />
+
+            {/* Action Buttons */}
+            <div className="mt-8 flex justify-center gap-4 border-t border-gray-100 pt-6">
+              <button
+                onClick={handleStartGame}
+                disabled={selectedAyahs.length === 0}
+                className={`px-8 py-3 rounded-xl font-semibold shadow-lg transition-all transform hover:-translate-y-0.5 ${
+                  selectedAyahs.length > 0
+                    ? "bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-emerald-500/30"
+                    : "bg-gray-200 text-gray-400 cursor-not-allowed"
+                }`}
+              >
+                Mulai Hafalan ({selectedAyahs.length} Ayat)
+              </button>
+              {gameStarted && (
+                <button
+                  onClick={handleReset}
+                  className="px-8 py-3 rounded-xl font-semibold bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all"
+                >
+                  Reset
+                </button>
+              )}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Content Section */}
-      <main className="grow container mx-auto px-6 py-12">
-        {loading ? (
-          <div className="text-center py-20">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-emerald-500 border-t-transparent"></div>
-            <p className="mt-4 text-gray-500">Memuat data surah...</p>
-          </div>
-        ) : surahData ? (
-          <div className="max-w-4xl mx-auto">
+      {/* Game Area */}
+      {gameStarted && currentSurah && (
+        <main
+          id="game-area"
+          className="grow container mx-auto px-6 py-12 bg-gray-50"
+        >
+          <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                Surah {surahData.nama_latin} ({surahData.nama})
+                {currentSurah.transliteration} ({currentSurah.name})
               </h2>
-              <p className="text-gray-500">
-                {surahData.arti} • {surahData.jumlah_ayat} Ayat •{" "}
-                {surahData.tempat_turun}
-              </p>
             </div>
 
-            <div
-              className={`grid gap-8 ${
-                selectedAyat ? "grid-cols-1" : "grid-cols-1"
-              }`}
-            >
-              {filteredVerses.map((verse, index) => {
-                // Calculate actual verse number
-                const verseNumber = selectedAyat ? selectedAyat : index + 1;
-                return (
-                  <AyatCard
-                    key={`${surahData.nomor}-${verseNumber}`}
-                    surahNumber={surahData.nomor}
-                    ayatNumber={verseNumber}
-                    ayatText={verse.ar}
-                    surahName={surahData.nama_latin}
-                  />
-                );
-              })}
+            <div className="space-y-8">
+              {processedVerses.map((verse) => (
+                <DraggableAyatCard
+                  key={`${selectedSurahId}-${verse.id}`}
+                  verse={verse}
+                  surahName={currentSurah.transliteration}
+                  surahId={selectedSurahId}
+                />
+              ))}
             </div>
           </div>
-        ) : (
-          <div className="text-center py-20 text-gray-500">
-            Silakan pilih surah untuk memulai.
-          </div>
-        )}
-      </main>
+        </main>
+      )}
 
       <Footer />
     </div>
