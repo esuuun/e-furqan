@@ -876,10 +876,10 @@ const LessonDetail = () => {
                           </div>
 
                           {quizSubmitted && q.explanation && (
-                            <div className="mt-6 p-5 bg-slate-800 rounded-xl border-l-4 border-yellow-400 shadow-md">
-                              <h4 className="text-yellow-400 font-bold mb-2 flex items-center">
+                            <div className="mt-6 p-5 bg-emerald-50 rounded-xl border border-emerald-200 shadow-sm">
+                              <h4 className="text-emerald-800 font-bold mb-2 flex items-center">
                                 <svg
-                                  className="w-5 h-5 mr-2"
+                                  className="w-5 h-5 mr-2 text-emerald-600"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -893,7 +893,7 @@ const LessonDetail = () => {
                                 </svg>
                                 Penjelasan:
                               </h4>
-                              <p className="text-slate-200 leading-relaxed">
+                              <p className="text-gray-700 leading-relaxed">
                                 {q.explanation}
                               </p>
                             </div>
