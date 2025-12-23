@@ -503,6 +503,26 @@ const LessonDetail = () => {
       <Navbar />
 
       <main className="grow container mx-auto px-6 pt-24 pb-8 relative">
+        <Link
+          to={`/qthematic/${themeSlug}`}
+          className="inline-flex items-center text-gray-500 hover:text-emerald-600 mb-6 transition-colors font-medium"
+        >
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            ></path>
+          </svg>
+          Kembali ke Materi Tema
+        </Link>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
