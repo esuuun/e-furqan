@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
+    <footer className="bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-300 py-16 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Column */}
@@ -14,11 +14,11 @@ const Footer = () => {
                 alt="e-Furqan Logo"
                 className="w-10 h-10 object-contain"
               />
-              <span className="text-2xl font-bold text-white tracking-tight">
+              <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">
                 e-Furqan
               </span>
             </div>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
               Platform pembelajaran Al-Qur'an terintegrasi yang memudahkan umat
               untuk mempelajari, memahami, dan mengamalkan Al-Qur'an.
             </p>
@@ -27,7 +27,7 @@ const Footer = () => {
                 <a
                   key={i}
                   href="#"
-                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 transition text-white"
+                  className="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-800 flex items-center justify-center hover:bg-emerald-600 transition text-white"
                 >
                   <svg
                     className="w-5 h-5"
@@ -43,25 +43,27 @@ const Footer = () => {
 
           {/* Links Column 1 */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Layanan</h4>
+            <h4 className="text-gray-900 dark:text-white font-bold text-lg mb-6">
+              Layanan
+            </h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   qThematic
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   qTajwid
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   qTahfidz
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   qNahwu
                 </a>
               </li>
@@ -70,25 +72,27 @@ const Footer = () => {
 
           {/* Links Column 2 */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Perusahaan</h4>
+            <h4 className="text-gray-900 dark:text-white font-bold text-lg mb-6">
+              Perusahaan
+            </h4>
             <ul className="space-y-4">
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   Tentang Kami
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   Karir
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-emerald-500 transition">
+                <a href="#" className="hover:text-yellow-500 transition">
                   Kontak
                 </a>
               </li>
@@ -97,15 +101,15 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           {/* <div>
-            <h4 className="text-white font-bold text-lg mb-6">Berlangganan</h4>
-            <p className="text-gray-400 mb-4">
+            <h4 className="text-gray-900 dark:text-white font-bold text-lg mb-6">Berlangganan</h4>
+            <p className="text-gray-500 dark:text-gray-400 mb-4">
               Dapatkan update terbaru tentang fitur dan artikel islami.
             </p>
             <form className="flex flex-col gap-3">
               <input
                 type="email"
                 placeholder="Email Anda"
-                className="bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 border border-gray-700"
+                className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-600 border border-gray-200 dark:border-gray-700"
               />
               <button className="bg-emerald-600 text-white px-4 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">
                 Subscribe
@@ -114,15 +118,21 @@ const Footer = () => {
           </div> */}
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+        <div className="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-500 dark:text-gray-500 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} e-Furqan. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm text-gray-500">
-            <a href="#" className="hover:text-white transition">
+          <div className="flex space-x-6 text-sm text-gray-500 dark:text-gray-500">
+            <a
+              href="#"
+              className="hover:text-gray-900 dark:hover:text-white transition"
+            >
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-white transition">
+            <a
+              href="#"
+              className="hover:text-gray-900 dark:hover:text-white transition"
+            >
               Terms of Service
             </a>
           </div>

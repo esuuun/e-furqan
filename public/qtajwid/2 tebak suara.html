@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul 2: Tebak Suara</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #EAB308;
+            --primary-dark: #CA8A04;
+            --accent-color: #FDE047;
+            --bg-gradient: linear-gradient(135deg, #FEFCE8 0%, #ffffff 50%, #FEF9C3 100%);
+            --glass-bg: rgba(255, 255, 255, 0.9);
+            --glass-border: 1px solid rgba(234, 179, 8, 0.2);
+            --text-color: #1F2937;
+            --text-muted: #6B7280;
+            --success: #EAB308;
+            --error: #EF4444;
+            --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+            --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-ui);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            direction: rtl;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            border: var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            margin-top: 0;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        #game-stats {
+            margin-bottom: 30px;
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        /* Tombol untuk Memutar Suara */
+        #play-sound-button {
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #play-sound-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.5);
+        }
+
+        /* Grid untuk Pilihan Jawaban */
+        .choice-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 500px) {
+            .choice-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .choice-button {
+            padding: 20px;
+            font-size: 3rem;
+            font-weight: bold;
+            font-family: var(--font-arabic);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            border-radius: 16px;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(4px);
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .choice-button:hover {
+            border-color: var(--primary-color);
+            background: rgba(252, 211, 77, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+            color: var(--accent-color);
+        }
+
+        .choice-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        /* Feedback visual */
+        #feedback {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .correct {
+            color: #6EE7B7;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 10px 20px;
+            animation: fadeIn 0.3s;
+        }
+
+        .wrong {
+            color: #FCA5A5;
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 10px 20px;
+            animation: fadeIn 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Latihan 2: Tebak Suara</h1>
+        <p>Dengarkan suaranya, lalu pilih jawaban yang benar!</p>
+
+        <div id="game-stats" style="margin-bottom: 20px; color: #666; font-size: 1rem;">
+            Benar: <span id="correct-count">0</span> |
+            Total: <span id="total-count">0</span> |
+            Akurasi: <span id="accuracy">0%</span>
+        </div>
+
+        <button id="play-sound-button">🔊 Putar Suara</button>
+
+        <div class="choice-grid">
+            <button class="choice-button" id="choice1"></button>
+            <button class="choice-button" id="choice2"></button>
+            <button class="choice-button" id="choice3"></button>
+        </div>
+
+        <div id="feedback"></div>
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- DATABASE HURUF (SESUAI FILE AUDIO) ---
+            const allSounds = [
+                // Basic letters - sesuai dengan file di folder audio/
+                { text: 'ا', sound: 'a' },
+                { text: 'بَ', sound: 'ba' },
+                { text: 'تَ', sound: 'ta' },
+                { text: 'ثَ', sound: 'tho' },
+                { text: 'جَ', sound: 'ja' },
+                { text: 'حَ', sound: 'ha_h' },
+                { text: 'خَ', sound: 'kho' },
+                { text: 'دَ', sound: 'da' },
+                { text: 'ذَ', sound: 'dho' },
+                { text: 'رَ', sound: 'ro' },
+                { text: 'زَ', sound: 'za' },
+                { text: 'سَ', sound: 'sa' },
+                { text: 'شَ', sound: 'sho' },
+                { text: 'صَ', sound: 'sya' },
+                { text: 'ضَ', sound: 'dza' },
+                { text: 'طَ', sound: 'tsa' },
+                { text: 'ظَ', sound: 'zho' },
+                { text: 'عَ', sound: 'ain' },
+                { text: 'غَ', sound: 'ghain' },
+                { text: 'فَ', sound: 'fa' },
+                { text: 'قَ', sound: 'qof' },
+                { text: 'كَ', sound: 'kaf' },
+                { text: 'لَ', sound: 'lam' },
+                { text: 'مَ', sound: 'mim' },
+                { text: 'نَ', sound: 'nun' },
+                { text: 'هَ', sound: 'ha' },
+                { text: 'وَ', sound: 'waw' },
+                { text: 'يَ', sound: 'ya' }
+            ];
+
+            // --- SIMPLE AUDIO SYSTEM (LEBIH HANDAL) ---
+            let currentAudioElement = null;
+
+            // --- ELEMEN PENTING ---
+            const playButton = document.getElementById('play-sound-button');
+            const choiceButtons = [
+                document.getElementById('choice1'),
+                document.getElementById('choice2'),
+                document.getElementById('choice3')
+            ];
+            const feedbackEl = document.getElementById('feedback');
+            const audioPlayer = document.getElementById('audio-player');
+
+            let correctAnswer = null; // Menyimpan jawaban yang benar untuk ronde ini
+            let gameStats = {
+                correct: 0,
+                total: 0,
+                streak: 0
+            };
+
+            // --- FUNGSI UTAMA ---
+
+            function setupNewRound() {
+                feedbackEl.textContent = ''; // Hapus feedback
+
+                // 1. Acak seluruh daftar suara (buat salinannya dulu)
+                const shuffledSounds = [...allSounds].sort(() => 0.5 - Math.random());
+
+                // 2. Ambil 3 suara teratas sebagai pilihan
+                const currentChoices = [
+                    shuffledSounds[0],
+                    shuffledSounds[1],
+                    shuffledSounds[2]
+                ];
+
+                // 3. Tampilkan 3 pilihan itu di tombol
+                choiceButtons[0].textContent = currentChoices[0].text;
+                choiceButtons[0].dataset.sound = currentChoices[0].sound;
+
+                choiceButtons[1].textContent = currentChoices[1].text;
+                choiceButtons[1].dataset.sound = currentChoices[1].sound;
+
+                choiceButtons[2].textContent = currentChoices[2].text;
+                choiceButtons[2].dataset.sound = currentChoices[2].sound;
+
+                // 4. Pilih 1 dari 3 pilihan itu sebagai jawaban benar
+                correctAnswer = currentChoices[Math.floor(Math.random() * 3)];
+
+                // 5. Putar suara jawaban yang benar
+                playSound(correctAnswer.sound);
+            }
+
+            // --- SIMPLE & RELIABLE AUDIO FUNCTION ---
+            function playSound(soundName) {
+                try {
+                    // Stop current audio if playing
+                    if (currentAudioElement) {
+                        currentAudioElement.pause();
+                        currentAudioElement.currentTime = 0;
+                        currentAudioElement = null;
+                    }
+
+                    // Create new audio element with simple approach
+                    const audio = new Audio();
+                    audio.src = `audio/${soundName}.mp3`;
+                    audio.volume = 0.9;
+
+                    // Simple error handling
+                    audio.onerror = function () {
+                        console.log(`Audio file tidak ditemukan: ${soundName}.mp3`);
+                        showFeedback(`File audio ${soundName}.mp3 tidak ditemukan`, 'wrong');
+                    };
+
+                    audio.onended = function () {
+                        currentAudioElement = null;
+                    };
+
+                    // Store reference and play
+                    currentAudioElement = audio;
+
+                    // Play with user gesture handling
+                    const playPromise = audio.play();
+
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            console.log('Playback failed:', error);
+                            // Retry once
+                            setTimeout(() => {
+                                audio.play().catch(e => {
+                                    console.log('Retry also failed:', e);
+                                    showFeedback('Gagal memutar audio', 'wrong');
+                                });
+                            }, 200);
+                        });
+                    }
+
+                } catch (error) {
+                    console.error("Error dalam playSound:", error);
+                    showFeedback('Error memutar suara', 'wrong');
+                }
+            }
+
+            function showFeedback(message, type) {
+                feedbackEl.textContent = message;
+                feedbackEl.className = type;
+            }
+
+            function checkAnswer(clickedButton) {
+                const clickedSound = clickedButton.dataset.sound;
+                gameStats.total++;
+
+                if (clickedSound === correctAnswer.sound) {
+                    // Jawaban Benar
+                    gameStats.correct++;
+                    gameStats.streak++;
+
+                    let message = 'Benar! 👍';
+                    if (gameStats.streak >= 5) {
+                        message += ` 🔥 Streak ${gameStats.streak}!`;
+                    }
+
+                    showFeedback(message, 'correct');
+                    updateStats();
+
+                    // Disable buttons temporarily
+                    choiceButtons.forEach(btn => btn.disabled = true);
+
+                    // Otomatis lanjut ke ronde berikutnya setelah 1.5 detik
+                    setTimeout(() => {
+                        choiceButtons.forEach(btn => btn.disabled = false);
+                        setupNewRound();
+                    }, 1500);
+                } else {
+                    // Jawaban Salah
+                    gameStats.streak = 0;
+                    updateStats();
+                    const accuracy = Math.round((gameStats.correct / gameStats.total) * 100);
+
+                    showFeedback(`Salah, coba lagi. Akurasi: ${accuracy}%`, 'wrong');
+
+                    // Beri kesempatan pengguna mendengar suara yang benar lagi
+                    setTimeout(() => {
+                        playSound(correctAnswer.sound);
+                    }, 500);
+                }
+            }
+
+            function updateStats() {
+                document.getElementById('correct-count').textContent = gameStats.correct;
+                document.getElementById('total-count').textContent = gameStats.total;
+                const accuracy = gameStats.total > 0 ? Math.round((gameStats.correct / gameStats.total) * 100) : 0;
+                document.getElementById('accuracy').textContent = accuracy + '%';
+            }
+
+            // Stop all audio function
+            function stopAllAudio() {
+                if (currentAudioElement) {
+                    currentAudioElement.pause();
+                    currentAudioElement.currentTime = 0;
+                    currentAudioElement = null;
+                }
+            }
+
+            // --- EVENT LISTENERS ---
+
+            // Tombol "Putar Suara" (untuk memutar ulang suara)
+            playButton.addEventListener('click', () => {
+                if (correctAnswer) {
+                    playSound(correctAnswer.sound);
+                }
+            });
+
+            // Tombol Pilihan Jawaban
+            choiceButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    checkAnswer(button);
+                });
+            });
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                switch (e.key) {
+                    case ' ': // Spacebar to replay sound
+                        e.preventDefault();
+                        if (correctAnswer) {
+                            playSound(correctAnswer.sound);
+                        }
+                        break;
+                    case '1':
+                        e.preventDefault();
+                        if (!choiceButtons[0].disabled) checkAnswer(choiceButtons[0]);
+                        break;
+                    case '2':
+                        e.preventDefault();
+                        if (!choiceButtons[1].disabled) checkAnswer(choiceButtons[1]);
+                        break;
+                    case '3':
+                        e.preventDefault();
+                        if (!choiceButtons[2].disabled) checkAnswer(choiceButtons[2]);
+                        break;
+                }
+            });
+
+            // Handle page visibility change to stop audio when tab is not active
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    stopAllAudio();
+                }
+            });
+
+            // --- INITIALIZATION ---
+            console.log('🎵 Memulai permainan Tebak Suara...');
+            setupNewRound();
+
+        });
+    </script>
+
+</body>
+
+</html>

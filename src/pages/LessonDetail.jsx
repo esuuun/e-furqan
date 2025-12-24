@@ -179,7 +179,7 @@ const LessonDetail = () => {
           // Add temporary highlight class or style
           const originalColor = element.style.color;
           element.style.transition = "color 0.5s";
-          element.style.color = "#059669"; // Emerald-600
+          element.style.color = "#EAB308"; // Yellow-500
           setTimeout(() => {
             element.style.color = originalColor;
           }, 1500);
@@ -471,16 +471,16 @@ const LessonDetail = () => {
 
   if (!theme || !lesson) {
     return (
-      <div className="min-h-screen flex flex-col bg-white font-sans">
+      <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 font-sans">
         <Navbar />
         <div className="grow flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Pelajaran Tidak Ditemukan
             </h1>
             <Link
               to={`/qthematic/${themeSlug}`}
-              className="text-emerald-600 hover:underline"
+              className="text-emerald-600 dark:text-emerald-400 hover:underline"
             >
               Kembali ke Detail Tema
             </Link>
@@ -499,13 +499,13 @@ const LessonDetail = () => {
       : null;
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 font-sans">
       <Navbar />
 
       <main className="grow container mx-auto px-6 pt-24 pb-8 relative">
         <Link
           to={`/qthematic/${themeSlug}`}
-          className="inline-flex items-center text-gray-500 hover:text-emerald-600 mb-6 transition-colors font-medium"
+          className="inline-flex items-center text-gray-500 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400 mb-6 transition-colors font-medium"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -527,19 +527,19 @@ const LessonDetail = () => {
           {/* Main Content */}
           <div className="lg:col-span-2">
             {/* Header & Audio Controls */}
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm sticky top-20 z-30">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm sticky top-20 z-30">
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
                   {lesson.title}
                 </h1>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                   Interactive Learning Module
                 </p>
               </div>
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setShowAudioPanel(true)}
-                  className="px-4 py-2 bg-emerald-50 text-emerald-700 rounded-lg hover:bg-emerald-100 transition-colors text-sm font-medium flex items-center gap-2"
+                  className="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-lg hover:bg-yellow-100 dark:hover:bg-yellow-900/40 transition-colors text-sm font-medium flex items-center gap-2"
                 >
                   <svg
                     className="w-4 h-4"
@@ -556,13 +556,13 @@ const LessonDetail = () => {
                   </svg>
                   Daftar Audio
                 </button>
-                <div className="h-8 w-px bg-gray-200 mx-2"></div>
+                <div className="h-8 w-px bg-gray-200 dark:bg-gray-700 mx-2"></div>
                 <button
                   onClick={toggleSpeech}
                   className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
                     isSpeaking && !isPaused
-                      ? "bg-emerald-100 text-emerald-600"
-                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                      ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400"
+                      : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
                   }`}
                   title={isSpeaking && !isPaused ? "Jeda" : "Putar"}
                 >
@@ -586,7 +586,7 @@ const LessonDetail = () => {
                 </button>
                 <button
                   onClick={stopSpeaking}
-                  className="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center justify-center transition-colors"
                   title="Berhenti"
                 >
                   <svg
@@ -599,7 +599,7 @@ const LessonDetail = () => {
                 </button>
                 <button
                   onClick={toggleSpeed}
-                  className="w-10 h-10 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 flex items-center justify-center text-xs font-bold transition-colors"
+                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center justify-center text-xs font-bold transition-colors"
                   title="Kecepatan"
                 >
                   {speechRate}x
@@ -613,8 +613,8 @@ const LessonDetail = () => {
                 onClick={() => setActiveTab("materi")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
                   activeTab === "materi"
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20"
-                    : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
+                    ? "bg-yellow-500 dark:bg-yellow-600 text-white shadow-lg shadow-yellow-500/20"
+                    : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
                 }`}
               >
                 <svg
@@ -636,8 +636,8 @@ const LessonDetail = () => {
                 onClick={() => setActiveTab("pdf")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
                   activeTab === "pdf"
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20"
-                    : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
+                    ? "bg-yellow-500 dark:bg-yellow-600 text-white shadow-lg shadow-yellow-500/20"
+                    : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
                 }`}
               >
                 <svg
@@ -659,8 +659,8 @@ const LessonDetail = () => {
                 onClick={() => setActiveTab("quiz")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
                   activeTab === "quiz"
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-600/20"
-                    : "bg-white text-gray-600 hover:bg-gray-50 border border-gray-200"
+                    ? "bg-yellow-500 dark:bg-yellow-600 text-white shadow-lg shadow-yellow-500/20"
+                    : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
                 }`}
               >
                 <svg
@@ -681,7 +681,7 @@ const LessonDetail = () => {
             </div>
 
             {/* Content Area */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-8 min-h-[500px]">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 mb-8 min-h-[500px]">
               {activeTab === "materi" && (
                 <div
                   ref={contentRef}
@@ -691,16 +691,16 @@ const LessonDetail = () => {
               )}
 
               {activeTab === "pdf" && (
-                <div className="flex flex-col items-center bg-gray-100 rounded-xl p-6 min-h-[600px]">
+                <div className="flex flex-col items-center bg-gray-100 dark:bg-gray-700 rounded-xl p-6 min-h-[600px]">
                   {lesson.file ? (
                     <div className="w-full max-w-4xl flex flex-col items-center">
                       {/* PDF Controls */}
-                      <div className="bg-white rounded-full shadow-md px-8 py-3 mb-8 flex items-center justify-between gap-6 sticky top-4 z-10">
+                      <div className="bg-white dark:bg-gray-800 rounded-full shadow-md px-8 py-3 mb-8 flex items-center justify-between gap-6 sticky top-4 z-10">
                         <button
                           type="button"
                           disabled={pageNumber <= 1}
                           onClick={previousPage}
-                          className="flex items-center px-5 py-2 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all shadow-sm"
+                          className="flex items-center px-5 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-full text-sm font-bold hover:bg-blue-700 dark:hover:bg-blue-600 disabled:bg-gray-300 dark:disabled:bg-gray-600 disabled:cursor-not-allowed transition-all shadow-sm"
                         >
                           <svg
                             className="w-4 h-4 mr-2"
@@ -718,7 +718,7 @@ const LessonDetail = () => {
                           Prev
                         </button>
 
-                        <span className="text-gray-700 font-bold text-lg min-w-[100px] text-center">
+                        <span className="text-gray-700 dark:text-gray-300 font-bold text-lg min-w-[100px] text-center">
                           Page {pageNumber} / {numPages || "--"}
                         </span>
 
@@ -726,7 +726,7 @@ const LessonDetail = () => {
                           type="button"
                           disabled={pageNumber >= numPages}
                           onClick={nextPage}
-                          className="flex items-center px-5 py-2 bg-blue-600 text-white rounded-full text-sm font-bold hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all shadow-sm"
+                          className="flex items-center px-5 py-2 bg-blue-600 dark:bg-blue-700 text-white rounded-full text-sm font-bold hover:bg-blue-700 dark:hover:bg-blue-600 disabled:bg-gray-300 dark:disabled:bg-gray-600 disabled:cursor-not-allowed transition-all shadow-sm"
                         >
                           Next
                           <svg
@@ -746,20 +746,20 @@ const LessonDetail = () => {
                       </div>
 
                       {/* PDF Document */}
-                      <div className="shadow-2xl rounded-lg overflow-hidden bg-white border border-gray-200">
+                      <div className="shadow-2xl rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                         <Document
                           file={`/pdf/${lesson.file}`}
                           onLoadSuccess={onDocumentLoadSuccess}
                           loading={
                             <div className="flex flex-col items-center justify-center h-96 w-[600px]">
-                              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-600 mb-4"></div>
-                              <p className="text-gray-500">
+                              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-500 mb-4"></div>
+                              <p className="text-gray-500 dark:text-gray-400">
                                 Memuat dokumen PDF...
                               </p>
                             </div>
                           }
                           error={
-                            <div className="text-red-500 p-12 text-center bg-red-50">
+                            <div className="text-red-500 dark:text-red-400 p-12 text-center bg-red-50 dark:bg-red-900/20">
                               <p className="font-bold text-lg mb-2">
                                 Gagal memuat PDF
                               </p>
@@ -780,7 +780,7 @@ const LessonDetail = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center h-full text-gray-500">
+                    <div className="flex items-center justify-center h-full text-gray-500 dark:text-gray-400">
                       PDF tidak tersedia untuk materi ini.
                     </div>
                   )}
@@ -790,14 +790,14 @@ const LessonDetail = () => {
               {activeTab === "quiz" && (
                 <div className="max-w-2xl mx-auto">
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                       Uji Pemahaman Materi
                     </h3>
-                    <p className="text-gray-500">
+                    <p className="text-gray-500 dark:text-gray-400">
                       Jawab pertanyaan berikut untuk menguji pemahaman Anda.
                     </p>
                     {quizSubmitted && (
-                      <div className="mt-4 inline-block px-6 py-2 bg-emerald-100 text-emerald-700 rounded-full font-bold text-lg">
+                      <div className="mt-4 inline-block px-6 py-2 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 rounded-full font-bold text-lg">
                         Skor Anda: {quizScore} / {lesson.quiz?.length || 0}
                       </div>
                     )}
@@ -808,9 +808,9 @@ const LessonDetail = () => {
                       {lesson.quiz.map((q, qIndex) => (
                         <div
                           key={qIndex}
-                          className="bg-gray-50 p-6 rounded-xl border border-gray-200"
+                          className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700"
                         >
-                          <p className="font-semibold text-gray-900 mb-4 text-lg">
+                          <p className="font-semibold text-gray-900 dark:text-white mb-4 text-lg">
                             {qIndex + 1}. {q.question}
                           </p>
                           <div className="space-y-3">
@@ -823,24 +823,24 @@ const LessonDetail = () => {
                               if (quizSubmitted) {
                                 if (oIndex === correctIndex) {
                                   optionClass +=
-                                    "bg-emerald-100 border-emerald-500 text-emerald-700 font-medium";
+                                    "bg-yellow-100 dark:bg-yellow-900/50 border-yellow-500 dark:border-yellow-500 text-yellow-800 dark:text-yellow-200 font-medium";
                                 } else if (
                                   quizAnswers[qIndex] === oIndex &&
                                   oIndex !== correctIndex
                                 ) {
                                   optionClass +=
-                                    "bg-red-100 border-red-500 text-red-700";
+                                    "bg-red-100 dark:bg-red-900/50 border-red-500 dark:border-red-500 text-red-700 dark:text-red-300";
                                 } else {
                                   optionClass +=
-                                    "bg-white border-gray-200 opacity-50";
+                                    "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 opacity-50";
                                 }
                               } else {
                                 if (quizAnswers[qIndex] === oIndex) {
                                   optionClass +=
-                                    "bg-emerald-50 border-emerald-500 text-emerald-700 shadow-sm ring-1 ring-emerald-500";
+                                    "bg-yellow-50 dark:bg-yellow-900/20 border-yellow-500 dark:border-yellow-500 text-yellow-800 dark:text-yellow-200 shadow-sm ring-1 ring-yellow-500";
                                 } else {
                                   optionClass +=
-                                    "bg-white border-gray-200 hover:bg-gray-50 hover:border-gray-300";
+                                    "bg-white dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 hover:border-gray-300 dark:hover:border-gray-500";
                                 }
                               }
 
@@ -857,18 +857,18 @@ const LessonDetail = () => {
                                     <div
                                       className={`w-6 h-6 rounded-full border flex items-center justify-center mr-3 ${
                                         quizSubmitted && oIndex === correctIndex
-                                          ? "bg-emerald-500 border-emerald-500 text-white"
+                                          ? "bg-yellow-500 dark:bg-yellow-600 border-yellow-500 dark:border-yellow-600 text-white"
                                           : quizAnswers[qIndex] === oIndex
                                           ? quizSubmitted &&
                                             oIndex !== correctIndex
-                                            ? "bg-red-500 border-red-500 text-white"
-                                            : "bg-emerald-500 border-emerald-500 text-white"
-                                          : "border-gray-300"
+                                            ? "bg-red-500 dark:bg-red-600 border-red-500 dark:border-red-600 text-white"
+                                            : "bg-yellow-500 dark:bg-yellow-600 border-yellow-500 dark:border-yellow-600 text-white"
+                                          : "border-gray-300 dark:border-gray-500"
                                       }`}
                                     >
                                       {String.fromCharCode(65 + oIndex)}
                                     </div>
-                                    {option}
+                                    <span className="text-gray-700 dark:text-gray-300">{option}</span>
                                   </div>
                                 </button>
                               );
@@ -876,10 +876,10 @@ const LessonDetail = () => {
                           </div>
 
                           {quizSubmitted && q.explanation && (
-                            <div className="mt-6 p-5 bg-emerald-50 rounded-xl border border-emerald-200 shadow-sm">
-                              <h4 className="text-emerald-800 font-bold mb-2 flex items-center">
+                            <div className="mt-6 p-5 bg-yellow-50 dark:bg-yellow-900/20 rounded-xl border border-yellow-200 dark:border-yellow-800 shadow-sm">
+                              <h4 className="text-yellow-800 dark:text-yellow-200 font-bold mb-2 flex items-center">
                                 <svg
-                                  className="w-5 h-5 mr-2 text-emerald-600"
+                                  className="w-5 h-5 mr-2 text-yellow-600 dark:text-yellow-400"
                                   fill="none"
                                   stroke="currentColor"
                                   viewBox="0 0 24 24"
@@ -893,7 +893,7 @@ const LessonDetail = () => {
                                 </svg>
                                 Penjelasan:
                               </h4>
-                              <p className="text-gray-700 leading-relaxed">
+                              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                                 {q.explanation}
                               </p>
                             </div>
@@ -909,14 +909,14 @@ const LessonDetail = () => {
                               Object.keys(quizAnswers).length !==
                               lesson.quiz.length
                             }
-                            className="px-8 py-3 bg-emerald-600 text-white rounded-full font-bold hover:bg-emerald-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-emerald-600/20 transition-all"
+                            className="px-8 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-full font-bold hover:bg-yellow-600 dark:hover:bg-yellow-500 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-yellow-500/20 transition-all"
                           >
                             Cek Jawaban
                           </button>
                         ) : (
                           <button
                             onClick={resetQuiz}
-                            className="px-8 py-3 bg-white border-2 border-emerald-600 text-emerald-600 rounded-full font-bold hover:bg-emerald-50 transition-all"
+                            className="px-8 py-3 bg-white dark:bg-gray-800 border-2 border-yellow-500 dark:border-yellow-600 text-yellow-600 dark:text-yellow-400 rounded-full font-bold hover:bg-yellow-50 dark:hover:bg-yellow-900/20 transition-all"
                           >
                             Ulangi Quiz
                           </button>
@@ -924,7 +924,7 @@ const LessonDetail = () => {
                       </div>
                     </div>
                   ) : (
-                    <div className="text-center py-12 text-gray-500">
+                    <div className="text-center py-12 text-gray-500 dark:text-gray-400">
                       Belum ada quiz untuk materi ini.
                     </div>
                   )}
@@ -933,11 +933,11 @@ const LessonDetail = () => {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="flex justify-between mt-12 pt-8 border-t border-gray-100">
+            <div className="flex justify-between mt-12 pt-8 border-t border-gray-100 dark:border-gray-700">
               {prevLesson ? (
                 <Link
                   to={`/qthematic/${themeSlug}/${prevLesson.id}`}
-                  className="flex items-center px-6 py-3 bg-white border border-gray-200 rounded-full text-gray-700 font-semibold hover:bg-gray-50 hover:border-gray-300 transition-all"
+                  className="flex items-center px-6 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full text-gray-700 dark:text-gray-300 font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all"
                 >
                   <svg
                     className="w-5 h-5 mr-2"
@@ -961,7 +961,7 @@ const LessonDetail = () => {
               {nextLesson ? (
                 <Link
                   to={`/qthematic/${themeSlug}/${nextLesson.id}`}
-                  className="flex items-center px-6 py-3 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 shadow-lg shadow-emerald-600/20 transition-all"
+                  className="flex items-center px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-full font-semibold hover:bg-yellow-600 dark:hover:bg-yellow-500 shadow-lg shadow-yellow-500/20 transition-all"
                 >
                   Selanjutnya
                   <svg
@@ -981,7 +981,7 @@ const LessonDetail = () => {
               ) : (
                 <Link
                   to={`/qthematic/${themeSlug}`}
-                  className="flex items-center px-6 py-3 bg-emerald-600 text-white rounded-full font-semibold hover:bg-emerald-700 shadow-lg shadow-emerald-600/20 transition-all"
+                  className="flex items-center px-6 py-3 bg-yellow-500 dark:bg-yellow-600 text-white rounded-full font-semibold hover:bg-yellow-600 dark:hover:bg-yellow-500 shadow-lg shadow-yellow-500/20 transition-all"
                 >
                   Selesai
                   <svg
@@ -1004,14 +1004,14 @@ const LessonDetail = () => {
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+              <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                 Daftar Materi
               </h3>
               <div className="space-y-6">
                 {theme.subjects.map((subject) => (
                   <div key={subject.id}>
-                    <h4 className="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-2">
+                    <h4 className="text-sm font-bold text-yellow-800 dark:text-yellow-200 uppercase tracking-wider mb-2">
                       {subject.title}
                     </h4>
                     <div className="space-y-2">
@@ -1021,8 +1021,8 @@ const LessonDetail = () => {
                           to={`/qthematic/${themeSlug}/${topic.id}`}
                           className={`block p-3 rounded-lg transition-colors ${
                             String(topic.id) === lessonSlug
-                              ? "bg-emerald-100 text-emerald-700 font-medium"
-                              : "hover:bg-white hover:shadow-sm text-gray-600"
+                              ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 font-medium"
+                              : "hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm text-gray-600 dark:text-gray-300"
                           }`}
                         >
                           <div className="flex items-start">
@@ -1040,15 +1040,15 @@ const LessonDetail = () => {
 
         {/* Audio Panel Overlay */}
         {showAudioPanel && (
-          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[80vh] flex flex-col">
-              <div className="p-6 border-b border-gray-100 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-900">
+          <div className="fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md max-h-[80vh] flex flex-col">
+              <div className="p-6 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   Daftar Bagian Audio
                 </h3>
                 <button
                   onClick={() => setShowAudioPanel(false)}
-                  className="text-gray-400 hover:text-gray-600"
+                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
                 >
                   <svg
                     className="w-6 h-6"
@@ -1072,15 +1072,15 @@ const LessonDetail = () => {
                     onClick={() => playSection(index)}
                     className={`w-full text-left p-4 rounded-xl transition-all ${
                       currentSectionIndex === index && isSpeaking
-                        ? "bg-emerald-100 text-emerald-700 font-bold border border-emerald-200"
-                        : "bg-gray-50 text-gray-700 hover:bg-gray-100 border border-transparent"
+                        ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 font-bold border border-yellow-200 dark:border-yellow-800"
+                        : "bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 border border-transparent"
                     }`}
                   >
                     {section.title}
                   </button>
                 ))}
                 {audioSections.length === 0 && (
-                  <p className="text-center text-gray-500 py-8">
+                  <p className="text-center text-gray-500 dark:text-gray-400 py-8">
                     Tidak ada bagian audio yang terdeteksi.
                   </p>
                 )}

@@ -30,7 +30,7 @@ const services = [
     title: "qTajwid",
     description:
       "Pelajari tajwid interaktif dengan contoh suara, warna, dan latihan real-time.",
-    link: "https://qtajwid.e-furqan.com/",
+    link: "/qtajwid",
     icon: (
       <svg
         className="w-7 h-7"
@@ -204,7 +204,7 @@ const services = [
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 font-sans">
       <Navbar />
       <Hero />
 
@@ -235,13 +235,13 @@ const Home = () => {
       {/* Services Section */}
       <main className="grow container mx-auto px-6 py-24" id="services">
         <div className="text-center mb-16">
-          <span className="text-emerald-600 font-semibold tracking-wider uppercase text-sm">
+          <span className="text-yellow-600 dark:text-yellow-400 font-semibold tracking-wider uppercase text-sm">
             Layanan Kami
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-3 mb-4">
             Eksplorasi Dunia Al-Qur'an
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg">
             Pilih modul pembelajaran yang sesuai dengan kebutuhan Anda, mulai
             dari tajwid hingga sains.
           </p>
@@ -261,30 +261,30 @@ const Home = () => {
       </main>
 
       {/* Features Section */}
-      <section className="py-24 bg-gray-50" id="features">
+      <section className="py-24 bg-gray-50 dark:bg-gray-800" id="features">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-16">
             <div className="md:w-1/2">
               <div className="relative">
-                <div className="absolute -top-4 -left-4 w-24 h-24 bg-emerald-200 rounded-full opacity-50 blur-xl"></div>
+                <div className="absolute -top-4 -left-4 w-24 h-24 bg-yellow-200 dark:bg-yellow-900/50 rounded-full opacity-50 blur-xl"></div>
                 <img
                   src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Belajar Quran"
                   className="rounded-2xl shadow-2xl relative z-10 w-full object-cover h-[400px]"
                 />
-                <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-teal-100 rounded-full opacity-50 blur-xl"></div>
+                <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-gray-100 dark:bg-gray-700 rounded-full opacity-50 blur-xl"></div>
               </div>
             </div>
             <div className="md:w-1/2">
-              <span className="text-emerald-600 font-semibold tracking-wider uppercase text-sm">
+              <span className="text-yellow-600 dark:text-yellow-400 font-semibold tracking-wider uppercase text-sm">
                 Kenapa e-Furqan?
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-3 mb-6">
                 Metode Belajar Modern & Interaktif
               </h2>
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-emerald-600 shrink-0">
+                  <div className="w-12 h-12 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center text-yellow-600 dark:text-yellow-400 shrink-0">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -300,17 +300,17 @@ const Home = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       Mudah Dipahami
                     </h3>
-                    <p className="text-gray-500">
+                    <p className="text-gray-500 dark:text-gray-400">
                       Materi disusun secara sistematis agar mudah dipahami oleh
                       pemula sekalipun.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-emerald-600 shrink-0">
+                  <div className="w-12 h-12 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center text-yellow-600 dark:text-yellow-400 shrink-0">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -326,17 +326,17 @@ const Home = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       Akses Multi-Platform
                     </h3>
-                    <p className="text-gray-500">
+                    <p className="text-gray-500 dark:text-gray-400">
                       Bisa diakses melalui laptop, tablet, maupun smartphone
                       Anda.
                     </p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-emerald-600 shrink-0">
+                  <div className="w-12 h-12 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center text-yellow-600 dark:text-yellow-400 shrink-0">
                     <svg
                       className="w-6 h-6"
                       fill="none"
@@ -352,10 +352,10 @@ const Home = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       Terintegrasi Sains
                     </h3>
-                    <p className="text-gray-500">
+                    <p className="text-gray-500 dark:text-gray-400">
                       Menghubungkan ayat-ayat Al-Qur'an dengan penemuan ilmiah
                       modern.
                     </p>
@@ -368,7 +368,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-emerald-600 relative overflow-hidden">
+      <section className="py-20 bg-yellow-500 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <div className="absolute w-64 h-64 bg-white opacity-10 rounded-full -top-10 -left-10"></div>
           <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full bottom-0 right-0"></div>
@@ -377,11 +377,11 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Siap Memperdalam Ilmu Al-Qur'an?
           </h2>
-          <p className="text-emerald-100 text-lg mb-10 max-w-2xl mx-auto">
+          <p className="text-yellow-100 dark:text-yellow-50 text-lg mb-10 max-w-2xl mx-auto">
             Bergabunglah dengan ribuan pengguna lainnya dan rasakan kemudahan
             belajar Al-Qur'an dengan teknologi modern.
           </p>
-          <button className="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+          <button className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
             Mulai Sekarang - Gratis
           </button>
         </div>

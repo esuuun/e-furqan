@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive QTajwid Level 1</title>
+    <!-- Google Fonts: Inter for UI, Amiri for Arabic -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Level Selection Screen -->
+    <div id="level-selection">
+        <header style="margin-bottom: 40px;">
+            <h1 style="font-size: 2.5rem; color: var(--text-color); margin-bottom: 15px;">Interactive QTajwid</h1>
+            <p style="font-size: 1.2rem; color: var(--text-muted);">Pilih Tingkatan Belajar Anda</p>
+        </header>
+
+        <div class="level-cards-container">
+            <div class="level-card" onclick="selectLevel(1)">
+                <div class="level-icon">🌱</div>
+                <h2>Level 1</h2>
+                <p>Dasar Huruf, Harakat, & Bunyi</p>
+                <div class="level-badge">4 Modul</div>
+            </div>
+
+            <div class="level-card" onclick="selectLevel(2)">
+                <div class="level-icon">🌿</div>
+                <h2>Level 2</h2>
+                <p>Mad, Tanwin, Qalqalah, & Waqaf Dasar</p>
+                <div class="level-badge">12 Modul</div>
+            </div>
+
+            <div class="level-card" onclick="selectLevel(3)">
+                <div class="level-icon">🌳</div>
+                <h2>Level 3</h2>
+                <p>Hukum Nun/Mim Sukun, Tebal/Tipis, & Lanjutan</p>
+                <div class="level-badge">8 Modul</div>
+            </div>
+
+            <div class="level-card" onclick="selectLevel(4)">
+                <div class="level-icon">👑</div>
+                <h2>Level 4</h2>
+                <p>Simulasi Membaca Al-Quran (Surah An-Naas)</p>
+                <div class="level-badge">1 Modul</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App View (Hidden initially) -->
+    <div id="app-view" style="display: none;">
+        <div class="app-container">
+            <header style="display: flex; align-items: center; justify-content: center; position: relative; gap: 15px;">
+                <button id="btn-home" class="home-btn" onclick="goHome()">🏠 Home</button>
+                <div style="text-align: center;">
+                    <h1>Interactive QTajwid</h1>
+                    <p id="level-subtitle">Level 1</p>
+                </div>
+            </header>
+
+            <!-- Navigation Tabs -->
+            <nav class="nav-tabs" id="nav-tabs">
+                <!-- Level 1 Tabs -->
+                <button class="nav-btn level-1" data-tab="module1"><span>📖</span> Klik & Dengar</button>
+                <button class="nav-btn level-1" data-tab="module2"><span>👂</span> Tebak Suara</button>
+                <button class="nav-btn level-1" data-tab="module3"><span>🧩</span> Susun Kata</button>
+                <button class="nav-btn level-1" data-tab="module4"><span>🎙️</span> Cek Ucapan</button>
+
+                <!-- Level 2 Tabs -->
+                <button class="nav-btn level-2" data-tab="module5"><span>📏</span> Mad Panjang</button>
+                <button class="nav-btn level-2" data-tab="module6"><span>🔡</span> Tanwin/Sukun</button>
+                <button class="nav-btn level-2" data-tab="module7"><span>🏀</span> Qalqalah</button>
+                <button class="nav-btn level-2" data-tab="module8"><span>👃</span> Ghunnah</button>
+                <button class="nav-btn level-2" data-tab="module9"><span>🌙</span> Alif Lam</button>
+                <button class="nav-btn level-2" data-tab="module10"><span>❓</span> Kuis Waqaf</button>
+                <button class="nav-btn level-2" data-tab="module11"><span>🛑</span> Latihan Waqaf</button>
+                <button class="nav-btn level-2" data-tab="module12"><span>🕌</span> Muqatta'ah</button>
+
+                <!-- Level 3 Tabs -->
+                <!-- Level 3 Tabs -->
+                <button class="nav-btn level-3" data-tab="module13"><span>🤐</span> Nun Sukun</button>
+                <button class="nav-btn level-3" data-tab="module14"><span>👄</span> Mim Sukun</button>
+                <button class="nav-btn level-3" data-tab="module15"><span>🦁</span> Ra Tafkhim</button>
+                <button class="nav-btn level-3" data-tab="module16"><span>🤲</span> Lam Jalalah</button>
+                <button class="nav-btn level-3" data-tab="module17"><span>🏗️</span> Drag & Drop</button>
+                <button class="nav-btn level-3" data-tab="module18"><span>⚡</span> Cerdas Cermat</button>
+                <button class="nav-btn level-3" data-tab="module19"><span>🛑</span> Waqaf Lanjut</button>
+                <button class="nav-btn level-3" data-tab="module20"><span>🐍</span> Mad Tambahan</button>
+
+                <!-- Level 4 Tabs -->
+                <button class="nav-btn level-4" data-tab="module21"><span>🎙️</span> Simulasi Membaca</button>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main id="main-content">
+                <!-- Level 1 & 2 Modules (Preserved content) -->
+                <section id="module1" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Huruf & Harakat Dasar</h2>
+                        <p style="color: var(--text-muted);">Klik tombol untuk mendengarkan pelafalannya.</p>
+                    </div>
+                    <div id="letter-grid" class="letter-grid"></div>
+                </section>
+
+                <section id="module2" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Kuis Tebak Suara</h2>
+                        <p class="quiz-stats">Benar: <span id="quiz-score" style="color: var(--success);">0</span> |
+                            Total: <span id="quiz-total">0</span></p>
+                        <button id="quiz-play-btn" class="play-sound-btn" title="Putar Suara">🔊</button>
+                        <p style="margin-bottom: 10px;">Pilih huruf yang sesuai dengan suara:</p>
+                        <div id="quiz-options" class="quiz-options"></div>
+                        <div id="quiz-feedback" class="feedback-msg" style="margin-top: 20px;"></div>
+                    </div>
+                </section>
+
+                <section id="module3" class="tab-content">
+                    <div class="puzzle-container">
+                        <h2>Susun Kata Bahasa Arab</h2>
+                        <p style="color: var(--text-muted); margin-bottom: 20px;">Tarik huruf (drag) dan lepas (drop) ke
+                            kotak yang benar.</p>
+                        <div id="puzzle-stats" style="color: var(--text-muted); margin-bottom: 10px;">Kata <span
+                                id="word-current">1</span> dari <span id="word-total">10</span></div>
+                        <div class="target-word-container">
+                            <div id="target-word-arabic" class="word-display">...</div>
+                            <div id="target-word-meaning" style="color: var(--primary-dark); font-weight: 500;">...
+                            </div>
+                        </div>
+                        <div id="drop-area" class="drop-area"></div>
+                        <div id="pieces-area" class="pieces-area"></div>
+                        <div id="puzzle-feedback" class="feedback-msg" style="margin-top: 20px;"></div>
+                        <div style="margin-top: 30px; display: flex; justify-content: center; gap: 10px;">
+                            <button id="puzzle-reset-btn" class="btn-secondary">Ulangi</button>
+                            <button id="puzzle-next-btn" class="btn-primary" disabled>Lanjut ❯</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="module4" class="tab-content">
+                    <div class="speech-container">
+                        <div style="text-align: center;">
+                            <h2>Latihan Pengucapan</h2>
+                            <p style="color: var(--text-muted);">Ucapkan huruf yang muncul di layar.</p>
+                            <div id="browser-warning"
+                                style="display: none; background: #FEF3C7; color: #92400E; padding: 10px; border-radius: 8px; margin-top: 10px;">
+                                Browser Anda tidak mendukung fitur Suara. Gunakan Chrome/Edge/Safari.</div>
+                        </div>
+                        <div class="target-card" id="speech-card-trigger"
+                            style="cursor: pointer; transition: transform 0.2s;">
+                            <button id="speech-play-sample"
+                                style="position: absolute; top: 15px; left: 15px; background: none; border: none; cursor: pointer; opacity: 0.6; font-size: 1.2rem;"
+                                title="Dengar Contoh">🔊</button>
+                            <span id="speech-target" class="target-letter">?</span>
+                        </div>
+
+                        <div id="speech-feedback" class="feedback-msg"></div>
+                        <button id="speech-next-btn" class="btn-primary" style="margin-top: 20px;">Selanjutnya
+                            ❯</button>
+                    </div>
+                </section>
+
+                <section id="module5" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Mad Panjang (Mad Thabi'i)</h2>
+                        <p style="color: var(--text-muted);">Klik bagian huruf yang dibaca panjang (2 harakat).</p>
+                        <p id="mad-feedback" class="feedback-msg"></p>
+                    </div>
+                    <div id="mad-container"
+                        style="display: flex; flex-direction: column; gap: 15px; align-items: center;"></div>
+                </section>
+
+                <section id="module6" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Tanwin, Sukun, & Tasydid</h2>
+                        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                            <button id="btn-tanwin" class="btn-secondary">Tanwin</button>
+                            <button id="btn-sukun" class="btn-secondary">Sukun (Mati)</button>
+                            <button id="btn-tasydid" class="btn-secondary">Tasydid (Ganda)</button>
+                        </div>
+                    </div>
+                    <div id="diacritic-grid" class="letter-grid"></div>
+                </section>
+
+                <section id="module7" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Qalqalah (Pantulan)</h2>
+                        <p style="color: var(--text-muted);">Temukan huruf Qalqalah (ق ط ب ج د) yang sukun/mati.</p>
+                        <p class="quiz-stats">Skor: <span id="qalqalah-score" style="color: var(--success);">0</span>
+                        </p>
+                    </div>
+                    <div id="qalqalah-container" style="display: flex; flex-direction: column; align-items: center;">
+                    </div>
+                </section>
+
+                <section id="module8" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Ghunnah (Dengung)</h2>
+                        <p style="color: var(--text-muted);">Dengarkan bacaan dengung pada Nun dan Mim Tasydid.</p>
+                    </div>
+                    <div id="ghunnah-container"
+                        style="display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    </div>
+                </section>
+
+                <section id="module9" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Alif Lam (Qamariyah & Syamsiyah)</h2>
+                        <p style="color: var(--text-muted);">Tentukan apakah kata ini Qamariyah (Jelas) atau Syamsiyah
+                            (Lebur).</p>
+                        <p class="quiz-stats">Skor: <span id="aliflam-score">0</span></p>
+                    </div>
+                    <div id="aliflam-game-area" style="text-align: center;">
+                        <div id="aliflam-card" class="aliflam-card">
+                            <div id="aliflam-arabic" class="aliflam-text">...</div>
+                            <div id="aliflam-latin" class="text-transliteration">...</div>
+                        </div>
+                        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+                            <button id="btn-qamariyah" class="btn-primary" style="background-color: #3B82F6;">🌙
+                                Qamariyah</button>
+                            <button id="btn-syamsiyah" class="btn-primary" style="background-color: #F59E0B;">☀️
+                                Syamsiyah</button>
+                        </div>
+                        <div id="aliflam-feedback" class="feedback-msg" style="margin-top: 15px;"></div>
+                    </div>
+                </section>
+
+                <section id="module10" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Kuis Tanda Waqaf</h2>
+                        <p style="color: var(--text-muted);">Apa arti tanda waqaf ini?</p>
+                        <p class="quiz-stats">Waktu: <span id="waqaf-timer" style="color: var(--error);">30</span>s |
+                            Skor: <span id="waqaf-score">0</span></p>
+                        <div class="waqaf-card">
+                            <span id="waqaf-sign-display" class="waqaf-sign-large">...</span>
+                            <div id="waqaf-name-display" class="waqaf-name">...</div>
+                        </div>
+                        <div id="waqaf-options" class="quiz-options" style="grid-template-columns: 1fr;"></div>
+                    </div>
+                </section>
+
+                <section id="module11" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Latihan Cara Berhenti (Waqaf)</h2>
+                        <p style="color: var(--text-muted);">Klik untuk mendengar perbedaan bacaan washal (lanjut) dan
+                            waqaf (berhenti).</p>
+                    </div>
+                    <div id="waqaf-practice-grid" class="button-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+                    </div>
+                </section>
+
+                <section id="module12" class="tab-content">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h2>Huruf Muqatta'ah</h2>
+                        <p style="color: var(--text-muted);">Huruf-huruf awal surah. Dibaca sesuai nama hurufnya.</p>
+                    </div>
+                    <div id="muqattaah-grid" class="button-grid"
+                        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px;">
+                    </div>
+                </section>
+
+                <!-- Level 3 Modules (New) -->
+                <section id="module13" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Kuis Nun Sukun & Tanwin</h2>
+                        <p class="quiz-stats">Benar: <span id="nun-score" style="color: var(--success);">0</span></p>
+                        <div class="question-box">
+                            <div id="nun-example"
+                                style="font-size: 3rem; font-family: var(--font-arabic); margin-bottom: 10px;">...</div>
+                            <p id="nun-question">...</p>
+                        </div>
+                        <div id="nun-options" class="quiz-options" style="grid-template-columns: repeat(2, 1fr);"></div>
+                        <div id="nun-feedback" class="feedback-msg"></div>
+                        <button id="nun-next-btn" class="btn-primary"
+                            style="display:none; margin-top:20px;">Lanjut</button>
+                    </div>
+                </section>
+
+                <section id="module14" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Kuis Mim Sukun</h2>
+                        <p class="quiz-stats">Benar: <span id="mim-score" style="color: var(--success);">0</span></p>
+                        <div class="question-box">
+                            <div id="mim-example"
+                                style="font-size: 3rem; font-family: var(--font-arabic); margin-bottom: 10px;">...</div>
+                            <p id="mim-question">...</p>
+                        </div>
+                        <div id="mim-options" class="quiz-options" style="grid-template-columns: 1fr;"></div>
+                        <div id="mim-feedback" class="feedback-msg"></div>
+                        <button id="mim-next-btn" class="btn-primary"
+                            style="display:none; margin-top:20px;">Lanjut</button>
+                    </div>
+                </section>
+
+                <section id="module15" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Ra Tafkhim & Tarqiq</h2>
+                        <p style="color: var(--text-muted);">Tebalkan atau Tipiskan?</p>
+                        <div class="question-box">
+                            <div id="ra-example"
+                                style="font-size: 3rem; font-family: var(--font-arabic); margin-bottom: 10px;">...</div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                            <button id="btn-ra-tafkhim" class="choice-button btn-tafkhim">🔊 Tafkhim (Tebal)</button>
+                            <button id="btn-ra-tarqiq" class="choice-button btn-tarqiq">🔉 Tarqiq (Tipis)</button>
+                        </div>
+                        <div id="ra-feedback" class="feedback-msg" style="margin-top: 15px;"></div>
+                        <button id="ra-next-btn" class="btn-primary"
+                            style="display:none; margin-top:20px;">Lanjut</button>
+                    </div>
+                </section>
+
+                <section id="module16" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Hukum Lam Jalalah (Allah)</h2>
+                        <div class="question-box">
+                            <div id="jalalah-example"
+                                style="font-size: 3rem; font-family: var(--font-arabic); margin-bottom: 10px;">...</div>
+                            <p id="jalalah-question">...</p>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                            <button id="btn-jalalah-tafkhim" class="choice-button btn-tafkhim">🔊 Tafkhim</button>
+                            <button id="btn-jalalah-tarqiq" class="choice-button btn-tarqiq">🔉 Tarqiq</button>
+                        </div>
+                        <div id="jalalah-feedback" class="feedback-msg" style="margin-top: 15px;"></div>
+                        <button id="jalalah-next-btn" class="btn-primary"
+                            style="display:none; margin-top:20px;">Lanjut</button>
+                    </div>
+                </section>
+
+                <section id="module17" class="tab-content">
+                    <div class="puzzle-container">
+                        <h2>Arena Tajwid Drag & Drop</h2>
+                        <p>Tarik kartu ayat ke hukum tajwid yang benar.</p>
+                        <div class="drop-arena" id="tajwid-drop-arena">
+                            <!-- Drop Zones generated by JS -->
+                        </div>
+                        <div class="drag-source-container" id="tajwid-drag-source">
+                            <!-- Drag Items -->
+                        </div>
+                        <div id="drag-feedback" class="feedback-msg" style="margin-top: 20px;"></div>
+                        <button id="drag-reset-btn" class="btn-secondary" style="margin-top: 20px;">Reset</button>
+                    </div>
+                </section>
+
+                <section id="module18" class="tab-content">
+                    <div class="quiz-container" style="max-width: 800px;">
+                        <h2>⚡ Cerdas Cermat Tajwid ⚡</h2>
+                        <div class="game-stats">
+                            <span>❤️ Nyawa: <span id="speed-lives">3</span></span>
+                            <span>⭐ Skor: <span id="speed-score">0</span></span>
+                        </div>
+                        <div class="timer-container">
+                            <div id="speed-timer-bar" class="timer-bar"></div>
+                        </div>
+
+                        <div id="speed-game-area" style="display: none;">
+                            <div class="question-box" style="padding: 40px;">
+                                <div id="speed-question" style="font-size: 3.5rem; font-family: var(--font-arabic);">...
+                                </div>
+                            </div>
+                            <div id="speed-options" class="quiz-options"
+                                style="grid-template-columns: repeat(2, 1fr); margin-top: 30px;"></div>
+                        </div>
+
+                        <div id="speed-start-screen" style="text-align: center; padding: 40px;">
+                            <h3>Siap bermain cepat?</h3>
+                            <p>Jawab sebanyak mungkin pertanyaan sebelum waktu habis!</p>
+                            <button id="speed-start-btn" class="btn-primary"
+                                style="font-size: 1.5rem; padding: 15px 40px; margin-top: 20px;">MULAI GAME</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="module19" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Latihan Waqaf Lanjutan</h2>
+                        <p class="quiz-stats">Tebak cara berhenti yang benar.</p>
+                        <div class="question-box">
+                            <div id="waqaf-adv-example"
+                                style="font-size: 3rem; font-family: var(--font-arabic); margin-bottom: 10px;">...</div>
+                        </div>
+                        <div id="waqaf-adv-options" class="quiz-options" style="grid-template-columns: 1fr;"></div>
+                        <div id="waqaf-adv-feedback" class="feedback-msg"></div>
+                        <button id="waqaf-adv-next-btn" class="btn-primary"
+                            style="display:none; margin-top:20px;">Lanjut</button>
+                    </div>
+                </section>
+
+                <section id="module20" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Kuis Mad Tambahan</h2>
+                        <p>Kenali jenis Mad Far'i berikut.</p>
+                        <div class="question-box">
+                            <div id="mad-adv-example"
+                                style="font-size: 3rem; font-family: var(--font-arabic); margin-bottom: 10px;">...</div>
+                            <p id="mad-adv-note" style="color: var(--text-muted); font-style: italic;">...</p>
+                        </div>
+                        <div id="mad-adv-options" class="quiz-options"
+                            style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));"></div>
+                        <div id="mad-adv-feedback" class="feedback-msg"></div>
+                        <button id="mad-adv-next-btn" class="btn-primary"
+                            style="display:none; margin-top:20px;">Lanjut</button>
+                    </div>
+                </section>
+
+                <section id="module21" class="tab-content">
+                    <div class="quiz-container">
+                        <h2>Simulasi Membaca: Surah An-Naas</h2>
+                        <p>Baca ayat yang aktif satu per satu.</p>
+
+                        <div class="verse-list" id="verse-list"
+                            style="margin: 30px 0; padding: 15px; background: rgba(0, 0, 0, 0.2); border-radius: 16px; border: var(--glass-border); max-height: 250px; overflow-y: auto;">
+                            <!-- Verses populated by JS -->
+                        </div>
+
+                        <div class="current-verse-box"
+                            style="margin: 30px 0; padding: 30px; background: rgba(0, 0, 0, 0.2); border-radius: 20px; border: var(--glass-border); position: relative;">
+                            <h2 id="current-verse-number"
+                                style="font-family: var(--font-ui); font-size: 0.9rem; color: var(--accent-color); margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 1px;">
+                                ...</h2>
+                            <div id="current-verse-text"
+                                style="font-family: var(--font-arabic); font-size: 3.5rem; font-weight: bold; color: var(--text-color); line-height: 1.8; text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);">
+                                ...</div>
+                        </div>
+
+                        <div class="controls"
+                            style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-bottom: 40px;">
+                            <button id="l4-listen-button" class="btn-primary" title="Dengar Contoh">🔊 Dengar</button>
+                            <button id="l4-record-button" class="record-btn" title="Rekam & Baca"
+                                style="background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%); color: white;">🎙️</button>
+                        </div>
+
+                        <div id="l4-status-message" style="margin-bottom: 10px; color: var(--text-muted);">Pilih ayat
+                            untuk memulai</div>
+                        <div id="l4-result-display" class="feedback-msg"></div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element -->
+    <audio id="global-audio"></audio>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

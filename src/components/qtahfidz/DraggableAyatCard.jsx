@@ -112,14 +112,14 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
   // Let's stick to standard HTML5 DnD for now to keep it clean, as mobile DnD is tricky without libs.
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden mb-8 transition-all hover:shadow-xl">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden mb-8 transition-all hover:shadow-xl">
       {/* Header */}
-      <div className="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+      <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-100 dark:border-gray-600 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-full">
+          <span className="bg-yellow-100 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 text-xs font-bold px-2.5 py-1 rounded-full">
             Ayat {verse.id}
           </span>
-          <h3 className="text-gray-700 font-semibold text-sm">{surahName}</h3>
+          <h3 className="text-gray-700 dark:text-gray-200 font-semibold text-sm">{surahName}</h3>
         </div>
       </div>
 
@@ -128,7 +128,7 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
         {(mode === "display" || mode === "success") && (
           <div className="mb-6 text-center">
             <p
-              className="text-3xl md:text-4xl leading-loose font-amiri text-gray-800"
+              className="text-3xl md:text-4xl leading-loose font-amiri text-gray-800 dark:text-gray-100"
               dir="rtl"
             >
               {verse.text}
@@ -152,7 +152,7 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
         {mode === "quiz" && (
           <div className="mb-6">
             <div
-              className="flex flex-wrap gap-3 justify-center p-4 bg-gray-50 rounded-xl border-2 border-dashed border-gray-200 min-h-[100px]"
+              className="flex flex-wrap gap-3 justify-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 border-dashed border-gray-200 dark:border-gray-600 min-h-[100px]"
               dir="rtl"
             >
               {shuffledWords.map((wordObj, index) => (
@@ -163,8 +163,8 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
                   onDragOver={(e) => onDragOver(e, index)}
                   onDrop={(e) => onDrop(e, index)}
                   className={`
-                    cursor-move bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 
-                    text-2xl font-amiri hover:border-emerald-400 hover:shadow-md transition-all select-none
+                    cursor-move bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm border border-gray-200 dark:border-gray-600
+                    text-2xl font-amiri text-gray-800 dark:text-gray-100 hover:border-yellow-400 dark:hover:border-yellow-500 hover:shadow-md transition-all select-none
                     ${draggedItemIndex === index ? "opacity-50" : "opacity-100"}
                   `}
                 >
@@ -172,7 +172,7 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
                 </div>
               ))}
             </div>
-            <p className="text-center text-xs text-gray-400 mt-2">
+            <p className="text-center text-xs text-gray-400 dark:text-gray-500 mt-2">
               Geser kata-kata di atas untuk menyusun ayat yang benar
             </p>
           </div>
@@ -183,8 +183,8 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
           <div
             className={`text-center mb-4 p-3 rounded-lg ${
               feedback.type === "success"
-                ? "bg-green-50 text-green-700"
-                : "bg-red-50 text-red-700"
+                ? "bg-green-50 text-green-700 dark:bg-green-900 dark:text-green-300"
+                : "bg-red-50 text-red-700 dark:bg-red-900 dark:text-red-300"
             }`}
           >
             {feedback.message}
@@ -200,7 +200,7 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
                 audioRef.current.play();
               }
             }}
-            className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 font-medium text-sm transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 font-medium text-sm transition-colors flex items-center gap-2"
           >
             <span>🔁</span> Putar Ulang
           </button>
@@ -208,7 +208,7 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
           {mode === "display" || mode === "success" ? (
             <button
               onClick={startQuiz}
-              className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 font-medium text-sm shadow-lg shadow-emerald-200 transition-all transform hover:-translate-y-0.5"
+              className="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 font-medium text-sm shadow-lg shadow-yellow-200 dark:shadow-none transition-all transform hover:-translate-y-0.5"
             >
               {mode === "success" ? "Main Lagi" : "🎯 Mulai Latihan"}
             </button>
@@ -216,13 +216,13 @@ const DraggableAyatCard = ({ verse, surahName, surahId }) => {
             <>
               <button
                 onClick={checkAnswer}
-                className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 font-medium text-sm shadow-lg shadow-emerald-200 transition-all"
+                className="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 font-medium text-sm shadow-lg shadow-yellow-200 dark:shadow-none transition-all"
               >
                 Cek Jawaban
               </button>
               <button
                 onClick={resetCard}
-                className="px-4 py-2 bg-white border border-gray-300 text-gray-600 rounded-lg hover:bg-gray-50 font-medium text-sm transition-colors"
+                className="px-4 py-2 bg-white border border-gray-300 text-gray-600 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 font-medium text-sm transition-colors"
               >
                 ↩️ Lihat Ayat
               </button>

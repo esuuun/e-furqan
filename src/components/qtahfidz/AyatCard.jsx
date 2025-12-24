@@ -181,14 +181,14 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow duration-300">
       {/* Header */}
-      <div className="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+      <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-100 dark:border-gray-600 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full">
+          <span className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300 text-xs font-bold px-3 py-1 rounded-full">
             Ayat {ayatNumber}
           </span>
-          <span className="text-gray-500 text-sm font-medium">{surahName}</span>
+          <span className="text-gray-500 dark:text-gray-400 text-sm font-medium">{surahName}</span>
         </div>
       </div>
 
@@ -199,7 +199,7 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
         {mode === "display" && (
           <div className="text-center">
             <div
-              className="text-4xl leading-loose font-arabic mb-8 text-gray-800"
+              className="text-4xl leading-loose font-arabic mb-8 text-gray-800 dark:text-gray-100"
               dir="rtl"
             >
               {ayatText}
@@ -208,13 +208,13 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
             <div className="flex justify-center gap-4">
               <button
                 onClick={handlePlayAudio}
-                className="flex items-center px-6 py-2.5 bg-white border border-gray-200 text-gray-700 rounded-full font-medium hover:bg-gray-50 transition shadow-sm"
+                className="flex items-center px-6 py-2.5 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-200 rounded-full font-medium hover:bg-gray-50 dark:hover:bg-gray-600 transition shadow-sm"
               >
                 <span className="mr-2">🔊</span> Dengarkan
               </button>
               <button
                 onClick={handleStartQuiz}
-                className="flex items-center px-6 py-2.5 bg-emerald-600 text-white rounded-full font-medium hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/20"
+                className="flex items-center px-6 py-2.5 bg-yellow-500 text-white rounded-full font-medium hover:bg-yellow-600 transition shadow-lg shadow-yellow-500/20 dark:shadow-none"
               >
                 <span className="mr-2">🎯</span> Mulai Latihan
               </button>
@@ -226,15 +226,15 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
         {mode === "quiz" && (
           <div>
             <div className="text-center mb-6">
-              <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-semibold mb-2">
+              <span className="inline-block px-3 py-1 bg-blue-50 text-blue-600 dark:bg-blue-900 dark:text-blue-300 rounded-full text-xs font-semibold mb-2">
                 Bagian {currentSegmentIndex + 1} dari {segments.length}
               </span>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 dark:text-gray-400 text-sm">
                 Susun kata-kata di bawah ini sesuai urutan ayat.
               </p>
               <button
                 onClick={handlePlayAudio}
-                className="mt-3 inline-flex items-center px-4 py-1.5 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium hover:bg-emerald-100 transition"
+                className="mt-3 inline-flex items-center px-4 py-1.5 bg-yellow-50 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-300 rounded-full text-sm font-medium hover:bg-yellow-100 dark:hover:bg-yellow-800 transition"
               >
                 <span className="mr-1.5">🔊</span> Dengarkan
               </button>
@@ -244,11 +244,11 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
             <div
               onDrop={(e) => handleDrop(e, "container")}
               onDragOver={handleDragOver}
-              className="min-h-[120px] bg-gray-50 border-2 border-dashed border-gray-300 rounded-xl p-6 mb-8 flex flex-wrap gap-3 justify-center items-center transition-colors hover:border-emerald-400 hover:bg-emerald-50/30"
+              className="min-h-[120px] bg-gray-50 dark:bg-gray-700 border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-xl p-6 mb-8 flex flex-wrap gap-3 justify-center items-center transition-colors hover:border-yellow-400 hover:bg-yellow-50/30 dark:hover:bg-yellow-900/30"
               dir="rtl"
             >
               {containerWords.length === 0 && (
-                <span className="text-gray-400 text-sm pointer-events-none">
+                <span className="text-gray-400 dark:text-gray-500 text-sm pointer-events-none">
                   Tarik kata ke sini
                 </span>
               )}
@@ -261,7 +261,7 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
                   }
                   onDrop={(e) => handleDrop(e, "container", index)}
                   onDragOver={(e) => e.preventDefault()}
-                  className="bg-white border border-gray-200 shadow-sm px-4 py-2 rounded-lg text-xl font-arabic cursor-grab active:cursor-grabbing hover:border-emerald-500 transition-colors"
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-sm px-4 py-2 rounded-lg text-xl font-arabic text-gray-800 dark:text-gray-100 cursor-grab active:cursor-grabbing hover:border-yellow-500 dark:hover:border-yellow-500 transition-colors"
                 >
                   {word.text}
                 </div>
@@ -280,7 +280,7 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
                   key={word.id}
                   draggable
                   onDragStart={(e) => handleDragStart(e, word, "pool", index)}
-                  className="bg-white border border-gray-200 shadow-sm px-4 py-2 rounded-lg text-xl font-arabic cursor-grab active:cursor-grabbing hover:border-emerald-500 transition-colors"
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-sm px-4 py-2 rounded-lg text-xl font-arabic text-gray-800 dark:text-gray-100 cursor-grab active:cursor-grabbing hover:border-yellow-500 dark:hover:border-yellow-500 transition-colors"
                 >
                   {word.text}
                 </div>
@@ -293,8 +293,8 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
                 <div
                   className={`text-lg font-bold ${
                     feedback.type === "success"
-                      ? "text-emerald-600"
-                      : "text-red-500"
+                      ? "text-yellow-600 dark:text-yellow-400"
+                      : "text-red-500 dark:text-red-400"
                   }`}
                 >
                   {feedback.message}
@@ -304,7 +304,7 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
               <div className="flex gap-3">
                 <button
                   onClick={handleReset}
-                  className="px-6 py-2.5 text-gray-500 hover:text-gray-700 font-medium transition"
+                  className="px-6 py-2.5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 font-medium transition"
                 >
                   Batal
                 </button>
@@ -312,14 +312,14 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
                 {feedback?.type === "error" && (
                   <button
                     onClick={handleRetry}
-                    className="px-6 py-2.5 bg-yellow-500 text-white rounded-full font-bold hover:bg-yellow-600 transition shadow-lg shadow-yellow-500/20"
+                    className="px-6 py-2.5 bg-yellow-500 text-white rounded-full font-bold hover:bg-yellow-600 transition shadow-lg shadow-yellow-500/20 dark:shadow-none"
                   >
                     Ulangi
                   </button>
                 )}
                 <button
                   onClick={handleCheckAnswer}
-                  className="px-8 py-2.5 bg-emerald-600 text-white rounded-full font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/20"
+                  className="px-8 py-2.5 bg-yellow-500 text-white rounded-full font-bold hover:bg-yellow-600 transition shadow-lg shadow-yellow-500/20 dark:shadow-none"
                 >
                   Cek Jawaban
                 </button>
@@ -331,16 +331,16 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
         {/* Success Mode */}
         {mode === "success" && (
           <div className="text-center py-8">
-            <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+            <div className="w-16 h-16 bg-yellow-100 text-yellow-600 dark:bg-yellow-900 dark:text-yellow-300 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
               🎉
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">Benar!</h3>
-            <p className="text-gray-600 mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Benar!</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               Kamu berhasil menyusun ayat ini dengan benar.
             </p>
 
             <div
-              className="text-3xl leading-loose font-arabic mb-8 text-emerald-800"
+              className="text-3xl leading-loose font-arabic mb-8 text-yellow-800 dark:text-yellow-300"
               dir="rtl"
             >
               {ayatText}
@@ -348,7 +348,7 @@ const AyatCard = ({ surahNumber, ayatNumber, ayatText, surahName }) => {
 
             <button
               onClick={handleReset}
-              className="px-8 py-3 bg-emerald-600 text-white rounded-full font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/20"
+              className="px-8 py-3 bg-yellow-500 text-white rounded-full font-bold hover:bg-yellow-600 transition shadow-lg shadow-yellow-500/20 dark:shadow-none"
             >
               Ulangi Latihan
             </button>

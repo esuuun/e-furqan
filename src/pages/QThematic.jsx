@@ -107,26 +107,26 @@ const QThematic = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 font-sans">
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative bg-linear-to-br from-emerald-50 via-white to-teal-50 pt-32 pb-20 overflow-hidden">
+      <div className="relative bg-linear-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-32 pb-20 overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50"></div>
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-teal-100 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-yellow-100 dark:bg-yellow-900/20 rounded-full blur-3xl opacity-50"></div>
+        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-yellow-50 dark:bg-yellow-900/10 rounded-full blur-3xl opacity-50"></div>
 
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="inline-block px-4 py-1.5 mb-6 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold tracking-wide">
+          <div className="inline-block px-4 py-1.5 mb-6 bg-yellow-100 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-semibold tracking-wide">
             ✨ qThematic
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
             Belajar Kandungan Al-Qur’an <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-teal-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-yellow-600">
               Secara Tematis
             </span>
           </h1>
-          <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto">
             Ayat demi ayat dibahas menurut tema kehidupan, memudahkan Anda
             memahami pesan Al-Qur'an secara utuh dan mendalam.
           </p>
@@ -134,45 +134,45 @@ const QThematic = () => {
       </div>
 
       {/* Stats Section */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-12 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">
+              <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">
                 {courseData.length}
               </p>
-              <p className="text-gray-500 font-medium">Tema Utama</p>
+              <p className="text-gray-500 dark:text-gray-400 font-medium">Tema Utama</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">
+              <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">
                 {courseData.reduce(
                   (acc, theme) => acc + theme.subjects.length,
                   0
                 )}
               </p>
-              <p className="text-gray-500 font-medium">Subtema</p>
+              <p className="text-gray-500 dark:text-gray-400 font-medium">Subtema</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">6236</p>
-              <p className="text-gray-500 font-medium">Ayat Terpilih</p>
+              <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">6236</p>
+              <p className="text-gray-500 dark:text-gray-400 font-medium">Ayat Terpilih</p>
             </div>
             <div>
-              <p className="text-4xl font-bold text-emerald-600 mb-2">100%</p>
-              <p className="text-gray-500 font-medium">Valid & Shahih</p>
+              <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">100%</p>
+              <p className="text-gray-500 dark:text-gray-400 font-medium">Valid & Shahih</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Course List Section */}
-      <section id="tema" className="bg-gray-50 py-24">
+      <section id="tema" className="bg-gray-50 dark:bg-gray-800 py-24">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                 Daftar Tema
               </h2>
-              <p className="text-gray-500">
+              <p className="text-gray-500 dark:text-gray-400">
                 Jelajahi berbagai tema menarik dari Al-Qur'an
               </p>
             </div>
@@ -183,10 +183,10 @@ const QThematic = () => {
                 placeholder="Cari tema..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                className="w-full px-4 py-2 pl-10 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               />
               <svg
-                className="w-5 h-5 absolute left-3 top-2.5 text-gray-400"
+                className="w-5 h-5 absolute left-3 top-2.5 text-gray-400 dark:text-gray-500"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -210,7 +210,7 @@ const QThematic = () => {
                     : ""
                 }`}
                 key={theme.id}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group cursor-pointer block"
+                className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 group cursor-pointer block"
               >
                 <div className="h-48 overflow-hidden relative">
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors z-10"></div>
@@ -219,18 +219,18 @@ const QThematic = () => {
                     alt={theme.title}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-emerald-600 z-20 shadow-sm">
+                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-yellow-600 dark:text-yellow-400 z-20 shadow-sm">
                     {theme.subjects.length} Subtema
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
                     {theme.title}
                   </h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-4">
                     {theme.description}
                   </p>
-                  <div className="flex items-center text-emerald-600 font-medium text-sm group-hover:translate-x-2 transition-transform">
+                  <div className="flex items-center text-yellow-600 dark:text-yellow-400 font-medium text-sm group-hover:translate-x-2 transition-transform">
                     Pelajari Tema
                     <svg
                       className="w-4 h-4 ml-1"
@@ -255,7 +255,7 @@ const QThematic = () => {
             <div className="mt-12 text-center">
               <button
                 onClick={handleLoadMore}
-                className="px-8 py-3 bg-white border border-gray-300 text-gray-700 rounded-full font-semibold hover:bg-gray-50 transition"
+                className="px-8 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-full font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition"
               >
                 Muat Lebih Banyak
               </button>
@@ -265,7 +265,7 @@ const QThematic = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-emerald-600 relative overflow-hidden">
+      <section className="py-20 bg-yellow-500 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <div className="absolute w-64 h-64 bg-white opacity-10 rounded-full -top-10 -left-10"></div>
           <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full bottom-0 right-0"></div>
@@ -274,12 +274,12 @@ const QThematic = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Mulai Belajar Tafsir Tematis Sekarang
           </h2>
-          <p className="text-emerald-100 text-lg mb-10 max-w-2xl mx-auto">
+          <p className="text-white/90 dark:text-gray-200 text-lg mb-10 max-w-2xl mx-auto">
             Dapatkan pemahaman yang lebih dalam tentang Al-Qur'an dengan metode
             yang terstruktur dan mudah dipahami.
           </p>
           <a href="#tema">
-            <button className="bg-white text-emerald-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+            <button className="bg-white text-yellow-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-xl">
               Akses Materi Gratis
             </button>
           </a>

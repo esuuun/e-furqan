@@ -2,11 +2,11 @@ import React from "react";
 
 const ServiceCard = ({ title, description, link, icon }) => {
   return (
-    <div className="group bg-white rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-1 flex flex-col h-full relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-50 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+    <div className="group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-1 flex flex-col h-full relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-50 dark:bg-yellow-900/20 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
 
       <div className="relative z-10">
-        <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+        <div className="w-14 h-14 bg-yellow-100 dark:bg-yellow-900/50 rounded-xl flex items-center justify-center text-yellow-600 dark:text-yellow-400 mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
           {icon || (
             <svg
               className="w-7 h-7"
@@ -24,16 +24,16 @@ const ServiceCard = ({ title, description, link, icon }) => {
           )}
         </div>
 
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
           {title}
         </h3>
-        <p className="text-gray-500 mb-6 leading-relaxed grow">{description}</p>
+        <p className="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed grow">{description}</p>
 
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 transition group-hover:translate-x-1"
+          className="inline-flex items-center text-yellow-600 dark:text-yellow-400 font-semibold hover:text-yellow-700 dark:hover:text-yellow-300 transition group-hover:translate-x-1"
         >
           Kunjungi Website
           <svg

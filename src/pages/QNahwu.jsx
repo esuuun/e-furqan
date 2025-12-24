@@ -34,12 +34,12 @@ const QNahwu = () => {
       : null;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
       <div className="flex h-screen pt-20">
         {/* Sidebar Toggle Button (Mobile) */}
         <button
-          className={`fixed left-4 top-24 z-30 p-2 bg-emerald-600 text-white rounded-md shadow-lg md:hidden transition-all duration-300 ${
+          className={`fixed left-4 top-24 z-30 p-2 bg-yellow-500 text-white rounded-md shadow-lg md:hidden transition-all duration-300 ${
             isSidebarOpen ? "left-[260px]" : "left-4"
           }`}
           onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -49,12 +49,12 @@ const QNahwu = () => {
 
         {/* Sidebar */}
         <aside
-          className={`fixed md:static inset-y-0 left-0 z-20 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed md:static inset-y-0 left-0 z-20 w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 transform transition-transform duration-300 ease-in-out ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
           } md:translate-x-0 pt-20 md:pt-0 overflow-y-auto h-full pb-20`}
         >
-          <div className="p-4 border-b border-gray-100">
-            <h2 className="text-xl font-bold text-emerald-800 flex items-center gap-2">
+          <div className="p-4 border-b border-gray-100 dark:border-gray-700">
+            <h2 className="text-xl font-bold text-yellow-800 dark:text-yellow-200 flex items-center gap-2">
               <span className="text-2xl">📚</span> Nahwu
             </h2>
           </div>
@@ -64,8 +64,8 @@ const QNahwu = () => {
               to="/qnahwu"
               className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                 !category
-                  ? "bg-emerald-50 text-emerald-700 font-medium"
-                  : "text-gray-600 hover:bg-gray-50"
+                  ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 font-medium"
+                  : "text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
               }`}
             >
               <span>🏠</span> Beranda
@@ -76,8 +76,8 @@ const QNahwu = () => {
                 <button
                   className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-colors ${
                     expandedMenu === menu.id
-                      ? "bg-emerald-50 text-emerald-700 font-medium"
-                      : "text-gray-600 hover:bg-gray-50"
+                      ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 font-medium"
+                      : "text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700"
                   }`}
                   onClick={() => toggleMenu(menu.id)}
                 >
@@ -92,7 +92,7 @@ const QNahwu = () => {
                 </button>
 
                 {expandedMenu === menu.id && (
-                  <div className="pl-4 space-y-1 border-l-2 border-emerald-100 ml-4">
+                  <div className="pl-4 space-y-1 border-l-2 border-yellow-200 dark:border-yellow-800 ml-4">
                     {menu.items.map((item, index) => {
                       const isActive =
                         category === menu.id &&
@@ -105,8 +105,8 @@ const QNahwu = () => {
                           )}`}
                           className={`block px-4 py-2 text-sm rounded-md transition-colors ${
                             isActive
-                              ? "text-emerald-600 font-medium bg-white shadow-sm"
-                              : "text-gray-500 hover:text-emerald-600 hover:bg-gray-50"
+                              ? "text-yellow-600 dark:text-yellow-400 font-medium bg-white dark:bg-gray-700 shadow-sm"
+                              : "text-gray-500 dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-400 hover:bg-gray-50 dark:hover:bg-gray-700"
                           }`}
                         >
                           {item.title}
@@ -126,17 +126,17 @@ const QNahwu = () => {
             <iframe
               src={currentHtmlPath}
               title="Materi Nahwu"
-              className="w-full h-full border-none bg-white"
+              className="w-full h-full border-none bg-white dark:bg-gray-800"
             />
           ) : (
-            <div className="h-full flex flex-col items-center justify-center text-center p-8 bg-emerald-50/30">
-              <div className="w-24 h-24 bg-emerald-100 rounded-full flex items-center justify-center mb-6 text-4xl">
+            <div className="h-full flex flex-col items-center justify-center text-center p-8 bg-yellow-50/30 dark:bg-yellow-900/10">
+              <div className="w-24 h-24 bg-yellow-100 dark:bg-yellow-900/50 rounded-full flex items-center justify-center mb-6 text-4xl">
                 📖
               </div>
-              <h1 className="text-3xl font-bold text-gray-800 mb-4">
+              <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-4">
                 Selamat Datang di QNahwu
               </h1>
-              <p className="text-gray-600 max-w-md leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 max-w-md leading-relaxed">
                 Silakan pilih materi pembelajaran Nahwu dari menu di sebelah
                 kiri untuk mulai belajar.
               </p>

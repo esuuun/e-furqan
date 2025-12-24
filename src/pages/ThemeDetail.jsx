@@ -40,14 +40,14 @@ const ThemeDetail = () => {
 
   if (!theme) {
     return (
-      <div className="min-h-screen flex flex-col bg-white font-sans">
+      <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 font-sans">
         <Navbar />
         <div className="grow flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Tema Tidak Ditemukan
             </h1>
-            <Link to="/qthematic" className="text-emerald-600 hover:underline">
+            <Link to="/qthematic" className="text-yellow-600 dark:text-yellow-400 hover:underline">
               Kembali ke Daftar Tema
             </Link>
           </div>
@@ -63,11 +63,11 @@ const ThemeDetail = () => {
   );
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 font-sans">
       <Navbar />
 
       {/* Hero Section */}
-      <div className="relative bg-emerald-900 py-24 overflow-hidden">
+      <div className="relative bg-gray-900 dark:bg-black py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
             src={getThemeImage(themeIndex)}
@@ -75,12 +75,12 @@ const ThemeDetail = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 bg-linear-to-t from-emerald-900 via-emerald-900/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-gray-900/80 to-transparent dark:from-black dark:via-black/80"></div>
 
         <div className="container mx-auto px-6 relative z-10">
           <Link
             to="/qthematic"
-            className="inline-flex items-center text-emerald-200 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-gray-300 hover:text-white mb-6 transition-colors"
           >
             <svg
               className="w-5 h-5 mr-2"
@@ -100,12 +100,12 @@ const ThemeDetail = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {theme.title}
           </h1>
-          <p className="text-xl text-emerald-100 max-w-2xl leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
             {theme.description}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
-            <div className="flex items-center text-emerald-200 bg-emerald-800/50 px-4 py-2 rounded-full backdrop-blur-sm">
+            <div className="flex items-center text-yellow-200 bg-gray-800/50 px-4 py-2 rounded-full backdrop-blur-sm">
               <svg
                 className="w-5 h-5 mr-2"
                 fill="none"
@@ -129,10 +129,10 @@ const ThemeDetail = () => {
               placeholder="Cari dalam tema ini..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-5 py-3 pl-12 rounded-xl bg-white/10 backdrop-blur-md border border-emerald-400/30 text-white placeholder-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:bg-white/20 transition-all"
+              className="w-full px-5 py-3 pl-12 rounded-xl bg-white/10 backdrop-blur-md border border-yellow-400/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:bg-white/20 transition-all"
             />
             <svg
-              className="w-5 h-5 absolute left-4 top-3.5 text-emerald-200"
+              className="w-5 h-5 absolute left-4 top-3.5 text-gray-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -151,7 +151,7 @@ const ThemeDetail = () => {
       {/* Lessons List */}
       <main className="grow container mx-auto px-6 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
             Daftar Pelajaran
           </h2>
           <div className="space-y-8">
@@ -169,7 +169,7 @@ const ThemeDetail = () => {
 
               return (
                 <div key={subject.id}>
-                  <h3 className="text-xl font-bold text-emerald-700 mb-4 border-b border-emerald-100 pb-2">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 border-b border-yellow-200 dark:border-yellow-800 pb-2">
                     {subject.title}
                   </h3>
                   <div className="space-y-4">
@@ -181,21 +181,21 @@ const ThemeDetail = () => {
                             : ""
                         }`}
                         key={topic.id}
-                        className="group flex items-center p-4 bg-white border border-gray-100 rounded-xl hover:shadow-md hover:border-emerald-200 transition-all duration-300 cursor-pointer"
+                        className="group flex items-center p-4 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl hover:shadow-md hover:border-yellow-200 dark:hover:border-yellow-700 transition-all duration-300 cursor-pointer"
                       >
-                        <div className="shrink-0 w-12 h-12 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center font-bold text-lg group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                        <div className="shrink-0 w-12 h-12 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-400 rounded-full flex items-center justify-center font-bold text-lg group-hover:bg-yellow-500 group-hover:text-white transition-colors">
                           {tIndex + 1}
                         </div>
                         <div className="ml-6 grow">
-                          <h3 className="text-lg font-semibold text-gray-900 group-hover:text-emerald-600 transition-colors">
+                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
                             {topic.title}
                           </h3>
-                          <p className="text-sm text-gray-500">
+                          <p className="text-sm text-gray-500 dark:text-gray-400">
                             Materi Pembelajaran
                           </p>
                         </div>
                         <div className="shrink-0">
-                          <button className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 group-hover:border-emerald-600 group-hover:text-emerald-600 transition-all">
+                          <button className="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-600 flex items-center justify-center text-gray-400 dark:text-gray-500 group-hover:border-yellow-500 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-all">
                             <svg
                               className="w-5 h-5 ml-0.5"
                               fill="currentColor"
@@ -213,10 +213,10 @@ const ThemeDetail = () => {
             })}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-100">
+          <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800">
             <Link
               to="/qthematic"
-              className="inline-flex items-center text-gray-600 hover:text-emerald-600 font-medium transition-colors"
+              className="inline-flex items-center text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors"
             >
               <svg
                 className="w-5 h-5 mr-2"
