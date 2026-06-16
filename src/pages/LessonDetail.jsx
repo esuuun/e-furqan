@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useParams, Link, useLocation } from "react-router-dom";
 import { Document, Page, pdfjs } from "react-pdf";
 import Navbar from "../components/Navbar";
@@ -18,15 +18,6 @@ const LessonDetail = () => {
   const { themeSlug, lessonSlug } = useParams();
   const [activeTab, setActiveTab] = useState("quiz");
 
-  // Audio State
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const [isPaused, setIsPaused] = useState(false);
-  const [speechRate, setSpeechRate] = useState(1);
-  const [audioSections, setAudioSections] = useState([]);
-  const [showAudioPanel, setShowAudioPanel] = useState(false);
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(-1);
-  const [pendingSectionIndex, setPendingSectionIndex] = useState(-1);
-
   // Quiz State
   const [quizAnswers, setQuizAnswers] = useState({});
   const [quizSubmitted, setQuizSubmitted] = useState(false);
@@ -35,13 +26,6 @@ const LessonDetail = () => {
   // PDF State
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
-
-  const contentRef = useRef(null);
-  const speechRef = useRef(null); // To store the current utterance
-  const synth = window.speechSynthesis;
-  const audioSegmentsRef = useRef([]);
-  const currentSegmentIndexRef = useRef(0);
-  const isPlayingRef = useRef(false); // Track playback state safely
 
   const theme = courseData.find((t) => t.id === themeSlug);
 
@@ -59,373 +43,82 @@ const LessonDetail = () => {
   const searchParams = new URLSearchParams(location.search);
   const highlightTerm = searchParams.get("highlight");
 
-  // Pre-process content to ensure IDs are stable and apply highlighting
-  const processedContent = useMemo(() => {
-    if (!lesson?.content) return "";
-
-    const div = document.createElement("div");
-    div.innerHTML = lesson.content;
-
-    // 1. ID Injection
-    let sectionCount = 0;
-    const processNode = (node) => {
-      if (node.tagName === "H2" || node.tagName === "H3") {
-        // Always assign a consistent ID based on order if not present
-        if (!node.id) {
-          node.id = `section-${sectionCount}`;
-          sectionCount++;
-        }
-      }
-      if (node.children) {
-        Array.from(node.children).forEach(processNode);
-      }
-    };
-    Array.from(div.children).forEach(processNode);
-
-    // 2. Highlighting
-    if (highlightTerm) {
-      const term = highlightTerm.toLowerCase();
-      // Escape special regex characters
-      const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-      const highlightText = (node) => {
-        if (node.nodeType === 3) {
-          // Text node
-          const text = node.nodeValue;
-          if (text.toLowerCase().includes(term)) {
-            const regex = new RegExp(`(${escapedTerm})`, "gi");
-            const parts = text.split(regex);
-            const fragment = document.createDocumentFragment();
-
-            parts.forEach((part) => {
-              if (part.toLowerCase() === term) {
-                const mark = document.createElement("span");
-                mark.className =
-                  "bg-yellow-300 text-gray-900 font-medium px-1 rounded-sm";
-                mark.textContent = part;
-                fragment.appendChild(mark);
-              } else {
-                fragment.appendChild(document.createTextNode(part));
-              }
-            });
-
-            node.parentNode.replaceChild(fragment, node);
-          }
-        } else if (
-          node.nodeType === 1 &&
-          node.tagName !== "SCRIPT" &&
-          node.tagName !== "STYLE"
-        ) {
-          // Element node, recurse
-          Array.from(node.childNodes).forEach(highlightText);
-        }
-      };
-      Array.from(div.childNodes).forEach(highlightText);
-    }
-
-    return div.innerHTML;
-  }, [lesson, highlightTerm]);
-
-  // --- Audio Logic ---
-
-  // Parse content for audio sections
-  useEffect(() => {
-    if (activeTab === "materi" && contentRef.current && lesson) {
-      // Small timeout to ensure DOM is ready
-      setTimeout(() => {
-        const sections = parseContentForAudio(contentRef.current);
-        setAudioSections(sections);
-      }, 100);
-    }
-  }, [lesson, activeTab]);
-
-  // Handle pending audio section (when switching from another tab)
-  useEffect(() => {
-    if (
-      pendingSectionIndex !== -1 &&
-      audioSections.length > 0 &&
-      activeTab === "materi" &&
-      contentRef.current
-    ) {
-      // Add extra delay to ensure DOM is fully updated after tab switch
-      setTimeout(() => {
-        const index = pendingSectionIndex;
-
-        // Stop current
-        synth.cancel();
-
-        // Build segments from this section onwards
-        let segments = [];
-        for (let i = index; i < audioSections.length; i++) {
-          segments = segments.concat(audioSections[i].segments);
-        }
-
-        audioSegmentsRef.current = segments;
-        currentSegmentIndexRef.current = 0;
-        setCurrentSectionIndex(index);
-
-        // Highlight section title
-        const section = audioSections[index];
-
-        // Try to find element by ID first (more reliable if re-rendered)
-        let element = section.id ? document.getElementById(section.id) : null;
-
-        if (!element && section.element) {
-          element = section.element;
-        }
-
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-          // Add temporary highlight class or style
-          const originalColor = element.style.color;
-          element.style.transition = "color 0.5s";
-          element.style.color = "#EAB308"; // Yellow-500
-          setTimeout(() => {
-            element.style.color = originalColor;
-          }, 1500);
-        }
-
-        setIsSpeaking(true);
-        setIsPaused(false);
-        playNextSegment();
-
-        // Reset pending
-        setPendingSectionIndex(-1);
-      }, 300);
-    }
-  }, [audioSections, pendingSectionIndex, activeTab]);
-
-  // Stop audio on unmount or lesson change
-  useEffect(() => {
-    return () => {
-      stopSpeaking();
-    };
-  }, [lessonSlug]);
-
-  // Ensure audio stops when navigating away (component unmount)
-  useEffect(() => {
-    return () => {
-      window.speechSynthesis.cancel();
-      isPlayingRef.current = false;
-    };
+  // Helper to construct normalized regex for highlight matches (q/k interchangeability)
+  const getHighlightRegex = useCallback((term, flags = "gi") => {
+    if (!term) return null;
+    let pattern = term.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    pattern = pattern.replace(/q/gi, '[qk]').replace(/k/gi, '[qk]');
+    return new RegExp(`(${pattern})`, flags);
   }, []);
 
-  const parseContentForAudio = (root) => {
-    const sections = [];
-    let currentSection = {
-      title: "Pembukaan",
-      segments: [],
-      id: "section-intro",
-      element: root.firstElementChild,
-    };
+  // PDF Text highlighting renderer - must return a string (HTML) since react-pdf uses innerHTML
+  const textRenderer = useCallback(
+    ({ str }) => {
+      if (!highlightTerm) return str;
 
-    const addSegment = (text, lang) => {
-      if (!text || text.trim().length === 0) return;
-      if (lang === "id-ID") {
-        // Split by punctuation for better pacing
-        const chunks = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
-        chunks.forEach((c) => {
-          if (c.trim())
-            currentSection.segments.push({ text: c.trim(), lang: "id-ID" });
-        });
-      } else {
-        currentSection.segments.push({ text: text.trim(), lang: "ar-SA" });
-      }
-    };
+      // Escape HTML entities to prevent XSS
+      const escapeHtml = (s) =>
+        s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-    const processNode = (node) => {
-      if (node.style && node.style.display === "none") return;
-      if (node.classList && node.classList.contains("toc-list")) return;
+      const escapedStr = escapeHtml(str);
 
-      if (node.tagName === "H2" || node.tagName === "H3") {
-        if (currentSection.segments.length > 0) sections.push(currentSection);
+      // Build pattern with q/k interchangeability for Indonesian/Arabic transliteration
+      let pattern = highlightTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+      pattern = pattern.replace(/q/gi, '[qk]').replace(/k/gi, '[qk]');
+      const regex = new RegExp(`(${pattern})`, 'gi');
 
-        // ID should already be there from processedContent
-        const sectionId = node.id || `section-${sections.length}`;
+      const result = escapedStr.replace(regex, '<mark>$1</mark>');
+      // If no match, return original str (not escaped, to preserve original content)
+      return result !== escapedStr ? result : str;
+    },
+    [highlightTerm]
+  );
 
-        currentSection = {
-          title: node.innerText,
-          segments: [],
-          id: sectionId,
-          element: node,
-        };
-      } else if (node.classList && node.classList.contains("quran-quote")) {
-        const arabic = node.querySelector(".arabic");
-        if (arabic) addSegment(arabic.innerText, "ar-SA");
-        const trans = node.querySelector(".translation");
-        if (trans) addSegment(trans.innerText, "id-ID");
-      } else if (node.tagName === "DIV" || node.tagName === "SECTION") {
-        Array.from(node.children).forEach(processNode);
-      } else if (
-        node.tagName === "P" ||
-        node.tagName === "LI" ||
-        node.tagName === "STRONG"
-      ) {
-        if (!node.closest(".quran-quote")) {
-          if (
-            !node.classList.contains("arabic") &&
-            !node.classList.contains("translation") &&
-            !node.classList.contains("source")
-          ) {
-            addSegment(node.innerText, "id-ID");
-          }
+  // Helper to find the first page containing the term
+  const findFirstPageWithTerm = useCallback(async (pdf, term) => {
+    try {
+      const regex = getHighlightRegex(term, "i");
+      if (!regex) return 1;
+
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const page = await pdf.getPage(i);
+        const textContent = await page.getTextContent();
+        const itemsStr = textContent.items.map(item => item.str);
+        const textWithSpaces = itemsStr.join(" ");
+        const textWithoutSpaces = itemsStr.join("");
+
+        if (regex.test(textWithSpaces) || regex.test(textWithoutSpaces)) {
+          return i;
         }
-      } else if (node.tagName === "UL" || node.tagName === "OL") {
-        Array.from(node.children).forEach(processNode);
       }
-    };
-
-    Array.from(root.children).forEach(processNode);
-    if (currentSection.segments.length > 0) sections.push(currentSection);
-    return sections;
-  };
-
-  const getVoices = () => {
-    return synth.getVoices();
-  };
-
-  const playNextSegment = () => {
-    if (!isPlayingRef.current) return;
-
-    if (currentSegmentIndexRef.current >= audioSegmentsRef.current.length) {
-      setIsSpeaking(false);
-      setIsPaused(false);
-      isPlayingRef.current = false;
-      return;
+    } catch (error) {
+      console.error("Error searching PDF text:", error);
     }
+    return 1;
+  }, [getHighlightRegex]);
 
-    const seg = audioSegmentsRef.current[currentSegmentIndexRef.current];
-    const utterance = new SpeechSynthesisUtterance(seg.text);
-    const voices = getVoices();
-
-    let selectedVoice = null;
-    if (seg.lang === "ar-SA") {
-      selectedVoice = voices.find((v) => v.lang.includes("ar"));
-    } else {
-      selectedVoice =
-        voices.find((v) => v.lang === "id-ID") ||
-        voices.find(
-          (v) => v.lang.replace("_", "-").toLowerCase() === "id-id",
-        ) ||
-        voices.find((v) => v.name.toLowerCase().includes("indonesia")) ||
-        voices.find((v) => v.lang.includes("id"));
+  // Redirect to pdf tab if highlight search is present
+  useEffect(() => {
+    if (highlightTerm) {
+      setActiveTab("pdf");
     }
+  }, [lesson, highlightTerm]);
 
-    if (selectedVoice) utterance.voice = selectedVoice;
-    utterance.lang = seg.lang || "id-ID";
-    utterance.rate = speechRate;
-
-    utterance.onend = () => {
-      if (isPlayingRef.current) {
-        currentSegmentIndexRef.current++;
-        playNextSegment();
-      }
-    };
-
-    utterance.onerror = (e) => {
-      console.error("Audio error", e);
-      if (
-        e.error !== "interrupted" &&
-        e.error !== "canceled" &&
-        isPlayingRef.current
-      ) {
-        currentSegmentIndexRef.current++;
-        playNextSegment();
-      }
-    };
-
-    speechRef.current = utterance;
-    synth.speak(utterance);
-  };
-
-  const playSection = (index) => {
-    setShowAudioPanel(false);
-
-    if (activeTab !== "materi") {
-      setActiveTab("materi");
-      setPendingSectionIndex(index);
-      return;
-    }
-
-    // Stop current
-    synth.cancel();
-
-    // Build segments from this section onwards
-    let segments = [];
-    for (let i = index; i < audioSections.length; i++) {
-      segments = segments.concat(audioSections[i].segments);
-    }
-
-    audioSegmentsRef.current = segments;
-    currentSegmentIndexRef.current = 0;
-    setCurrentSectionIndex(index);
-
-    // Highlight section title
-    const section = audioSections[index];
-
-    // Try to find element by ID first (more reliable if re-rendered)
-    let element = section.id ? document.getElementById(section.id) : null;
-
-    if (!element && section.element) {
-      element = section.element;
-    }
-
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-      // Add temporary highlight class or style
-      const originalColor = element.style.color;
-      element.style.transition = "color 0.5s";
-      element.style.color = "#059669"; // Emerald-600
-      setTimeout(() => {
-        element.style.color = originalColor;
-      }, 1500);
-    }
-
-    setIsSpeaking(true);
-    setIsPaused(false);
-    isPlayingRef.current = true;
-    playNextSegment();
-  };
-
-  const toggleSpeech = () => {
-    if (isSpeaking) {
-      if (isPaused) {
-        synth.resume();
-        setIsPaused(false);
-      } else {
-        synth.pause();
-        setIsPaused(true);
-      }
-    } else {
-      // Start from beginning if nothing playing
-      if (audioSections.length > 0) {
-        playSection(0);
-      }
-    }
-  };
-
-  const stopSpeaking = () => {
-    isPlayingRef.current = false;
-    synth.cancel();
-    setIsSpeaking(false);
-    setIsPaused(false);
-    currentSegmentIndexRef.current = 0;
-  };
-
-  const toggleSpeed = () => {
-    const newRate = speechRate === 1 ? 1.5 : speechRate === 1.5 ? 2 : 1;
-    setSpeechRate(newRate);
-    // If playing, we need to restart current segment with new rate
-    if (isSpeaking && !isPaused) {
-      synth.cancel();
-      playNextSegment();
-    }
-  };
 
   // --- PDF Logic ---
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-    setPageNumber(1);
+  function onDocumentLoadSuccess(pdf) {
+    setNumPages(pdf.numPages);
+    if (highlightTerm) {
+      findFirstPageWithTerm(pdf, highlightTerm)
+        .then((pageIndex) => {
+          setPageNumber(pageIndex);
+        })
+        .catch(() => {
+          setPageNumber(1);
+        });
+    } else {
+      setPageNumber(1);
+    }
   }
 
   function changePage(offset) {
@@ -526,7 +219,7 @@ const LessonDetail = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2">
-            {/* Header & Audio Controls */}
+            {/* Header */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4 bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm sticky top-20 z-30">
               <div>
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -536,102 +229,10 @@ const LessonDetail = () => {
                   Interactive Learning Module
                 </p>
               </div>
-              {/* <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setShowAudioPanel(true)}
-                  className="px-4 py-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-800 dark:text-yellow-200 rounded-lg hover:bg-yellow-100 dark:hover:bg-yellow-900/40 transition-colors text-sm font-medium flex items-center gap-2"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                  Daftar Audio
-                </button>
-                <div className="h-8 w-px bg-gray-200 dark:bg-gray-700 mx-2"></div>
-                <button
-                  onClick={toggleSpeech}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                    isSpeaking && !isPaused
-                      ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-600 dark:text-yellow-400"
-                      : "bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600"
-                  }`}
-                  title={isSpeaking && !isPaused ? "Jeda" : "Putar"}
-                >
-                  {isSpeaking && !isPaused ? (
-                    <svg
-                      className="w-4 h-4"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
-                    </svg>
-                  ) : (
-                    <svg
-                      className="w-4 h-4 ml-0.5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  )}
-                </button>
-                <button
-                  onClick={stopSpeaking}
-                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center justify-center transition-colors"
-                  title="Berhenti"
-                >
-                  <svg
-                    className="w-4 h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M6 6h12v12H6z" />
-                  </svg>
-                </button>
-                <button
-                  onClick={toggleSpeed}
-                  className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 flex items-center justify-center text-xs font-bold transition-colors"
-                  title="Kecepatan"
-                >
-                  {speechRate}x
-                </button>
-              </div> */}
             </div>
 
             {/* Tabs */}
             <div className="flex gap-2 mb-6 overflow-x-auto pb-2 mt-8">
-              {/* <button
-                onClick={() => setActiveTab("materi")}
-                className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
-                  activeTab === "materi"
-                    ? "bg-yellow-500 dark:bg-yellow-600 text-white shadow-lg shadow-yellow-500/20"
-                    : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
-                }`}
-              >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
-                Materi Pelajaran
-              </button> */}
               <button
                 onClick={() => setActiveTab("pdf")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
@@ -682,13 +283,7 @@ const LessonDetail = () => {
 
             {/* Content Area */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 mb-8 min-h-[500px]">
-              {activeTab === "materi" && (
-                <div
-                  ref={contentRef}
-                  className="lesson-content"
-                  dangerouslySetInnerHTML={{ __html: processedContent }}
-                />
-              )}
+
 
               {activeTab === "pdf" && (
                 <div className="flex flex-col items-center bg-gray-100 dark:bg-gray-700 rounded-xl p-6 min-h-[600px]">
@@ -771,7 +366,8 @@ const LessonDetail = () => {
                         >
                           <Page
                             pageNumber={pageNumber}
-                            renderTextLayer={false}
+                            renderTextLayer={true}
+                            customTextRenderer={textRenderer}
                             renderAnnotationLayer={false}
                             width={Math.min(window.innerWidth * 0.8, 800)}
                             className="max-w-full"
@@ -1039,57 +635,6 @@ const LessonDetail = () => {
             </div>
           </div>
         </div>
-
-        {/* Audio Panel Overlay */}
-        {showAudioPanel && (
-          <div className="fixed inset-0 bg-black/50 dark:bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md max-h-[80vh] flex flex-col">
-              <div className="p-6 border-b border-gray-100 dark:border-gray-700 flex justify-between items-center">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                  Daftar Bagian Audio
-                </h3>
-                <button
-                  onClick={() => setShowAudioPanel(false)}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                </button>
-              </div>
-              <div className="overflow-y-auto p-4 space-y-2">
-                {audioSections.map((section, index) => (
-                  <button
-                    key={index}
-                    onClick={() => playSection(index)}
-                    className={`w-full text-left p-4 rounded-xl transition-all ${
-                      currentSectionIndex === index && isSpeaking
-                        ? "bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 font-bold border border-yellow-200 dark:border-yellow-800"
-                        : "bg-gray-50 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 border border-transparent"
-                    }`}
-                  >
-                    {section.title}
-                  </button>
-                ))}
-                {audioSections.length === 0 && (
-                  <p className="text-center text-gray-500 dark:text-gray-400 py-8">
-                    Tidak ada bagian audio yang terdeteksi.
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
       </main>
     </div>
   );
