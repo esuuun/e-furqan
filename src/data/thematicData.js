@@ -1,7 +1,7 @@
-const courseData = [
+﻿const courseData = [
     {
         id: "theme-1",
-        title: "Tema 1: Mengenal Allah",
+        title: "1. Mengenal Allah",
         description: "Pembahasan mendalam tentang nama dan sifat Allah",
         subjects: [
             {
@@ -3676,7 +3676,7 @@ const courseData = [
     },
     {
         id: "theme-2",
-        title: "Tema 2: Golongan Manusia",
+        title: "2. Golongan Manusia",
         subjects: [
             {
                 id: "subject-1",
@@ -4653,7 +4653,7 @@ const courseData = [
     },
     {
         id: "theme-3",
-        title: "Tema 3: Malaikat, Kitab, dan Rasul",
+        title: "3. Malaikat, Kitab, dan Rasul",
         subjects: [
             {
                 id: "subject-1",
@@ -6505,7 +6505,7 @@ const courseData = [
     },
     {
         id: "theme-4",
-        title: "Tema 4: Taqdir dan Hari Akhir",
+        title: "4. Taqdir dan Hari Akhir",
         description: "Pembahasan tentang beriman kepada Qadha dan Qadar serta Hari Kiamat",
         subjects: [
             {
@@ -8283,7 +8283,7 @@ diminta pertanggungjawabannya.</p>
     }
     , {
         id: "theme-5",
-        title: "Tema 5: Nabi Muhammad SAW",
+        title: "5. Nabi Muhammad SAW",
         description: "Sejarah Perjalanan Hidup Nabi Muhammad SAW",
         subjects: [
             {
@@ -10976,7 +10976,7 @@ diminta pertanggungjawabannya.</p>
 
     {
         id: "theme-6",
-        title: "Tema 6: Kisah Dalam Alquran",
+        title: "6. Kisah Dalam Alquran",
         description: "Kisah para Nabi dan Rasul",
         subjects: [
 
@@ -14032,7 +14032,7 @@ diminta pertanggungjawabannya.</p>
 
 {
         "id": "theme-7",
-        "title": "Tema 7: Taqwa, Jihad dan Ibadah",
+        "title": "7. Taqwa, Jihad dan Ibadah",
         "description": "Pembahasan mendalam tentang taqwa, jihad dan ibadah",
         "subjects": [
             {
@@ -14168,7 +14168,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-8",
-        "title": "Tema 8: Ibadah Mahdah",
+        "title": "8. Ibadah Mahdah",
         "description": "Pembahasan mendalam tentang ibadah mahdah",
         "subjects": [
             {
@@ -15166,7 +15166,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-9",
-        "title": "Tema 9: Ibadah Ghair Mahdah",
+        "title": "9. Ibadah Ghair Mahdah",
         "description": "Pembahasan mendalam tentang ibadah ghair mahdah",
         "subjects": [
             {
@@ -15589,7 +15589,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-10",
-        "title": "Tema 10: Akhlak Terpuji",
+        "title": "10. Akhlak Terpuji",
         "description": "Pembahasan mendalam tentang akhlak terpuji",
         "subjects": [
             {
@@ -16873,7 +16873,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-11",
-        "title": "Tema 11: Akhlak Tercela",
+        "title": "11. Akhlak Tercela",
         "description": "Pembahasan mendalam tentang akhlak tercela",
         "subjects": [
             {
@@ -17706,7 +17706,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-12",
-        "title": "Tema 12: Hukum Keluarga",
+        "title": "12. Hukum Keluarga",
         "description": "Pembahasan mendalam tentang hukum keluarga",
         "subjects": [
             {
@@ -18252,7 +18252,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-13",
-        "title": "Tema 13: Hukum Mu'amalat",
+        "title": "13. Hukum Mu'amalat",
         "description": "Pembahasan mendalam tentang hukum mu'amalat",
         "subjects": [
             {
@@ -18429,7 +18429,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-14",
-        "title": "Tema 14: Hukum Pidana",
+        "title": "14. Hukum Pidana",
         "description": "Pembahasan mendalam tentang hukum pidana",
         "subjects": [
             {
@@ -18606,7 +18606,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-15",
-        "title": "Tema 15: Hukum Pemerintahan",
+        "title": "15. Hukum Pemerintahan",
         "description": "Pembahasan mendalam tentang hukum pemerintahan",
         "subjects": [
             {
@@ -18824,7 +18824,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-16",
-        "title": "Tema 16: Hukum Makanan dan Pakaian",
+        "title": "16. Hukum Makanan dan Pakaian",
         "description": "Pembahasan mendalam tentang hukum makanan dan pakaian",
         "subjects": [
             {
@@ -19083,7 +19083,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-17",
-        "title": "Tema 17: Manusia",
+        "title": "17. Manusia",
         "description": "Pembahasan mendalam tentang manusia",
         "subjects": [
             {
@@ -19383,7 +19383,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-18",
-        "title": "Tema 18: Alam",
+        "title": "18. Alam",
         "description": "Pembahasan mendalam tentang alam",
         "subjects": [
             {
@@ -19806,7 +19806,7 @@ diminta pertanggungjawabannya.</p>
     },
     {
         "id": "theme-19",
-        "title": "Tema 19: Jin dan Iblis",
+        "title": "19. Jin dan Iblis",
         "description": "Pembahasan mendalam tentang jin dan iblis",
         "subjects": [
             {
