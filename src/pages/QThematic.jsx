@@ -92,6 +92,8 @@ const QThematic = () => {
       "nabiMuhammad.png",
       "kisahAlquran.png",
       "taqwaJihadIbadah.png",
+      "ibadahMahdah.png",
+      "ibadahGhairMahdah.png",
       "akhlakTerpuji.png",
       "akhlakTercela.png",
       "hukumKeluarga.png",

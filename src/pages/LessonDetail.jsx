@@ -453,8 +453,8 @@ const LessonDetail = () => {
     if (!lesson.quiz) return;
     let correct = 0;
     lesson.quiz.forEach((q, index) => {
-      // Data uses 1-based index for 'correct'
-      const correctIndex = q.correct - 1;
+      // Data uses 1-based index for 'correct' (or fallback to 0-based 'answer')
+      const correctIndex = q.correct !== undefined ? q.correct - 1 : q.answer;
       if (quizAnswers[index] === correctIndex) {
         correct++;
       }
@@ -815,8 +815,8 @@ const LessonDetail = () => {
                           </p>
                           <div className="space-y-3">
                             {q.options.map((option, oIndex) => {
-                              // Data uses 1-based index for 'correct'
-                              const correctIndex = q.correct - 1;
+                              // Data uses 1-based index for 'correct' (or fallback to 0-based 'answer')
+                              const correctIndex = q.correct !== undefined ? q.correct - 1 : q.answer;
 
                               let optionClass =
                                 "w-full text-left p-4 rounded-lg border transition-all ";

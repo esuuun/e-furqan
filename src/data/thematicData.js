@@ -14028,6 +14028,6123 @@ diminta pertanggungjawabannya.</p>
                 ]
             }
         ]
+    },
+
+{
+        "id": "theme-7",
+        "title": "Tema 7: Taqwa, Jihad dan Ibadah",
+        "description": "Pembahasan mendalam tentang taqwa, jihad dan ibadah",
+        "subjects": [
+            {
+                "id": "subject-7-1",
+                "title": "Pokok Bahasan: Hakikat Taqwa, Jihad dan Ibadah",
+                "topics": [
+                    {
+                        "id": 169,
+                        "title": "Hakikat Taqwa",
+                        "file": "topic_169.pdf",
+                        "content": "<h2>Hakikat Taqwa</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hakikat Taqwa\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Taqwa, Jihad dan Ibadah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hakikat Taqwa\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Taqwa, Jihad dan Ibadah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hakikat Taqwa\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hakikat Taqwa\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hakikat Taqwa\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 170,
+                        "title": "Hakikat Jihad",
+                        "file": "topic_170.pdf",
+                        "content": "<h2>Hakikat Jihad</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hakikat Jihad\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Taqwa, Jihad dan Ibadah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hakikat Jihad\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Taqwa, Jihad dan Ibadah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hakikat Jihad\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hakikat Jihad\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hakikat Jihad\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 171,
+                        "title": "Hakikat Ibadah",
+                        "file": "topic_171.pdf",
+                        "content": "<h2>Hakikat Ibadah</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hakikat Ibadah\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Taqwa, Jihad dan Ibadah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hakikat Ibadah\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Taqwa, Jihad dan Ibadah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hakikat Ibadah\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hakikat Ibadah\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hakikat Ibadah\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-8",
+        "title": "Tema 8: Ibadah Mahdah",
+        "description": "Pembahasan mendalam tentang ibadah mahdah",
+        "subjects": [
+            {
+                "id": "subject-8-1",
+                "title": "Pokok Bahasan: Bersuci",
+                "topics": [
+                    {
+                        "id": 172,
+                        "title": "Keutamaan Bersuci",
+                        "file": "topic_172.pdf",
+                        "content": "<h2>Keutamaan Bersuci</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Keutamaan Bersuci\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Keutamaan Bersuci\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Keutamaan Bersuci\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Keutamaan Bersuci\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Keutamaan Bersuci\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 173,
+                        "title": "Perintah Bersuci_",
+                        "file": "topic_173.pdf",
+                        "content": "<h2>Perintah Bersuci_</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Perintah Bersuci_\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Perintah Bersuci_\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Perintah Bersuci_\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Perintah Bersuci_\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Perintah Bersuci_\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-2",
+                "title": "Pokok Bahasan: Sholat",
+                "topics": [
+                    {
+                        "id": 174,
+                        "title": "Perintah dan Waktu Shalat",
+                        "file": "topic_174.pdf",
+                        "content": "<h2>Perintah dan Waktu Shalat</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Perintah dan Waktu Shalat\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Perintah dan Waktu Shalat\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Perintah dan Waktu Shalat\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Perintah dan Waktu Shalat\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Perintah dan Waktu Shalat\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 175,
+                        "title": "Ancaman Meninggalkan Shalat",
+                        "file": "topic_175.pdf",
+                        "content": "<h2>Ancaman Meninggalkan Shalat</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Ancaman Meninggalkan Shalat\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Ancaman Meninggalkan Shalat\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Ancaman Meninggalkan Shalat\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Ancaman Meninggalkan Shalat\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Ancaman Meninggalkan Shalat\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 176,
+                        "title": "Shalat Jumat dan Shalat Tahajjud",
+                        "file": "topic_176.pdf",
+                        "content": "<h2>Shalat Jumat dan Shalat Tahajjud</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Shalat Jumat dan Shalat Tahajjud\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Shalat Jumat dan Shalat Tahajjud\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Shalat Jumat dan Shalat Tahajjud\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Shalat Jumat dan Shalat Tahajjud\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Shalat Jumat dan Shalat Tahajjud\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 177,
+                        "title": "Shalat Safar, Qashar, dan Khauf",
+                        "file": "topic_177.pdf",
+                        "content": "<h2>Shalat Safar, Qashar, dan Khauf</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Shalat Safar, Qashar, dan Khauf\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Shalat Safar, Qashar, dan Khauf\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Shalat Safar, Qashar, dan Khauf\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Shalat Safar, Qashar, dan Khauf\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Shalat Safar, Qashar, dan Khauf\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-3",
+                "title": "Pokok Bahasan: Zakat",
+                "topics": [
+                    {
+                        "id": 178,
+                        "title": "Zakat Bagian 1",
+                        "file": "topic_178.pdf",
+                        "content": "<h2>Zakat Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Zakat Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Zakat Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Zakat Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Zakat Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Zakat Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 179,
+                        "title": "Zakat Bagian 2",
+                        "file": "topic_179.pdf",
+                        "content": "<h2>Zakat Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Zakat Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Zakat Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Zakat Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Zakat Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Zakat Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-4",
+                "title": "Pokok Bahasan: Puasa",
+                "topics": [
+                    {
+                        "id": 180,
+                        "title": "Puasa Bagian 1",
+                        "file": "topic_180.pdf",
+                        "content": "<h2>Puasa Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Puasa Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Puasa Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Puasa Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Puasa Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Puasa Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 181,
+                        "title": "Puasa Bagian 2",
+                        "file": "topic_181.pdf",
+                        "content": "<h2>Puasa Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Puasa Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Puasa Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Puasa Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Puasa Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Puasa Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-5",
+                "title": "Pokok Bahasan: Hajji",
+                "topics": [
+                    {
+                        "id": 182,
+                        "title": "Hajji Bagian 1",
+                        "file": "topic_182.pdf",
+                        "content": "<h2>Hajji Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hajji Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hajji Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hajji Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hajji Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hajji Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 183,
+                        "title": "Hajji Bagian 2",
+                        "file": "topic_183.pdf",
+                        "content": "<h2>Hajji Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hajji Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hajji Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hajji Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hajji Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hajji Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 184,
+                        "title": "Hajji Bagian 3",
+                        "file": "topic_184.pdf",
+                        "content": "<h2>Hajji Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hajji Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hajji Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hajji Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hajji Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hajji Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-6",
+                "title": "Pokok Bahasan: Sumpah",
+                "topics": [
+                    {
+                        "id": 185,
+                        "title": "Sumpah Bagian 1",
+                        "file": "topic_185.pdf",
+                        "content": "<h2>Sumpah Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Sumpah Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Sumpah Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Sumpah Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Sumpah Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Sumpah Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-7",
+                "title": "Pokok Bahasan: Dzikir",
+                "topics": [
+                    {
+                        "id": 186,
+                        "title": "Dzikir Bagian 1",
+                        "file": "topic_186.pdf",
+                        "content": "<h2>Dzikir Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Dzikir Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Dzikir Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Dzikir Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Dzikir Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Dzikir Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 187,
+                        "title": "Dzikir Bagian 2",
+                        "file": "topic_187.pdf",
+                        "content": "<h2>Dzikir Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Dzikir Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Dzikir Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Dzikir Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Dzikir Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Dzikir Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 188,
+                        "title": "Dzikir Bagian 3",
+                        "file": "topic_188.pdf",
+                        "content": "<h2>Dzikir Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Dzikir Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Dzikir Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Dzikir Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Dzikir Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Dzikir Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 189,
+                        "title": "Dzikir Bagian 4",
+                        "file": "topic_189.pdf",
+                        "content": "<h2>Dzikir Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Dzikir Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Dzikir Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Dzikir Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Dzikir Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Dzikir Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "subject-8-8",
+                "title": "Pokok Bahasan: Do'a dan Istighfar",
+                "topics": [
+                    {
+                        "id": 190,
+                        "title": "Do'a dan Istighfar Bagian 1",
+                        "file": "topic_190.pdf",
+                        "content": "<h2>Do'a dan Istighfar Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Do'a dan Istighfar Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Do'a dan Istighfar Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Do'a dan Istighfar Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Do'a dan Istighfar Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Do'a dan Istighfar Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 191,
+                        "title": "Do'a dan Istighfar Bagian 2",
+                        "file": "topic_191.pdf",
+                        "content": "<h2>Do'a dan Istighfar Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Do'a dan Istighfar Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Do'a dan Istighfar Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Do'a dan Istighfar Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Do'a dan Istighfar Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Do'a dan Istighfar Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 192,
+                        "title": "Do'a dan Istighfar Bagian 3",
+                        "file": "topic_192.pdf",
+                        "content": "<h2>Do'a dan Istighfar Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Do'a dan Istighfar Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Do'a dan Istighfar Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Do'a dan Istighfar Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Do'a dan Istighfar Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Do'a dan Istighfar Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 193,
+                        "title": "Do'a dan Istighfar Bagian 4",
+                        "file": "topic_193.pdf",
+                        "content": "<h2>Do'a dan Istighfar Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Do'a dan Istighfar Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Do'a dan Istighfar Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Do'a dan Istighfar Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Do'a dan Istighfar Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Do'a dan Istighfar Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 194,
+                        "title": "Do'a dan Istighfar Bagian 5",
+                        "file": "topic_194.pdf",
+                        "content": "<h2>Do'a dan Istighfar Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Do'a dan Istighfar Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Do'a dan Istighfar Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Do'a dan Istighfar Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Do'a dan Istighfar Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Do'a dan Istighfar Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-9",
+        "title": "Tema 9: Ibadah Ghair Mahdah",
+        "description": "Pembahasan mendalam tentang ibadah ghair mahdah",
+        "subjects": [
+            {
+                "id": "subject-9-1",
+                "title": "Pokok Bahasan: Ibadah Ghair Mahdah",
+                "topics": [
+                    {
+                        "id": 195,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 1",
+                        "file": "topic_195.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 196,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 2",
+                        "file": "topic_196.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 197,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 3",
+                        "file": "topic_197.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 198,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 4",
+                        "file": "topic_198.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 199,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 5",
+                        "file": "topic_199.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 200,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 6",
+                        "file": "topic_200.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 201,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 7",
+                        "file": "topic_201.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 202,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 8",
+                        "file": "topic_202.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 8</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 8\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 8\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 8\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 8\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 8\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 203,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 9",
+                        "file": "topic_203.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 9</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 9\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 9\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 9\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 9\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 9\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 204,
+                        "title": "IBADAH GHAIR MAHDHAH Bagian  Bagian 10",
+                        "file": "topic_204.pdf",
+                        "content": "<h2>IBADAH GHAIR MAHDHAH Bagian  Bagian 10</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"IBADAH GHAIR MAHDHAH Bagian  Bagian 10\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Ibadah Ghair Mahdah",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"IBADAH GHAIR MAHDHAH Bagian  Bagian 10\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Ibadah Ghair Mahdah secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"IBADAH GHAIR MAHDHAH Bagian  Bagian 10\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"IBADAH GHAIR MAHDHAH Bagian  Bagian 10\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"IBADAH GHAIR MAHDHAH Bagian  Bagian 10\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-10",
+        "title": "Tema 10: Akhlak Terpuji",
+        "description": "Pembahasan mendalam tentang akhlak terpuji",
+        "subjects": [
+            {
+                "id": "subject-10-1",
+                "title": "Pokok Bahasan: Akhlak Terpuji",
+                "topics": [
+                    {
+                        "id": 205,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 1",
+                        "file": "topic_205.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 206,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 2",
+                        "file": "topic_206.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 207,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 3",
+                        "file": "topic_207.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 208,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 4",
+                        "file": "topic_208.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 209,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 5",
+                        "file": "topic_209.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 210,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 6",
+                        "file": "topic_210.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 211,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 7",
+                        "file": "topic_211.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 212,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 8",
+                        "file": "topic_212.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 8</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 8\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 8\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 8\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 8\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 8\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 213,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 9",
+                        "file": "topic_213.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 9</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 9\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 9\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 9\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 9\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 9\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 214,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 10",
+                        "file": "topic_214.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 10</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 10\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 10\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 10\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 10\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 10\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 215,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 11",
+                        "file": "topic_215.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 11</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 11\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 11\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 11\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 11\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 11\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 216,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 12",
+                        "file": "topic_216.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 12</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 12\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 12\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 12\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 12\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 12\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 217,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 13",
+                        "file": "topic_217.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 13</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 13\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 13\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 13\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 13\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 13\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 218,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 14",
+                        "file": "topic_218.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 14</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 14\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 14\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 14\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 14\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 14\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 219,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 15",
+                        "file": "topic_219.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 15</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 15\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 15\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 15\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 15\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 15\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 220,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 16",
+                        "file": "topic_220.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 16</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 16\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 16\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 16\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 16\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 16\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 221,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 17",
+                        "file": "topic_221.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 17</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 17\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 17\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 17\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 17\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 17\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 222,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 18",
+                        "file": "topic_222.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 18</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 18\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 18\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 18\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 18\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 18\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 223,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 19",
+                        "file": "topic_223.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 19</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 19\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 19\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 19\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 19\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 19\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 224,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 20",
+                        "file": "topic_224.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 20</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 20\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 20\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 20\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 20\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 20\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 225,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 21",
+                        "file": "topic_225.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 21</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 21\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 21\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 21\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 21\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 21\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 226,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 22",
+                        "file": "topic_226.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 22</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 22\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 22\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 22\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 22\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 22\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 227,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 23",
+                        "file": "topic_227.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 23</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 23\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 23\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 23\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 23\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 23\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 228,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 24",
+                        "file": "topic_228.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 24</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 24\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 24\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 24\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 24\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 24\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 229,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 25",
+                        "file": "topic_229.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 25</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 25\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 25\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 25\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 25\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 25\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 230,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 26",
+                        "file": "topic_230.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 26</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 26\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 26\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 26\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 26\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 26\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 231,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 27",
+                        "file": "topic_231.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 27</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 27\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 27\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 27\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 27\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 27\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 232,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 28",
+                        "file": "topic_232.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 28</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 28\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 28\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 28\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 28\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 28\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 233,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 29",
+                        "file": "topic_233.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 29</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 29\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 29\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 29\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 29\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 29\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 234,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 30",
+                        "file": "topic_234.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 30</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 30\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 30\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 30\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 30\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 30\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 235,
+                        "title": "AKHLAK TERPUJI Bagian  Bagian 31",
+                        "file": "topic_235.pdf",
+                        "content": "<h2>AKHLAK TERPUJI Bagian  Bagian 31</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"AKHLAK TERPUJI Bagian  Bagian 31\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Terpuji",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"AKHLAK TERPUJI Bagian  Bagian 31\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Terpuji secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"AKHLAK TERPUJI Bagian  Bagian 31\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"AKHLAK TERPUJI Bagian  Bagian 31\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"AKHLAK TERPUJI Bagian  Bagian 31\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-11",
+        "title": "Tema 11: Akhlak Tercela",
+        "description": "Pembahasan mendalam tentang akhlak tercela",
+        "subjects": [
+            {
+                "id": "subject-11-1",
+                "title": "Pokok Bahasan: Akhlak Tercela",
+                "topics": [
+                    {
+                        "id": 236,
+                        "title": "Akhlak Tercela Bagian 1",
+                        "file": "topic_236.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 237,
+                        "title": "Akhlak Tercela Bagian 2",
+                        "file": "topic_237.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 238,
+                        "title": "Akhlak Tercela Bagian 3",
+                        "file": "topic_238.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 239,
+                        "title": "Akhlak Tercela Bagian 4",
+                        "file": "topic_239.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 240,
+                        "title": "Akhlak Tercela Bagian 5",
+                        "file": "topic_240.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 241,
+                        "title": "Akhlak Tercela Bagian 6",
+                        "file": "topic_241.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 242,
+                        "title": "Akhlak Tercela Bagian 7",
+                        "file": "topic_242.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 243,
+                        "title": "Akhlak Tercela Bagian 8",
+                        "file": "topic_243.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 8</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 8\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 8\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 8\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 8\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 8\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 244,
+                        "title": "Akhlak Tercela Bagian 9",
+                        "file": "topic_244.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 9</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 9\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 9\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 9\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 9\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 9\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 245,
+                        "title": "Akhlak Tercela Bagian 10",
+                        "file": "topic_245.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 10</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 10\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 10\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 10\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 10\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 10\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 246,
+                        "title": "Akhlak Tercela Bagian 11",
+                        "file": "topic_246.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 11</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 11\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 11\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 11\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 11\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 11\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 247,
+                        "title": "Akhlak Tercela Bagian 12",
+                        "file": "topic_247.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 12</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 12\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 12\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 12\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 12\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 12\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 248,
+                        "title": "Akhlak Tercela Bagian 13",
+                        "file": "topic_248.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 13</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 13\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 13\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 13\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 13\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 13\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 249,
+                        "title": "Akhlak Tercela Bagian 14",
+                        "file": "topic_249.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 14</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 14\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 14\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 14\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 14\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 14\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 250,
+                        "title": "Akhlak Tercela Bagian 15",
+                        "file": "topic_250.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 15</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 15\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 15\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 15\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 15\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 15\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 251,
+                        "title": "Akhlak Tercela Bagian 16",
+                        "file": "topic_251.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 16</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 16\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 16\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 16\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 16\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 16\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 252,
+                        "title": "Akhlak Tercela Bagian 17",
+                        "file": "topic_252.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 17</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 17\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 17\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 17\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 17\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 17\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 253,
+                        "title": "Akhlak Tercela Bagian 18",
+                        "file": "topic_253.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 18</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 18\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 18\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 18\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 18\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 18\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 254,
+                        "title": "Akhlak Tercela Bagian 19",
+                        "file": "topic_254.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 19</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 19\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 19\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 19\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 19\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 19\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 255,
+                        "title": "Akhlak Tercela Bagian 20",
+                        "file": "topic_255.pdf",
+                        "content": "<h2>Akhlak Tercela Bagian 20</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Akhlak Tercela Bagian 20\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Akhlak Tercela",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Akhlak Tercela Bagian 20\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Akhlak Tercela secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Akhlak Tercela Bagian 20\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Akhlak Tercela Bagian 20\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Akhlak Tercela Bagian 20\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-12",
+        "title": "Tema 12: Hukum Keluarga",
+        "description": "Pembahasan mendalam tentang hukum keluarga",
+        "subjects": [
+            {
+                "id": "subject-12-1",
+                "title": "Pokok Bahasan: Hukum Keluarga",
+                "topics": [
+                    {
+                        "id": 256,
+                        "title": "Hukum Keluarga Bagian 1",
+                        "file": "topic_256.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 257,
+                        "title": "Hukum Keluarga Bagian 2",
+                        "file": "topic_257.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 258,
+                        "title": "Hukum Keluarga Bagian 3",
+                        "file": "topic_258.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 259,
+                        "title": "Hukum Keluarga Bagian 4",
+                        "file": "topic_259.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 260,
+                        "title": "Hukum Keluarga Bagian 5",
+                        "file": "topic_260.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 261,
+                        "title": "Hukum Keluarga Bagian 6",
+                        "file": "topic_261.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 262,
+                        "title": "Hukum Keluarga Bagian 7",
+                        "file": "topic_262.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 263,
+                        "title": "Hukum Keluarga Bagian 8",
+                        "file": "topic_263.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 8</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 8\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 8\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 8\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 8\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 8\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 264,
+                        "title": "Hukum Keluarga Bagian 9",
+                        "file": "topic_264.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 9</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 9\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 9\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 9\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 9\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 9\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 265,
+                        "title": "Hukum Keluarga Bagian 10",
+                        "file": "topic_265.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 10</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 10\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 10\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 10\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 10\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 10\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 266,
+                        "title": "Hukum Keluarga Bagian 11",
+                        "file": "topic_266.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 11</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 11\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 11\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 11\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 11\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 11\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 267,
+                        "title": "Hukum Keluarga Bagian 12",
+                        "file": "topic_267.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 12</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 12\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 12\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 12\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 12\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 12\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 268,
+                        "title": "Hukum Keluarga Bagian 13",
+                        "file": "topic_268.pdf",
+                        "content": "<h2>Hukum Keluarga Bagian 13</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Keluarga Bagian 13\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Keluarga",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Keluarga Bagian 13\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Keluarga secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Keluarga Bagian 13\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Keluarga Bagian 13\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Keluarga Bagian 13\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-13",
+        "title": "Tema 13: Hukum Mu'amalat",
+        "description": "Pembahasan mendalam tentang hukum mu'amalat",
+        "subjects": [
+            {
+                "id": "subject-13-1",
+                "title": "Pokok Bahasan: Hukum Mu'amalat",
+                "topics": [
+                    {
+                        "id": 269,
+                        "title": "Hukum Mu'amalat Bagian 1",
+                        "file": "topic_269.pdf",
+                        "content": "<h2>Hukum Mu'amalat Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Mu'amalat Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Mu'amalat",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Mu'amalat Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Mu'amalat secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Mu'amalat Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Mu'amalat Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Mu'amalat Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 270,
+                        "title": "Hukum Mu'amalat Bagian 2",
+                        "file": "topic_270.pdf",
+                        "content": "<h2>Hukum Mu'amalat Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Mu'amalat Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Mu'amalat",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Mu'amalat Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Mu'amalat secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Mu'amalat Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Mu'amalat Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Mu'amalat Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 271,
+                        "title": "Hukum Mu'amalat Bagian 3",
+                        "file": "topic_271.pdf",
+                        "content": "<h2>Hukum Mu'amalat Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Mu'amalat Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Mu'amalat",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Mu'amalat Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Mu'amalat secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Mu'amalat Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Mu'amalat Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Mu'amalat Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 272,
+                        "title": "Hukum Mu'amalat Bagian 4",
+                        "file": "topic_272.pdf",
+                        "content": "<h2>Hukum Mu'amalat Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Mu'amalat Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Mu'amalat",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Mu'amalat Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Mu'amalat secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Mu'amalat Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Mu'amalat Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Mu'amalat Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-14",
+        "title": "Tema 14: Hukum Pidana",
+        "description": "Pembahasan mendalam tentang hukum pidana",
+        "subjects": [
+            {
+                "id": "subject-14-1",
+                "title": "Pokok Bahasan: Hukum Pidana",
+                "topics": [
+                    {
+                        "id": 273,
+                        "title": "Hukum Pidana Bagian 1",
+                        "file": "topic_273.pdf",
+                        "content": "<h2>Hukum Pidana Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pidana Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pidana",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pidana Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pidana secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pidana Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pidana Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pidana Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 274,
+                        "title": "Hukum Pidana Bagian 2",
+                        "file": "topic_274.pdf",
+                        "content": "<h2>Hukum Pidana Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pidana Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pidana",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pidana Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pidana secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pidana Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pidana Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pidana Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 275,
+                        "title": "Hukum Pidana Bagian 3",
+                        "file": "topic_275.pdf",
+                        "content": "<h2>Hukum Pidana Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pidana Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pidana",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pidana Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pidana secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pidana Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pidana Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pidana Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 276,
+                        "title": "Hukum Pidana Bagian 4",
+                        "file": "topic_276.pdf",
+                        "content": "<h2>Hukum Pidana Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pidana Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pidana",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pidana Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pidana secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pidana Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pidana Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pidana Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-15",
+        "title": "Tema 15: Hukum Pemerintahan",
+        "description": "Pembahasan mendalam tentang hukum pemerintahan",
+        "subjects": [
+            {
+                "id": "subject-15-1",
+                "title": "Pokok Bahasan: Hukum Pemerintahan",
+                "topics": [
+                    {
+                        "id": 277,
+                        "title": "Hukum Pemerintahan Bagian 1",
+                        "file": "topic_277.pdf",
+                        "content": "<h2>Hukum Pemerintahan Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pemerintahan Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pemerintahan",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pemerintahan Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pemerintahan secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pemerintahan Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pemerintahan Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pemerintahan Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 278,
+                        "title": "Hukum Pemerintahan Bagian 2",
+                        "file": "topic_278.pdf",
+                        "content": "<h2>Hukum Pemerintahan Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pemerintahan Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pemerintahan",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pemerintahan Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pemerintahan secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pemerintahan Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pemerintahan Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pemerintahan Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 279,
+                        "title": "Hukum Pemerintahan Bagian 3",
+                        "file": "topic_279.pdf",
+                        "content": "<h2>Hukum Pemerintahan Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pemerintahan Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pemerintahan",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pemerintahan Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pemerintahan secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pemerintahan Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pemerintahan Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pemerintahan Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 280,
+                        "title": "Hukum Pemerintahan Bagian 4",
+                        "file": "topic_280.pdf",
+                        "content": "<h2>Hukum Pemerintahan Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pemerintahan Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pemerintahan",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pemerintahan Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pemerintahan secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pemerintahan Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pemerintahan Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pemerintahan Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 281,
+                        "title": "Hukum Pemerintahan Bagian 5",
+                        "file": "topic_281.pdf",
+                        "content": "<h2>Hukum Pemerintahan Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Pemerintahan Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Pemerintahan",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Pemerintahan Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Pemerintahan secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Pemerintahan Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Pemerintahan Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Pemerintahan Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-16",
+        "title": "Tema 16: Hukum Makanan dan Pakaian",
+        "description": "Pembahasan mendalam tentang hukum makanan dan pakaian",
+        "subjects": [
+            {
+                "id": "subject-16-1",
+                "title": "Pokok Bahasan: Hukum Makanan dan Pakaian",
+                "topics": [
+                    {
+                        "id": 282,
+                        "title": "Hukum Makanan dan Pakaian Bagian 1",
+                        "file": "topic_282.pdf",
+                        "content": "<h2>Hukum Makanan dan Pakaian Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Makanan dan Pakaian Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Makanan dan Pakaian",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Makanan dan Pakaian Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Makanan dan Pakaian secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Makanan dan Pakaian Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Makanan dan Pakaian Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Makanan dan Pakaian Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 283,
+                        "title": "Hukum Makanan dan Pakaian Bagian 2",
+                        "file": "topic_283.pdf",
+                        "content": "<h2>Hukum Makanan dan Pakaian Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Makanan dan Pakaian Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Makanan dan Pakaian",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Makanan dan Pakaian Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Makanan dan Pakaian secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Makanan dan Pakaian Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Makanan dan Pakaian Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Makanan dan Pakaian Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 284,
+                        "title": "Hukum Makanan dan Pakaian Bagian 3",
+                        "file": "topic_284.pdf",
+                        "content": "<h2>Hukum Makanan dan Pakaian Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Makanan dan Pakaian Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Makanan dan Pakaian",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Makanan dan Pakaian Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Makanan dan Pakaian secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Makanan dan Pakaian Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Makanan dan Pakaian Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Makanan dan Pakaian Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 285,
+                        "title": "Hukum Makanan dan Pakaian Bagian 4",
+                        "file": "topic_285.pdf",
+                        "content": "<h2>Hukum Makanan dan Pakaian Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Makanan dan Pakaian Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Makanan dan Pakaian",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Makanan dan Pakaian Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Makanan dan Pakaian secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Makanan dan Pakaian Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Makanan dan Pakaian Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Makanan dan Pakaian Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 286,
+                        "title": "Hukum Makanan dan Pakaian Bagian 5",
+                        "file": "topic_286.pdf",
+                        "content": "<h2>Hukum Makanan dan Pakaian Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Makanan dan Pakaian Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Makanan dan Pakaian",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Makanan dan Pakaian Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Makanan dan Pakaian secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Makanan dan Pakaian Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Makanan dan Pakaian Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Makanan dan Pakaian Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 287,
+                        "title": "Hukum Makanan dan Pakaian Bagian 6",
+                        "file": "topic_287.pdf",
+                        "content": "<h2>Hukum Makanan dan Pakaian Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Hukum Makanan dan Pakaian Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Hukum Makanan dan Pakaian",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Hukum Makanan dan Pakaian Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Hukum Makanan dan Pakaian secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Hukum Makanan dan Pakaian Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Hukum Makanan dan Pakaian Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Hukum Makanan dan Pakaian Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-17",
+        "title": "Tema 17: Manusia",
+        "description": "Pembahasan mendalam tentang manusia",
+        "subjects": [
+            {
+                "id": "subject-17-1",
+                "title": "Pokok Bahasan: Manusia",
+                "topics": [
+                    {
+                        "id": 288,
+                        "title": "Manusia Bagian 1",
+                        "file": "topic_288.pdf",
+                        "content": "<h2>Manusia Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Manusia Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Manusia Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Manusia Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Manusia Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Manusia Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 289,
+                        "title": "Manusia Bagian 2",
+                        "file": "topic_289.pdf",
+                        "content": "<h2>Manusia Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Manusia Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Manusia Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Manusia Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Manusia Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Manusia Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 290,
+                        "title": "Manusia Bagian 3",
+                        "file": "topic_290.pdf",
+                        "content": "<h2>Manusia Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Manusia Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Manusia Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Manusia Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Manusia Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Manusia Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 291,
+                        "title": "Manusia Bagian 4",
+                        "file": "topic_291.pdf",
+                        "content": "<h2>Manusia Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Manusia Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Manusia Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Manusia Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Manusia Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Manusia Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 292,
+                        "title": "Manusia Bagian 5",
+                        "file": "topic_292.pdf",
+                        "content": "<h2>Manusia Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Manusia Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Manusia Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Manusia Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Manusia Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Manusia Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 293,
+                        "title": "Sifat Manusia",
+                        "file": "topic_293.pdf",
+                        "content": "<h2>Sifat Manusia</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Sifat Manusia\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Sifat Manusia\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Sifat Manusia\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Sifat Manusia\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Sifat Manusia\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 294,
+                        "title": "Manusia Bagian 7",
+                        "file": "topic_294.pdf",
+                        "content": "<h2>Manusia Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Manusia Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Manusia",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Manusia Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Manusia secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Manusia Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Manusia Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Manusia Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-18",
+        "title": "Tema 18: Alam",
+        "description": "Pembahasan mendalam tentang alam",
+        "subjects": [
+            {
+                "id": "subject-18-1",
+                "title": "Pokok Bahasan: Alam",
+                "topics": [
+                    {
+                        "id": 295,
+                        "title": "Alam Bagian 1",
+                        "file": "topic_295.pdf",
+                        "content": "<h2>Alam Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 296,
+                        "title": "Alam Bagian 2",
+                        "file": "topic_296.pdf",
+                        "content": "<h2>Alam Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 297,
+                        "title": "Alam Bagian 3",
+                        "file": "topic_297.pdf",
+                        "content": "<h2>Alam Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 298,
+                        "title": "Alam Bagian 4",
+                        "file": "topic_298.pdf",
+                        "content": "<h2>Alam Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 299,
+                        "title": "Alam Bagian 5",
+                        "file": "topic_299.pdf",
+                        "content": "<h2>Alam Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 300,
+                        "title": "Alam Bagian 6",
+                        "file": "topic_300.pdf",
+                        "content": "<h2>Alam Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 301,
+                        "title": "Alam Bagian 7",
+                        "file": "topic_301.pdf",
+                        "content": "<h2>Alam Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 302,
+                        "title": "Alam Bagian 8",
+                        "file": "topic_302.pdf",
+                        "content": "<h2>Alam Bagian 8</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 8\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 8\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 8\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 8\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 8\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 303,
+                        "title": "Alam Bagian 9",
+                        "file": "topic_303.pdf",
+                        "content": "<h2>Alam Bagian 9</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 9\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 9\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 9\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 9\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 9\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 304,
+                        "title": "Alam Bagian 10",
+                        "file": "topic_304.pdf",
+                        "content": "<h2>Alam Bagian 10</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Alam Bagian 10\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Alam",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Alam Bagian 10\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Alam secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Alam Bagian 10\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Alam Bagian 10\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Alam Bagian 10\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "theme-19",
+        "title": "Tema 19: Jin dan Iblis",
+        "description": "Pembahasan mendalam tentang jin dan iblis",
+        "subjects": [
+            {
+                "id": "subject-19-1",
+                "title": "Pokok Bahasan: Jin dan Iblis",
+                "topics": [
+                    {
+                        "id": 305,
+                        "title": "Jin dan Iblis Bagian 1",
+                        "file": "topic_305.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 1</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 1\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 1\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 1\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 1\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 1\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 306,
+                        "title": "Jin dan Iblis Bagian 2",
+                        "file": "topic_306.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 2</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 2\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 2\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 2\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 2\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 2\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 307,
+                        "title": "Jin dan Iblis Bagian 3",
+                        "file": "topic_307.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 3</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 3\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 3\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 3\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 3\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 3\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 308,
+                        "title": "Jin dan Iblis Bagian 4",
+                        "file": "topic_308.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 4</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 4\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 4\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 4\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 4\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 4\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 309,
+                        "title": "Jin dan Iblis Bagian 5",
+                        "file": "topic_309.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 5</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 5\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 5\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 5\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 5\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 5\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 310,
+                        "title": "Jin dan Iblis Bagian 6",
+                        "file": "topic_310.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 6</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 6\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 6\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 6\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 6\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 6\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 311,
+                        "title": "Jin dan Iblis Bagian 7",
+                        "file": "topic_311.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 7</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 7\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 7\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 7\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 7\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 7\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    },
+                    {
+                        "id": 312,
+                        "title": "Jin dan Iblis Bagian 8",
+                        "file": "topic_312.pdf",
+                        "content": "<h2>Jin dan Iblis Bagian 8</h2><p>Materi pembelajaran lengkap dapat diakses melalui dokumen PDF asli pada tab di atas.</p>",
+                        "quiz": [
+                            {
+                                "question": "Apa tujuan utama mempelajari materi \"Jin dan Iblis Bagian 8\"?",
+                                "options": [
+                                    "Meningkatkan pemahaman dan pengamalan ajaran terkait Jin dan Iblis",
+                                    "Hanya untuk memenuhi kurikulum pembelajaran",
+                                    "Mendapatkan pujian dan apresiasi dari orang lain",
+                                    "Mencari kesalahan dalam pemahaman orang lain"
+                                ],
+                                "correct": 1,
+                                "explanation": "Mempelajari \"Jin dan Iblis Bagian 8\" bertujuan untuk memperdalam keilmuan dan mengamalkan ajaran Jin dan Iblis secara ikhlas demi mengharap ridha Allah."
+                            },
+                            {
+                                "question": "Berikut ini adalah sikap terbaik dalam menerapkan nilai-nilai \"Jin dan Iblis Bagian 8\" dalam kehidupan sehari-hari, yaitu...",
+                                "options": [
+                                    "Melaksanakannya dengan konsisten (istiqamah) dan penuh keikhlasan",
+                                    "Melakukannya sesekali saja saat merasa bersemangat",
+                                    "Menasihati orang lain tanpa mempraktikkannya sendiri",
+                                    "Menunda-nunda pelaksanaan ajaran tersebut"
+                                ],
+                                "correct": 1,
+                                "explanation": "Konsistensi (istiqamah) dan keikhlasan adalah kunci utama pengamalan ajaran Islam, termasuk dalam hal \"Jin dan Iblis Bagian 8\"."
+                            },
+                            {
+                                "question": "Bagaimana sikap kita apabila menghadapi tantangan atau kesulitan dalam menjalankan ajaran \"Jin dan Iblis Bagian 8\"?",
+                                "options": [
+                                    "Bersabar, berdoa, dan terus berusaha memperbaikinya",
+                                    "Langsung menyerah dan meninggalkan ajaran tersebut",
+                                    "Menyalahkan keadaan atau orang lain",
+                                    "Melakukannya secara terpaksa tanpa rasa ikhlas"
+                                ],
+                                "correct": 1,
+                                "explanation": "Sabar, doa, dan ikhtiar yang tiada henti adalah anjuran Islam saat menghadapi hambatan dalam kebaikan."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ];
+
 export default courseData;
