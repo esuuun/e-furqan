@@ -11,12 +11,12 @@ import "react-pdf/dist/Page/TextLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
-  import.meta.url
+  import.meta.url,
 ).toString();
 
 const LessonDetail = () => {
   const { themeSlug, lessonSlug } = useParams();
-  const [activeTab, setActiveTab] = useState("materi");
+  const [activeTab, setActiveTab] = useState("quiz");
 
   // Audio State
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -51,7 +51,7 @@ const LessonDetail = () => {
     : [];
 
   const currentTopicIndex = allTopics.findIndex(
-    (t) => String(t.id) === lessonSlug
+    (t) => String(t.id) === lessonSlug,
   );
   const lesson = allTopics[currentTopicIndex];
 
@@ -305,7 +305,7 @@ const LessonDetail = () => {
       selectedVoice =
         voices.find((v) => v.lang === "id-ID") ||
         voices.find(
-          (v) => v.lang.replace("_", "-").toLowerCase() === "id-id"
+          (v) => v.lang.replace("_", "-").toLowerCase() === "id-id",
         ) ||
         voices.find((v) => v.name.toLowerCase().includes("indonesia")) ||
         voices.find((v) => v.lang.includes("id"));
@@ -609,7 +609,7 @@ const LessonDetail = () => {
 
             {/* Tabs */}
             <div className="flex gap-2 mb-6 overflow-x-auto pb-2 mt-8">
-              <button
+              {/* <button
                 onClick={() => setActiveTab("materi")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
                   activeTab === "materi"
@@ -631,7 +631,7 @@ const LessonDetail = () => {
                   />
                 </svg>
                 Materi Pelajaran
-              </button>
+              </button> */}
               <button
                 onClick={() => setActiveTab("pdf")}
                 className={`px-6 py-3 rounded-lg font-medium transition-all whitespace-nowrap flex items-center gap-2 ${
@@ -859,16 +859,18 @@ const LessonDetail = () => {
                                         quizSubmitted && oIndex === correctIndex
                                           ? "bg-yellow-500 dark:bg-yellow-600 border-yellow-500 dark:border-yellow-600 text-white"
                                           : quizAnswers[qIndex] === oIndex
-                                          ? quizSubmitted &&
-                                            oIndex !== correctIndex
-                                            ? "bg-red-500 dark:bg-red-600 border-red-500 dark:border-red-600 text-white"
-                                            : "bg-yellow-500 dark:bg-yellow-600 border-yellow-500 dark:border-yellow-600 text-white"
-                                          : "border-gray-300 dark:border-gray-500"
+                                            ? quizSubmitted &&
+                                              oIndex !== correctIndex
+                                              ? "bg-red-500 dark:bg-red-600 border-red-500 dark:border-red-600 text-white"
+                                              : "bg-yellow-500 dark:bg-yellow-600 border-yellow-500 dark:border-yellow-600 text-white"
+                                            : "border-gray-300 dark:border-gray-500"
                                       }`}
                                     >
                                       {String.fromCharCode(65 + oIndex)}
                                     </div>
-                                    <span className="text-gray-700 dark:text-gray-300">{option}</span>
+                                    <span className="text-gray-700 dark:text-gray-300">
+                                      {option}
+                                    </span>
                                   </div>
                                 </button>
                               );
