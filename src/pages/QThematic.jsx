@@ -154,13 +154,14 @@ const QThematic = () => {
               </p>
               <p className="text-gray-500 dark:text-gray-400 font-medium">Subtema</p>
             </div>
+            
+            <div>
+              <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">377</p>
+              <p className="text-gray-500 dark:text-gray-400 font-medium">Pelajaran</p>
+            </div>
             <div>
               <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">6236</p>
               <p className="text-gray-500 dark:text-gray-400 font-medium">Ayat Terpilih</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">100%</p>
-              <p className="text-gray-500 dark:text-gray-400 font-medium">Valid & Shahih</p>
             </div>
           </div>
         </div>
