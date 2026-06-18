@@ -124,21 +124,22 @@ export const hijaiyahSounds = [
 
 // --- 2. WORD DATABASE (VOCABULARY) ---
 // Used by: Module 3
+// quranAudio: verified exact word-by-word Quranic audio from audio.qurancdn.com
+// Coordinates verified via quran.com API text_uthmani EXACT harakat comparison
 export const rawWords = [
-    { word: 'أَمِنَ', root: 'ء م ن' },
-    { word: 'عَلِمَ', root: 'ع ل م' },
-    { word: 'كَفَرَ', root: 'ك ف ر' },
-    { word: 'عَمِلَ', root: 'ع م ل' },
-    { word: 'جَعَلَ', root: 'ج ع ل' },
-    { word: 'رَحِمَ', root: 'ر ح م' },
-    { word: 'كُتِبَ', root: 'ك ت ب' },
-    { word: 'ظَلَمَ', root: 'ظ ل م' },
-    { word: 'هُدِيَ', root: 'ه د ي' },
-    { word: 'نَزَلَ', root: 'ن ز ل' },
-    { word: 'كَذَبَ', root: 'ك ذ ب' },
-    { word: 'عَبَدَ', root: 'ع ب د' },
-    { word: 'ذُكِرَ', root: 'ذ ك ر' }
-    // ... truncated for brevity, can add more later if needed
+    { word: 'أَمِنَ', root: 'ء م ن', quranAudio: 'wbw/002_283_011.mp3' }, // Surah 2:283 exact
+    { word: 'عَلِمَ', root: 'ع ل م', quranAudio: 'wbw/002_060_015.mp3' }, // Surah 2:60 exact
+    { word: 'كَفَرَ', root: 'ك ف ر', quranAudio: 'wbw/002_102_009.mp3' }, // Surah 2:102 exact
+    { word: 'عَمِلَ', root: 'ع م ل', quranAudio: 'wbw/006_054_016.mp3' }, // Surah 6:54 exact (verb, not noun)
+    { word: 'جَعَلَ', root: 'ج ع ل', quranAudio: 'wbw/002_022_002.mp3' }, // Surah 2:22 exact
+    { word: 'رَحِمَ', root: 'ر ح م', quranAudio: 'wbw/012_053_010.mp3' }, // Surah 12:53 exact
+    { word: 'كُتِبَ', root: 'ك ت ب', quranAudio: 'wbw/002_178_004.mp3' }, // Surah 2:178 exact
+    { word: 'ظَلَمَ', root: 'ظ ل م', quranAudio: 'wbw/002_231_019.mp3' }, // Surah 2:231 exact
+    { word: 'هُدِيَ', root: 'ه د ي', quranAudio: 'wbw/002_002_006.mp3' }, // approx (rare standalone form)
+    { word: 'نَزَلَ', root: 'ن ز ل', quranAudio: 'wbw/026_193_001.mp3' }, // Surah 26:193 exact
+    { word: 'كَذَبَ', root: 'ك ذ ب', quranAudio: 'wbw/039_032_004.mp3' }, // Surah 39:32 exact
+    { word: 'عَبَدَ', root: 'ع ب د', quranAudio: 'wbw/019_030_003.mp3' }, // approx (rare standalone form)
+    { word: 'ذُكِرَ', root: 'ذ ك ر', quranAudio: 'wbw/006_118_003.mp3' }, // Surah 6:118 exact
 ];
 
 // Simplified meanings mapping
@@ -191,20 +192,13 @@ function createWordPieces(arabicWord) {
     return pieces;
 }
 
-// Prepare the ready-to-use word list
+// Prepare the ready-to-use word list — quranAudio URL passed directly from rawWords
 export const wordList = rawWords.map((item) => {
     const cleanWord = removeTanwin(item.word);
-
-    // Construct audio filename: remove harakat, replace spaces with underscores
-    // Note: Assuming audio files match this pattern based on original code
-    const audioName = removeAllHarakat(cleanWord).split('').join('');
-
     return {
         word: cleanWord,
         meaning: meanings[item.word] || 'Terjemahan belum tersedia',
-        // In the original, it tried to map root letters to audio.
-        // For now we will use a generic placeholder or dynamic TTS if specific file missing.
-        audio: audioName,
+        quranAudio: item.quranAudio || null,  // direct URL path for audio.qurancdn.com
         pieces: createWordPieces(item.word)
     };
 });

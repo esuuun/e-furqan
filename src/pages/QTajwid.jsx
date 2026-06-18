@@ -35,111 +35,159 @@ const normalizeArabic = (text) => {
   return normalized.trim();
 };
 
+const QURANCDN_BASE = "https://audio.qurancdn.com/";
+
+// Exact word-by-word Quranic audio — verified standalone with FULL harakat match (no wa/fa prefix)
+// Verified via quran.com API text_uthmani exact comparison
+const QURAN_WORDS_AUDIO = {
+  "أَمِنَ": "wbw/002_283_011.mp3",   // Surah 2:283 — exact match ✓
+  "عَلِمَ": "wbw/002_060_015.mp3",   // Surah 2:60 — exact match ✓ (was 002_032, wrong)
+  "كَفَرَ": "wbw/002_102_009.mp3",   // Surah 2:102 — exact match ✓
+  "عَمِلَ": "wbw/006_054_016.mp3",   // Surah 6:54 — exact match ✓ (was 003_195 = noun عَمَلَ "amala")
+  "جَعَلَ": "wbw/002_022_002.mp3",   // Surah 2:22 — exact match ✓
+  "رَحِمَ": "wbw/012_053_010.mp3",   // Surah 12:53 — exact match ✓ (was 011_043)
+  "كُتِبَ": "wbw/002_178_004.mp3",   // Surah 2:178 — exact match ✓
+  "ظَلَمَ": "wbw/002_231_019.mp3",   // Surah 2:231 — exact match ✓
+  "نَزَلَ": "wbw/026_193_001.mp3",   // Surah 26:193 — exact match ✓ (was 002_176)
+  "كَذَبَ": "wbw/039_032_004.mp3",   // Surah 39:32 — exact match ✓ (was 003_184)
+  "ذُكِرَ": "wbw/006_118_003.mp3",   // Surah 6:118 — exact match ✓
+  // هُدِيَ and عَبَدَ don't appear standalone in Quran — best available approximation:
+  "هُدِيَ": "wbw/002_002_006.mp3",   // closest: هُدًى Surah 2:2
+  "عَبَدَ": "wbw/019_030_003.mp3",   // closest: Surah 19:30
+};
+
+const playQuranCdnAudio = (path) => {
+  return new Promise((resolve, reject) => {
+    const audio = new Audio(`${QURANCDN_BASE}${path}`);
+    audio.referrerPolicy = "no-referrer";
+    audio.play().then(resolve).catch(reject);
+  });
+};
+
 const speakArabic = (text) => {
   if (!text) return;
   const cleanText = text.trim();
   
-  // Google TTS provides a high-quality, clear, native Arabic accent (including correct tashkeel/harakat reading)
-  const googleTtsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ar&client=tw-ob&q=${encodeURIComponent(cleanText)}`;
-  
-  // Create audio element programmatically to configure referrerPolicy
-  const audio = document.createElement('audio');
-  audio.referrerPolicy = "no-referrer";
-  audio.src = googleTtsUrl;
-  
-  // Slow down the playback rate slightly for clear, educational pronunciation
-  audio.defaultPlaybackRate = 0.8;
-  audio.playbackRate = 0.8;
-  audio.onplay = () => {
-    audio.playbackRate = 0.8;
-  };
-  
-  audio.play().catch((err) => {
-    console.warn("Google TTS failed, falling back to browser SpeechSynthesis:", err);
-    if ('speechSynthesis' in window) {
-      try {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(cleanText);
-        utterance.lang = 'ar-SA';
-        utterance.rate = 0.65; // Slow down for educational clarity
-        
-        const voices = window.speechSynthesis.getVoices();
-        let arabicVoice = voices.find(v => v.lang === 'ar-SA' || v.lang === 'ar_SA');
-        if (!arabicVoice) {
-          arabicVoice = voices.find(v => v.lang.startsWith('ar') || v.lang.toLowerCase().includes('arabic'));
-        }
-        
-        if (arabicVoice) {
-          utterance.voice = arabicVoice;
-        }
-        
-        window.speechSynthesis.speak(utterance);
-      } catch (e) {
-        console.error("Browser speechSynthesis failed:", e);
+  // Fallback: use browser SpeechSynthesis with Arabic locale
+  if ('speechSynthesis' in window) {
+    try {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(cleanText);
+      utterance.lang = 'ar-SA';
+      utterance.rate = 0.65;
+      
+      const voices = window.speechSynthesis.getVoices();
+      let arabicVoice = voices.find(v => v.lang === 'ar-SA' || v.lang === 'ar_SA');
+      if (!arabicVoice) {
+        arabicVoice = voices.find(v => v.lang.startsWith('ar') || v.lang.toLowerCase().includes('arabic'));
       }
+      if (arabicVoice) utterance.voice = arabicVoice;
+      
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.error("Browser speechSynthesis failed:", e);
     }
-  });
+  }
+};
+
+// Normalize Arabic for fuzzy audio key lookup: strip harakat but keep base letters + alif normalization
+const stripHarakat = (text) => text
+  .replace(/[\u064B-\u0652\u0670]/g, '') // remove all harakat/diacritics/superscript alif
+  .replace(/[\u0623\u0625\u0622\u0671]/g, '\u0627') // أ إ آ ٱ → ا
+  .replace(/\u0649/g, '\u064A'); // ى → ي
+
+// Find Quran CDN audio path for a word (exact match first, then stripped match)
+const getQuranAudioPath = (text) => {
+  if (!text) return null;
+  const clean = text.trim();
+  // 1. Exact match
+  if (QURAN_WORDS_AUDIO[clean]) return QURAN_WORDS_AUDIO[clean];
+  // 2. Harakat-stripped fallback (handles encoding variations)
+  const stripped = stripHarakat(clean);
+  for (const [key, val] of Object.entries(QURAN_WORDS_AUDIO)) {
+    if (stripHarakat(key) === stripped) return val;
+  }
+  return null;
 };
 
 const playSound = (text) => {
   if (!text) return;
   const cleanText = text.trim();
   
-  // 1. Search in hijaiyahSounds
-  let audioFile = null;
-  const letterMatch = hijaiyahSounds.find(h => h.text === cleanText);
-  if (letterMatch) {
-    audioFile = letterMatch.sound;
+  // 0. Play high-quality native Qari recitation from audio.qurancdn.com if mapped
+  const quranPath = getQuranAudioPath(cleanText);
+  if (quranPath) {
+    playQuranCdnAudio(quranPath).catch((err) => {
+      console.warn("QuranCDN audio failed, falling back to local MP3 / TTS:", err);
+      playLocalOrTts(cleanText);
+    });
+    return;
   }
   
-  // 2. Search in wordList
-  if (!audioFile) {
-    const wordMatch = wordList.find(w => w.word === cleanText);
-    if (wordMatch) {
-      audioFile = wordMatch.audio;
+  playLocalOrTts(cleanText);
+};
+
+const normalizeArabicText = (text) => {
+  if (!text) return "";
+  let norm = text.trim().normalize("NFC");
+  
+  // 1. Remove leading Alif Fathah (اَ) if string length is > 2 characters
+  if (norm.length > 2 && norm.startsWith("\u0627\u064E")) {
+    norm = norm.substring(2);
+  }
+  
+  // 2. Remove trailing Alif (ا) only if it is preceded by Fathatayn (ً)
+  if (norm.endsWith("\u0627") && norm.charAt(norm.length - 2) === "\u064B") {
+    norm = norm.substring(0, norm.length - 1);
+  }
+  return norm;
+};
+
+const playLocalOrTts = (cleanText) => {
+  // 1. Search for exact match first
+  let matchedItem = hijaiyahSounds.find(h => h.text === cleanText);
+  if (!matchedItem) {
+    const lists = [...sukunData, ...tanwinData, ...tasydidData];
+    matchedItem = lists.find(item => item.text === cleanText);
+  }
+
+  // 2. If no exact match, use normalized match
+  if (!matchedItem) {
+    const normalizedQuery = normalizeArabicText(cleanText);
+    
+    // Check hijaiyahSounds first with normalized comparison
+    matchedItem = hijaiyahSounds.find(h => normalizeArabicText(h.text) === normalizedQuery);
+    
+    // Check sukun/tanwin/tasydid with normalized comparison
+    if (!matchedItem) {
+      const lists = [...sukunData, ...tanwinData, ...tasydidData];
+      matchedItem = lists.find(item => normalizeArabicText(item.text) === normalizedQuery);
     }
   }
 
-  // 3. Search in sukunData / tanwinData / tasydidData
-  if (!audioFile) {
-    const list = [...sukunData, ...tanwinData, ...tasydidData];
-    const match = list.find(item => item.text === cleanText);
-    if (match) {
-      audioFile = match.sound;
-    }
-  }
-  
-  // 4. Fallback Manual Map
-  const MANUAL_MAP = {
-    'اَ': 'a', 'بَ': 'ba', 'تَ': 'ta', 'ثَ': 'tsa', 'جَ': 'ja', 'حَ': 'ha_h', 'خَ': 'kho',
-    'دَ': 'da', 'ذَ': 'dza', 'رَ': 'ro', 'زَ': 'za', 'سَ': 'sa', 'شَ': 'sya', 'صَ': 'sho',
-    'ضَ': 'dho', 'طَ': 'tho', 'ظَ': 'zho', 'عَ': 'ain', 'غَ': 'ghain', 'فَ': 'fa', 'قَ': 'qof',
-    'كَ': 'kaf', 'لَ': 'lam', 'مَ': 'mim', 'نَ': 'nun', 'وَ': 'waw', 'هَ': 'ha', 'يَ': 'ya',
-    'ا': 'a', 'ب': 'ba', 'ت': 'ta', 'ث': 'tsa', 'ج': 'ja', 'ح': 'ha_h', 'خ': 'kho',
-    'د': 'da', 'ذ': 'dza', 'ر': 'ro', 'ز': 'za', 'س': 'sa', 'ش': 'sya', 'ص': 'sho',
-    'ض': 'dho', 'ط': 'tho', 'ظ': 'zho', 'ع': 'ain', 'غ': 'ghain', 'ف': 'fa', 'ق': 'qof',
-    'ك': 'kaf', 'l': 'lam', 'm': 'mim', 'n': 'nun', 'w': 'waw', 'h': 'ha', 'y': 'ya',
-    'اَنْعَمْتَ': 'an-amta', 'اَلنَّاسُ': 'annaasu', 'اَلرَّحْمٰنُ': 'arrahmani', 'اَلرَّحِيْمِ': 'arrohiim',
-    'أَحَدٌ': 'ahad', 'ٱلْحَمْدُ': 'alhamd', 'ٱلْمُدَّثِّرُ': 'almudassir', 'ٱلْقَارِعَةُ': 'alqoriah',
-    'نَسْتَعِيْنُ': 'nastaiin', 'نَسْتَعِينُ': 'nastaiin', 'خَوْفٌ': 'khouf', 'ثُمَّ': 'tsumma',
-    'إِنَّ': 'inna-1', 'عَلِيْمًا': 'aliimaa', 'هُدًى': 'hudaa', 'اَلْجَنَّةُ': 'jannah',
-    'صُمٌّ': 'summun', 'مِنْهُمْ': 'min-hum', 'مِنْ': 'min-ard', 'مِنْ وَاقٍ': 'an-khayr'
-  };
-
-  if (!audioFile && MANUAL_MAP[cleanText]) {
-    audioFile = MANUAL_MAP[cleanText];
-  }
-
-  if (audioFile) {
-    const audioUrl = `/qtajwid/audio/${audioFile}.mp3`;
-    const audio = new Audio(audioUrl);
+  // 3. Play audio if matched and has a sound file, else fallback to browser TTS
+  if (matchedItem?.sound) {
+    const audio = new Audio(`/qtajwid/audio/${matchedItem.sound}.mp3`);
     audio.play().catch((err) => {
-      console.warn("Local MP3 play failed, falling back to TTS:", err);
+      console.warn(`Local audio play failed for ${matchedItem.sound}.mp3, falling back to TTS:`, err);
       speakArabic(cleanText);
     });
   } else {
     speakArabic(cleanText);
   }
+};
+
+// Play audio directly for a wordList item using its stored quranAudio URL
+const playWordAudio = (item) => {
+  if (!item) return;
+  const wordText = item.word || item.text || '';
+  if (item.quranAudio) {
+    playQuranCdnAudio(item.quranAudio)
+      .catch(() => speakArabic(wordText));
+    return;
+  }
+  // Fallback for words without quranAudio
+  playLocalOrTts(wordText);
 };
 
 const getGameIcon = (id, className = "w-4 h-4") => {
@@ -228,9 +276,9 @@ function JilidCourse() {
     setQuizFinished(false);
     setGameMode("quiz");
 
-    // Auto play first question sound
+    // Auto play first question sound — use playLocalOrTts directly for letters
     setTimeout(() => {
-      playSound(shuffledQs[0].arabic);
+      playLocalOrTts(shuffledQs[0].arabic);
     }, 300);
   };
 
@@ -262,9 +310,8 @@ function JilidCourse() {
       setQIndex(nextIdx);
       setChosenAnswer(null);
       setIsAnswered(false);
-      setTimeout(() => {
-        playSound(questions[nextIdx].arabic);
-      }, 200);
+      // Play next letter sound immediately (no timeout to stay in gesture context)
+      playLocalOrTts(questions[nextIdx].arabic);
     }
   };
 
@@ -434,7 +481,7 @@ function JilidCourse() {
             {lvlData.questions.map((item, idx) => (
               <button
                 key={idx}
-                onClick={() => playSound(item.arabic)}
+                onClick={() => playLocalOrTts(item.arabic)}
                 className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 hover:bg-yellow-50 dark:hover:bg-yellow-950/20 border border-gray-100 dark:border-gray-800 hover:border-yellow-400 dark:hover:border-yellow-600 transition flex flex-col items-center justify-center gap-3 cursor-pointer group active:scale-95"
               >
                 <span className="text-4xl font-arabic font-bold text-gray-800 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition">
@@ -516,7 +563,7 @@ function JilidCourse() {
                 <p className="text-xs uppercase tracking-wider text-gray-400 font-semibold mb-2">Dengarkan audio dan pilih aksara yang tepat</p>
                 <div className="flex justify-center items-center gap-3">
                   <button
-                    onClick={() => playSound(questions[qIndex].arabic)}
+                    onClick={() => playLocalOrTts(questions[qIndex].arabic)}
                     className="p-5 bg-yellow-500 hover:bg-yellow-450 text-white rounded-full transition shadow-md active:scale-95 cursor-pointer flex items-center justify-center animate-pulse"
                     title="Putar Ulang Suara"
                   >
@@ -585,7 +632,6 @@ function SusunKataGame() {
     setAssembledPieces([]);
     setFeedback(null);
     setIsDone(false);
-    // Shuffle pieces
     const shuffled = [...word.pieces].sort(() => Math.random() - 0.5);
     setShuffledPieces(shuffled);
   }, []);
@@ -600,15 +646,14 @@ function SusunKataGame() {
     setAssembledPieces(newAssembled);
     setShuffledPieces(shuffledPieces.filter(p => p.value !== piece.value));
 
-    // Auto-check if all pieces are assembled
     if (newAssembled.length === currentWord.pieces.length) {
       const isCorrect = newAssembled.every((p, idx) => p.value === currentWord.pieces[idx].value);
       if (isCorrect) {
-        setFeedback({ type: 'correct', text: '✓ Masha Allah, Benar!' });
+        setFeedback({ type: 'correct', text: 'Masha Allah, Benar!' });
         setIsDone(true);
-        playSound(currentWord.word);
+        playWordAudio(currentWord); // use direct quranAudio URL
       } else {
-        setFeedback({ type: 'wrong', text: '✗ Belum tepat. Silakan coba susun kembali.' });
+        setFeedback({ type: 'wrong', text: 'Belum tepat. Silakan coba susun kembali.' });
       }
     }
   };
@@ -640,7 +685,7 @@ function SusunKataGame() {
         <h3 className="text-4xl font-arabic font-bold text-yellow-600 mb-2">{currentWord.word}</h3>
         <p className="text-sm text-gray-500 italic dark:text-gray-400">Artinya: {currentWord.meaning}</p>
         <button
-          onClick={() => playSound(currentWord.word)}
+          onClick={() => playWordAudio(currentWord)}
           className="mt-3.5 p-2.5 rounded-lg bg-yellow-50 dark:bg-yellow-950/20 text-yellow-600 hover:bg-yellow-500 hover:text-white transition cursor-pointer inline-flex items-center gap-1.5 text-xs font-semibold"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -739,9 +784,12 @@ function TebakSuaraGame() {
     setTarget(item);
     setOptions(opts);
     
-    setTimeout(() => {
-      playSound(itemText);
-    }, 200);
+    // Play directly using the correct method for this item type
+    if (isLetter) {
+      playLocalOrTts(itemText);
+    } else {
+      playWordAudio(item);
+    }
   }, []);
 
   useEffect(() => {
@@ -768,7 +816,11 @@ function TebakSuaraGame() {
       <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-900 rounded-3xl border border-gray-100 dark:border-gray-800">
         <p className="text-sm text-gray-500 mb-4 font-sans">Dengarkan audio dan pilihlah aksara Arab yang sesuai</p>
         <button
-          onClick={() => target && playSound(target.text || target.word)}
+          onClick={() => {
+            if (!target) return;
+            if (target.quranAudio) playWordAudio(target);
+            else playLocalOrTts(target.text || target.word);
+          }}
           className="p-5 bg-yellow-500 hover:bg-yellow-450 text-white rounded-full transition shadow-md active:scale-95 cursor-pointer animate-pulse"
         >
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -985,12 +1037,13 @@ function TajwidQuiz({ questions, accentBg = "bg-yellow-500" }) {
 
   useEffect(() => {
     if (q) {
+      // Small delay to let the component render, but keep within user-gesture window
       const t = setTimeout(() => {
         playSound(q.example || q.word);
-      }, 300);
+      }, 100);
       return () => clearTimeout(t);
     }
-  }, [cur, q]);
+  }, [cur]); // only re-run when cur changes, not when q changes (avoids double-play)
 
   const handleChoose = (opt) => {
     if (chosen) return;
