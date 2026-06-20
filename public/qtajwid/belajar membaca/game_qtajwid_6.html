@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Interaktif Qtajwid 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Tema Hijau Emerald/Emas untuk Qtajwid 6 (Level Akhir) */
+            --bg-grad-1: #064e3b;
+            --bg-grad-2: #14532d;
+            --bg-grad-3: #065f46;
+            --accent: #FDE047; /* Emas/Kuning terang */
+            --accent-hover: #FBBF24;
+            --danger: #EF4444; 
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(253, 224, 71, 0.3);
+            --text-main: #ECFDF5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--bg-grad-1), var(--bg-grad-2), var(--bg-grad-3));
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        #btn-audio {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 600;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+
+        #btn-audio:hover {
+            background: rgba(253, 224, 71, 0.15);
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        h1 {
+            font-weight: 800;
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #FDE047, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #D1FAE5;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Menu Styles */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .menu-card {
+            padding: 2rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-width: 2px;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            background: rgba(253, 224, 71, 0.1);
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(253, 224, 71, 0.2);
+        }
+
+        .menu-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .menu-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* Common Game UI */
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(253, 224, 71, 0.4);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+            font-weight: 600;
+        }
+
+        .btn-back:hover {
+            background: rgba(253, 224, 71, 0.2);
+        }
+
+        .score-board {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .arabic {
+            font-family: 'Amiri', serif;
+            direction: rtl;
+        }
+
+        /* Game 1: Tebak Huruf */
+        #game-1 .question-box {
+            font-size: 6rem;
+            text-align: center;
+            margin: 2rem 0;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            animation: float 3s ease-in-out infinite;
+            color: white;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn-option {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: white;
+            padding: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-option:hover {
+            background: var(--accent);
+            color: var(--bg-grad-1);
+            transform: scale(1.02);
+        }
+
+        /* Game 2: Letuskan Balon (Balloon Pop) */
+        .g2-instruction {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .g2-instruction span {
+            font-weight: 800;
+            color: var(--accent);
+            font-size: 2rem;
+        }
+
+        .balloon-area {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+            background: rgba(0,0,0,0.3);
+            border: 2px dashed rgba(253, 224, 71, 0.3);
+            border-radius: 16px;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -150px;
+            width: 100px;
+            height: 110px;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-family: 'Amiri', serif;
+            cursor: pointer;
+            box-shadow: inset -10px -10px 20px rgba(0,0,0,0.4);
+            animation: floatUp linear infinite;
+            text-align: center;
+            line-height: 1.2;
+            padding: 5px;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 30px;
+            background: rgba(253, 224, 71, 0.8);
+            z-index: -1;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-300px) rotate(5deg); }
+            100% { transform: translateY(-650px) rotate(-5deg); }
+        }
+
+        .balloon.pop-anim {
+            animation: pop 0.3s forwards !important;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+
+        /* Game 3: Susun Kata */
+        .target-word {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+        }
+
+        .drop-zone {
+            min-height: 100px;
+            background: rgba(0,0,0,0.3);
+            border: 2px dashed rgba(253, 224, 71, 0.4);
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .letters-pool {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .draggable-letter {
+            width: 140px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(253, 224, 71, 0.5);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s;
+            user-select: none;
+            text-align: center;
+        }
+
+        .draggable-letter:hover {
+            background: rgba(253, 224, 71, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(253, 224, 71, 0.3);
+        }
+
+        /* Common Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .wrong {
+            animation: shake 0.4s ease-in-out !important;
+            background: var(--danger) !important;
+            border-color: var(--danger) !important;
+            color: black !important;
+        }
+
+        .correct {
+            background: var(--accent) !important;
+            border-color: var(--accent) !important;
+            color: var(--bg-grad-1) !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            #game-1 .question-box {
+                font-size: 4rem;
+            }
+            .draggable-letter {
+                width: 100px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="btn-audio" onclick="toggleAudio()">🔊 Audio Nyala</button>
+
+    <header>
+        <h1>Qtajwid 6 Interaktif</h1>
+        <p class="subtitle">Level Akhir: Bacaan Ghorib & Potongan Surat Pendek</p>
+    </header>
+
+    <div style="margin-bottom: 2rem; display: flex; gap: 1rem; justify-content: center; z-index: 10; flex-wrap: wrap;">
+        <div style="background: var(--glass-bg); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--glass-border);">
+            <select onchange="if(this.value) window.location.href=this.value" style="background: transparent; border: none; color: inherit; font-weight: bold; cursor: pointer; outline: none; margin-left: 0;">
+                <option value="" style="color: black;" disabled selected hidden>Lanjut Ke</option>
+                <option value="game_qtajwid_1.html" style="color: black;">Qtajwid 1</option>
+                <option value="game_qtajwid_2.html" style="color: black;">Qtajwid 2</option>
+                <option value="game_qtajwid_3.html" style="color: black;">Qtajwid 3</option>
+                <option value="game_qtajwid_4.html" style="color: black;">Qtajwid 4</option>
+                <option value="game_qtajwid_5.html" style="color: black;">Qtajwid 5</option>
+                <option value="game_qtajwid_6.html" style="color: black;">Qtajwid 6</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container glass" id="main-menu">
+        <h2 style="text-align: center; margin-bottom: 1rem; color: var(--accent);">Pilih Permainan</h2>
+        <div class="menu-grid">
+            <div class="menu-card glass" onclick="startGame(1)">
+                <div class="icon">👑</div>
+                <h3>Tebak Ghorib</h3>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #D1FAE5;">Penebakan bacaan khusus</p>
+            </div>
+            <div class="menu-card glass" onclick="startGame(2)">
+                <div class="icon">🎈</div>
+                <h3>Balon Emas</h3>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #D1FAE5;">Tangkap potongan ayat</p>
+            </div>
+            <div class="menu-card glass" onclick="startGame(3)">
+                <div class="icon">🧩</div>
+                <h3>Susun Ayat</h3>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: #D1FAE5;">Rangkai surat-surat pendek</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game 1: Tebak Huruf -->
+    <div class="container glass hidden" id="game-1">
+        <div class="game-header">
+            <button class="btn-back" onclick="showMenu()">← Kembali</button>
+            <div class="score-board">Skor: <span id="score-1">0</span></div>
+        </div>
+        <div class="arabic question-box" id="g1-question">مَجْرٰىهَا</div>
+        <div class="options-grid" id="g1-options">
+            <!-- Options generated by JS -->
+        </div>
+    </div>
+
+    <!-- Game 2: Letuskan Balon -->
+    <div class="container glass hidden" id="game-2">
+        <div class="game-header">
+            <button class="btn-back" onclick="showMenu()">← Kembali</button>
+            <div class="score-board">Skor: <span id="score-2">0</span></div>
+        </div>
+        
+        <p class="g2-instruction">Cari & letuskan: <br><span id="g2-target-latin">majreeha</span></p>
+        
+        <div class="balloon-area" id="g2-area">
+            <!-- Balloons generated by JS -->
+        </div>
+    </div>
+
+    <!-- Game 3: Susun Kata -->
+    <div class="container glass hidden" id="game-3">
+        <div class="game-header">
+            <button class="btn-back" onclick="showMenu()">← Kembali</button>
+            <div class="score-board">Skor: <span id="score-3">0</span></div>
+        </div>
+        <p style="text-align: center; color: #D1FAE5; margin-bottom: 0.5rem;">Susun bacaan sesuai urutan ini:</p>
+        <div class="target-word" id="g3-target">qul huwa - allahu ahad</div>
+        
+        <div class="drop-zone arabic" id="g3-dropzone">
+            <!-- Clicked letters go here -->
+        </div>
+
+        <div class="letters-pool arabic" id="g3-pool">
+            <!-- Letters to pick generated by JS -->
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn-back" onclick="resetGame3()">Reset Susunan</button>
+        </div>
+    </div>
+
+    <script>
+        const qtajwidData = [
+            // Bacaan Ghorib (Spesial)
+            { a: 'مَجْرٰىهَا', l: 'majreeha' }, // Imalah
+            { a: 'لَا تَأْمَنَّا', l: 'laa ta\'manna' }, // Isymam
+            { a: 'ءَاَعْجَمِيٌّ', l: 'a-a\'jamiyyun' }, // Tashil
+            { a: 'بِئْسَ الِاسْمُ', l: 'bi\'sal-lismu' }, // Naql
+            { a: 'بَلْۜ رَانَ', l: 'bal raana' }, // Saktah
+            { a: 'مَنْۜ رَاقٍ', l: 'man raaq' }, // Saktah
+            { a: 'عِوَجًاۜ', l: '\'iwajaa' }, // Saktah
+            { a: 'اَنَا', l: 'ana (pendek)' }, // Ana dibaca pendek
+            { a: 'لٰكِنَّا', l: 'laakinna (pendek)' }, 
+            // Surah Pendek (Potongan)
+            { a: 'قُلْ هُوَ', l: 'qul huwa' },
+            { a: 'اللّٰهُ اَحَدٌ', l: 'allahu ahad' },
+            { a: 'اللّٰهُ الصَّمَدُ', l: 'allahu sh-shamad' },
+            { a: 'مِنْ شَرِّ', l: 'min syarri' },
+            { a: 'مَا خَلَقَ', l: 'maa khalaq' }
+        ];
+
+        // Emas & Zamrud colors for balloons
+        const balloonColors = [
+            'radial-gradient(circle at 30% 30%, #FDE047, #B45309)', // Emas
+            'radial-gradient(circle at 30% 30%, #34D399, #065F46)', // Zamrud
+            'radial-gradient(circle at 30% 30%, #60A5FA, #1E3A8A)', // Berlian biru
+            'radial-gradient(circle at 30% 30%, #FCA5A5, #991B1B)'  // Ruby
+        ];
+
+        let score = 0;
+
+        // ====== AUDIO SYSTEM ======
+        let audioEnabled = true;
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function toggleAudio() {
+            audioEnabled = !audioEnabled;
+            const btn = document.getElementById('btn-audio');
+            btn.innerText = audioEnabled ? '🔊 Audio Nyala' : '🔇 Audio Mati';
+            if(audioEnabled && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        const SoundEffects = {
+            playPop: function() {
+                if (!audioEnabled) return;
+                if(audioCtx.state === 'suspended') audioCtx.resume();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.1);
+                gain.gain.setValueAtTime(1, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                osc.start(audioCtx.currentTime);
+                osc.stop(audioCtx.currentTime + 0.1);
+            },
+            playCorrect: function() {
+                if (!audioEnabled) return;
+                if(audioCtx.state === 'suspended') audioCtx.resume();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+                osc.frequency.setValueAtTime(600, audioCtx.currentTime + 0.1);
+                osc.frequency.setValueAtTime(800, audioCtx.currentTime + 0.2);
+                gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                osc.start(audioCtx.currentTime);
+                osc.stop(audioCtx.currentTime + 0.4);
+            },
+            playWrong: function() {
+                if (!audioEnabled) return;
+                if(audioCtx.state === 'suspended') audioCtx.resume();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                osc.start(audioCtx.currentTime);
+                osc.stop(audioCtx.currentTime + 0.3);
+            },
+            speak: function(text) {
+                if (!audioEnabled) return;
+                if ('speechSynthesis' in window) {
+                    window.speechSynthesis.cancel(); 
+                    const msg = new SpeechSynthesisUtterance();
+                    // bersihkan tanda keterangan agar tidak dibaca robot
+                    let cleanText = text.replace('(pendek)', '').trim();
+                    msg.text = cleanText;
+                    msg.lang = 'id-ID';
+                    msg.rate = 0.8;
+                    window.speechSynthesis.speak(msg);
+                }
+            }
+        };
+
+        // Utilities
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function getRandomItems(count) {
+            return shuffle([...qtajwidData]).slice(0, count);
+        }
+
+        function showMenu() {
+            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
+            document.getElementById('main-menu').classList.remove('hidden');
+        }
+
+        function startGame(gameId) {
+            if(audioEnabled && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`game-${gameId}`).classList.remove('hidden');
+            score = 0;
+            
+            if(gameId === 1) initGame1();
+            if(gameId === 2) initGame2();
+            if(gameId === 3) initGame3();
+        }
+
+        // ====== GAME 1: TEBAK HURUF ======
+        let g1CurrentCorrect;
+
+        function initGame1() {
+            document.getElementById('score-1').innerText = score;
+            const items = getRandomItems(4);
+            g1CurrentCorrect = items[0];
+            
+            document.getElementById('g1-question').innerText = g1CurrentCorrect.a;
+            
+            const optionsGrid = document.getElementById('g1-options');
+            optionsGrid.innerHTML = '';
+            
+            shuffle(items).forEach(item => {
+                const btn = document.createElement('button');
+                btn.className = 'btn-option';
+                btn.innerText = item.l;
+                btn.onclick = () => checkGame1(btn, item);
+                optionsGrid.appendChild(btn);
+            });
+        }
+
+        function checkGame1(btn, item) {
+            if(item.l === g1CurrentCorrect.l) {
+                btn.classList.add('correct');
+                SoundEffects.playCorrect();
+                SoundEffects.speak(g1CurrentCorrect.l);
+                score += 10;
+                setTimeout(initGame1, 1000);
+            } else {
+                btn.classList.add('wrong');
+                SoundEffects.playWrong();
+                setTimeout(() => btn.classList.remove('wrong'), 400);
+            }
+        }
+
+
+        // ====== GAME 2: LETUSKAN BALON ======
+        let g2TargetItem;
+
+        function initGame2() {
+            document.getElementById('score-2').innerText = score;
+            startBalloonWave();
+        }
+
+        function startBalloonWave() {
+            const area = document.getElementById('g2-area');
+            area.innerHTML = '';
+            
+            const items = getRandomItems(4); // 1 correct, 3 distractors
+            g2TargetItem = items[0];
+            
+            document.getElementById('g2-target-latin').innerText = g2TargetItem.l;
+            SoundEffects.speak(g2TargetItem.l);
+            
+            shuffle(items).forEach((item, index) => {
+                const balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.innerText = item.a;
+                
+                const color = balloonColors[Math.floor(Math.random() * balloonColors.length)];
+                balloon.style.background = color;
+                
+                const baseLeft = (index * 25) + 5; 
+                balloon.style.left = baseLeft + '%';
+                
+                const duration = 5 + Math.random() * 3;
+                balloon.style.animationDuration = duration + 's';
+                
+                const delay = Math.random() * 2;
+                balloon.style.animationDelay = delay + 's';
+                
+                balloon.onclick = () => checkBalloonClick(balloon, item);
+                area.appendChild(balloon);
+            });
+        }
+
+        function checkBalloonClick(balloon, item) {
+            if(balloon.classList.contains('pop-anim')) return;
+
+            if(item.l === g2TargetItem.l) {
+                balloon.classList.add('pop-anim');
+                SoundEffects.playPop();
+                setTimeout(() => SoundEffects.playCorrect(), 150);
+                
+                score += 10;
+                document.getElementById('score-2').innerText = score;
+                
+                setTimeout(() => {
+                    startBalloonWave();
+                }, 800);
+            } else {
+                balloon.classList.add('wrong');
+                SoundEffects.playWrong();
+                setTimeout(() => balloon.classList.remove('wrong'), 400);
+            }
+        }
+
+
+        // ====== GAME 3: SUSUN KATA ======
+        let g3TargetSequence = [];
+        let g3CurrentIndex = 0;
+
+        function initGame3() {
+            document.getElementById('score-3').innerText = score;
+            const seqLength = 2; // For long verses, 2 blocks is better
+            g3TargetSequence = getRandomItems(seqLength);
+            g3CurrentIndex = 0;
+            
+            const latinTarget = g3TargetSequence.map(i => i.l).join(' - ');
+            document.getElementById('g3-target').innerText = latinTarget;
+            
+            // Speak the target phrase
+            const speakPhrase = g3TargetSequence.map(i => i.l).join(" ");
+            SoundEffects.speak(speakPhrase);
+
+            document.getElementById('g3-dropzone').innerHTML = '';
+            
+            const pool = document.getElementById('g3-pool');
+            pool.innerHTML = '';
+            
+            let poolItems = [...g3TargetSequence, ...getRandomItems(2)];
+            
+            shuffle(poolItems).forEach(item => {
+                const el = document.createElement('div');
+                el.className = 'draggable-letter glass';
+                el.innerText = item.a;
+                el.onclick = () => onLetterClick(el, item);
+                pool.appendChild(el);
+            });
+        }
+
+        function onLetterClick(el, item) {
+            if(el.parentElement.id !== 'g3-pool') return; 
+            
+            const targetItem = g3TargetSequence[g3CurrentIndex];
+            
+            if(item.l === targetItem.l) {
+                document.getElementById('g3-dropzone').appendChild(el);
+                SoundEffects.playPop();
+                g3CurrentIndex++;
+                
+                if(g3CurrentIndex === g3TargetSequence.length) {
+                    score += 20;
+                    document.getElementById('score-3').innerText = score;
+                    document.getElementById('g3-dropzone').classList.add('correct');
+                    
+                    setTimeout(() => SoundEffects.playCorrect(), 200);
+
+                    setTimeout(() => {
+                        document.getElementById('g3-dropzone').classList.remove('correct');
+                        initGame3();
+                    }, 1200);
+                }
+            } else {
+                el.classList.add('wrong');
+                SoundEffects.playWrong();
+                setTimeout(() => el.classList.remove('wrong'), 400);
+            }
+        }
+
+        function resetGame3() {
+            initGame3();
+        }
+
+    </script>
+</body>
+</html>
