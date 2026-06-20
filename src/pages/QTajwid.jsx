@@ -121,7 +121,6 @@ const shuffle = (array) => {
 // ─── MAIN COMPONENT ──────────────────────────────────────────────────
 const QTajwid = () => {
   const [selectedLevel, setSelectedLevel] = useState(null);
-  const [activeTab, setActiveTab] = useState("materi"); // "materi" | "game"
   const [activeGame, setActiveGame] = useState(null); // null | "tebak" | "balon" | "susun"
   const [audioEnabled, setAudioEnabled] = useState(true);
 
@@ -202,7 +201,6 @@ const QTajwid = () => {
   // Back to level detail dashboard
   const handleBackToDashboard = () => {
     setSelectedLevel(null);
-    setActiveTab("materi");
     setActiveGame(null);
   };
 
@@ -256,7 +254,7 @@ const QTajwid = () => {
           </h1>
 
           <p className="text-base text-gray-600 dark:text-gray-400 mb-2 max-w-2xl mx-auto leading-relaxed">
-            Metode interaktif Tilawati yang terbagi menjadi 6 level belajar. Baca modul materi PDF pendukung, lalu latih kemampuan pelafalan Anda lewat game yang menyenangkan.
+            Metode interaktif Tilawati yang terbagi menjadi 6 level belajar. Latih kemampuan pelafalan Anda secara menyenangkan melalui berbagai game interaktif.
           </p>
         </div>
       </div>
@@ -285,23 +283,21 @@ const QTajwid = () => {
                       Level {lvl.id}
                     </span>
                     <span className="text-[11px] font-semibold text-gray-400 dark:text-gray-500">
-                      {lvl.data.length} Materi
+                      {lvl.data.length} Huruf
                     </span>
                   </div>
 
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
-                    {lvl.title.split(": ")[1]}
+                    {lvl.desc}
                   </h3>
                   
-                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-6 grow">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
                     {lvl.subtitle}
                   </p>
 
-                  <div className="flex items-center text-xs font-semibold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1.5 transition-transform duration-300">
-                    Mulai Level
-                    <svg className="w-3.5 h-3.5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                    </svg>
+                  <div className="mt-auto pt-4 flex items-center justify-between border-t border-gray-150 dark:border-gray-800 w-full text-xs font-bold text-yellow-600 dark:text-yellow-400">
+                    <span>Mulai Latihan</span>
+                    <span className="transform group-hover:translate-x-1 transition-transform">→</span>
                   </div>
                 </button>
               ))}
@@ -328,9 +324,8 @@ const QTajwid = () => {
                 </div>
               </div>
 
-              {/* Sound Controls & Tab Options */}
+              {/* Sound Controls */}
               <div className="flex items-center gap-3 self-start">
-                {/* Clean Toggle Audio button */}
                 <button
                   onClick={() => setAudioEnabled(!audioEnabled)}
                   className={`p-2.5 rounded-xl border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 transition cursor-pointer flex items-center justify-center ${
@@ -349,178 +344,122 @@ const QTajwid = () => {
                     </svg>
                   )}
                 </button>
-
-                <div className="flex bg-gray-50 dark:bg-gray-800 p-1 rounded-xl">
-                  <button
-                    onClick={() => {
-                      setActiveTab("materi");
-                      setActiveGame(null);
-                    }}
-                    className={`px-4 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${
-                      activeTab === "materi"
-                        ? "bg-white dark:bg-gray-700 text-yellow-600 dark:text-yellow-400 shadow-xs"
-                        : "text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
-                    }`}
-                  >
-                    Materi (PDF)
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("game")}
-                    className={`px-4 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer ${
-                      activeTab === "game"
-                        ? "bg-white dark:bg-gray-700 text-yellow-600 dark:text-yellow-400 shadow-xs"
-                        : "text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"
-                    }`}
-                  >
-                    Latihan Game
-                  </button>
-                </div>
               </div>
             </div>
 
-            {/* TAB CONTENTS */}
-            {activeTab === "materi" ? (
-              /* TAB: MATERI (PDF) */
-              <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xs border border-gray-200 dark:border-gray-800 overflow-hidden flex flex-col">
-                <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
-                  <div>
-                    <h3 className="text-sm font-bold text-gray-900 dark:text-white">Buku Tilawati Jilid {selectedLevel.id}</h3>
-                    <p className="text-[11px] text-gray-500 dark:text-gray-400">Bacalah materi di bawah untuk memahami kaidah pelafalan sebelum bermain game.</p>
+            {/* GAME CONTENTS */}
+            <div>
+              {!activeGame ? (
+                /* GAME SELECTION MENU */
+                <div>
+                  <div className="text-center mb-6">
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-white">Pilih Permainan Latihan</h3>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Mainkan game di bawah untuk mengasah daya ingat dan kefasihan membaca</p>
                   </div>
-                  <a
-                    href={selectedLevel.pdfPath}
-                    download
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-yellow-50 dark:bg-yellow-950/20 text-yellow-700 dark:text-yellow-400 border border-yellow-200/50 dark:border-yellow-900/30 text-xs font-bold hover:bg-yellow-500 dark:hover:bg-yellow-600 hover:text-white hover:border-transparent transition"
-                  >
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Unduh PDF
-                  </a>
-                </div>
-                <div className="w-full h-[65vh]">
-                  <iframe
-                    src={selectedLevel.pdfPath}
-                    title={selectedLevel.title}
-                    className="w-full h-full border-0"
-                  />
-                </div>
-              </div>
-            ) : (
-              /* TAB: INTERACTIVE LATIHAN GAME */
-              <div>
-                {!activeGame ? (
-                  /* GAME SELECTION MENU */
-                  <div>
-                    <div className="text-center mb-6">
-                      <h3 className="text-lg font-bold text-gray-800 dark:text-white">Pilih Permainan Latihan</h3>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Mainkan game di bawah untuk mengasah daya ingat dan kefasihan membaca</p>
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                      {/* Game 1 Card */}
-                      <button
-                        onClick={() => setActiveGame("tebak")}
-                        className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-yellow-450 hover:shadow-md text-left transition duration-300 flex flex-col items-start cursor-pointer group"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-950/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                        </div>
-                        <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">Tebak Bacaan</h4>
-                        <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-                          Cari ejaan latin yang tepat berdasarkan aksara Arab yang ditampilkan pada layar.
-                        </p>
-                        <span className="text-[11px] font-bold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1 transition-transform">
-                          Mulai Main →
-                        </span>
-                      </button>
-
-                      {/* Game 2 Card */}
-                      <button
-                        onClick={() => setActiveGame("balon")}
-                        className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-yellow-450 hover:shadow-md text-left transition duration-300 flex flex-col items-start cursor-pointer group"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-950/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                          </svg>
-                        </div>
-                        <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">Letuskan Balon</h4>
-                        <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-                          Dengarkan panduan audio pelafalan, lalu cari dan letuskan balon aksara Arab yang sesuai.
-                        </p>
-                        <span className="text-[11px] font-bold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1 transition-transform">
-                          Mulai Main →
-                        </span>
-                      </button>
-
-                      {/* Game 3 Card */}
-                      <button
-                        onClick={() => setActiveGame("susun")}
-                        className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-yellow-450 hover:shadow-md text-left transition duration-300 flex flex-col items-start cursor-pointer group"
-                      >
-                        <div className="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-950/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                          </svg>
-                        </div>
-                        <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">Susun Bacaan</h4>
-                        <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
-                          Rangkai kepingan-kepingan aksara Arab acak menjadi kalimat utuh sesuai ejaan yang diberikan.
-                        </p>
-                        <span className="text-[11px] font-bold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1 transition-transform">
-                          Mulai Main →
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  /* RENDER ACTIVE GAME SCREEN */
-                  <div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    {/* Game 1 Card */}
                     <button
-                      onClick={handleBackToGameMenu}
-                      className="inline-flex items-center text-xs font-bold text-gray-500 hover:text-yellow-600 dark:hover:text-yellow-400 mb-6 transition cursor-pointer"
+                      onClick={() => setActiveGame("tebak")}
+                      className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-yellow-450 hover:shadow-md text-left transition duration-300 flex flex-col items-start cursor-pointer group"
                     >
-                      <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                      </svg>
-                      Kembali ke Menu Game
+                      <div className="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-950/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">Tebak Bacaan</h4>
+                      <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+                        Cari ejaan latin yang tepat berdasarkan aksara Arab yang ditampilkan pada layar.
+                      </p>
+                      <span className="text-[11px] font-bold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1 transition-transform">
+                        Mulai Main →
+                      </span>
                     </button>
 
-                    {activeGame === "tebak" && (
-                      <TebakBacaanGame
-                        dataset={selectedLevel.data}
-                        speak={speakReading}
-                        playCorrect={playCorrectSound}
-                        playWrong={playWrongSound}
-                      />
-                    )}
+                    {/* Game 2 Card */}
+                    <button
+                      onClick={() => setActiveGame("balon")}
+                      className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-yellow-450 hover:shadow-md text-left transition duration-300 flex flex-col items-start cursor-pointer group"
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-950/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">Letuskan Balon</h4>
+                      <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+                        Dengarkan panduan audio pelafalan, lalu cari dan letuskan balon aksara Arab yang sesuai.
+                      </p>
+                      <span className="text-[11px] font-bold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1 transition-transform">
+                        Mulai Main →
+                      </span>
+                    </button>
 
-                    {activeGame === "balon" && (
-                      <LetuskanBalonGame
-                        dataset={selectedLevel.data}
-                        speak={speakReading}
-                        playPop={playPopSound}
-                        playCorrect={playCorrectSound}
-                        playWrong={playWrongSound}
-                      />
-                    )}
-
-                    {activeGame === "susun" && (
-                      <SusunBacaanGame
-                        dataset={selectedLevel.data}
-                        speak={speakReading}
-                        playPop={playPopSound}
-                        playCorrect={playCorrectSound}
-                        playWrong={playWrongSound}
-                      />
-                    )}
+                    {/* Game 3 Card */}
+                    <button
+                      onClick={() => setActiveGame("susun")}
+                      className="p-5 rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 hover:border-yellow-450 hover:shadow-md text-left transition duration-300 flex flex-col items-start cursor-pointer group"
+                    >
+                      <div className="w-10 h-10 rounded-xl bg-yellow-50 dark:bg-yellow-950/30 text-yellow-600 dark:text-yellow-400 flex items-center justify-center mb-4 group-hover:bg-yellow-500 group-hover:text-white transition">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-sm font-bold text-gray-900 dark:text-white mb-2">Susun Bacaan</h4>
+                      <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed mb-4">
+                        Rangkai kepingan-kepingan aksara Arab acak menjadi kalimat utuh sesuai ejaan yang diberikan.
+                      </p>
+                      <span className="text-[11px] font-bold text-yellow-600 dark:text-yellow-400 group-hover:translate-x-1 transition-transform">
+                        Mulai Main →
+                      </span>
+                    </button>
                   </div>
-                )}
-              </div>
-            )}
+                </div>
+              ) : (
+                /* RENDER ACTIVE GAME SCREEN */
+                <div>
+                  <button
+                    onClick={handleBackToGameMenu}
+                    className="inline-flex items-center text-xs font-bold text-gray-500 hover:text-yellow-600 dark:hover:text-yellow-400 mb-6 transition cursor-pointer"
+                  >
+                    <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Kembali ke Menu Game
+                  </button>
+
+                  {activeGame === "tebak" && (
+                    <TebakBacaanGame
+                      dataset={selectedLevel.data}
+                      speak={speakReading}
+                      playCorrect={playCorrectSound}
+                      playWrong={playWrongSound}
+                    />
+                  )}
+
+                  {activeGame === "balon" && (
+                    <LetuskanBalonGame
+                      dataset={selectedLevel.data}
+                      speak={speakReading}
+                      playPop={playPopSound}
+                      playCorrect={playCorrectSound}
+                      playWrong={playWrongSound}
+                    />
+                  )}
+
+                  {activeGame === "susun" && (
+                    <SusunBacaanGame
+                      dataset={selectedLevel.data}
+                      speak={speakReading}
+                      playPop={playPopSound}
+                      playCorrect={playCorrectSound}
+                      playWrong={playWrongSound}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         )}
       </main>
