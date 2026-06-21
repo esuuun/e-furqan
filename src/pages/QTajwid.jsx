@@ -254,7 +254,7 @@ const QTajwid = () => {
           </h1>
 
           <p className="text-base text-gray-600 dark:text-gray-400 mb-2 max-w-2xl mx-auto leading-relaxed">
-            Metode interaktif Tilawati yang terbagi menjadi 6 level belajar. Latih kemampuan pelafalan Anda secara menyenangkan melalui berbagai game interaktif.
+            Metode interaktif QTajwid yang terbagi menjadi 6 level belajar. Latih kemampuan pelafalan Anda secara menyenangkan melalui berbagai game interaktif.
           </p>
         </div>
       </div>
