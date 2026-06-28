@@ -61,12 +61,12 @@ const Flashcard = ({ word, surahId, ayatNumber, playAudioGlobal, rootWord }) => 
         </div>
 
         {/* BACK FACE */}
-        <div className="word-card-face word-card-back absolute w-full h-full p-4 flex flex-col justify-center items-center rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:border-yellow-500 dark:hover:border-yellow-500 hover:shadow-md hover:shadow-yellow-500/5 transition duration-300">
+        <div dir="ltr" className="word-card-face word-card-back absolute w-full h-full p-4 flex flex-col justify-center items-center rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:border-yellow-500 dark:hover:border-yellow-500 hover:shadow-md hover:shadow-yellow-500/5 transition duration-300">
           <div className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 leading-snug line-clamp-3 text-center">
             {word.translation?.text || ""}
           </div>
           {rootWord && (
-            <div className="mt-2 text-[10px] sm:text-xs font-bold text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/30 px-2 py-0.5 rounded-md font-arabic select-none">
+            <div dir="rtl" className="mt-2 text-[10px] sm:text-xs font-bold text-yellow-600 dark:text-yellow-400 bg-yellow-50 dark:bg-yellow-950/30 px-2 py-0.5 rounded-md font-arabic select-none">
               {rootWord}
             </div>
           )}
@@ -295,7 +295,7 @@ const QTahfidz = () => {
             <div className="max-w-4xl mx-auto flex flex-col items-center">
               {/* Entire Verse Player Card */}
               <div className="w-full bg-slate-50/50 dark:bg-zinc-950/30 rounded-3xl p-6 sm:p-8 border border-gray-200/60 dark:border-gray-800/60 flex flex-col items-center mb-10 gap-6">
-                <div className="font-arabic text-3xl sm:text-4xl text-gray-900 dark:text-white leading-loose text-center direction-rtl select-none">
+                <div dir="rtl" className="font-arabic text-3xl sm:text-4xl text-gray-900 dark:text-white leading-loose text-center select-none">
                   {currentAyat.fullText}
                 </div>
 
@@ -325,7 +325,8 @@ const QTahfidz = () => {
               {/* Grid of Word Flashcards */}
               <div 
                 key={`${currentSurahId}-${currentAyatIndex}`} 
-                className="words-grid flex flex-wrap gap-4 sm:gap-6 justify-center w-full direction-rtl mb-12"
+                dir="rtl"
+                className="words-grid flex flex-wrap gap-4 sm:gap-6 justify-center w-full mb-12"
               >
                 {currentAyat.words.map((word) => (
                   <Flashcard
