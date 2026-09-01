@@ -951,26 +951,13 @@ const QThematic = () => {
           <div className="max-w-4xl mx-auto flex flex-col items-center">
             
             {/* Sub-Header Banner Card */}
-            <div className="w-full bg-linear-to-r from-yellow-500/10 via-white to-gray-50 dark:from-yellow-900/20 dark:via-gray-900 dark:to-gray-950 p-6 sm:p-8 rounded-3xl border border-yellow-200/50 dark:border-yellow-900/30 flex flex-col sm:flex-row items-center justify-between gap-6 mb-10 shadow-xs">
-              <div className="text-center sm:text-left">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  {subTitleTranslation || selectedSub}
-                </h2>
-                <p className="text-xs sm:text-sm font-semibold text-yellow-600 dark:text-yellow-400">
-                  {displayUraianKeys.length} Group Cards
-                </p>
-              </div>
-
-              <div className="flex items-center gap-3">
-                {/* Expand / Collapse All Toggle Button */}
-                <button
-                  onClick={toggleAllGroups}
-                  className="px-5 py-2.5 rounded-full border border-yellow-500 hover:bg-yellow-500 hover:text-white dark:hover:text-gray-900 text-yellow-600 dark:text-yellow-400 text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center gap-2 cursor-pointer shadow-xs whitespace-nowrap"
-                >
-                  <Layers className="w-4 h-4" />
-                  <span>{allCollapsedMode ? uiLabels.showVerses : uiLabels.hideVerses}</span>
-                </button>
-              </div>
+            <div className="w-full bg-linear-to-r from-yellow-500/10 via-white to-gray-50 dark:from-yellow-900/20 dark:via-gray-900 dark:to-gray-950 p-6 sm:p-8 rounded-3xl border border-yellow-200/50 dark:border-yellow-900/30 mb-10 shadow-xs">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                {subTitleTranslation || selectedSub}
+              </h2>
+              <p className="text-xs sm:text-sm font-semibold text-yellow-600 dark:text-yellow-400">
+                {displayUraianKeys.length} Group Cards
+              </p>
             </div>
 
             {/* Hint Indicator */}
