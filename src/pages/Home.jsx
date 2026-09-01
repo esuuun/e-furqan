@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const services = [
   {
-    title: "qThematic",
+    title: "Alquran Tematis",
     description:
       "Belajar kandungan Al-Qur’an secara tematis — ayat demi ayat dibahas menurut tema kehidupan.",
     link: "/qthematic",
@@ -26,48 +26,48 @@ const services = [
       </svg>
     ),
   },
-  {
-    title: "qTajwid",
-    description:
-      "Kuasai tajwid Al-Qur'an lewat game interaktif — huruf hijaiyah, hukum bacaan, waqaf, dan lebih banyak lagi.",
-    link: "/qtajwid",
-    icon: (
-      <svg
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-        ></path>
-      </svg>
-    ),
-  },
-  {
-    title: "qTahfidz",
-    description:
-      "Latihan hafalan ayat demi ayat dengan sistem audio, drag-and-drop, dan penilaian otomatis.",
-    link: "/qtahfidz",
-    icon: (
-      <svg
-        className="w-7 h-7"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 3-2 3-2 1.343 2 3 2zm0 0v-8"
-        ></path>
-      </svg>
-    ),
-  },
+  // {
+  //   title: "qTajwid",
+  //   description:
+  //     "Kuasai tajwid Al-Qur'an lewat game interaktif — huruf hijaiyah, hukum bacaan, waqaf, dan lebih banyak lagi.",
+  //   link: "/qtajwid",
+  //   icon: (
+  //     <svg
+  //       className="w-7 h-7"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       viewBox="0 0 24 24"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth="2"
+  //         d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+  //       ></path>
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "qTahfidz",
+  //   description:
+  //     "Latihan hafalan ayat demi ayat dengan sistem audio, drag-and-drop, dan penilaian otomatis.",
+  //   link: "/qtahfidz",
+  //   icon: (
+  //     <svg
+  //       className="w-7 h-7"
+  //       fill="none"
+  //       stroke="currentColor"
+  //       viewBox="0 0 24 24"
+  //     >
+  //       <path
+  //         strokeLinecap="round"
+  //         strokeLinejoin="round"
+  //         strokeWidth="2"
+  //         d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 3-2 3-2 1.343 2 3 2zm0 0v-8"
+  //       ></path>
+  //     </svg>
+  //   ),
+  // },
   // {
   //   title: "qNahwu",
   //   description:
@@ -117,7 +117,7 @@ const services = [
   //   ),
   // },
   {
-    title: "qMushaf",
+    title: "Mushaf Nahwu Shorof",
     description:
       "Jelajahi mushaf digital interaktif dengan analisis morfologi dan pencarian cepat setiap lafadz.",
     link: "/qmushaf",
@@ -277,7 +277,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2">
               <span className="text-yellow-600 dark:text-yellow-400 font-semibold tracking-wider uppercase text-sm">
-                Kenapa e-Furqan?
+                Kenapa SIMAQ?
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-3 mb-6">
                 Metode Belajar Modern & Interaktif

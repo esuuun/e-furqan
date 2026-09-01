@@ -54,7 +54,7 @@ const Navbar = () => {
             className="w-10 h-10 object-contain"
           />
           <span className="text-2xl font-bold text-gray-800 dark:text-white tracking-tight">
-            e-Furqan
+            SIMAQ
           </span>
         </Link>
 

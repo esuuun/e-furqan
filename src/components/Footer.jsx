@@ -15,7 +15,7 @@ const Footer = () => {
                 className="w-10 h-10 object-contain"
               />
               <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">
-                e-Furqan
+                SIMAQ
               </span>
             </div>
             <p className="text-gray-500 dark:text-gray-400 mb-6 leading-relaxed">
