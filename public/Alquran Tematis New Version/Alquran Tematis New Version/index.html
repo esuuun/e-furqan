@@ -1,0 +1,2700 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirah Rasulullah - Al-Quran Tematik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+Tamil:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Sans+Thaana:wght@400;500;600;700&family=Noto+Sans+Tifinagh:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --text-color: #e2e8f0;
+            --card-bg: #111827;
+            --card-border: #1e293b;
+            --accent: #14b8a6;
+            --accent-glow: rgba(20, 184, 166, 0.15);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 2rem 1rem;
+            line-height: 1.7;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, transparent 50%);
+            min-height: 100vh;
+        }
+        h1, h2, h3 {
+            color: var(--text-color);
+            text-align: center;
+        }
+        h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 2rem; 
+            font-weight: 700; 
+            letter-spacing: -0.025em; 
+        }
+        h1 span { color: var(--accent); }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding-bottom: 4rem;
+        }
+
+        /* Nav Container */
+        .nav-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .custom-select {
+            flex: 1;
+            min-width: 200px;
+            background-color: var(--card-bg);
+            color: #f8fafc;
+            border: 1px solid var(--card-border);
+            padding: 0.85rem 2.5rem 0.85rem 1rem;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%2314b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 12px;
+            transition: all 0.3s ease;
+        }
+        .custom-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.2);
+        }
+        .custom-select:hover:not(:disabled) {
+            border-color: #334155;
+        }
+        .custom-select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Hint */
+        .hint {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+            display: none; /* hidden by default until content loads */
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #1e293b;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid #334155;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(148, 163, 184, 0.2); }
+            70% { box-shadow: 0 0 0 10px rgba(148, 163, 184, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(148, 163, 184, 0); }
+        }
+
+        /* Content Area */
+        #content-area {
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sub Header Banner Card */
+        .sub-header-banner-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(15, 23, 42, 0.85));
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(20, 184, 166, 0.25);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .sub-header-info {
+            flex: 1;
+            text-align: left;
+        }
+        .sub-header-title {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #fbbf24;
+            text-align: left;
+            letter-spacing: -0.01em;
+        }
+        .sub-header-meta {
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .sub-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .toggle-verses-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(13, 148, 136, 0.3));
+            color: #5eead4;
+            border: 1px solid rgba(20, 184, 166, 0.45);
+            padding: 0.75rem 1.4rem;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 15px rgba(20, 184, 166, 0.1);
+            white-space: nowrap;
+            user-select: none;
+        }
+        .toggle-verses-btn:hover {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.35), rgba(13, 148, 136, 0.5));
+            border-color: #2dd4bf;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(20, 184, 166, 0.3);
+        }
+        .toggle-verses-btn.collapsed-mode {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(217, 119, 6, 0.3));
+            color: #fbbf24;
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 15px rgba(245, 158, 11, 0.15);
+        }
+        .toggle-verses-btn.collapsed-mode:hover {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.35), rgba(217, 119, 6, 0.5));
+            border-color: #fcd34d;
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.35);
+        }
+
+        /* Uraian Group Card Styling */
+        .uraian-group-card {
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.7), rgba(15, 23, 42, 0.8));
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .uraian-group-card:hover {
+            border-color: rgba(20, 184, 166, 0.5);
+            box-shadow: 0 15px 35px -5px rgba(20, 184, 166, 0.15);
+        }
+        .uraian-group-card.is-collapsed {
+            margin-bottom: 1.25rem;
+            padding: 1.25rem 1.75rem;
+            background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(15, 23, 42, 0.95));
+            border-color: rgba(51, 65, 85, 0.8);
+        }
+        .uraian-group-card.is-collapsed:hover {
+            border-color: var(--accent);
+            background: linear-gradient(145deg, rgba(20, 184, 166, 0.08), rgba(17, 24, 39, 0.95));
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px -5px rgba(20, 184, 166, 0.2);
+        }
+
+        .group-header-banner {
+            border-bottom: 2px solid rgba(30, 41, 59, 0.8);
+            padding-bottom: 1.25rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+        .uraian-group-card.is-collapsed .group-header-banner {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .group-header-left {
+            flex: 1;
+            text-align: left;
+        }
+        .group-title {
+            font-size: 1.18rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: left;
+            margin: 0.25rem 0 0.5rem 0;
+            line-height: 1.4;
+            letter-spacing: -0.01em;
+        }
+        .group-toggle-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(30, 41, 59, 0.6);
+            color: var(--accent);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+        .group-header-banner:hover .group-toggle-icon {
+            background: rgba(20, 184, 166, 0.2);
+            border-color: var(--accent);
+            color: #ffffff;
+            transform: scale(1.08);
+        }
+        .uraian-group-card.is-collapsed .group-toggle-icon svg {
+            transform: rotate(-90deg);
+        }
+        .uraian-group-card.is-collapsed .group-cards-container {
+            display: none;
+        }
+
+        .group-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(13, 148, 136, 0.1));
+            color: var(--accent);
+            border: 1px solid rgba(20, 184, 166, 0.3);
+            padding: 0.35rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .group-meta {
+            font-size: 0.88rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent);
+            text-align: left;
+            color: #f8fafc;
+        }
+
+        .verse-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .verse-title::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            perspective: 1000px;
+            margin-bottom: 3rem;
+            cursor: pointer;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            display: grid;
+        }
+        .flip-card:hover .flip-card-front {
+            border-color: #334155;
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+        .flip-card-front, .flip-card-back {
+            grid-area: 1 / 1 / 2 / 2;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            box-sizing: border-box;
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .flip-card-front {
+            background: linear-gradient(145deg, #0b1120, #0f172a);
+            font-size: 1.15rem;
+            text-align: center;
+            color: #cbd5e1;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .translation-text {
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .translation-text.lang-ur {
+            direction: rtl;
+            font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+            font-size: 1.35rem;
+            line-height: 2.3;
+            text-align: center;
+        }
+        .translation-text.lang-bn {
+            font-family: 'Noto Sans Bengali', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-hi {
+            font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-zh {
+            font-family: 'Noto Sans SC', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-ko {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            word-break: keep-all;
+        }
+        .translation-text.lang-ja {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-th {
+            font-family: 'Noto Sans Thai', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-ar {
+            direction: rtl;
+            font-family: 'Amiri', serif;
+            font-size: 1.35rem;
+            line-height: 2.3;
+            text-align: center;
+        }
+        .translation-text.lang-ku {
+            direction: rtl;
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            text-align: center;
+        }
+        .translation-text.lang-ber {
+            font-family: 'Noto Sans Tifinagh', 'Inter', sans-serif;
+            font-size: 1.2rem;
+            line-height: 2;
+            letter-spacing: 0.02em;
+        }
+        .translation-text.lang-am {
+            font-family: 'Noto Sans Ethiopic', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-dv {
+            direction: rtl;
+            font-family: 'Noto Sans Thaana', 'Inter', sans-serif;
+            font-size: 1.25rem;
+            line-height: 2.2;
+            text-align: center;
+        }
+        .translation-text.lang-ta {
+            font-family: 'Noto Sans Tamil', 'Inter', sans-serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+        }
+        .translation-text.lang-ug {
+            direction: rtl;
+            font-family: 'Amiri', serif;
+            font-size: 1.25rem;
+            line-height: 2.2;
+            text-align: center;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(145deg, #111827, #0f172a);
+            transform: rotateY(180deg);
+            font-family: 'Amiri', serif;
+            font-size: 2.4rem;
+            line-height: 2.2;
+            direction: rtl;
+            text-align: center;
+            border-color: var(--accent);
+            box-shadow: 0 0 40px var(--accent-glow);
+            color: #f1f5f9;
+        }
+        
+        .tts-button {
+            background-color: rgba(20, 184, 166, 0.1);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+            animation: spin 1.2s linear infinite;
+        }
+        .tts-button:hover {
+            background-color: var(--accent);
+            color: #0b1120;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .tts-button.is-playing {
+            background-color: var(--accent);
+            color: #0b1120;
+            box-shadow: 0 0 15px var(--accent-glow);
+            border-color: var(--accent);
+        }
+        .tts-button.ai-btn:hover {
+            background-color: #8b5cf6;
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-top: 4rem;
+        }
+
+        .nav-action-btn {
+            flex: 1;
+            min-width: 180px;
+            padding: 1.1rem 1.5rem;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .primary-btn {
+            background: linear-gradient(135deg, var(--accent), #0d9488);
+            color: #0b0f19;
+            box-shadow: 0 4px 20px rgba(20, 184, 166, 0.25);
+        }
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(20, 184, 166, 0.45);
+            background: linear-gradient(135deg, #16d3bf, #14b8a6);
+        }
+        .next-btn {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.25);
+        }
+        .next-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.45);
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+        }
+        .secondary-btn {
+            background-color: #1e293b;
+            color: #94a3b8;
+            border: 1px solid #334155;
+        }
+        .secondary-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            color: #f8fafc;
+            border-color: #475569;
+        }
+        .secondary-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .translator-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.45rem;
+            margin-top: 0.65rem;
+            padding: 0.35rem 0.9rem;
+            background: rgba(20, 184, 166, 0.08);
+            border: 1px solid rgba(20, 184, 166, 0.25);
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            max-width: 90%;
+        }
+        .translator-badge strong {
+            color: #f8fafc;
+            font-weight: 600;
+        }
+        .translator-badge svg {
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+            }
+            .custom-select {
+                width: 100%;
+            }
+            .flip-card-front { font-size: 1rem; padding: 2rem; }
+            .flip-card-back { font-size: 1.8rem; padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Al-Quran <span>Tematik</span></h1>
+        
+        <div style="text-align: center; margin-bottom: 2rem; margin-top: -1rem;">
+            <div style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                <label for="tts-language" style="color: #94a3b8; margin-right: 0.5rem; font-size: 0.95rem; font-weight: 500;">Bahasa Terjemahan & Suara:</label>
+                <select id="tts-language" class="custom-select" style="min-width: 190px; padding: 0.5rem 2.5rem 0.5rem 1rem; font-size: 0.9rem;">
+                    <option value="id-ID">🇮🇩 Indonesia</option>
+                    <option value="ms-MY">🇲🇾 Bahasa Melayu (Malay)</option>
+                    <option value="en-US">🇬🇧 English</option>
+                    <option value="ur-PK">🇵🇰 اردو (Urdu)</option>
+                    <option value="bn-BD">🇧🇩 বাংলা (Bangla)</option>
+                    <option value="hi-IN">🇮🇳 हिन्दी (Hindi)</option>
+                    <option value="ru-RU">🇷🇺 Русский (Russian)</option>
+                    <option value="zh-CN">🇨🇳 中文 (Chinese)</option>
+                    <option value="fr-FR">🇫🇷 Français</option>
+                    <option value="es-ES">🇪🇸 Español</option>
+                    <option value="pt-PT">🇵🇹 Português (Portuguese)</option>
+                    <option value="it-IT">🇮🇹 Italiano (Italian)</option>
+                    <option value="tr-TR">🇹🇷 Türkçe (Turkish)</option>
+                    <option value="de-DE">🇩🇪 Deutsch (German)</option>
+                    <option value="ko-KR">🇰🇷 한국어 (Korean)</option>
+                    <option value="ja-JP">🇯🇵 日本語 (Japanese)</option>
+                    <option value="th-TH">🇹🇭 ภาษาไทย (Thai)</option>
+                    <option value="ha-NG">🇳🇬 Hausa</option>
+                    <option value="sw-TZ">🇹🇿 Kiswahili (Swahili)</option>
+                    <option value="bs-BA">🇧🇦 Bosanski (Bosnian)</option>
+                    <option value="sq-AL">🇦🇱 Shqip (Albanian)</option>
+                    <option value="ber-DZ">ⵣ ⵜⴰⵎⴰⵣⵉⵖⵜ (Amazigh)</option>
+                    <option value="am-ET">🇪🇹 አማርኛ (Amharic)</option>
+                    <option value="az-AZ">🇦🇿 Azərbaycan (Azerbaijani)</option>
+                    <option value="bg-BG">🇧🇬 Български (Bulgarian)</option>
+                    <option value="cs-CZ">🇨🇿 Čeština (Czech)</option>
+                    <option value="dv-MV">🇲🇻 ދިވެހި (Dhivehi)</option>
+                    <option value="nl-NL">🇳🇱 Nederlands (Dutch)</option>
+                    <option value="no-NO">🇳🇴 Norsk (Norwegian)</option>
+                    <option value="pl-PL">🇵🇱 Polski (Polish)</option>
+                    <option value="ro-RO">🇷🇴 Română (Romanian)</option>
+                    <option value="sv-SE">🇸🇪 Svenska (Swedish)</option>
+                    <option value="tg-TJ">🇹🇯 Тоҷикӣ (Tajik)</option>
+                    <option value="ta-IN">🇮🇳 தமிழ் (Tamil)</option>
+                    <option value="tt-RU">🟩 Татарча (Tatar)</option>
+                    <option value="ug-CN">🌙 ئۇيغۇرچە (Uyghur)</option>
+                    <option value="uz-UZ">🇺🇿 O‘zbekcha (Uzbek)</option>
+                    <option value="ar-SA">🇸🇦 العربية (Arabic)</option>
+                    <option value="ku-IQ">☀️ کوردی (Kurdish)</option>
+                </select>
+            </div>
+            <div style="display: flex; justify-content: center; width: 100%;">
+                <div id="translator-info-badge" class="translator-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    <span id="translator-info-text">Terjemahan: <strong>Kementerian Agama RI (Kemenag)</strong></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-container">
+            <select id="select-tema" class="custom-select">
+                <option value="">Pilih Tema</option>
+            </select>
+            
+            <select id="select-pokok" class="custom-select" disabled>
+                <option value="">Pilih Pokok Bahasan</option>
+            </select>
+            
+            <select id="select-sub" class="custom-select" disabled>
+                <option value="">Pilih Sub Pokok Bahasan</option>
+            </select>
+        </div>
+        
+        <div class="hint" id="hint-text">
+            <span>✨</span> Klik pada kartu untuk membalik dan melihat teks Arabnya
+        </div>
+
+        <div id="content-area">
+            <div class="empty-state">Silakan pilih kategori di atas untuk melihat ayat.</div>
+        </div>
+
+        <div id="bottom-nav-container" style="display: none; margin-top: 3rem;">
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; align-items: center;">
+                <button id="btn-prev-uraian" class="nav-action-btn secondary-btn" onclick="prevSub()">
+                    ⬅️ Sub Bahasan Sebelum
+                </button>
+                <button id="btn-next-uraian" class="nav-action-btn next-btn" onclick="nextSub()">
+                    Sub Bahasan Berikutnya ➡️
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let quranData = {};
+        const translationCache = {};
+        const ayahTranslationCache = {};
+
+        const LANG_CONFIG = {
+            'id-ID': {
+                code: 'id',
+                edition: 'id.indonesian',
+                label: 'Bahasa Terjemahan & Suara:',
+                translatorLabel: 'Terjemahan:',
+                translator: 'Kementerian Agama RI (Kemenag)',
+                hint: '<span>✨</span> Klik pada kartu untuk membalik dan melihat teks Arabnya',
+                prevBtn: '⬅️ Sub Bahasan Sebelum',
+                nextBtn: 'Sub Bahasan Berikutnya ➡️',
+                subMeta: count => `Menampilkan ${count} Kelompok Uraian Flash Card`,
+                groupMeta: count => `<span>📖 ${count} Ayat Al-Qur'an</span>`,
+                hideVerses: 'Hide Ayat',
+                showVerses: 'Show Ayat',
+                playText: ' Dengarkan',
+                stopText: ' Stop',
+                aiText: ' Tanya AI',
+                copyText: ' Salin Teks Ini',
+                copiedText: ' Tersalin!',
+                copyTitle: 'Salin Teks Terjemahan',
+                loadingText: 'Menerjemahkan...',
+                errorText: 'Gagal menerjemahkan',
+                connErrorText: 'Error koneksi',
+                emptySelect: 'Silakan pilih kategori di atas untuk melihat ayat.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Jelaskan singkat QS. ${surah}:${ayat} terkait "${uraian}": "${text}"`
+            },
+            'ms-MY': {
+                code: 'ms',
+                edition: 'ms.basmeih',
+                label: 'Bahasa Terjemahan & Suara:',
+                translatorLabel: 'Terjemahan:',
+                translator: 'Sheikh Abdullah Muhammad Basmeih',
+                hint: '<span>✨</span> Klik pada kad untuk membalikkan dan melihat teks Arab',
+                prevBtn: '⬅️ Sub Bahasan Sebelum',
+                nextBtn: 'Sub Bahasan Seterusnya ➡️',
+                subMeta: count => `Memaparkan ${count} Kumpulan Huraian Flash Card`,
+                groupMeta: count => `<span>📖 ${count} Ayat Al-Quran</span>`,
+                hideVerses: 'Sembunyi Ayat',
+                showVerses: 'Papar Ayat',
+                playText: ' Dengar',
+                stopText: ' Berhenti',
+                aiText: ' Tanya AI',
+                copyText: ' Salin Teks Ini',
+                copiedText: ' Disalin!',
+                copyTitle: 'Salin Teks Terjemahan',
+                loadingText: 'Menterjemah...',
+                errorText: 'Gagal menterjemah',
+                connErrorText: 'Ralat sambungan',
+                emptySelect: 'Sila pilih kategori di atas untuk melihat ayat.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Terangkan secara ringkas QS. ${surah}:${ayat} berkaitan "${uraian}": "${text}"`
+            },
+            'en-US': {
+                code: 'en',
+                edition: 'en.sahih',
+                label: 'Translation & Voice Language:',
+                translatorLabel: 'Translator:',
+                translator: 'Saheeh International',
+                hint: '<span>✨</span> Click on card to flip and view Arabic text',
+                prevBtn: '⬅️ Previous Sub Topic',
+                nextBtn: 'Next Sub Topic ➡️',
+                subMeta: count => `Displaying ${count} Flash Card Groups`,
+                groupMeta: count => `<span>📖 ${count} Quran Verses</span>`,
+                hideVerses: 'Hide Verses',
+                showVerses: 'Show Verses',
+                playText: ' Listen',
+                stopText: ' Stop',
+                aiText: ' Ask AI',
+                copyText: ' Copy This Text',
+                copiedText: ' Copied!',
+                copyTitle: 'Copy Translation Text',
+                loadingText: 'Translating...',
+                errorText: 'Failed to translate',
+                connErrorText: 'Connection error',
+                emptySelect: 'Please select a category above to view verses.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Briefly explain Quran ${surah}:${ayat} regarding "${uraian}": "${text}"`
+            },
+            'ur-PK': {
+                code: 'ur',
+                edition: 'ur.jalandhry',
+                label: 'ترجمہ اور آواز کی زبان:',
+                translatorLabel: 'مترجم:',
+                translator: 'Fateh Muhammad Jalandhry (جالندھری)',
+                hint: '<span>✨</span> عربی متن دیکھنے کے لیے کارڈ پر کلک کریں',
+                prevBtn: '⬅️ پچھلا ذیلی موضوع',
+                nextBtn: 'اگلا ذیلی موضوع ➡️',
+                subMeta: count => `${count} فلیش کارڈ گروپس دکھائے جا رہے ہیں`,
+                groupMeta: count => `<span>📖 ${count} قرآنی آیات</span>`,
+                hideVerses: 'آیات چھپائیں',
+                showVerses: 'آیات دکھائیں',
+                playText: ' سنیں',
+                stopText: ' روکیں',
+                aiText: ' AI سے پوچھیں',
+                copyText: ' یہ متن کاپی کریں',
+                copiedText: ' کاپی ہو گیا!',
+                copyTitle: 'ترجمہ کا متن کاپی کریں',
+                loadingText: 'ترجمہ کیا جا رہا ہے...',
+                errorText: 'ترجمہ ناکام رہا',
+                connErrorText: 'کنکشن کی خرابی',
+                emptySelect: 'آیات دیکھنے کے لیے براہ کرم اوپر دی گئی کیٹیگری منتخب کریں۔',
+                cssClass: 'lang-ur',
+                aiPrompt: (surah, ayat, uraian, text) => `قرآن ${surah}:${ayat} کی مختصراً وضاحت کریں برائے "${uraian}": "${text}"`
+            },
+            'bn-BD': {
+                code: 'bn',
+                edition: 'bn.bengali',
+                label: 'অনুবাদ ও ভয়েস ভাষা:',
+                translatorLabel: 'অনুবাদক:',
+                translator: 'Maulana Muhiuddin Khan (মুহিউদ্দীন খান)',
+                hint: '<span>✨</span> আরবি পাঠ দেখতে কার্ডটিতে ক্লিক করুন',
+                prevBtn: '⬅️ পূর্ববর্তী উপ-বিষয়',
+                nextBtn: 'পরবর্তী উপ-বিষয় ➡️',
+                subMeta: count => `${count}টি ফ্ল্যাশ কার্ড গ্রুপ দেখানো হচ্ছে`,
+                groupMeta: count => `<span>📖 ${count}টি কোরআনের আয়াত</span>`,
+                hideVerses: 'আয়াত লুকান',
+                showVerses: 'আয়াত দেখান',
+                playText: ' শুনুন',
+                stopText: ' থামুন',
+                aiText: ' AI কে জিজ্ঞাসা করুন',
+                copyText: ' এই পাঠটি অনুলিপি করুন',
+                copiedText: ' অনুলিপি করা হয়েছে!',
+                copyTitle: 'অনুবাদ টেক্সট কপি করুন',
+                loadingText: 'অনুবাদ করা হচ্ছে...',
+                errorText: 'অনুবাদ ব্যর্থ হয়েছে',
+                connErrorText: 'সংযোগ ত্রুটি',
+                emptySelect: 'আয়াত দেখতে উপরে বিভাগ নির্বাচন করুন।',
+                cssClass: 'lang-bn',
+                aiPrompt: (surah, ayat, uraian, text) => `সংক্ষেপে ব্যাখ্যা করুন কোরআন ${surah}:${ayat} প্রসঙ্গ "${uraian}": "${text}"`
+            },
+            'hi-IN': {
+                code: 'hi',
+                edition: 'hi.hindi',
+                label: 'अनुवाद और आवाज़ की भाषा:',
+                translatorLabel: 'अनुवादक:',
+                translator: 'Suhel Farooq Khan & Saifur Rahman Nadwi',
+                hint: '<span>✨</span> अरबी पाठ देखने के लिए कार्ड पर क्लिक करें',
+                prevBtn: '⬅️ पिछला उप-विषय',
+                nextBtn: 'अगला उप-विषय ➡️',
+                subMeta: count => `${count} फ़्लैश कार्ड समूह दिखाए जा रहे हैं`,
+                groupMeta: count => `<span>📖 ${count} क़ुरआन की आयतें</span>`,
+                hideVerses: 'आयतें छिपाएं',
+                showVerses: 'आयतें दिखाएं',
+                playText: ' सुनें',
+                stopText: ' रोकें',
+                aiText: ' AI से पूछें',
+                copyText: ' यह पाठ कॉपी करें',
+                copiedText: ' कॉपी हो गया!',
+                copyTitle: 'अनुवाद पाठ कॉपी करें',
+                loadingText: 'अनुवाद हो रहा है...',
+                errorText: 'अनुवाद विफल रहा',
+                connErrorText: 'कनेक्शन त्रुटि',
+                emptySelect: 'आयतें देखने के लिए कृपया ऊपर एक श्रेणी चुनें।',
+                cssClass: 'lang-hi',
+                aiPrompt: (surah, ayat, uraian, text) => `संक्षेप में समझाइए क़ुरआन ${surah}:${ayat} संदर्भ "${uraian}": "${text}"`
+            },
+            'ru-RU': {
+                code: 'ru',
+                edition: 'ru.kuliev',
+                label: 'Язык перевода и озвучки:',
+                translatorLabel: 'Переводчик:',
+                translator: 'Elmir Kuliev (Эльмир Кулиев)',
+                hint: '<span>✨</span> Нажмите на карточку, чтобы перевернуть и увидеть арабский текст',
+                prevBtn: '⬅️ Предыдущая подтема',
+                nextBtn: 'Следующая подтема ➡️',
+                subMeta: count => `Отображение ${count} групп карточек`,
+                groupMeta: count => `<span>📖 ${count} аятов Корана</span>`,
+                hideVerses: 'Скрыть аяты',
+                showVerses: 'Показать аяты',
+                playText: ' Слушать',
+                stopText: ' Стоп',
+                aiText: ' Спросить у ИИ',
+                copyText: ' Копировать этот текст',
+                copiedText: ' Скопировано!',
+                copyTitle: 'Копировать текст перевода',
+                loadingText: 'Перевод...',
+                errorText: 'Ошибка перевода',
+                connErrorText: 'Ошибка подключения',
+                emptySelect: 'Пожалуйста, выберите категорию выше для просмотра аятов.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Кратко объясните Коран ${surah}:${ayat} по теме "${uraian}": "${text}"`
+            },
+            'zh-CN': {
+                code: 'zh-CN',
+                edition: 'zh.jian',
+                label: '翻译与语音语言：',
+                translatorLabel: '译者：',
+                translator: 'Muhammad Ma Jian (马坚)',
+                hint: '<span>✨</span> 点击卡片翻转以查看阿拉伯语原文',
+                prevBtn: '⬅️ 上一个子主题',
+                nextBtn: '下一个子主题 ➡️',
+                subMeta: count => `显示 ${count} 个闪卡分类`,
+                groupMeta: count => `<span>📖 ${count} 节古兰经经文</span>`,
+                hideVerses: '隐藏经文',
+                showVerses: '显示经文',
+                playText: ' 朗读',
+                stopText: ' 停止',
+                aiText: ' 询问 AI',
+                copyText: ' 复制此文本',
+                copiedText: ' 已复制！',
+                copyTitle: '复制译文',
+                loadingText: '正在翻译...',
+                errorText: '翻译失败',
+                connErrorText: '网络连接错误',
+                emptySelect: '请在上方选择分类以查看经文。',
+                cssClass: 'lang-zh',
+                aiPrompt: (surah, ayat, uraian, text) => `简要解释古兰经 ${surah}:${ayat} 关于 "${uraian}"： "${text}"`
+            },
+            'fr-FR': {
+                code: 'fr',
+                edition: 'fr.hamidullah',
+                label: 'Langue de traduction et voix :',
+                translatorLabel: 'Traducteur :',
+                translator: 'Dr. Muhammad Hamidullah',
+                hint: '<span>✨</span> Cliquez sur la carte pour tourner et voir le texte arabe',
+                prevBtn: '⬅️ Sous-sujet précédent',
+                nextBtn: 'Sous-sujet suivant ➡️',
+                subMeta: count => `Affichage de ${count} groupes de cartes`,
+                groupMeta: count => `<span>📖 ${count} Versets du Coran</span>`,
+                hideVerses: 'Masquer les versets',
+                showVerses: 'Afficher les versets',
+                playText: ' Écouter',
+                stopText: ' Arrêter',
+                aiText: ' Demander à l\'IA',
+                loadingText: 'Traduction...',
+                errorText: 'Échec de la traduction',
+                connErrorText: 'Erreur de connexion',
+                emptySelect: 'Veuillez sélectionner une catégorie ci-dessus pour afficher les versets.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Expliquez brièvement le Coran ${surah}:${ayat} concernant "${uraian}" : "${text}"`
+            },
+            'es-ES': {
+                code: 'es',
+                edition: 'es.cortes',
+                label: 'Idioma de traducción y voz:',
+                translatorLabel: 'Traductor:',
+                translator: 'Julio Cortés',
+                hint: '<span>✨</span> Haz clic en la tarjeta para girarla y ver el texto en árabe',
+                prevBtn: '⬅️ Subtema anterior',
+                nextBtn: 'Subtema siguiente ➡️',
+                subMeta: count => `Mostrando ${count} Grupos de Tarjetas`,
+                groupMeta: count => `<span>📖 ${count} Versículos del Corán</span>`,
+                hideVerses: 'Ocultar versículos',
+                showVerses: 'Mostrar versículos',
+                playText: ' Escuchar',
+                stopText: ' Detener',
+                aiText: ' Preguntar a la IA',
+                copyText: ' Copiar este texto',
+                copiedText: ' ¡Copiado!',
+                copyTitle: 'Copiar texto de traducción',
+                copyText: ' Copier ce texte',
+                copiedText: ' Copié !',
+                copyTitle: 'Copier le texte de la traduction',
+                loadingText: 'Traduciendo...',
+                errorText: 'Error al traducir',
+                connErrorText: 'Error de conexión',
+                emptySelect: 'Seleccione una categoría arriba para ver los versículos.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Explique brevemente el Corán ${surah}:${ayat} sobre "${uraian}": "${text}"`
+            },
+            'pt-PT': {
+                code: 'pt',
+                edition: 'pt.elhayek',
+                label: 'Idioma de tradução e voz:',
+                translatorLabel: 'Tradutor:',
+                translator: 'Prof. Samir El-Hayek',
+                hint: '<span>✨</span> Clique no cartão para virar e ver o texto em árabe',
+                prevBtn: '⬅️ Subtópico Anterior',
+                nextBtn: 'Próximo Subtópico ➡️',
+                subMeta: count => `Exibindo ${count} Grupos de Flash Cards`,
+                groupMeta: count => `<span>📖 ${count} Versículos do Alcorão</span>`,
+                hideVerses: 'Ocultar Versículos',
+                showVerses: 'Mostrar Versículos',
+                playText: ' Ouvir',
+                stopText: ' Parar',
+                aiText: ' Perguntar à IA',
+                copyText: ' Copiar este texto',
+                copiedText: ' Copiado!',
+                copyTitle: 'Copiar texto da tradução',
+                loadingText: 'Traduzindo...',
+                errorText: 'Falha ao traduzir',
+                connErrorText: 'Erro de conexão',
+                emptySelect: 'Selecione uma categoria acima para visualizar os versículos.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Explique brevemente o Alcorão ${surah}:${ayat} sobre "${uraian}": "${text}"`
+            },
+            'it-IT': {
+                code: 'it',
+                edition: 'it.piccardo',
+                label: 'Lingua di traduzione e voce:',
+                translatorLabel: 'Traduzione:',
+                translator: 'Hamza Roberto Piccardo',
+                hint: '<span>✨</span> Clicca sulla scheda per girarla e vedere il testo in arabo',
+                prevBtn: '⬅️ Sotto-argomento precedente',
+                nextBtn: 'Sotto-argomento successivo ➡️',
+                subMeta: count => `Visualizzazione di ${count} gruppi di flash card`,
+                groupMeta: count => `<span>📖 ${count} Versetti del Corano</span>`,
+                hideVerses: 'Nascondi versetti',
+                showVerses: 'Mostra versetti',
+                playText: ' Ascolta',
+                stopText: ' Ferma',
+                aiText: ' Chiedi all\'IA',
+                loadingText: 'Traduzione in corso...',
+                errorText: 'Traduzione non riuscita',
+                connErrorText: 'Errore di connessione',
+                emptySelect: 'Seleziona una categoria sopra per visualizzare i versetti.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Spiega brevemente il Corano ${surah}:${ayat} riguardo a "${uraian}": "${text}"`
+            },
+            'tr-TR': {
+                code: 'tr',
+                edition: 'tr.diyanet',
+                label: 'Çeviri ve Ses Dili:',
+                translatorLabel: 'Çevirmen:',
+                translator: 'Diyanet İşleri Başkanlığı',
+                hint: '<span>✨</span> Arapça metni görmek ve kartı çevirmek için tıklayın',
+                prevBtn: '⬅️ Önceki Alt Konu',
+                nextBtn: 'Sonraki Alt Konu ➡️',
+                subMeta: count => `${count} Bilgi Kartı Grubu Gösteriliyor`,
+                groupMeta: count => `<span>📖 ${count} Kur'an Ayeti</span>`,
+                hideVerses: 'Ayetleri Gizle',
+                showVerses: 'Ayetleri Göster',
+                playText: ' Dinle',
+                stopText: ' Durdur',
+                aiText: ' Yapay Zekaya Sor',
+                copyText: ' Bu Metni Kopyala',
+                copiedText: ' Kopyalandı!',
+                copyTitle: 'Çeviri Metnini Kopyala',
+                copyText: ' Copia questo testo',
+                copiedText: ' Copiato!',
+                copyTitle: 'Copia il testo della traduzione',
+                loadingText: 'Çevriliyor...',
+                errorText: 'Çeviri başarısız',
+                connErrorText: 'Bağlantı hatası',
+                emptySelect: 'Ayetleri görmek için lütfen yukarıdan bir kategori seçin.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Kur'an ${surah}:${ayat} ayetini "${uraian}" konusu bağlamında kısaca açıklayın: "${text}"`
+            },
+            'de-DE': {
+                code: 'de',
+                edition: 'de.bubenheim',
+                label: 'Übersetzungs- & Audiosprache:',
+                translatorLabel: 'Übersetzer:',
+                translator: 'Frank Bubenheim & Dr. Nadeem Elyas',
+                hint: '<span>✨</span> Auf die Karte klicken, um den arabischen Text anzuzeigen',
+                prevBtn: '⬅️ Vorheriges Unterthema',
+                nextBtn: 'Nächstes Unterthema ➡️',
+                subMeta: count => `${count} Karteikartengruppen werden angezeigt`,
+                groupMeta: count => `<span>📖 ${count} Koranverse</span>`,
+                hideVerses: 'Verse ausblenden',
+                showVerses: 'Verse anzeigen',
+                playText: ' Anhören',
+                stopText: ' Stopp',
+                aiText: ' KI fragen',
+                copyText: ' Diesen Text kopieren',
+                copiedText: ' Kopiert!',
+                copyTitle: 'Übersetzungstext kopieren',
+                loadingText: 'Übersetzen...',
+                errorText: 'Übersetzung fehlgeschlagen',
+                connErrorText: 'Verbindungsfehler',
+                emptySelect: 'Bitte wählen Sie oben eine Kategorie aus, um Verse anzuzeigen.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Erklären Sie kurz Koran ${surah}:${ayat} im Zusammenhang mit "${uraian}": "${text}"`
+            },
+            'ko-KR': {
+                code: 'ko',
+                edition: 'ko.korean',
+                label: '번역 및 음성 언어:',
+                translatorLabel: '번역자:',
+                translator: 'Dr. Hamid Choi (최영길 / Choi Yeong-kil)',
+                hint: '<span>✨</span> 카드를 클릭하여 뒤집고 아랍어 원문을 확인하세요',
+                prevBtn: '⬅️ 이전 소주제',
+                nextBtn: '다음 소주제 ➡️',
+                subMeta: count => `${count}개 플래시 카드 그룹 표시 중`,
+                groupMeta: count => `<span>📖 ${count}개 쿠란 구절</span>`,
+                hideVerses: '구절 숨기기',
+                showVerses: '구절 표시',
+                playText: ' 듣기',
+                stopText: ' 정지',
+                aiText: ' AI 질문',
+                copyText: ' 이 텍스트 복사',
+                copiedText: ' 복사됨!',
+                copyTitle: '번역 텍스트 복사',
+                loadingText: '번역 중...',
+                errorText: '번역 실패',
+                connErrorText: '연결 오류',
+                emptySelect: '구절을 보려면 상단에서 카테고리를 선택하세요.',
+                cssClass: 'lang-ko',
+                aiPrompt: (surah, ayat, uraian, text) => `쿠란 ${surah}:${ayat} "${uraian}" 주제와 관련하여 간략히 설명해 주세요: "${text}"`
+            },
+            'ja-JP': {
+                code: 'ja',
+                edition: 'ja.japanese',
+                label: '翻訳と言語音声：',
+                translatorLabel: '翻訳者：',
+                translator: 'Umar Ryoichi Mita (三田 了一)',
+                hint: '<span>✨</span> カードをクリックして裏返し、アラビア語の原文を表示',
+                prevBtn: '⬅️ 前のサブトピック',
+                nextBtn: '次のサブトピック ➡️',
+                subMeta: count => `${count} 個のフラッシュカードグループを表示中`,
+                groupMeta: count => `<span>📖 ${count} 節のコーラン</span>`,
+                hideVerses: '節を非表示',
+                showVerses: '節を表示',
+                playText: ' 音声再生',
+                stopText: ' 停止',
+                aiText: ' AIに質問',
+                copyText: ' このテキストをコピー',
+                copiedText: ' コピー完了！',
+                copyTitle: '翻訳テキストをコピー',
+                loadingText: '翻訳中...',
+                errorText: '翻訳に失敗しました',
+                connErrorText: '接続エラー',
+                emptySelect: '節を表示するには、上のカテゴリを選択してください。',
+                cssClass: 'lang-ja',
+                aiPrompt: (surah, ayat, uraian, text) => `コーラン第${surah}章${ayat}節について「${uraian}」の文脈で簡潔に説明してください: 「${text}」`
+            },
+            'th-TH': {
+                code: 'th',
+                edition: 'th.thai',
+                label: 'ภาษาคำแปลและเสียง:',
+                translatorLabel: 'การแปล:',
+                translator: 'ศูนย์กษัตริย์ฟะฮัดเพื่อการพิมพ์อัลกุรอาน (King Fahad Quran Complex)',
+                hint: '<span>✨</span> คลิกที่การ์ดเพื่อพลิกดูข้อความภาษาอาหรับ',
+                prevBtn: '⬅️ หัวข้อย่อยก่อนหน้า',
+                nextBtn: 'หัวข้อย่อยถัดไป ➡️',
+                subMeta: count => `กำลังแสดง ${count} กลุ่มหัวข้อย่อยแฟลชการ์ด`,
+                groupMeta: count => `<span>📖 ${count} อายะฮ์อัลกุรอาน</span>`,
+                hideVerses: 'ซ่อนอายะฮ์',
+                showVerses: 'แสดงอายะฮ์',
+                playText: ' ฟังเสียง',
+                stopText: ' หยุด',
+                aiText: ' ถาม AI',
+                copyText: ' คัดลอกข้อความนี้',
+                copiedText: ' คัดลอกแล้ว!',
+                copyTitle: 'คัดลอกข้อความคำแปล',
+                loadingText: 'กำลังแปล...',
+                errorText: 'การแปลล้มเหลว',
+                connErrorText: 'ข้อผิดพลาดในการเชื่อมต่อ',
+                emptySelect: 'โปรดเลือกหมวดหมู่ด้านบนเพื่อดูอายะฮ์',
+                cssClass: 'lang-th',
+                aiPrompt: (surah, ayat, uraian, text) => `อธิบายสั้นๆ เกี่ยวกับอัลกุรอาน ซูเราะฮ์ที่ ${surah}:${ayat} ในหัวข้อ "${uraian}": "${text}"`
+            },
+            'ha-NG': {
+                code: 'ha',
+                edition: 'ha.gumi',
+                label: 'Harshen Fassara da Murya:',
+                translatorLabel: 'Mai fassara:',
+                translator: 'Sheikh Abubakar Mahmoud Gumi',
+                hint: '<span>✨</span> Danna katin domin juyawa da ganin rubutun Larabci',
+                prevBtn: '⬅️ Karamin Take Na Baya',
+                nextBtn: 'Karamin Take Na Gaba ➡️',
+                subMeta: count => `Ana nuna rukunan katunan ${count}`,
+                groupMeta: count => `<span>📖 Ayoyin Alƙur\'ani ${count}</span>`,
+                hideVerses: 'Ɓoye Ayoyi',
+                showVerses: 'Nuna Ayoyi',
+                playText: ' Saurara',
+                stopText: ' Tsaya',
+                aiText: ' Tambayi AI',
+                copyText: ' Kwafi Wannan Rubutun',
+                copiedText: ' An kwafa!',
+                copyTitle: 'Kwafi Rubutun Fassara',
+                loadingText: 'Ana fassarawa...',
+                errorText: 'Fassara ta gaza',
+                connErrorText: 'Matsalar haɗi',
+                emptySelect: 'Da fatan za a zaɓi rukuni a sama don duba ayoyi.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Bayyana a takaice Alƙur\'ani ${surah}:${ayat} dangane da "${uraian}": "${text}"`
+            },
+            'sw-TZ': {
+                code: 'sw',
+                edition: 'sw.barwani',
+                label: 'Lugha ya Tafsiri na Sauti:',
+                translatorLabel: 'Mfasiri:',
+                translator: 'Sheikh Ali Muhsin Al-Barwani',
+                hint: '<span>✨</span> Bofya kwenye kadi ili kuigeuza na kuona maandishi ya Kiarabu',
+                prevBtn: '⬅️ Mada Ndogo Iliyotangulia',
+                nextBtn: 'Mada Ndogo Inayofuata ➡️',
+                subMeta: count => `Inaonyesha Vikundi ${count} vya Flash Cards`,
+                groupMeta: count => `<span>📖 Aya ${count} za Qur\'ani</span>`,
+                hideVerses: 'Ficha Aya',
+                showVerses: 'Onyesha Aya',
+                playText: ' Sikiliza',
+                stopText: ' Simamisha',
+                aiText: ' Uliza AI',
+                copyText: ' Nakili Maandishi Haya',
+                copiedText: ' Imenakiliwa!',
+                copyTitle: 'Nakili Maandishi ya Tafsiri',
+                loadingText: 'Inatafsiri...',
+                errorText: 'Imeshindwa kutafsiri',
+                connErrorText: 'Hitilafu ya muunganisho',
+                emptySelect: 'Tafadhali chagua kitengo hapo juu ili kuona aya.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Eleza kwa ufupi Qur'ani ${surah}:${ayat} kuhusu "${uraian}": "${text}"`
+            },
+            'bs-BA': {
+                code: 'bs',
+                edition: 'bs.korkut',
+                label: 'Jezik prijevoda i glasa:',
+                translatorLabel: 'Prevodilac:',
+                translator: 'Besim Korkut',
+                hint: '<span>✨</span> Kliknite na karticu da biste je okrenuli i vidjeli arapski tekst',
+                prevBtn: '⬅️ Prethodna podtema',
+                nextBtn: 'Sljedeća podtema ➡️',
+                subMeta: count => `Prikazano ${count} grupa flash kartica`,
+                groupMeta: count => `<span>📖 ${count} kur\'anskih ajeta</span>`,
+                hideVerses: 'Sakrij ajete',
+                showVerses: 'Prikaži ajete',
+                playText: ' Slušaj',
+                stopText: ' Zaustavi',
+                aiText: ' Pitaj AI',
+                copyText: ' Kopiraj ovaj tekst',
+                copiedText: ' Kopirano!',
+                copyTitle: 'Kopiraj tekst prijevoda',
+                loadingText: 'Prevođenje...',
+                errorText: 'Prevođenje nije uspjelo',
+                connErrorText: 'Greška u povezivanju',
+                emptySelect: 'Molimo odaberite kategoriju iznad da biste vidjeli ajete.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Ukratko objasnite Kur\'an ${surah}:${ayat} u vezi "${uraian}": "${text}"`
+            },
+            'sq-AL': {
+                code: 'sq',
+                edition: 'sq.ahmeti',
+                label: 'Gjuha e përkthimit dhe zërit:',
+                translatorLabel: 'Përkthyesi:',
+                translator: 'H. Sherif Ahmeti',
+                hint: '<span>✨</span> Klikoni mbi kartë për ta kthyer dhe parë tekstin arabisht',
+                prevBtn: '⬅️ Nëntema e mëparshme',
+                nextBtn: 'Nëntema tjetër ➡️',
+                subMeta: count => `Po shfaqen ${count} grupe kartash`,
+                groupMeta: count => `<span>📖 ${count} Ajete Kur\'anore</span>`,
+                hideVerses: 'Fshih Ajetet',
+                showVerses: 'Shfaq Ajetet',
+                playText: ' Dëgjo',
+                stopText: ' Ndalo',
+                aiText: ' Pyet AI',
+                copyText: ' Kopjo këtë tekst',
+                copiedText: ' U kopjua!',
+                copyTitle: 'Kopjo tekstin e përkthimit',
+                loadingText: 'Duke përkthyer...',
+                errorText: 'Dështoi përkthimi',
+                connErrorText: 'Gabim lidhjeje',
+                emptySelect: 'Ju lutemi zgjidhni një kategori më lart për të parë ajetet.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Shpjegoni shkurt Kur\'anin ${surah}:${ayat} lidhur me "${uraian}": "${text}"`
+            },
+            'ber-DZ': {
+                code: 'ber',
+                edition: 'ber.mensur',
+                label: 'ⵜⵓⵜⵍⴰⵢⵜ ⴷ ⵜⴰⵖⴻⵛⵜ ⵏ ⵜⵙⵓⵇⵉⵍⵜ:',
+                translatorLabel: 'ⵜⴰⵙⵓⵇⵉⵍⵜ:',
+                translator: 'Ramdane At Mansour (At Mensur)',
+                hint: '<span>✨</span> ⴽⵏⴻⴷ ⵖⴻⴼ ⵜⴽⴰⵔⴹⴰ ⵉⵡⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵜⵉⴷⵜⴻⵔⵔⴻⴹ ⵓ ⴰⴷ ⵜⵡⴰⵍⵉⴹ ⴰⴹⵔⵉⵙ ⴰⵄⵔⴰⴱ',
+                prevBtn: '⬅️ ⴰⵙⴽⴰⵙⵉ ⴰⵇⴱⵓⵔ',
+                nextBtn: 'ⴰⵙⴽⴰⵙⵉ ⵉⴷ ⵉⵜⴻⴷⴷⵓⵏ ➡️',
+                subMeta: count => `ⵢⴻⵜⵜⴱⴻⴳⴳⵉⵏⴷ ${count} ⵜⴰⵔⴱⴰⵄⵜ ⵏ ⵓⵙⴻⴼⵀⴻⵎ ⵏ ⵜⴽⴰⵔⴹⴰ ⵏ ⴼⵍⴰⵙⵀ`,
+                groupMeta: count => `<span>📖 ${count} ⴰⵢⴰⵜ ⵏ ⵍⵇⵓⵔⴰⵏ</span>`,
+                hideVerses: 'ⴼⴼⴻⵔ ⴰⵢⴰⵜ',
+                showVerses: 'ⵙⴽⴻⵏⴷ ⴰⵢⴰⵜ',
+                playText: ' ⵙⵙⴻⴼⵍⴻⴷ',
+                stopText: ' ⵃⴻⴱⵙⴻⵜ',
+                aiText: ' ⵢⴻⵙⵜⴻⵇⵙⴰ AI',
+                copyText: ' ⵏⵖⴻⵍ ⴰⴹⵔⵉⵙ-ⴰ',
+                copiedText: ' ⵢⴻⵜⵜⵡⴰⵏⵖⴻⵍ!',
+                copyTitle: 'ⵏⵖⴻⵍ ⴰⴹⵔⵉⵙ ⵏ ⵜⵙⵓⵇⵉⵍⵜ',
+                loadingText: 'ⴰⵙⵓⵇⴻⵍ...',
+                errorText: 'ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵜⵜⵡⴰⵙⵓⵇⴻⵍ',
+                connErrorText: 'ⵜⵓⵛⵛⴹⴰ ⵏ ⵜⵓⵇⵇⵏⴰ',
+                emptySelect: 'ⵜⵜⵅⵉⵍⴽ, ⴼⵔⴻⵏ ⵢⵉⵡⴻⵜ ⵏ ⵜⴰⴳⴳⴰⵢⵜ ⵙ ⵓⴼⴻⵍⵍⴰ ⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵡⴰⵍⵉⴹ ⵉⵎⴻⵙⵍⴰⵢⴻⵏ.',
+                cssClass: 'lang-ber',
+                aiPrompt: (surah, ayat, uraian, text) => `ⵙⵙⴻⴼⵀⴻⵎⴷ ⵙ ⵜⵖⵓⵔⵉ ⵜⴰⵡⴻⵣⵍⴰⵏⵜ ⵍⵇⵓⵔⴰⵏ ${surah}:${ayat} ⵉⵥⵍⵉⵏ ⵙ "${uraian}": "${text}"`
+            },
+            'am-ET': {
+                code: 'am',
+                edition: 'am.sadiq',
+                label: 'ቋንቋ እና ድምጽ ትርጉም፡',
+                translatorLabel: 'ትርጉም፡-',
+                translator: 'Muhammed Sadiq & Muhammed Sani Habib (ሳዲቅ & ሳኒ ሐቢብ)',
+                hint: '<span>✨</span> ካርዱን ለመገልበጥ እና የአረብኛ ጽሁፍን ለማየት ካርዱን ጠቅ ያድርጉ',
+                prevBtn: '⬅️ ቀዳሚ ንዑስ ውይይት',
+                nextBtn: 'ቀጣይ ንዑስ ውይይት ➡️',
+                subMeta: count => `ያሳያል ${count} የፍላሽ ካርድ መግለጫ ቡድን`,
+                groupMeta: count => `<span>📖 ${count} የቁርዓን አንቀጾች</span>`,
+                hideVerses: 'ጥቅስ ደብቅ',
+                showVerses: 'ጥቅስ አሳይ',
+                playText: ' ያዳምጡ',
+                stopText: ' ተወ',
+                aiText: ' AI ጠይቅ',
+                copyText: ' ይህንን ጽሑፍ ቅዳ',
+                copiedText: ' ተቀድቷል!',
+                copyTitle: 'የትርጉም ጽሑፍ ቅዳ',
+                loadingText: 'በመተርጎም ላይ...',
+                errorText: 'መተርጎም አልተሳካም።',
+                connErrorText: 'የግንኙነት ስህተት',
+                emptySelect: 'ጥቅሶችን ለማየት እባክህ አንድ ምድብ ምረጥ።',
+                cssClass: 'lang-am',
+                aiPrompt: (surah, ayat, uraian, text) => `ቁርኣን ${surah}:${ayat} ስለ "${uraian}" በአጭሩ አብራራ፡ "${text}"`
+            },
+            'az-AZ': {
+                code: 'az',
+                edition: 'az.mammadaliyev',
+                label: 'Tərcümə Dili və Səs:',
+                translatorLabel: 'Tərcümə:',
+                translator: 'Vasim Məmmədəliyev & Ziya Bünyadov',
+                hint: '<span>✨</span> Kartı çevirmək və ərəb mətninə baxmaq üçün üzərinə klikləyin',
+                prevBtn: '⬅️ Əvvəlki Alt Müzakirə',
+                nextBtn: 'Növbəti Alt Müzakirə ➡️',
+                subMeta: count => `${count} Məlumat Kartı Qrupu göstərilir`,
+                groupMeta: count => `<span>📖 ${count} Quran Ayəsi</span>`,
+                hideVerses: 'Ayələri gizlət',
+                showVerses: 'Ayələri göstər',
+                playText: ' Qulaq as',
+                stopText: ' Dayan',
+                aiText: ' AI-dan soruş',
+                copyText: ' Bu mətni kopyalayın',
+                copiedText: ' Kopyalandı!',
+                copyTitle: 'Tərcümə mətnini kopyalayın',
+                loadingText: 'Tərcümə edilir...',
+                errorText: 'Tərcümə etmək alınmadı',
+                connErrorText: 'Bağlantı xətası',
+                emptySelect: 'Ayələrə baxmaq üçün yuxarıdakı kateqoriyanı seçin.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Quran ${surah}:${ayat} ayəsini "${uraian}" mövzusu kontekstində qısaca izah edin: "${text}"`
+            },
+            'bg-BG': {
+                code: 'bg',
+                edition: 'bg.theophanov',
+                label: 'Език на превода и глас:',
+                translatorLabel: 'Преводач:',
+                translator: 'Tzvetan Theophanov (Цветан Теофанов)',
+                hint: '<span>✨</span> Кликнете върху картата, за да я обърнете и видите арабския текст',
+                prevBtn: '⬅️ Предишна подтема',
+                nextBtn: 'Следваща подтема ➡️',
+                subMeta: count => `Показване на ${count} групи карти`,
+                groupMeta: count => `<span>📖 ${count} знамения (аяти) от Корана</span>`,
+                hideVerses: 'Скриване на аятите',
+                showVerses: 'Показване на аятите',
+                playText: ' Слушай',
+                stopText: ' Спри',
+                aiText: ' Попитай AI',
+                copyText: ' Копирай този текст',
+                copiedText: ' Копирано!',
+                copyTitle: 'Копирай текста на превода',
+                loadingText: 'Превежда се...',
+                errorText: 'Неуспешен превод',
+                connErrorText: 'Грешка при свързване',
+                emptySelect: 'Моля, изберете категория по-горе, за да видите стиховете.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Обяснете накратко Коран ${surah}:${ayat} по темата "${uraian}": "${text}"`
+            },
+            'cs-CZ': {
+                code: 'cs',
+                edition: 'cs.hrbek',
+                label: 'Jazyk překladu a hlasu:',
+                translatorLabel: 'Překladatel:',
+                translator: 'Ivan Hrbek (Preklad I. Hrbek)',
+                hint: '<span>✨</span> Kliknutím na kartu ji otočíte a zobrazíte arabský text',
+                prevBtn: '⬅️ Předchozí podtéma',
+                nextBtn: 'Další podtéma ➡️',
+                subMeta: count => `Zobrazení ${count} skupin kartiček`,
+                groupMeta: count => `<span>📖 ${count} koránských veršů</span>`,
+                hideVerses: 'Skrýt verše',
+                showVerses: 'Zobrazit verše',
+                playText: ' Poslouchat',
+                stopText: ' Zastavit',
+                aiText: ' Zeptejte se AI',
+                copyText: ' Zkopírovat tento text',
+                copiedText: ' Zkopírováno!',
+                copyTitle: 'Zkopírovat text překladu',
+                loadingText: 'Překládá se...',
+                errorText: 'Překlad se nezdařil',
+                connErrorText: 'Chyba připojení',
+                emptySelect: 'Pro zobrazení veršů prosím vyberte výše uvedenou kategorii.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Stručně vysvětlete Korán ${surah}:${ayat} v souvislosti s tématem "${uraian}": "${text}"`
+            },
+            'dv-MV': {
+                code: 'dv',
+                edition: 'dv.divehi',
+                label: 'ތަރުޖަމާ ބަހާއި އަޑު:',
+                translatorLabel: 'ތަރުޖަމާ:',
+                translator: 'Office of the President of Maldives (ދިވެހި ރައީސުލްޖުމްހޫރިއްޔާގެ އޮފީސް)',
+                hint: '<span>✨</span> ކާޑަށް ފިތާލުމުން ކާޑު އަނބުރާލާފައި ޢަރަބި ލިޔުން ފެންނާނެއެވެ',
+                prevBtn: '⬅️ ކުރީގެ ސަބް ޑިސްކަޝަން',
+                nextBtn: 'ދެން އޮންނަ ސަބް ޑިސްކަޝަން ➡️',
+                subMeta: count => `${count} ފްލެޝް ކާޑް ގްރޫޕް ދައްކާލައެވެ`,
+                groupMeta: count => `<span>📖 ${count} ޤުރުއާނުގެ އާޔަތް</span>`,
+                hideVerses: 'އާޔަތްތައް ފޮރުވާ',
+                showVerses: 'އާޔަތްތައް ދައްކާ',
+                playText: ' އަޑުއަހާ',
+                stopText: ' ހުއްޓާ',
+                aiText: ' AI އާ ސުވާލުކުރޭ',
+                copyText: ' މި ލިޔުން ކޮޕީކުރޭ',
+                copiedText: ' ކޮޕީ ކުރެވިއްޖެ!',
+                copyTitle: 'ތަރުޖަމާގެ ލިޔުން ކޮޕީކުރޭ',
+                loadingText: 'ތަރުޖަމާ ކުރަމުން...',
+                errorText: 'ތަރުޖަމާ ކުރަން ނާކާމިޔާބުވިއެވެ',
+                connErrorText: 'ކަނެކްޝަން އެރަރ',
+                emptySelect: 'އާޔަތްތައް ބަލާލުމަށް މަތީގައިވާ ކެޓަގަރީއެއް ހޮވުން އެދެމެވެ.',
+                cssClass: 'lang-dv',
+                aiPrompt: (surah, ayat, uraian, text) => `ކުރުކޮށް ޤުރުއާން ${surah}:${ayat} ބަޔާންކޮށްދީ "${uraian}" އާ ގުޅޭގޮތުން: "${text}"`
+            },
+            'nl-NL': {
+                code: 'nl',
+                edition: 'nl.siregar',
+                label: 'Vertaaltaal en stem:',
+                translatorLabel: 'Vertaling:',
+                translator: 'Sofian S. Siregar',
+                hint: '<span>✨</span> Klik op de kaart om om te draaien en de Arabische tekst te zien',
+                prevBtn: '⬅️ Vorig subonderwerp',
+                nextBtn: 'Volgend subonderwerp ➡️',
+                subMeta: count => `Weergave van ${count} flashcardgroepen`,
+                groupMeta: count => `<span>📖 ${count} Koranverzen</span>`,
+                hideVerses: 'Verzen verbergen',
+                showVerses: 'Verzen tonen',
+                playText: ' Luisteren',
+                stopText: ' Stoppen',
+                aiText: ' Vraag AI',
+                copyText: ' Kopieer deze tekst',
+                copiedText: ' Gekopieerd!',
+                copyTitle: 'Kopieer vertaaltekst',
+                loadingText: 'Vertalen...',
+                errorText: 'Vertaling mislukt',
+                connErrorText: 'Verbindingsfout',
+                emptySelect: 'Selecteer hierboven een categorie om verzen te bekijken.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Leg kort Koran ${surah}:${ayat} uit met betrekking tot "${uraian}": "${text}"`
+            },
+            'no-NO': {
+                code: 'no',
+                edition: 'no.berg',
+                label: 'Oversettelse og stemmespråk:',
+                translatorLabel: 'Oversetter:',
+                translator: 'Einar Berg',
+                hint: '<span>✨</span> Klikk på kortet for å snu og se den arabiske teksten',
+                prevBtn: '⬅️ Forrige deltema',
+                nextBtn: 'Neste deltema ➡️',
+                subMeta: count => `Viser ${count} grupper med flashkort`,
+                groupMeta: count => `<span>📖 ${count} koranvers</span>`,
+                hideVerses: 'Skjul vers',
+                showVerses: 'Vis vers',
+                playText: ' Lytt',
+                stopText: ' Stopp',
+                aiText: ' Spør AI',
+                copyText: ' Kopier denne teksten',
+                copiedText: ' Kopiert!',
+                copyTitle: 'Kopier oversettelsestekst',
+                loadingText: 'Oversetter...',
+                errorText: 'Kunne ikke oversette',
+                connErrorText: 'Tilkoblingsfeil',
+                emptySelect: 'Vennligst velg en kategori ovenfor for å se versene.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Forklar kort Koranen ${surah}:${ayat} angående "${uraian}": "${text}"`
+            },
+            'pl-PL': {
+                code: 'pl',
+                edition: 'pl.bielawskiego',
+                label: 'Język tłumaczenia i głosu:',
+                translatorLabel: 'Tłumaczenie:',
+                translator: 'Józef Bielawski',
+                hint: '<span>✨</span> Kliknij kartę, aby odwrócić i zobaczyć tekst arabski',
+                prevBtn: '⬅️ Poprzedni podtemat',
+                nextBtn: 'Następny podtemat ➡️',
+                subMeta: count => `Wyświetlanie ${count} grup fiszek`,
+                groupMeta: count => `<span>📖 ${count} wersetów Koranu</span>`,
+                hideVerses: 'Ukryj wersety',
+                showVerses: 'Pokaż wersety',
+                playText: ' Słuchaj',
+                stopText: ' Zatrzymaj',
+                aiText: ' Zapytaj AI',
+                copyText: ' Skopiuj ten tekst',
+                copiedText: ' Skopiowano!',
+                copyTitle: 'Skopiuj tekst tłumaczenia',
+                loadingText: 'Tłumaczenie...',
+                errorText: 'Błąd tłumaczenia',
+                connErrorText: 'Błąd połączenia',
+                emptySelect: 'Wybierz kategorię powyżej, aby wyświetlić wersety.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Wyjaśnij krótko Koran ${surah}:${ayat} w kontekście "${uraian}": "${text}"`
+            },
+            'ro-RO': {
+                code: 'ro',
+                edition: 'ro.grigore',
+                label: 'Limba de traducere și voce:',
+                translatorLabel: 'Traducere:',
+                translator: 'George Grigore',
+                hint: '<span>✨</span> Faceți clic pe card pentru a-l întoarce și a vedea textul în arabă',
+                prevBtn: '⬅️ Subiectul secundar anterior',
+                nextBtn: 'Subiectul secundar următor ➡️',
+                subMeta: count => `Se afișează ${count} grupuri de flashcard-uri`,
+                groupMeta: count => `<span>📖 ${count} Versete Coranice</span>`,
+                hideVerses: 'Ascunde versetele',
+                showVerses: 'Afișează versetele',
+                playText: ' Ascultă',
+                stopText: ' Oprește',
+                aiText: ' Întreabă AI',
+                copyText: ' Copiază acest text',
+                copiedText: ' Copiat!',
+                copyTitle: 'Copiază textul traducerii',
+                loadingText: 'Se traduce...',
+                errorText: 'Traducerea a eșuat',
+                connErrorText: 'Eroare de conexiune',
+                emptySelect: 'Vă rugăm să selectați o categorie de mai sus pentru a vedea versetele.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Explicați pe scurt Coranul ${surah}:${ayat} în contextul "${uraian}": "${text}"`
+            },
+            'sv-SE': {
+                code: 'sv',
+                edition: 'sv.bernstrom',
+                label: 'Översättnings- och röstspråk:',
+                translatorLabel: 'Översättning:',
+                translator: 'Knut Bernström',
+                hint: '<span>✨</span> Klicka på kortet för att vända och se den arabiska texten',
+                prevBtn: '⬅️ Föregående underämne',
+                nextBtn: 'Nästa underämne ➡️',
+                subMeta: count => `Visar ${count} grupper med flashkort`,
+                groupMeta: count => `<span>📖 ${count} koranverser</span>`,
+                hideVerses: 'Dölj verser',
+                showVerses: 'Visa verser',
+                playText: ' Lyssna',
+                stopText: ' Stopp',
+                aiText: ' Fråga AI',
+                copyText: ' Kopiera denna text',
+                copiedText: ' Kopierat!',
+                copyTitle: 'Kopiera översättningstext',
+                loadingText: 'Översätter...',
+                errorText: 'Kunde inte översätta',
+                connErrorText: 'Anslutningsfel',
+                emptySelect: 'Vänligen välj en kategori ovan för att visa verser.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Förklara kort Koranen ${surah}:${ayat} angående "${uraian}": "${text}"`
+            },
+            'tg-TJ': {
+                code: 'tg',
+                edition: 'tg.ayati',
+                label: 'Забони тарҷума ва овоз:',
+                translatorLabel: 'Тарҷума:',
+                translator: 'Абдулмуҳаммад Оятӣ (AbdolMohammad Ayati)',
+                hint: '<span>✨</span> Барои гардондан ва дидани матни арабӣ ба корт клик кунед',
+                prevBtn: '⬅️ Мавзӯи фаръии қаблӣ',
+                nextBtn: 'Мавзӯи фаръии навбатӣ ➡️',
+                subMeta: count => `Намоиши ${count} гурӯҳи кортҳои флеш`,
+                groupMeta: count => `<span>📖 ${count} ояти Қуръон</span>`,
+                hideVerses: 'Пинҳон кардани оятҳо',
+                showVerses: 'Нишон додани оятҳо',
+                playText: ' Гӯш кардан',
+                stopText: ' Қатъ',
+                aiText: ' Аз AI пурсед',
+                copyText: ' Ин матнро нусхабардорӣ кунед',
+                copiedText: ' Нусхабардорӣ шуд!',
+                copyTitle: 'Нусхабардории матни тарҷума',
+                loadingText: 'Тарҷума шуда истодааст...',
+                errorText: 'Тарҷума ноком шуд',
+                connErrorText: 'Хатои пайвастшавӣ',
+                emptySelect: 'Лутфан барои дидани оятҳо аз боло як категорияро интихоб кунед.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Қуръон ${surah}:${ayat}-ро вобаста ба мавзӯи "${uraian}" мухтасар шарҳ диҳед: "${text}"`
+            },
+            'ta-IN': {
+                code: 'ta',
+                edition: 'ta.tamil',
+                label: 'மொழிபெயர்ப்பு மற்றும் குரல் மொழி:',
+                translatorLabel: 'மொழிபெயர்ப்பு:',
+                translator: 'ஜான் டிரஸ்ட் (Jan Trust Foundation)',
+                hint: '<span>✨</span> அரபு உரையைப் பார்க்க அட்டையைத் திருப்ப கிளிக் செய்யவும்',
+                prevBtn: '⬅️ முந்தைய துணைத் தலைப்பு',
+                nextBtn: 'அடுத்த துணைத் தலைப்பு ➡️',
+                subMeta: count => `${count} ஃபிளாஷ் கார்டு குழுக்கள் காட்டப்படுகின்றன`,
+                groupMeta: count => `<span>📖 ${count} குர்ஆன் வசனங்கள்</span>`,
+                hideVerses: 'வசனங்களை மறை',
+                showVerses: 'வசனங்களைக் காட்டு',
+                playText: ' கேட்க',
+                stopText: ' நிறுத்து',
+                aiText: ' AI-யிடம் கேளுங்கள்',
+                copyText: ' இந்த உரையை நகலெடுக்கவும்',
+                copiedText: ' நகலெடுக்கப்பட்டது!',
+                copyTitle: 'மொழிபெயர்ப்பு உரையை நகலெடுக்கவும்',
+                loadingText: 'மொழிபெயர்க்கிறது...',
+                errorText: 'மொழிபெயர்ப்பு தோல்வியடைந்தது',
+                connErrorText: 'இணைப்பு பிழை',
+                emptySelect: 'வசனங்களைப் பார்க்க மேலே உள்ள வகையைத் தேர்ந்தெடுக்கவும்.',
+                cssClass: 'lang-ta',
+                aiPrompt: (surah, ayat, uraian, text) => `குர்ஆன் ${surah}:${ayat} தலைப்பு "${uraian}" தொடர்பாக சுருக்கமாக விளக்குங்கள்: "${text}"`
+            },
+            'tt-RU': {
+                code: 'tt',
+                edition: 'tt.nugman',
+                label: 'Тәрҗемә һәм тавыш теле:',
+                translatorLabel: 'Тәрҗемә:',
+                translator: 'Якуб ибн Нугман (Yakub Ibn Nugman)',
+                hint: '<span>✨</span> Гарәпчә текстын күрү өчен карточкага басыгыз',
+                prevBtn: '⬅️ Алдагы астема',
+                nextBtn: 'Чираттагы астема ➡️',
+                subMeta: count => `Күрсәтелә ${count} флеш-карта төркеме`,
+                groupMeta: count => `<span>📖 ${count} Коръән аяте</span>`,
+                hideVerses: 'Аятьләрне яшерү',
+                showVerses: 'Аятьләрне күрсәтү',
+                playText: ' Тыңлау',
+                stopText: ' Туктату',
+                aiText: ' AI-дан сорарга',
+                copyText: ' Бу текстны күчермәләү',
+                copiedText: ' Күчермәләнде!',
+                copyTitle: 'Тәрҗемә текстын күчермәләү',
+                loadingText: 'Тәрҗемә ителә...',
+                errorText: 'Тәрҗемә итеп булмады',
+                connErrorText: 'Бәйләнеш хатасы',
+                emptySelect: 'Аятьләрне карау өчен югарыдагы категорияне сайлагыз.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Коръән ${surah}:${ayat} аятен "${uraian}" темасы буенча кыскача аңлатыгыз: "${text}"`
+            },
+            'ug-CN': {
+                code: 'ug',
+                edition: 'ug.saleh',
+                label: 'تەرجىمە ۋە ئاۋاز تىلى:',
+                translatorLabel: 'تەرجىمە:',
+                translator: 'مۇھەممەد سالىھ (Muhammad Saleh)',
+                hint: '<span>✨</span> ئەرەبچە تېكىستنى كۆرۈش ئۈچۈن كارتىنى چېكىپ ئۆرۈڭ',
+                prevBtn: '⬅️ ئالدىنقى تارماق تېما',
+                nextBtn: 'كېيىنكى تارماق تېما ➡️',
+                subMeta: count => `${count} گۇرۇپپا كارتىلار كۆرسىتىلىۋاتىدۇ`,
+                groupMeta: count => `<span>📖 ${count} قۇرئان ئايىتى</span>`,
+                hideVerses: 'ئايەتلەرنى يوشۇرۇش',
+                showVerses: 'ئايەتلەرنى كۆرسىتىش',
+                playText: ' ئاڭلاش',
+                stopText: ' توختىتىش',
+                aiText: ' AI دىن سوراش',
+                copyText: ' بۇ تېكىستنى كۆچۈرۈش',
+                copiedText: ' كۆچۈرۈلدى!',
+                copyTitle: 'تەرجىمە تېكىستىنى كۆچۈرۈش',
+                loadingText: 'تەرجىمە قىلىنىۋاتىدۇ...',
+                errorText: 'تەرجىمە مەغلۇپ بولدى',
+                connErrorText: 'ئۇلىنىش خاتالىقى',
+                emptySelect: 'ئايەتلەرنى كۆرۈش ئۈچۈن يۇقىرىدىكى سەھىپىنى تاللاڭ.',
+                cssClass: 'lang-ug',
+                aiPrompt: (surah, ayat, uraian, text) => `قۇرئان ${surah}:${ayat} نى "${uraian}" تېمىسى بويىچە قىسقىچە چۈشەندۈرۈپ بېرىڭ: "${text}"`
+            },
+            'ar-SA': {
+                code: 'ar',
+                edition: 'ar.muyassar',
+                label: 'لغة الترجمة والصوت:',
+                translatorLabel: 'التفسير:',
+                translator: 'Majma\' Malik Fahd (Tafsir Al-Muyassar)',
+                hint: '<span>✨</span> انقر على البطاقة لقلبها ومشاهدة النص القرآني',
+                prevBtn: '⬅️ الموضوع الفرعي السابق',
+                nextBtn: 'الموضوع الفرعي التالي ➡️',
+                subMeta: count => `عرض ${count} من مجموعات البطاقات`,
+                groupMeta: count => `<span>📖 ${count} آيات من القرآن الكريم</span>`,
+                hideVerses: 'إخفاء الآيات',
+                showVerses: 'إظهار الآيات',
+                playText: ' استماع',
+                stopText: ' إيقاف',
+                aiText: ' اسأل الذكاء الاصطناعي',
+                copyText: ' نسخ هذا النص',
+                copiedText: ' تم النسخ!',
+                copyTitle: 'نسخ نص الترجمة والتفسير',
+                loadingText: 'جارٍ التحميل...',
+                errorText: 'فشل في جلب التفسير',
+                connErrorText: 'خطأ في الاتصال',
+                emptySelect: 'يرجى اختيار الفئة أعلاه لعرض الآيات.',
+                cssClass: 'lang-ar',
+                aiPrompt: (surah, ayat, uraian, text) => `اشرح بإيجاز سورة ${surah}:${ayat} المتعلقة بموضوع "${uraian}": "${text}"`
+            },
+            'ku-IQ': {
+                code: 'ckb',
+                edition: 'ku.asan',
+                label: 'زمانی وەرگێڕان و دەنگ:',
+                translatorLabel: 'وەرگێڕان:',
+                translator: 'تەفسیری ئاسان (Burhan Muhammad-Amin)',
+                hint: '<span>✨</span> کلیک لەسەر کارتەکە بکە بۆ وەرگەڕاندن و بینینی دەقی عەرەبی',
+                prevBtn: '⬅️ بابەتی پێشوو',
+                nextBtn: 'بابەتی دواتر ➡️',
+                subMeta: count => `پێشاندانی ${count} گرووپی فلاش کارت`,
+                groupMeta: count => `<span>📖 ${count} ئایەتی قورئان</span>`,
+                hideVerses: 'شاردنەوەی ئایەتەکان',
+                showVerses: 'پێشاندانی ئایەتەکان',
+                playText: ' گوێبگرە',
+                stopText: ' ڕاگرتن',
+                aiText: ' لە AI بپرسە',
+                copyText: ' ئەم دەقە کۆپی بکە',
+                copiedText: ' کۆپی کرا!',
+                copyTitle: 'کۆپیکردنی دەقی وەرگێڕان',
+                loadingText: 'وەرگێڕان دەکرێت...',
+                errorText: 'وەرگێڕان سەرکەوتوو نەبوو',
+                connErrorText: 'هەڵەی پەیوەندی',
+                emptySelect: 'تکایە لە سەرەوە پۆلێک هەڵبژێرە بۆ بینینی ئایەتەکان.',
+                cssClass: 'lang-ku',
+                aiPrompt: (surah, ayat, uraian, text) => `بە کورتی قورئان ${surah}:${ayat} سەبارەت بە "${uraian}" ڕوون بکەرەوە: "${text}"`
+            },
+            'uz-UZ': {
+                code: 'uz',
+                edition: 'uz.sodik',
+                label: 'Tarjima va ovoz tili:',
+                translatorLabel: 'Tarjima:',
+                translator: 'Shayx Muhammad Sodiq Muhammad Yusuf (Муҳаммад Содиқ)',
+                hint: '<span>✨</span> Arabcha matnni koʻrish uchun kartani bosing',
+                prevBtn: '⬅️ Oldingi mavzu',
+                nextBtn: 'Keyingi mavzu ➡️',
+                subMeta: count => `${count} ta flesh-karta guruhi koʻrsatilmoqda`,
+                groupMeta: count => `<span>📖 ${count} Qurʼon oyatlari</span>`,
+                hideVerses: 'Oyatlarni yashirish',
+                showVerses: 'Oyatlarni koʻrsatish',
+                playText: ' Tinglash',
+                stopText: ' Toʻxtatish',
+                aiText: ' AI-dan soʻrash',
+                copyText: ' Ushbu matnni nusxalash',
+                copiedText: ' Nusxalandi!',
+                copyTitle: 'Tarjima matnini nusxalash',
+                loadingText: 'Tarjima qilinmoqda...',
+                errorText: 'Tarjima qilib boʻlmadi',
+                connErrorText: 'Ulanishda xatolik',
+                emptySelect: 'Oyatlarni koʻrish uchun yuqoridagi toifani tanlang.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Qurʼon ${surah}:${ayat} oyatini "${uraian}" mavzusi kontekstida qisqacha tushuntirib bering: "${text}"`
+            }
+        };
+
+        async function translateTextFree(text, targetLangCode) {
+            if (!text || targetLangCode === 'id') return text;
+            const cacheKey = `${targetLangCode}:${text}`;
+            if (translationCache[cacheKey]) return translationCache[cacheKey];
+            
+            try {
+                // Pre-processing to prevent Google Translate neural model hallucinations
+                let queryText = text;
+                // 1. Ensure space after numbering prefix (e.g., "5.KIKIR" -> "5. KIKIR")
+                queryText = queryText.replace(/^(\d+(?:\.\d+)*)\.([^\s\d])/g, '$1. $2');
+                // 2. Protect "(Bakhil)" by converting to "(Al-Bakhil)" so Google won't corrupt it into "Kakhil"
+                queryText = queryText.replace(/\(Bakhil\)/gi, '(Al-Bakhil)');
+
+                const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=id&tl=${targetLangCode}&dt=t&q=${encodeURIComponent(queryText)}`;
+                const res = await fetch(url);
+                const data = await res.json();
+                let translated = data[0].map(item => item[0]).join('');
+
+                // Post-processing: Correct any residual "Kakhil" hallucinations across various scripts/alphabets
+                translated = translated
+                    .replace(/\bKakhil\b/gi, match => match === 'KAKHIL' ? 'BAKHIL' : (match === 'Kakhil' ? 'Bakhil' : 'bakhil'))
+                    .replace(/\(Kakhil\)/gi, match => match === '(KAKHIL)' ? '(BAKHIL)' : (match === '(Kakhil)' ? '(Bakhil)' : '(bakhil)'))
+                    .replace(/الكخيل/g, 'البخيل')
+                    .replace(/کاخیل/g, 'البخيل')
+                    .replace(/কাখিল/g, 'আল-বাখিল')
+                    .replace(/काखिल/g, 'अल-बखिल')
+                    .replace(/кахил/gi, 'Аль-Бахиль');
+
+                // Fix mis-translations for Kikir / Bakhil topic headers
+                if (text.toUpperCase().includes('KIKIR (BAKHIL)') || text.toUpperCase().includes('KIKIR')) {
+                    translated = translated
+                        .replace(/MISERY\s*\(STORY\)/gi, 'STINGINESS (BAKHIL)')
+                        .replace(/MISERING\s*\(Al-Bakhil\)/gi, 'STINGINESS (Al-Bakhil)')
+                        .replace(/MIS[ÈE]RE\s*\(HISTOIRE\)/gi, 'AVARICE (BAKHIL)')
+                        .replace(/MISERIA\s*\(HISTORIA\)/gi, 'AVARICIA (BAKHIL)')
+                        .replace(/MISERIA\s*\(STORIA\)/gi, 'AVARIZIA (BAKHIL)')
+                        .replace(/ELEND\s*\(GESCHICHTE\)/gi, 'GEIZ (BAKHIL)');
+                }
+
+                translationCache[cacheKey] = translated;
+                return translated;
+            } catch(e) {
+                console.error("Translation error:", e);
+                return text;
+            }
+        }
+
+        async function translateDropdowns() {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLangCode = cfg.code;
+            
+            const labelEl = document.querySelector('label[for="tts-language"]');
+            if (labelEl && cfg.label) {
+                labelEl.textContent = cfg.label;
+            }
+
+            const selects = [document.getElementById('select-tema'), document.getElementById('select-pokok'), document.getElementById('select-sub')];
+            const promises = [];
+            
+            for (let select of selects) {
+                if (!select) continue;
+                for (let option of select.options) {
+                    if (!option.hasAttribute('data-original')) {
+                        option.setAttribute('data-original', option.textContent);
+                    }
+                    const originalText = option.getAttribute('data-original');
+                    
+                    if (targetLangCode === 'id') {
+                        option.textContent = originalText;
+                    } else {
+                        const cacheKey = `${targetLangCode}:${originalText}`;
+                        if (!translationCache[cacheKey]) {
+                            option.textContent = '...';
+                        }
+                        promises.push((async () => {
+                            const translated = await translateTextFree(originalText, targetLangCode);
+                            option.textContent = translated;
+                        })());
+                    }
+                }
+            }
+            await Promise.all(promises);
+        }
+
+        function naturalCompare(a, b) {
+            return (a || '').toString().localeCompare((b || '').toString(), undefined, { numeric: true, sensitivity: 'base' });
+        }
+
+        function naturalSort(arr) {
+            return [...arr].sort(naturalCompare);
+        }
+
+        const elTema = document.getElementById('select-tema');
+        const elPokok = document.getElementById('select-pokok');
+        const elSub = document.getElementById('select-sub');
+        const elContent = document.getElementById('content-area');
+        const elHint = document.getElementById('hint-text');
+
+        function updateTranslatorInfo() {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const infoTextEl = document.getElementById('translator-info-text');
+            if (infoTextEl && cfg.translator) {
+                const label = cfg.translatorLabel || 'Terjemahan:';
+                infoTextEl.innerHTML = `${label} <strong>${cfg.translator}</strong>`;
+            }
+        }
+
+        function initData(data) {
+            quranData = data;
+            const savedLang = localStorage.getItem('active_lang');
+            const elTts = document.getElementById('tts-language');
+            if (savedLang && elTts && elTts.querySelector(`option[value="${savedLang}"]`)) {
+                elTts.value = savedLang;
+            }
+            populateSelect(elTema, naturalSort(Object.keys(data)), "Pilih Tema");
+            translateDropdowns();
+            updateTranslatorInfo();
+            checkAutoNav();
+        }
+
+        // Fetch Data
+        fetch('data.json?t=' + new Date().getTime())
+            .then(res => res.json())
+            .then(data => {
+                initData(data);
+            })
+            .catch(err => {
+                console.warn("Fetch data.json failed (likely file:// protocol). Trying data.js fallback...", err);
+                if (typeof window.quranData !== 'undefined' && Object.keys(window.quranData).length > 0) {
+                    initData(window.quranData);
+                } else {
+                    const script = document.createElement('script');
+                    script.src = 'data.js';
+                    script.onload = () => {
+                        if (typeof window.quranData !== 'undefined' && Object.keys(window.quranData).length > 0) {
+                            initData(window.quranData);
+                        } else {
+                            elContent.innerHTML = `<div class="empty-state" style="color:#ef4444;">Gagal memuat data.json. Pastikan Anda menjalankan server lokal (misalnya live server) atau file data.js tersedia.</div>`;
+                        }
+                    };
+                    script.onerror = () => {
+                        elContent.innerHTML = `<div class="empty-state" style="color:#ef4444;">Gagal memuat data.json. Pastikan Anda menjalankan server lokal (misalnya live server).</div>`;
+                    };
+                    document.head.appendChild(script);
+                }
+            });
+
+        function saveCurrentState() {
+            if (elTema && elTema.value) sessionStorage.setItem('active_tema', elTema.value);
+            if (elPokok && elPokok.value) sessionStorage.setItem('active_pokok', elPokok.value);
+            if (elSub && elSub.value) sessionStorage.setItem('active_sub', elSub.value);
+            const langSelect = document.getElementById('tts-language');
+            if (langSelect && langSelect.value) localStorage.setItem('active_lang', langSelect.value);
+        }
+
+        function checkAutoNav() {
+            const savedTema = sessionStorage.getItem('active_tema');
+            const savedPokok = sessionStorage.getItem('active_pokok');
+            const savedSub = sessionStorage.getItem('active_sub');
+
+            if (savedTema && quranData[savedTema]) {
+                elTema.value = savedTema;
+                populateSelect(elPokok, naturalSort(Object.keys(quranData[savedTema])), "Pilih Pokok Bahasan");
+                if (savedPokok && quranData[savedTema][savedPokok]) {
+                    elPokok.value = savedPokok;
+                    populateSelect(elSub, naturalSort(Object.keys(quranData[savedTema][savedPokok])), "Pilih Sub Pokok Bahasan");
+                    if (savedSub && quranData[savedTema][savedPokok][savedSub]) {
+                        elSub.value = savedSub;
+                        renderContentAll(savedTema, savedPokok, savedSub);
+                        return;
+                    }
+                }
+            }
+
+            // Default initial state: open the first Tema, first Pokok, and first Sub
+            const temaKeys = naturalSort(Object.keys(quranData));
+            if (temaKeys.length > 0) {
+                const firstTema = temaKeys[0];
+                elTema.value = firstTema;
+                const pokokKeys = naturalSort(Object.keys(quranData[firstTema] || {}));
+                populateSelect(elPokok, pokokKeys, "Pilih Pokok Bahasan");
+                if (pokokKeys.length > 0) {
+                    const firstPokok = pokokKeys[0];
+                    elPokok.value = firstPokok;
+                    const subKeys = naturalSort(Object.keys(quranData[firstTema][firstPokok] || {}));
+                    populateSelect(elSub, subKeys, "Pilih Sub Pokok Bahasan");
+                    if (subKeys.length > 0) {
+                        const firstSub = subKeys[0];
+                        elSub.value = firstSub;
+                        renderContentAll(firstTema, firstPokok, firstSub);
+                    }
+                }
+            }
+        }
+
+        // Helpers
+        function populateSelect(element, options, defaultText) {
+            element.innerHTML = `<option value="">${defaultText}</option>`;
+            options.forEach(opt => {
+                const el = document.createElement('option');
+                el.value = opt;
+                el.textContent = opt;
+                element.appendChild(el);
+            });
+            element.disabled = false;
+        }
+
+        function resetSelect(element, defaultText) {
+            element.innerHTML = `<option value="">${defaultText}</option>`;
+            element.disabled = true;
+        }
+
+        // Event Listeners
+        elTema.addEventListener('change', () => {
+            const val = elTema.value;
+            resetSelect(elSub, "Pilih Sub Pokok Bahasan");
+            clearContent();
+            
+            if (val && quranData[val]) {
+                populateSelect(elPokok, naturalSort(Object.keys(quranData[val])), "Pilih Pokok Bahasan");
+            } else {
+                resetSelect(elPokok, "Pilih Pokok Bahasan");
+            }
+            translateDropdowns();
+        });
+
+        elPokok.addEventListener('change', () => {
+            const tema = elTema.value;
+            const pokok = elPokok.value;
+            clearContent();
+
+            if (pokok && quranData[tema] && quranData[tema][pokok]) {
+                populateSelect(elSub, naturalSort(Object.keys(quranData[tema][pokok])), "Pilih Sub Pokok Bahasan");
+            } else {
+                resetSelect(elSub, "Pilih Sub Pokok Bahasan");
+            }
+            translateDropdowns();
+        });
+
+        elSub.addEventListener('change', () => {
+            const tema = elTema.value;
+            const pokok = elPokok.value;
+            const sub = elSub.value;
+            clearContent();
+
+            if (sub && quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub]) {
+                saveCurrentState();
+                renderContentAll(tema, pokok, sub);
+            }
+            translateDropdowns();
+        });
+
+        let currentAudio = null;
+        let onlineAudioQueue = [];
+        let isAudioPlaying = false;
+        let activeTtsButton = null;
+        let currentUtterance = null;
+        let speechSentences = [];
+        let availableVoices = [];
+
+        function loadVoices() {
+            if (typeof window.speechSynthesis !== 'undefined') {
+                availableVoices = window.speechSynthesis.getVoices() || [];
+            }
+        }
+        loadVoices();
+        if (typeof window.speechSynthesis !== 'undefined' && window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function hasLocalVoice(langCode) {
+            if (!availableVoices || availableVoices.length === 0) {
+                loadVoices();
+            }
+            if (!availableVoices || availableVoices.length === 0) return false;
+            const code = (langCode || '').toLowerCase().split('-')[0];
+            return availableVoices.some(v => {
+                const vl = (v.lang || '').toLowerCase().replace('_', '-');
+                return vl.startsWith(code) || ((code === 'no' || code === 'nb') && (vl.startsWith('no') || vl.startsWith('nb')));
+            });
+        }
+
+        function getBestVoice(selectedLang) {
+            if (!availableVoices || availableVoices.length === 0) {
+                loadVoices();
+            }
+            if (!availableVoices || availableVoices.length === 0) return null;
+
+            const exactCode = (selectedLang || '').toLowerCase().replace('_', '-');
+            const shortCode = exactCode.split('-')[0];
+
+            // 1. Ambil seluruh voice yang cocok dengan bahasa terpilih
+            const langVoices = availableVoices.filter(v => {
+                const vl = (v.lang || '').toLowerCase().replace('_', '-');
+                return vl === exactCode || vl.startsWith(shortCode) || ((shortCode === 'no' || shortCode === 'nb') && (vl.startsWith('no') || vl.startsWith('nb')));
+            });
+
+            if (langVoices.length === 0) return null;
+
+            // 2. KONSISTENSI 1 JENIS SUARA: Prioritaskan Suara Perempuan (Female / Natural)
+            // (Contoh: Microsoft Gadis, Microsoft Jenny, Google Bahasa Indonesia, Aria, Zira, Iselin, Nora, dll.)
+            const femaleVoice = langVoices.find(v => 
+                /gadis|jenny|aria|sonia|zira|siti|yasmin|amira|ayumi|yuna|xiaoxiao|denise|katja|elena|elsa|isabella|chiara|alice|bianca|carla|federica|lucia|premwadee|achara|iselin|nora|astrid|ingrid|liv|anne|kari|paulina|maja|zofia|ewa|agnieszka|alina|carmen|ioana|simona|maria|hillevi|hedda|elin|sofie|klara|alva|vani|latha|priya|siri|madina|dilnura|nodira|sevara|female|woman|natural/i.test(v.name)
+            );
+            if (femaleVoice) return femaleVoice;
+
+            // 3. Prioritaskan penyedia kualitas tinggi (Google / Microsoft / Apple)
+            const providerVoice = langVoices.find(v => /google|microsoft|apple/i.test(v.name));
+            if (providerVoice) return providerVoice;
+
+            // 4. Default ke suara pertama yang tersedia
+            return langVoices[0];
+        }
+
+        function stopTTS(event) {
+            if (event && event.stopPropagation) event.stopPropagation(); // Mencegah flip card
+            
+            isAudioPlaying = false;
+            speechSentences = [];
+            onlineAudioQueue = [];
+
+            if (currentUtterance) {
+                currentUtterance.onend = null;
+                currentUtterance.onerror = null;
+                currentUtterance = null;
+            }
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (currentAudio) {
+                currentAudio.onended = null;
+                currentAudio.onerror = null;
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+            }
+            
+            if (activeTtsButton) {
+                resetPlayButtonState(activeTtsButton);
+                activeTtsButton = null;
+            }
+
+            document.querySelectorAll('.play-btn.is-playing').forEach(btn => {
+                resetPlayButtonState(btn);
+            });
+        }
+
+        function setPlayButtonPlayingState(btn) {
+            if (!btn) return;
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+            const spinnerSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path></svg>`;
+            btn.innerHTML = spinnerSvg + (cfg.stopText || cfg.playText);
+            btn.classList.add('is-playing');
+            btn.setAttribute('title', 'Klik untuk menghentikan suara');
+        }
+
+        function resetPlayButtonState(btn) {
+            if (!btn) return;
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+            const svg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+            btn.innerHTML = svg + cfg.playText;
+            btn.classList.remove('is-playing');
+            btn.setAttribute('title', 'Dengarkan Terjemahan');
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
+        }
+
+        function splitTextIntoChunks(text, maxLen = 120) {
+            if (!text) return [];
+            if (text.length <= maxLen) return [text];
+
+            const regex = /([^.?!,;:\n\u06d4\u0964]+[.?!,;:\n\u06d4\u0964]+|[^.?!,;:\n\u06d4\u0964]+$)/g;
+            const parts = text.match(regex) || [text];
+            const chunks = [];
+            let current = '';
+
+            for (let part of parts) {
+                part = part.trim();
+                if (!part) continue;
+                if ((current + ' ' + part).trim().length <= maxLen) {
+                    current = (current ? current + ' ' + part : part).trim();
+                } else {
+                    if (current) chunks.push(current);
+                    if (part.length > maxLen) {
+                        const words = part.split(/\s+/);
+                        current = '';
+                        for (let w of words) {
+                            if ((current + ' ' + w).trim().length <= maxLen) {
+                                current = (current ? current + ' ' + w : w).trim();
+                            } else {
+                                if (current) chunks.push(current);
+                                current = w;
+                            }
+                        }
+                    } else {
+                        current = part;
+                    }
+                }
+            }
+            if (current) chunks.push(current);
+            return chunks;
+        }
+
+        function playOnlineTTSQueue(chunks, langCode, button) {
+            if (!chunks || chunks.length === 0) {
+                stopTTS();
+                return;
+            }
+            onlineAudioQueue = [...chunks];
+            isAudioPlaying = true;
+            activeTtsButton = button;
+
+            setPlayButtonPlayingState(button);
+
+            function playNext() {
+                if (!isAudioPlaying || onlineAudioQueue.length === 0) {
+                    stopTTS();
+                    return;
+                }
+                const chunk = onlineAudioQueue.shift();
+                const url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${encodeURIComponent(langCode)}&q=${encodeURIComponent(chunk)}`;
+                
+                if (currentAudio) {
+                    currentAudio.onended = null;
+                    currentAudio.onerror = null;
+                    currentAudio.pause();
+                }
+
+                currentAudio = new Audio(url);
+                currentAudio.onended = () => {
+                    if (isAudioPlaying) playNext();
+                };
+                currentAudio.onerror = (err) => {
+                    console.warn("Online audio playback failed:", err);
+                    if (isAudioPlaying) playNext();
+                };
+                currentAudio.play().catch(e => {
+                    console.warn("Audio play() interrupted or rejected:", e);
+                    if (isAudioPlaying && e.name !== 'AbortError') playNext();
+                });
+            }
+
+            playNext();
+        }
+
+        function playNativeSpeechQueue(sentences, selectedLang, langCode, button) {
+            speechSentences = [...sentences];
+            isAudioPlaying = true;
+            activeTtsButton = button;
+
+            setPlayButtonPlayingState(button);
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                }
+            }
+
+            let failedCount = 0;
+            const chosenVoice = getBestVoice(selectedLang);
+
+            function playNext() {
+                if (!isAudioPlaying || speechSentences.length === 0) {
+                    stopTTS();
+                    return;
+                }
+
+                const sentence = speechSentences.shift();
+                const utterance = new SpeechSynthesisUtterance(sentence);
+                currentUtterance = utterance;
+                utterance.lang = selectedLang;
+                if (chosenVoice) {
+                    utterance.voice = chosenVoice;
+                }
+                utterance.rate = 0.92;
+                utterance.pitch = 1.0;
+
+                let done = false;
+                utterance.onend = () => {
+                    if (!isAudioPlaying) return;
+                    if (!done) {
+                        done = true;
+                        currentUtterance = null;
+                        if (isAudioPlaying) playNext();
+                    }
+                };
+
+                utterance.onerror = (e) => {
+                    console.warn("SpeechSynthesis utterance error:", e);
+                    // Jika dihentikan manual atau dibatalkan, jangan alihkan ke online TTS
+                    if (!isAudioPlaying || e.error === 'interrupted' || e.error === 'canceled') {
+                        currentUtterance = null;
+                        return;
+                    }
+                    failedCount++;
+                    if (!done) {
+                        done = true;
+                        currentUtterance = null;
+                        // Jika gagal pada kalimat pertama karena tidak didukung, alihkan ke online TTS
+                        if (failedCount === 1 && isAudioPlaying) {
+                            speechSentences.unshift(sentence);
+                            playOnlineTTSQueue(speechSentences, langCode, button);
+                            return;
+                        }
+                        if (isAudioPlaying) playNext();
+                    }
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }
+
+            playNext();
+        }
+
+        function playTTS(button, event) {
+            if (event) event.stopPropagation(); // Mencegah flip card saat tombol diklik
+            
+            // Jika tombol yang sama sedang memutar (atau tombol memiliki status is-playing), klik sekali lagi akan otomatis berhenti
+            if (isAudioPlaying && (activeTtsButton === button || button.classList.contains('is-playing'))) {
+                stopTTS();
+                return;
+            }
+
+            stopTTS(); // Hentikan suara yang sedang berjalan di tempat lain
+
+            // Hentikan pemutaran audio tilawah alquran jika sedang aktif
+            document.querySelectorAll('audio').forEach(a => {
+                if (!a.paused) a.pause();
+            });
+
+            const card = button.closest('.flip-card-front');
+            let text = '';
+            if (card) {
+                const textEl = card.querySelector('.translation-text');
+                if (textEl && textEl.textContent) {
+                    text = textEl.textContent.trim();
+                }
+            }
+            if (!text) {
+                text = decodeURIComponent(button.getAttribute('data-text') || '');
+            }
+            if (!text) return;
+
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+            const langCode = cfg.code;
+
+            const chunks = splitTextIntoChunks(text, 140);
+            if (chunks.length === 0) return;
+
+            // Jika ada suara bawaan browser (seperti Bahasa Indonesia, Inggris), gunakan SpeechSynthesis native empuk.
+            // Jika TIDAK ADA suara bawaan di sistem untuk bahasa ini (seperti Urdu, Bangla, Turki di Windows), gunakan Online TTS agar PASTI berbunyi lancar!
+            if (window.speechSynthesis && hasLocalVoice(selectedLang)) {
+                playNativeSpeechQueue(chunks, selectedLang, langCode, button);
+            } else {
+                playOnlineTTSQueue(chunks, langCode, button);
+            }
+        }
+
+
+
+        function tanyaAI(button, event, uraianTitle) {
+            if (event) event.stopPropagation(); // Mencegah flip card
+            stopTTS();
+            const card = button.closest('.flip-card-front');
+            const surah = card.getAttribute('data-surah');
+            const ayat = card.getAttribute('data-ayat');
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+
+            const textEl = card.querySelector('.translation-text');
+            const currentText = textEl ? textEl.textContent.trim() : decodeURIComponent(card.getAttribute('data-indo'));
+            
+            const groupCard = button.closest('.uraian-group-card');
+            let titleToUse = uraianTitle;
+            if (groupCard) {
+                const titleEl = groupCard.querySelector('.group-title');
+                if (titleEl && titleEl.textContent) {
+                    titleToUse = titleEl.textContent.trim();
+                }
+            }
+
+            const prompt = cfg.aiPrompt ? cfg.aiPrompt(surah, ayat, titleToUse, currentText) : `Jelaskan singkat QS. ${surah}:${ayat} terkait "${titleToUse}": "${currentText}"`;
+            
+            const url = `https://chatgpt.com/?q=${encodeURIComponent(prompt)}`;
+            window.open(url, '_blank');
+        }
+
+
+        function clearContent() {
+            stopTTS();
+            elContent.innerHTML = `<div class="empty-state">Silakan pilih kategori di atas untuk melihat ayat.</div>`;
+            elHint.style.display = 'none';
+            const navContainer = document.getElementById('bottom-nav-container');
+            if (navContainer) navContainer.style.display = 'none';
+        }
+
+        function prevSub() {
+            stopTTS();
+            if (!elSub || elSub.disabled) return;
+            const curIdx = elSub.selectedIndex;
+            if (curIdx > 1) {
+                elSub.selectedIndex = curIdx - 1;
+                elSub.dispatchEvent(new Event('change'));
+                scrollToContent();
+            }
+        }
+
+        function nextSub() {
+            stopTTS();
+            // 1. Next Sub in current Pokok
+            if (elSub && !elSub.disabled && elSub.selectedIndex < elSub.options.length - 1) {
+                elSub.selectedIndex = elSub.selectedIndex + 1;
+                elSub.dispatchEvent(new Event('change'));
+                scrollToContent();
+                return;
+            }
+
+            // 2. Next Pokok Bahasan
+            if (elPokok && !elPokok.disabled && elPokok.selectedIndex < elPokok.options.length - 1) {
+                elPokok.selectedIndex = elPokok.selectedIndex + 1;
+                elPokok.dispatchEvent(new Event('change'));
+                setTimeout(() => {
+                    if (elSub.options.length > 1) {
+                        elSub.selectedIndex = 1;
+                        elSub.dispatchEvent(new Event('change'));
+                        scrollToContent();
+                    }
+                }, 100);
+                return;
+            }
+
+            // 3. Next Tema
+            if (elTema && elTema.selectedIndex < elTema.options.length - 1) {
+                elTema.selectedIndex = elTema.selectedIndex + 1;
+                elTema.dispatchEvent(new Event('change'));
+                setTimeout(() => {
+                    if (elPokok.options.length > 1) {
+                        elPokok.selectedIndex = 1;
+                        elPokok.dispatchEvent(new Event('change'));
+                        setTimeout(() => {
+                            if (elSub.options.length > 1) {
+                                elSub.selectedIndex = 1;
+                                elSub.dispatchEvent(new Event('change'));
+                                scrollToContent();
+                            }
+                        }, 100);
+                    }
+                }, 100);
+            }
+        }
+
+        function prevUraian() { prevSub(); }
+        function nextUraian() { nextSub(); }
+
+        function scrollToContent() {
+            setTimeout(() => {
+                const elContent = document.getElementById('content-area');
+                if (elContent) {
+                    window.scrollTo({ top: elContent.offsetTop - 20, behavior: 'smooth' });
+                }
+            }, 80);
+        }
+
+        function updateNavButtonState() {
+            const btnPrev = document.getElementById('btn-prev-uraian');
+            if (btnPrev && elSub) {
+                btnPrev.disabled = (elSub.selectedIndex <= 1);
+            }
+        }
+
+        function toggleSingleGroup(groupIdx, event) {
+            if (event && event.target && (event.target.closest('button') || event.target.closest('audio') || event.target.closest('.flip-card'))) {
+                return;
+            }
+            const card = document.getElementById(`group-${groupIdx}`);
+            if (!card) return;
+            card.classList.toggle('is-collapsed');
+
+            const groupCards = Array.from(document.querySelectorAll('.uraian-group-card'));
+            const anyExpandedWithVerses = groupCards.some(c => {
+                if (c.classList.contains('is-collapsed')) return false;
+                const meta = c.querySelector('.group-meta');
+                const count = meta ? parseInt(meta.getAttribute('data-count') || '0') : 0;
+                return count > 0;
+            });
+
+            if (anyExpandedWithVerses) {
+                elHint.style.display = 'flex';
+            } else {
+                elHint.style.display = 'none';
+            }
+        }
+
+        function generateUraianGroupMarkup(uraianTitle, data, groupIdx) {
+            let markup = `
+                <div class="uraian-group-card is-collapsed" id="group-${groupIdx}">
+                    <div class="group-header-banner" onclick="toggleSingleGroup(${groupIdx}, event)" title="Klik untuk Buka / Tutup Kelompok Ini">
+                        <div class="group-header-left">
+                            <h3 class="group-title" data-original="${uraianTitle}">${uraianTitle}</h3>
+                            <div class="group-meta" data-count="${data && data.verses ? data.verses.length : 0}">
+                                <span>📖 ${data && data.verses ? data.verses.length : 0} Ayat Al-Qur'an</span>
+                            </div>
+                        </div>
+                        <div class="group-toggle-icon" title="Buka / Tutup Kelompok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="group-cards-container">
+            `;
+
+            if (data.is_lihat_juga) {
+                markup += `<div class="empty-state" style="padding: 1.5rem; text-align: left; background: rgba(30, 41, 59, 0.4); border-radius: 12px; margin-top: 1rem;">ℹ️ Lihat juga bahasan terkait pada referensi utama.</div>`;
+            } else if (!data.verses || data.verses.length === 0) {
+                markup += `<div class="empty-state" style="padding: 1.5rem; text-align: center;">Tidak ada ayat untuk kelompok uraian ini.</div>`;
+            } else {
+                data.verses.forEach(v => {
+                    markup += `
+                        <div class="verse-item-wrapper" style="margin-bottom: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+                                <div class="verse-title" style="margin-bottom: 0;">${v.surah_name} [${v.surah_num}]: ${v.ayat_num}</div>
+                                ${v.audio ? `
+                                <audio controls style="height: 32px; border-radius: 999px;">
+                                    <source src="${v.audio}" type="audio/mpeg">
+                                </audio>
+                                ` : ''}
+                            </div>
+                            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front" data-surah="${v.surah_num}" data-ayat="${v.ayat_num}" data-indo="${encodeURIComponent(v.indo)}">
+                                        <div class="translation-text" style="width: 100%;">${v.indo}</div>
+                                        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                                            <button class="tts-button play-btn" data-text="${encodeURIComponent(v.indo)}" onclick="playTTS(this, event)" title="Dengarkan Terjemahan">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                                                Dengarkan
+                                            </button>
+                                            <button class="tts-button ai-btn" style="color: #8b5cf6; border-color: #8b5cf6; background-color: rgba(139, 92, 246, 0.1);" onclick="tanyaAI(this, event, '${uraianTitle.replace(/'/g, "\\'")}')" title="Tanya AI tentang ayat ini">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                                Tanya AI
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back">${v.arab}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            markup += `
+                    </div>
+                </div>
+            `;
+            return markup;
+        }
+
+        function renderContentAll(tema, pokok, sub) {
+            saveCurrentState();
+            const subData = quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub];
+            if (!subData) return;
+            const keys = naturalSort(Object.keys(subData));
+            
+            let html = `
+                <div class="sub-header-banner-card">
+                    <div class="sub-header-info">
+                        <h2 class="sub-header-title" data-original="${sub}">${sub}</h2>
+                        <div class="sub-header-meta" data-count="${keys.length}">Menampilkan ${keys.length} Kelompok Uraian Flash Card</div>
+                    </div>
+                </div>
+            `;
+
+            const navContainer = document.getElementById('bottom-nav-container');
+            let totalVerses = 0;
+
+            keys.forEach((uraianTitle, idx) => {
+                const data = subData[uraianTitle];
+                html += generateUraianGroupMarkup(uraianTitle, data, idx);
+                if (data && data.verses) totalVerses += data.verses.length;
+            });
+
+            elHint.style.display = 'none';
+
+            if (totalVerses > 0) {
+                if (navContainer) navContainer.style.display = 'block';
+            } else {
+                if (navContainer) navContainer.style.display = 'none';
+            }
+
+            elContent.innerHTML = html;
+            updateNavButtonState();
+            translatePageContent();
+        }
+
+        function renderContentSingle(tema, pokok, sub, uraianTitle) {
+            saveCurrentState();
+            const subData = quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub];
+            if (!subData || !subData[uraianTitle]) return;
+
+            const data = subData[uraianTitle];
+            const navContainer = document.getElementById('bottom-nav-container');
+
+            let html = generateUraianGroupMarkup(uraianTitle, data, 0);
+
+            elHint.style.display = 'none';
+
+            if (data.verses && data.verses.length > 0) {
+                if (navContainer) navContainer.style.display = 'block';
+            } else {
+                if (navContainer) navContainer.style.display = 'none';
+            }
+
+            elContent.innerHTML = html;
+            updateNavButtonState();
+            translatePageContent();
+        }
+
+        const elTtsLanguage = document.getElementById('tts-language');
+        if (elTtsLanguage) {
+            elTtsLanguage.addEventListener('change', () => {
+                stopTTS();
+                saveCurrentState();
+                translatePageContent();
+                translateDropdowns();
+                updateTranslatorInfo();
+            });
+        }
+
+        async function translatePageContent() {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLangCode = cfg.code;
+
+            updateTranslatorInfo();
+
+            // 1. Petunjuk / Hint
+            const elHint = document.getElementById('hint-text');
+            if (elHint) {
+                elHint.innerHTML = cfg.hint;
+            }
+
+            // 2. Tombol Navigasi Bawah
+            const btnPrev = document.getElementById('btn-prev-uraian');
+            const btnNext = document.getElementById('btn-next-uraian');
+            if (btnPrev) btnPrev.textContent = cfg.prevBtn;
+            if (btnNext) btnNext.textContent = cfg.nextBtn;
+
+            // 3. Judul Sub Header & Meta
+            const subTitleEls = document.querySelectorAll('.sub-header-title');
+            subTitleEls.forEach(async el => {
+                const orig = el.getAttribute('data-original');
+                if (orig) {
+                    if (targetLangCode === 'id') el.textContent = orig;
+                    else el.textContent = await translateTextFree(orig, targetLangCode);
+                }
+            });
+
+            const subMetaEls = document.querySelectorAll('.sub-header-meta');
+            subMetaEls.forEach(el => {
+                const count = el.getAttribute('data-count');
+                el.textContent = cfg.subMeta(count);
+            });
+
+            // 4. Judul Kelompok Uraian & Meta Jumlah Ayat
+            const groupTitleEls = document.querySelectorAll('.group-title');
+            groupTitleEls.forEach(async el => {
+                const orig = el.getAttribute('data-original');
+                if (orig) {
+                    if (targetLangCode === 'id') el.textContent = orig;
+                    else el.textContent = await translateTextFree(orig, targetLangCode);
+                }
+            });
+
+            const groupMetaEls = document.querySelectorAll('.group-meta');
+            groupMetaEls.forEach(el => {
+                const count = el.getAttribute('data-count');
+                el.innerHTML = cfg.groupMeta(count);
+            });
+
+            // 5. Tombol aksi di depan kartu
+            const playBtns = document.querySelectorAll('.play-btn');
+            playBtns.forEach(btn => {
+                if (btn.classList.contains('is-playing')) {
+                    const spinnerSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path></svg>`;
+                    btn.innerHTML = spinnerSvg + cfg.playText;
+                } else {
+                    const svg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+                    btn.innerHTML = svg + cfg.playText;
+                }
+            });
+
+
+
+            const aiBtns = document.querySelectorAll('.ai-btn');
+            aiBtns.forEach(btn => {
+                const svg = btn.querySelector('svg') ? btn.querySelector('svg').outerHTML : '';
+                btn.innerHTML = svg + cfg.aiText;
+            });
+
+            // 6. Terjemahan Ayat pada Kartu Flip (di bagian depan)
+            const cards = document.querySelectorAll('.flip-card-front');
+            if (lang === 'id-ID') {
+                cards.forEach(card => {
+                    const text = decodeURIComponent(card.getAttribute('data-indo'));
+                    const textEl = card.querySelector('.translation-text');
+                    if (textEl) {
+                        textEl.className = 'translation-text';
+                        textEl.textContent = text;
+                    }
+                    const playBtn = card.querySelector('.play-btn');
+                    if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(text));
+                });
+                return;
+            }
+            
+            const edition = cfg.edition;
+            const cssClass = cfg.cssClass ? ' ' + cfg.cssClass : '';
+            
+            const promises = Array.from(cards).map(async card => {
+                const surah = card.getAttribute('data-surah');
+                const ayat = card.getAttribute('data-ayat');
+                const textEl = card.querySelector('.translation-text');
+                const playBtn = card.querySelector('.play-btn');
+                
+                if (textEl) {
+                    textEl.className = 'translation-text' + cssClass;
+                }
+                
+                const cacheKey = `${edition}:${surah}:${ayat}`;
+                if (ayahTranslationCache[cacheKey]) {
+                    const translatedText = ayahTranslationCache[cacheKey];
+                    if (textEl) textEl.textContent = translatedText;
+                    if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+                    return;
+                }
+                
+                if (textEl) textEl.textContent = cfg.loadingText;
+                
+                try {
+                    const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surah}:${ayat}/${edition}`);
+                    const json = await res.json();
+                    if (json && json.data && json.data.text) {
+                        const translatedText = json.data.text;
+                        ayahTranslationCache[cacheKey] = translatedText;
+                        if (textEl) textEl.textContent = translatedText;
+                        if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+                    } else {
+                        if (textEl) textEl.textContent = cfg.errorText;
+                    }
+                } catch (e) {
+                    console.error(e);
+                    if (textEl) textEl.textContent = cfg.connErrorText;
+                }
+            });
+            await Promise.all(promises);
+        }
+    </script>
+</body>
+</html>

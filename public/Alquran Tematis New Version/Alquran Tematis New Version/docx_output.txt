@@ -1,0 +1,67 @@
+--- PARAGRAPHS ---
+[3] (Style: Heading 3) Al Maaidah [5]: 103 – 104
+[5] (Style: Heading 3) Al An`am [6]: 136
+[6] (Style: Heading 3) Al An`am [6]: 138 – 139
+[7] (Style: Heading 3) Al An`am [6]: 143 – 144
+[8] (Style: Heading 3) An Nahl [16]: 56
+[10] (Style: Heading 3) Al An`am [6]: 137
+[11] (Style: Heading 3) Al An`am [6]: 140
+[13] (Style: Heading 3) An Nahl [16]: 57 – 62
+[14] (Style: Heading 3) Az Zukhruf [43]: 15 – 22
+[16] (Style: Heading 3) Al A'raaf [7]: 28
+[17] (Style: Heading 3) Al Anfaal [8]: 35
+[19] (Style: Heading 3) An Najm [53]: 19 – 25
+[21] (Style: Heading 3) An Najm [53]: 26 – 28
+[24] (Style: Heading 3) Quraisy [106]: 1 – 4
+[26] (Style: Heading 3) Al Fiil [105]: 1 – 5
+[31] (Style: Heading 3) Al Maaidah [5]: 67
+[32] (Style: Heading 3) Al Maaidah [5]: 92
+[33] (Style: Heading 3) Al Maaidah [5]: 99
+[34] (Style: Heading 3) Al Anáam [6]: 50
+[35] (Style: Heading 3) Al Anáam [6]: 159
+[36] (Style: Heading 3) An Nahl [16]: 35
+[37] (Style: Heading 3) An Nahl [16]: 82
+[38] (Style: Heading 3) Asy Syuura [42]: 47 – 48
+[39] (Style: Heading 3) Lihat juga: Ar Ra’d [13]: 40, At Taghaabun [64]: 12, An Nuur [24]: 54
+[41] (Style: Heading 3) Al Baqarah [2]: 119
+[42] (Style: Heading 3) Al Furqaan [25]: 56 – 57
+[43] (Style: Heading 3) Al Ahzab [33]: 45 – 47
+[44] (Style: Heading 3) Lihat juga: Yuunus [10]: 1 – 2, Faathir [35]: 23 – 24
+[46] (Style: Heading 3) Faathir [35]: 23 – 24
+[47] (Style: Heading 3) Al A'raaf [7]: 184
+[48] (Style: Heading 3) Al Hajj [22]: 49
+[49] (Style: Heading 3) Al Ahqaaf [46]: 9
+[50] (Style: Heading 3) Shaad [38]: 65 – 70
+[51] (Style: Heading 3) Al Anbiyaa' [21]: 41 – 46
+[52] (Style: Heading 3) Lihat juga: Al Baqarah [2]: 119, Yuunus [10]: 1 – 2, Al Furqaan [25]: 56 – 57,  Al Ahzaab [33]: 45 – 46, An Najm [53]: 56, Al Muddatstsir [74]1-5, Al Ghaasyiyah [88]: 21-26
+[54] (Style: Heading 3) Al Anbiyaa` [21]: 107 – 111
+[55] (Style: Heading 3) Al Anfaal [8]: 33 – 34
+[57] (Style: Heading 3) An Nahl [16]: 89
+[58] (Style: Heading 3) Lihat juga: An Nisaa` [4]: 41
+[61] (Style: Heading 3) Ali 'Imran [3]: 83 – 84
+[63] (Style: Heading 3) Ali 'Imran [3]: 19 - 20
+[64] (Style: Heading 3) Al Baqarah [2]: 111
+[65] (Style: Heading 3) Al Maaidah [5]: 3
+[67] (Style: Heading 3) Ali 'Imran [3]: 85 – 89
+[68] (Style: Heading 3) Az Zumar [39]: 22
+[70] (Style: Heading 3) Ash Shaff [61]: 9
+[71] (Style: Heading 3) Al Israa [17]: 81
+[72] (Style: Heading 3) Lihat juga: At Taubah [9]: 33
+[75] (Style: Heading 3) Al A'raaf [7]: 157
+[76] (Style: Heading 3) Ash Shaff [61]: 6
+[77] (Style: Heading 3) Al Maaidah [5]: 19
+[78] (Style: Heading 3) Lihat juga: Al Baqarah [2]: 129, Al An’aam [6]: 20, Asy Syu'araa' [26]: 196-197, Al Ahqaf [46]: 10, Al Fath [48]: 29
+[80] (Style: Heading 3) Ali 'Imran [3]: 81 – 82
+[82] (Style: Heading 3) Al Ahzab [33]: 40
+[84] (Style: Heading 3) Al A`raaf [7]: 158
+[85] (Style: Heading 3) Saba` [34]: 28
+[86] (Style: Heading 3) Al Jumu'ah [62]: 2 – 4
+[87] (Style: Heading 3) Lihat juga: An Nisa [4]: 79, Al An’aam [6]: 90, Al Hajj [22]: 78
+[90] (Style: Heading 3) Al Baqarah [2]: 252
+[91] (Style: Heading 3) Asy Syuura [42]: 1 – 3
+[92] (Style: Heading 3) Al Bayyinah [98]: 1 – 4
+[93] (Style: Heading 3) Al Qashash [28]: 44 – 49
+[94] (Style: Heading 3) Lihat juga: Al Baqarah [2]: 99, Ali ‘Imran[3]: 44, Huud [11]: 100, Yusuf [12]: 3, 102, Al Kahfi [18]: 27, Al Anbiyaa’ [21]: 10, Asy Syu`araa` [26]: 192 – 194, An Naml [27]: 6, Al ‘Ankabuut [29]: 50 – 51, Az Zumar [39]: 1 – 2
+[99] (Style: Heading 3) Asy Syu`araa` [26]: 214 – 220
+
+--- TABLES ---
