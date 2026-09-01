@@ -42,7 +42,7 @@ const LANG_CONFIG = {
   'sw-TZ': { code: 'sw', edition: 'sw.barwani', name: 'Kiswahili (Swahili)', translator: 'Ali Muhsin Al-Barwani' },
   'bs-BA': { code: 'bs', edition: 'bs.korkut', name: 'Bosanski (Bosnian)', translator: 'Besim Korkut' },
   'sq-AL': { code: 'sq', edition: 'sq.ahmeti', name: 'Shqip (Albanian)', translator: 'Sherif Ahmeti' },
-  'ber-DZ': { code: 'ber', edition: 'ber.mensur', name: 'ⵜⴰⵎⴰⵣⵉⵖⵜ (Amazigh)', translator: 'At Mansour' },
+  'ber-DZ': { code: 'ber', edition: 'ber.mensur', name: 'ⵜⴰⵎⴰⵣⵉⵖⵜ (Amazigh)', translator: 'At Mensur' },
   'am-ET': { code: 'am', edition: 'am.sadiq', name: 'አማርኛ (Amharic)', translator: 'Sadiq & Sani' },
   'az-AZ': { code: 'az', edition: 'az.mammadaliyev', name: 'Azərbaycan (Azerbaijani)', translator: 'Mammadaliyev' },
   'bg-BG': { code: 'bg', edition: 'bg.theophanov', name: 'Български (Bulgarian)', translator: 'Theophanov' },
@@ -56,7 +56,7 @@ const LANG_CONFIG = {
   'tg-TJ': { code: 'tg', edition: 'tg.ayati', name: 'Тоҷикӣ (Tajik)', translator: 'Ayati' },
   'ta-IN': { code: 'ta', edition: 'ta.tamil', name: 'தமிழ் (Tamil)', translator: 'Jan Trust' },
   'tt-RU': { code: 'tt', edition: 'tt.nugman', name: 'Татарча (Tatar)', translator: 'Nugman' },
-  'ug-CN': { code: 'ug', edition: 'ug.saleh', name: 'ئۇيغۇرޗە (Uyghur)', translator: 'Muhammad Saleh' },
+  'ug-CN': { code: 'ug', edition: 'ug.saleh', name: 'ئۇيغۇرޗެ (Uyghur)', translator: 'Muhammad Saleh' },
   'uz-UZ': { code: 'uz', edition: 'uz.sodik', name: 'O‘zbekcha (Uzbek)', translator: 'Sodiq' },
   'ar-SA': { code: 'ar', edition: 'ar.muyassar', name: 'العربية (Arabic)', translator: 'Tafsir Al-Muyassar' },
   'ku-IQ': { code: 'ckb', edition: 'ku.asan', name: 'کوردی (Kurdish)', translator: 'Burhan Amin' }
@@ -203,11 +203,11 @@ const VerseCard = ({
         className="word-scene cursor-pointer group"
         onClick={() => setIsFlipped(!isFlipped)}
       >
-        <div className={`word-card relative min-h-[220px] ${isFlipped ? "is-flipped" : ""}`}>
+        <div className={`word-card relative min-h-[240px] sm:min-h-[220px] ${isFlipped ? "is-flipped" : ""}`}>
           
           {/* FRONT FACE: Translation & Action Buttons */}
-          <div className="word-card-face word-card-front absolute inset-0 p-6 flex flex-col justify-between rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm hover:border-yellow-500 dark:hover:border-yellow-500 hover:shadow-md transition duration-300">
-            <div className="text-base sm:text-lg text-gray-800 dark:text-gray-200 leading-relaxed font-medium">
+          <div className="word-card-face word-card-front relative min-h-[240px] sm:min-h-[220px] w-full p-5 sm:p-6 flex flex-col justify-between rounded-2xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-xs hover:border-yellow-500 dark:hover:border-yellow-500 hover:shadow-md transition duration-300">
+            <div className="text-base sm:text-lg text-gray-800 dark:text-gray-200 leading-relaxed font-medium mb-4">
               {isLoadingTranslation && selectedLang !== 'id-ID' && !translatedText ? (
                 <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400 animate-pulse font-semibold">
                   <Loader2 className="w-4 h-4 animate-spin" />
@@ -218,11 +218,12 @@ const VerseCard = ({
               )}
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 pt-4 border-t border-gray-100 dark:border-gray-800 mt-4">
+            {/* Always Side-by-Side 2-Column Buttons Grid */}
+            <div className="grid grid-cols-2 gap-2 sm:gap-3 pt-3 border-t border-gray-100 dark:border-gray-800 mt-auto w-full">
               {/* TTS Button */}
               <button
                 onClick={handlePlayTTSClick}
-                className={`px-4 py-2 rounded-full border text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center gap-2 cursor-pointer ${
+                className={`w-full py-2.5 px-2 sm:px-4 rounded-full border text-[11px] sm:text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap ${
                   isPlaying 
                     ? "border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
                     : "border-yellow-500 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-500 hover:text-white dark:hover:text-gray-900"
@@ -231,13 +232,13 @@ const VerseCard = ({
               >
                 {isPlaying ? (
                   <>
-                    <Square className="w-3.5 h-3.5 animate-pulse" />
-                    <span>{uiLabels.stopText || "Hentikan"}</span>
+                    <Square className="w-3.5 h-3.5 shrink-0 animate-pulse" />
+                    <span className="truncate">{uiLabels.stopText || "Hentikan"}</span>
                   </>
                 ) : (
                   <>
-                    <Volume2 className="w-3.5 h-3.5" />
-                    <span>{uiLabels.playText || "Dengarkan"}</span>
+                    <Volume2 className="w-3.5 h-3.5 shrink-0" />
+                    <span className="truncate">{uiLabels.playText || "Dengarkan"}</span>
                   </>
                 )}
               </button>
@@ -245,17 +246,17 @@ const VerseCard = ({
               {/* Tanya AI Button */}
               <button
                 onClick={handleTanyaAI}
-                className="px-4 py-2 rounded-full border border-purple-500/50 text-purple-600 dark:text-purple-400 bg-purple-50/50 dark:bg-purple-950/20 hover:bg-purple-500 hover:text-white text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center gap-2 cursor-pointer"
+                className="w-full py-2.5 px-2 sm:px-4 rounded-full border border-purple-500/50 text-purple-600 dark:text-purple-400 bg-purple-50/50 dark:bg-purple-950/20 hover:bg-purple-500 hover:text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
                 title="Tanya AI tentang ayat ini"
               >
-                <Bot className="w-3.5 h-3.5" />
-                <span>{uiLabels.aiText || "Tanya AI"}</span>
+                <Bot className="w-3.5 h-3.5 shrink-0" />
+                <span className="truncate">{uiLabels.aiText || "Tanya AI"}</span>
               </button>
             </div>
           </div>
 
           {/* BACK FACE: Uthmani Arabic Text */}
-          <div className="word-card-face word-card-back absolute inset-0 p-6 flex items-center justify-center rounded-2xl bg-slate-50 dark:bg-zinc-950/60 border border-gray-200 dark:border-gray-800 shadow-sm hover:border-yellow-500 dark:hover:border-yellow-500 transition duration-300">
+          <div className="word-card-face word-card-back absolute inset-0 p-5 sm:p-6 flex items-center justify-center rounded-2xl bg-slate-50 dark:bg-zinc-950/60 border border-gray-200 dark:border-gray-800 shadow-xs hover:border-yellow-500 dark:hover:border-yellow-500 transition duration-300">
             <div className="font-arabic text-2xl sm:text-3xl text-gray-900 dark:text-white leading-loose text-center direction-rtl select-none">
               {verse.arab}
             </div>
@@ -272,11 +273,10 @@ const QThematic = () => {
   const [quranData, setQuranData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
-  // Selector state
+  // Selector state (Tema Utama, Pokok Bahasan, Sub Bahasan)
   const [selectedTema, setSelectedTema] = useState("");
   const [selectedPokok, setSelectedPokok] = useState("");
   const [selectedSub, setSelectedSub] = useState("");
-  const [selectedUraian, setSelectedUraian] = useState("");
 
   // Collapsed groups state
   const [collapsedGroups, setCollapsedGroups] = useState(new Set());
@@ -294,8 +294,8 @@ const QThematic = () => {
     heroTitle1: 'Kandungan Al-Qur\'an',
     heroTitle2: 'Berdasarkan Tema & Pembahasan',
     heroDesc: 'Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).',
-    labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan', '4. Kelompok Uraian'],
-    placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan', 'Semua Kelompok Uraian'],
+    labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan'],
+    placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan'],
     hint: 'Ketuk kartu untuk melihat teks Arab ayat',
     prevBtn: 'Sub Tema Sebelumnya',
     nextBtn: 'Sub Tema Selanjutnya',
@@ -336,7 +336,7 @@ const QThematic = () => {
   useEffect(() => {
     stopTTS();
     return () => stopTTS();
-  }, [selectedTema, selectedPokok, selectedSub, selectedUraian, selectedLang, stopTTS]);
+  }, [selectedTema, selectedPokok, selectedSub, selectedLang, stopTTS]);
 
   // Load Data on Mount
   useEffect(() => {
@@ -385,8 +385,8 @@ const QThematic = () => {
         heroTitle1: 'Kandungan Al-Qur\'an',
         heroTitle2: 'Berdasarkan Tema & Pembahasan',
         heroDesc: 'Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).',
-        labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan', '4. Kelompok Uraian'],
-        placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan', 'Semua Kelompok Uraian'],
+        labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan'],
+        placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan'],
         hint: 'Ketuk kartu untuk melihat teks Arab ayat',
         prevBtn: 'Sub Tema Sebelumnya',
         nextBtn: 'Sub Tema Selanjutnya',
@@ -408,8 +408,8 @@ const QThematic = () => {
         heroTitle1,
         heroTitle2,
         heroDesc,
-        lbl1, lbl2, lbl3, lbl4,
-        pl1, pl2, pl3, pl4,
+        lbl1, lbl2, lbl3,
+        pl1, pl2, pl3,
         hint, prevBtn, nextBtn, showVerses, hideVerses, playText, stopText, aiText, loadingText, emptySelect
       ] = await Promise.all([
         translateTextFree('Bahasa Terjemahan & Suara:', targetLangCode),
@@ -420,11 +420,9 @@ const QThematic = () => {
         translateTextFree('1. Tema Utama', targetLangCode),
         translateTextFree('2. Pokok Bahasan', targetLangCode),
         translateTextFree('3. Sub Bahasan', targetLangCode),
-        translateTextFree('4. Kelompok Uraian', targetLangCode),
         translateTextFree('Pilih Tema', targetLangCode),
         translateTextFree('Pilih Pokok Bahasan', targetLangCode),
         translateTextFree('Pilih Sub Pokok Bahasan', targetLangCode),
-        translateTextFree('Semua Kelompok Uraian', targetLangCode),
         translateTextFree('Ketuk kartu untuk melihat teks Arab ayat', targetLangCode),
         translateTextFree('Sub Tema Sebelumnya', targetLangCode),
         translateTextFree('Sub Tema Selanjutnya', targetLangCode),
@@ -443,8 +441,8 @@ const QThematic = () => {
         heroTitle1,
         heroTitle2,
         heroDesc,
-        labels: [lbl1, lbl2, lbl3, lbl4],
-        placeholders: [pl1, pl2, pl3, pl4],
+        labels: [lbl1, lbl2, lbl3],
+        placeholders: [pl1, pl2, pl3],
         hint,
         prevBtn,
         nextBtn,
@@ -467,7 +465,6 @@ const QThematic = () => {
     setSelectedTema(tema);
     setSelectedPokok("");
     setSelectedSub("");
-    setSelectedUraian("");
     stopTTS();
 
     if (tema && quranData[tema]) {
@@ -487,7 +484,6 @@ const QThematic = () => {
     const pokok = e.target.value;
     setSelectedPokok(pokok);
     setSelectedSub("");
-    setSelectedUraian("");
     stopTTS();
 
     if (selectedTema && pokok && quranData[selectedTema]?.[pokok]) {
@@ -501,12 +497,6 @@ const QThematic = () => {
   const handleSubChange = (e) => {
     const sub = e.target.value;
     setSelectedSub(sub);
-    setSelectedUraian("");
-    stopTTS();
-  };
-
-  const handleUraianChange = (e) => {
-    setSelectedUraian(e.target.value);
     stopTTS();
   };
 
@@ -590,19 +580,10 @@ const QThematic = () => {
   const temaOptions = naturalSort(Object.keys(quranData));
   const pokokOptions = selectedTema && quranData[selectedTema] ? naturalSort(Object.keys(quranData[selectedTema])) : [];
   const subOptions = selectedTema && selectedPokok && quranData[selectedTema]?.[selectedPokok] ? naturalSort(Object.keys(quranData[selectedTema][selectedPokok])) : [];
-  const uraianOptions = selectedTema && selectedPokok && selectedSub && quranData[selectedTema]?.[selectedPokok]?.[selectedSub] ? naturalSort(Object.keys(quranData[selectedTema][selectedPokok][selectedSub])) : [];
 
-  // Derived Groups to display
+  // Derived Groups to display (always show ALL Uraian groups under selected Sub Bahasan)
   const currentSubData = (selectedTema && selectedPokok && selectedSub) ? quranData[selectedTema]?.[selectedPokok]?.[selectedSub] : null;
-  
-  let displayUraianKeys = [];
-  if (currentSubData) {
-    if (selectedUraian) {
-      displayUraianKeys = [selectedUraian];
-    } else {
-      displayUraianKeys = naturalSort(Object.keys(currentSubData));
-    }
-  }
+  const displayUraianKeys = currentSubData ? naturalSort(Object.keys(currentSubData)) : [];
 
   // Fetch Non-Indonesian Verse Translations dynamically in PARALLEL with API + Fallback
   useEffect(() => {
@@ -707,7 +688,7 @@ const QThematic = () => {
 
       // 3. Translate Dropdown Options
       const optionTrans = {};
-      const allSelectOptions = [...temaOptions, ...pokokOptions, ...subOptions, ...uraianOptions];
+      const allSelectOptions = [...temaOptions, ...pokokOptions, ...subOptions];
       await Promise.all(
         allSelectOptions.map(async (opt) => {
           if (!optionTranslations[opt]) {
@@ -728,7 +709,6 @@ const QThematic = () => {
     const curIndex = subOptions.indexOf(selectedSub);
     if (curIndex > 0) {
       setSelectedSub(subOptions[curIndex - 1]);
-      setSelectedUraian("");
       stopTTS();
     }
   };
@@ -738,7 +718,6 @@ const QThematic = () => {
     const curIndex = subOptions.indexOf(selectedSub);
     if (curIndex < subOptions.length - 1) {
       setSelectedSub(subOptions[curIndex + 1]);
-      setSelectedUraian("");
       stopTTS();
     }
   };
@@ -809,8 +788,8 @@ const QThematic = () => {
             </select>
           </div>
 
-          {/* 4 Cascading Selectors Grid */}
-          <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xs border border-gray-200 dark:border-gray-800 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* 3 Cascading Selectors Grid (Tema Utama, Pokok Bahasan, Sub Bahasan) */}
+          <div className="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-xs border border-gray-200 dark:border-gray-800 max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
             
             {/* 1. Tema Utama */}
             <div className="flex flex-col items-start gap-1">
@@ -871,26 +850,6 @@ const QThematic = () => {
               </select>
             </div>
 
-            {/* 4. Kelompok Uraian */}
-            <div className="flex flex-col items-start gap-1">
-              <label className="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-                {uiLabels.labels[3]}
-              </label>
-              <select
-                value={selectedUraian}
-                onChange={handleUraianChange}
-                disabled={!selectedSub}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-gray-250 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-sm font-semibold outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                <option value="">{uiLabels.placeholders[3]}</option>
-                {uraianOptions.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {optionTranslations[opt] || opt}
-                  </option>
-                ))}
-              </select>
-            </div>
-
           </div>
         </div>
       </div>
@@ -943,7 +902,7 @@ const QThematic = () => {
               <span>{uiLabels.hint}</span>
             </div>
 
-            {/* List of Uraian Group Cards */}
+            {/* List of Uraian Group Cards (All groups displayed) */}
             <div className="w-full space-y-10 mb-12">
               {displayUraianKeys.map((uraianTitle, groupIdx) => {
                 const groupData = currentSubData[uraianTitle];
