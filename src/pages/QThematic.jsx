@@ -12,7 +12,8 @@ import {
   ChevronDown, 
   ChevronUp, 
   Bot, 
-  Globe, 
+  Globe,
+  Languages, 
   Info, 
   Layers,
   HelpCircle,
@@ -459,7 +460,7 @@ const QThematic = () => {
         heroTitle1: 'Kandungan Al-Qur\'an',
         heroTitle2: 'Berdasarkan Tema & Pembahasan',
         heroDesc: 'Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).',
-        labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan'],
+        labels: ['1. Pilih Tema Utama', '2. Pilih Pokok Bahasan', '3. Pilih Sub Bahasan'],
         placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan'],
         hint: 'Ketuk kartu untuk melihat teks Arab ayat',
         prevBtn: 'Sub Tema Sebelumnya',
@@ -491,9 +492,9 @@ const QThematic = () => {
         translateTextFree('Kandungan Al-Qur\'an', targetLangCode),
         translateTextFree('Berdasarkan Tema & Pembahasan', targetLangCode),
         translateTextFree('Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).', targetLangCode),
-        translateTextFree('1. Tema Utama', targetLangCode),
-        translateTextFree('2. Pokok Bahasan', targetLangCode),
-        translateTextFree('3. Sub Bahasan', targetLangCode),
+        translateTextFree('1. Pilih Tema Utama', targetLangCode),
+        translateTextFree('2. Pilih Pokok Bahasan', targetLangCode),
+        translateTextFree('3. Pilih Sub Bahasan', targetLangCode),
         translateTextFree('Pilih Tema', targetLangCode),
         translateTextFree('Pilih Pokok Bahasan', targetLangCode),
         translateTextFree('Pilih Sub Pokok Bahasan', targetLangCode),
@@ -844,11 +845,13 @@ const QThematic = () => {
           </p>
 
           {/* Multi-Language Selector Dropdown with all 39 Languages */}
-          <div className="mb-8 flex flex-wrap justify-center items-center gap-2">
-            <Globe className="w-4 h-4 text-yellow-500" />
-            <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-              {uiLabels.langLabel}
-            </span>
+          <div className="mb-8 flex flex-wrap justify-center items-center gap-2.5">
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-50 dark:bg-yellow-950/40 border border-yellow-200/60 dark:border-yellow-900/40">
+              <Languages className="w-4 h-4 text-yellow-600 dark:text-yellow-400 shrink-0" />
+              <span className="text-xs font-bold text-yellow-800 dark:text-yellow-300 uppercase tracking-wider">
+                {uiLabels.langLabel}
+              </span>
+            </div>
             <select
               value={selectedLang}
               onChange={(e) => handleLanguageChange(e.target.value)}
