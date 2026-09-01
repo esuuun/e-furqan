@@ -19,328 +19,47 @@ import {
   Loader2
 } from "lucide-react";
 
-// ─── LANGUAGE CONFIGURATION ──────────────────────────────────────────
+// ─── COMPLETE 39 LANGUAGES CONFIGURATION ─────────────────────────────
 const LANG_CONFIG = {
-  'id-ID': {
-    code: 'id',
-    edition: 'id.indonesian',
-    label: 'Bahasa Terjemahan & Suara:',
-    heroBadge: 'qThematic — Al-Qur’an Tematis',
-    heroTitle1: 'Kandungan Al-Qur\'an',
-    heroTitle2: 'Berdasarkan Tema & Pembahasan',
-    heroDesc: 'Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).',
-    labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan', '4. Kelompok Uraian'],
-    placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan', 'Semua Kelompok Uraian'],
-    translatorLabel: 'Terjemahan:',
-    translator: 'Kementerian Agama Republik Indonesia (Kemenag RI)',
-    hint: 'Ketuk kartu untuk melihat teks Arab ayat',
-    prevBtn: 'Sub Tema Sebelumnya',
-    nextBtn: 'Sub Tema Selanjutnya',
-    subMeta: count => `Menampilkan ${count} Kelompok Uraian Flash Card`,
-    groupMeta: count => `${count} Ayat Al-Qur'an`,
-    hideVerses: 'Tutup Semua',
-    showVerses: 'Buka Semua',
-    playText: 'Dengarkan',
-    stopText: 'Hentikan',
-    aiText: 'Tanya AI',
-    copyText: 'Salin Teks',
-    copiedText: 'Tersalin!',
-    copyTitle: 'Salin Teks Terjemahan',
-    loadingText: 'Memuat terjemahan...',
-    errorText: 'Gagal memuat terjemahan',
-    connErrorText: 'Koneksi bermasalah',
-    emptySelect: 'Silakan pilih kategori di atas untuk melihat ayat.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Jelaskan singkat QS. ${surah}:${ayat} terkait "${uraian}": "${text}"`
-  },
-  'en-US': {
-    code: 'en',
-    edition: 'en.sahih',
-    label: 'Translation & Voice Language:',
-    heroBadge: 'qThematic — Thematic Qur\'an',
-    heroTitle1: 'Qur\'anic Insights',
-    heroTitle2: 'By Topic & Thematic Study',
-    heroDesc: 'Explore the Qur\'an through structured thematic topics, multi-language translations, audible recitations & voice reading, and interactive AI-driven verse exploration.',
-    labels: ['1. Main Theme', '2. Main Topic', '3. Sub Topic', '4. Category Group'],
-    placeholders: ['Select Theme', 'Select Topic', 'Select Sub-Topic', 'All Category Groups'],
-    translatorLabel: 'Translation:',
-    translator: 'Saheeh International',
-    hint: 'Tap card to view Arabic text',
-    prevBtn: 'Previous Sub-topic',
-    nextBtn: 'Next Sub-topic',
-    subMeta: count => `Showing ${count} Flashcard Groups`,
-    groupMeta: count => `${count} Qur'anic Verses`,
-    hideVerses: 'Collapse All',
-    showVerses: 'Expand All',
-    playText: 'Listen',
-    stopText: 'Stop',
-    aiText: 'Ask AI',
-    copyText: 'Copy Text',
-    copiedText: 'Copied!',
-    copyTitle: 'Copy Translation Text',
-    loadingText: 'Loading translation...',
-    errorText: 'Failed to load translation',
-    connErrorText: 'Connection error',
-    emptySelect: 'Please select a category above to view verses.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Briefly explain Qur'an ${surah}:${ayat} regarding topic "${uraian}": "${text}"`
-  },
-  'ar-SA': {
-    code: 'ar',
-    edition: 'ar.muyassar',
-    label: 'لغة الترجمة والصوت:',
-    heroBadge: 'qThematic — القرآن الموضوعي',
-    heroTitle1: 'موضوعات القرآن الكريم',
-    heroTitle2: 'دراسة وتفسير موضوعي',
-    heroDesc: 'استكشف معاني القرآن الكريم بشكل موضوعي ومنظم، مع دعم لغات متعددة وتلاوات صوتية واستكشاف تفاعلي بواسطة الذكاء الاصطناعي.',
-    labels: ['١. المحور الرئيسي', '٢. الموضوع العام', '٣. الموضوع الفرعي', '٤. مجموعة العناصر'],
-    placeholders: ['اختر المحور', 'اختر الموضوع', 'اختر الموضوع الفرعي', 'جميع المجموعات'],
-    translatorLabel: 'التفسير:',
-    translator: 'Tafsir Al-Muyassar',
-    hint: 'انقر على البطاقة لقلبها ومشاهدة النص القرآني',
-    prevBtn: 'الموضوع الفرعي السابق',
-    nextBtn: 'الموضوع الفرعي التالي',
-    subMeta: count => `عرض ${count} من مجموعات البطاقات`,
-    groupMeta: count => `${count} آيات من القرآن الكريم`,
-    hideVerses: 'إخفاء الآيات',
-    showVerses: 'إظهار الآيات',
-    playText: 'استماع',
-    stopText: 'إيقاف',
-    aiText: 'اسأل الذكاء الاصطناعي',
-    copyText: 'نسخ النص',
-    copiedText: 'تم النسخ!',
-    copyTitle: 'نسخ نص الترجمة والتفسير',
-    loadingText: 'جارٍ التحميل...',
-    errorText: 'فشل في جلب التفسير',
-    connErrorText: 'خطأ في الاتصال',
-    emptySelect: 'يرجى اختيار الفئة أعلاه لعرض الآيات.',
-    cssClass: 'lang-ar',
-    aiPrompt: (surah, ayat, uraian, text) => `اشرح بإيجاز سورة ${surah}:${ayat} المتعلقة بموضوع "${uraian}": "${text}"`
-  },
-  'fr-FR': {
-    code: 'fr',
-    edition: 'fr.hamidullah',
-    label: 'Langue de traduction & voix:',
-    heroBadge: 'qThematic — Coran Thématique',
-    heroTitle1: 'Enseignements du Coran',
-    heroTitle2: 'Par Thème & Étude Thématique',
-    heroDesc: 'Explorez le Coran par thèmes structurés, traductions multilingues, récitations audio et exploration interactive assistée par l\'IA.',
-    labels: ['1. Thème Principal', '2. Sujet Principal', '3. Sous-Sujet', '4. Groupe de Catégorie'],
-    placeholders: ['Sélectionner le Thème', 'Sélectionner le Sujet', 'Sélectionner le Sous-Sujet', 'Tous les Groupes'],
-    translatorLabel: 'Traduction:',
-    translator: 'Muhammad Hamidullah',
-    hint: 'Appuyez sur la carte pour voir le texte arabe',
-    prevBtn: 'Sous-thème précédent',
-    nextBtn: 'Sous-thème suivant',
-    subMeta: count => `Affichage de ${count} groupes de cartes`,
-    groupMeta: count => `${count} versets du Coran`,
-    hideVerses: 'Tout réduire',
-    showVerses: 'Tout développer',
-    playText: 'Écouter',
-    stopText: 'Arrêter',
-    aiText: 'Demander à l\'IA',
-    copyText: 'Copier',
-    copiedText: 'Copié!',
-    copyTitle: 'Copier la traduction',
-    loadingText: 'Chargement...',
-    errorText: 'Échec du chargement',
-    connErrorText: 'Erreur de connexion',
-    emptySelect: 'Veuillez sélectionner une catégorie ci-dessus.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Expliquez brièvement le Coran ${surah}:${ayat} sur le thème "${uraian}": "${text}"`
-  },
-  'de-DE': {
-    code: 'de',
-    edition: 'de.bubenheim',
-    label: 'Übersetzung & Sprachausgabe:',
-    heroBadge: 'qThematic — Thematischer Koran',
-    heroTitle1: 'Erkenntnisse des Korans',
-    heroTitle2: 'Nach Themen & Studien',
-    heroDesc: 'Entdecken Sie den Koran durch strukturierte Themen, mehrsprachige Übersetzungen, Audio-Rezitationen und interaktive KI-gestützte Verserkundung.',
-    labels: ['1. Hauptthema', '2. Hauptthema-Bereich', '3. Unterthema', '4. Kategoriegruppe'],
-    placeholders: ['Thema wählen', 'Bereich wählen', 'Unterthema wählen', 'Alle Gruppen'],
-    translatorLabel: 'Übersetzung:',
-    translator: 'A. S. F. Bubenheim & N. Elyas',
-    hint: 'Tippe auf die Karte, um den arabischen Text zu sehen',
-    prevBtn: 'Vorheriges Unterthema',
-    nextBtn: 'Nächstes Unterthema',
-    subMeta: count => `${count} Karteikartengruppen werden angezeigt`,
-    groupMeta: count => `${count} Koran-Verse`,
-    hideVerses: 'Alle einklappen',
-    showVerses: 'Alle ausklappen',
-    playText: 'Anhören',
-    stopText: 'Stopp',
-    aiText: 'KI fragen',
-    copyText: 'Kopieren',
-    copiedText: 'Kopiert!',
-    copyTitle: 'Übersetzung kopieren',
-    loadingText: 'Wird geladen...',
-    errorText: 'Laden fehlgeschlagen',
-    connErrorText: 'Verbindungsfehler',
-    emptySelect: 'Bitte wähle oben eine Kategorie aus.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Erkläre kurz Koran ${surah}:${ayat} zum Thema "${uraian}": "${text}"`
-  },
-  'es-ES': {
-    code: 'es',
-    edition: 'es.bornez',
-    label: 'Idioma de traducción y voz:',
-    heroBadge: 'qThematic — Corán Temático',
-    heroTitle1: 'Enseñanzas del Corán',
-    heroTitle2: 'Por Tema y Estudio Temático',
-    heroDesc: 'Explore el Corán a través de temas estructurados, traducciones multilingües, recitaciones en audio y exploración interactiva con Inteligencia Artificial.',
-    labels: ['1. Tema Principal', '2. Tema General', '3. Subtema', '4. Grupo de Categoría'],
-    placeholders: ['Seleccionar Tema', 'Seleccionar Tema General', 'Seleccionar Subtema', 'Todos los Grupos'],
-    translatorLabel: 'Traducción:',
-    translator: 'Raúl González Bornez',
-    hint: 'Toca la tarjeta para ver el texto en árabe',
-    prevBtn: 'Subtema anterior',
-    nextBtn: 'Subtema siguiente',
-    subMeta: count => `Mostrando ${count} grupos de tarjetas`,
-    groupMeta: count => `${count} versículos del Corán`,
-    hideVerses: 'Contraer todo',
-    showVerses: 'Expandir todo',
-    playText: 'Escuchar',
-    stopText: 'Detener',
-    aiText: 'Preguntar a la IA',
-    copyText: 'Copiar',
-    copiedText: '¡Copiado!',
-    copyTitle: 'Copiar traducción',
-    loadingText: 'Cargando traducción...',
-    errorText: 'Error al cargar la traducción',
-    connErrorText: 'Error de conexión',
-    emptySelect: 'Selecciona una categoría arriba para ver los versículos.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Explica brevemente el Corán ${surah}:${ayat} sobre el tema "${uraian}": "${text}"`
-  },
-  'tr-TR': {
-    code: 'tr',
-    edition: 'tr.diyanet',
-    label: 'Çeviri ve Ses Dili:',
-    heroBadge: 'qThematic — Konulu Kur\'an',
-    heroTitle1: 'Kur\'an-ı Kerim Konuları',
-    heroTitle2: 'Konulu Çalışma ve Tefsir',
-    heroDesc: 'Yapılandırılmış konular, çok dilli çeviriler, sesli tilavetler ve yapay zeka destekli etkileşimli ayet incelemesi ile Kur\'an-ı Kerim\'i keşfedin.',
-    labels: ['1. Ana Tema', '2. Ana Konu', '3. Alt Konu', '4. Kategori Grubu'],
-    placeholders: ['Tema Seçin', 'Konu Seçin', 'Alt Konu Seçin', 'Tüm Gruplar'],
-    translatorLabel: 'Çeviri:',
-    translator: 'Diyanet İşleri Başkanlığı',
-    hint: 'Arapça metni görmek için karta dokunun',
-    prevBtn: 'Önceki Alt Konu',
-    nextBtn: 'Sonraki Alt Konu',
-    subMeta: count => `${count} bilgi kartı grubu gösteriliyor`,
-    groupMeta: count => `${count} Kur'an Ayeti`,
-    hideVerses: 'Tümünü Daralt',
-    showVerses: 'Tümünü Genişlet',
-    playText: 'Dinle',
-    stopText: 'Durdur',
-    aiText: 'Yapay Zekaya Sor',
-    copyText: 'Kopyala',
-    copiedText: 'Kopyalandı!',
-    copyTitle: 'Metni Kopyala',
-    loadingText: 'Çeviri yükleniyor...',
-    errorText: 'Çeviri yüklenemedi',
-    connErrorText: 'Bağlantı hatası',
-    emptySelect: 'Ayetleri görmek için yukarıdan bir kategori seçin.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Kur'an ${surah}:${ayat} ayetini "${uraian}" konusu bağlamında kısaca açıklayın: "${text}"`
-  },
-  'ru-RU': {
-    code: 'ru',
-    edition: 'ru.kuliev',
-    label: 'Язык перевода и озвучки:',
-    heroBadge: 'qThematic — Тематический Коран',
-    heroTitle1: 'Смыслы Корана',
-    heroTitle2: 'По Темам и Исследованиям',
-    heroDesc: 'Изучайте Коран по структурированным темам с многоязычным переводом, аудиозаписями и интерактивным исследованием аятов с помощью ИИ.',
-    labels: ['1. Главная Тема', '2. Основной Раздел', '3. Подраздел', '4. Группа Категорий'],
-    placeholders: ['Выберите Тему', 'Выберите Раздел', 'Выберите Подраздел', 'Все Группы'],
-    translatorLabel: 'Перевод:',
-    translator: 'Эльмир Кулиев (Elmir Kuliev)',
-    hint: 'Нажмите на карточку, чтобы увидеть арабский текст',
-    prevBtn: 'Предыдущая подтема',
-    nextBtn: 'Следующая подтема',
-    subMeta: count => `Отображается ${count} групп карточек`,
-    groupMeta: count => `${count} аятов Корана`,
-    hideVerses: 'Свернуть все',
-    showVerses: 'Развернуть все',
-    playText: 'Слушать',
-    stopText: 'Стоп',
-    aiText: 'Спросить ИИ',
-    copyText: 'Копировать',
-    copiedText: 'Скопировано!',
-    copyTitle: 'Копировать текст',
-    loadingText: 'Загрузка перевода...',
-    errorText: 'Не удалось загрузить',
-    connErrorText: 'Ошибка соединения',
-    emptySelect: 'Выберите категорию выше для просмотра аятов.',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `Кратко объясните Коран ${surah}:${ayat} по теме "${uraian}": "${text}"`
-  },
-  'zh-CN': {
-    code: 'zh',
-    edition: 'zh.jian',
-    label: '翻译与语音语言：',
-    heroBadge: 'qThematic — 主题古兰经',
-    heroTitle1: '古兰经要义',
-    heroTitle2: '按主题与专题研读',
-    heroDesc: '通过结构化主题、多语言翻译、音频朗读以及人工智能交互式经文探索，深入领会古兰经的奥义。',
-    labels: ['1. 主主题', '2. 核心主题', '3. 子主题', '4. 分类分组'],
-    placeholders: ['选择主题', '选择核心主题', '选择子主题', '所有分组'],
-    translatorLabel: '翻译：',
-    translator: '马坚 (Ma Jian)',
-    hint: '点击卡片查看阿拉伯语原文',
-    prevBtn: '上一子主题',
-    nextBtn: '下一子主题',
-    subMeta: count => `显示 ${count} 个卡片组`,
-    groupMeta: count => `${count} 节古兰经文`,
-    hideVerses: '折叠全部',
-    showVerses: '展开全部',
-    playText: '朗读',
-    stopText: '停止',
-    aiText: '询问 AI',
-    copyText: '复制',
-    copiedText: '已复制！',
-    copyTitle: '复制译文',
-    loadingText: '加载翻译中...',
-    errorText: '加载失败',
-    connErrorText: '连接错误',
-    emptySelect: '请在上方选择分类以查看经文。',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `简要解释古兰经 ${surah}:${ayat} 关于主题 "${uraian}" 的内容："${text}"`
-  },
-  'ja-JP': {
-    code: 'ja',
-    edition: 'ja.japanese',
-    label: '翻訳と音声の言語：',
-    heroBadge: 'qThematic — テーマ別クルアーン',
-    heroTitle1: 'クルアーンの教え',
-    heroTitle2: 'テーマ別・分野別研究',
-    heroDesc: '体系的なテーマ分類、多言語翻訳、音声朗読、そしてAIを活用した対話型の聖句探求を通じて、クルアーンの教えを深めましょう。',
-    labels: ['1. メインテーマ', '2. 主要トピック', '3. サブトピック', '4. カテゴリーグループ'],
-    placeholders: ['テーマを選択', 'トピックを選択', 'サブトピックを選択', 'すべてのグループ'],
-    translatorLabel: '翻訳：',
-    translator: '日本ムスリム協会',
-    hint: 'カードをタップしてアラビア語原文を表示',
-    prevBtn: '前のサブトピック',
-    nextBtn: '次のサブトピック',
-    subMeta: count => `${count} 個のカードグループを表示中`,
-    groupMeta: count => `${count} 節のクルアーン聖句`,
-    hideVerses: 'すべて折りたたむ',
-    showVerses: 'すべて展開',
-    playText: '再生',
-    stopText: '停止',
-    aiText: 'AIに質問',
-    copyText: 'コピー',
-    copiedText: 'コピーしました！',
-    copyTitle: '翻訳文をコピー',
-    loadingText: '翻訳を読み込み中...',
-    errorText: '読み込み失敗',
-    connErrorText: '接続エラー',
-    emptySelect: '上記からカテゴリーを選択してください。',
-    cssClass: '',
-    aiPrompt: (surah, ayat, uraian, text) => `クルアーン第${surah}章${ayat}節の「${uraian}」に関する内容を簡単に解説してください：「${text}」`
-  }
+  'id-ID': { code: 'id', edition: 'id.indonesian', name: 'Bahasa Indonesia', translator: 'Kemenag RI' },
+  'ms-MY': { code: 'ms', edition: 'ms.basmeih', name: 'Bahasa Melayu', translator: 'Basmeih' },
+  'en-US': { code: 'en', edition: 'en.sahih', name: 'English', translator: 'Saheeh International' },
+  'ur-PK': { code: 'ur', edition: 'ur.jalandhry', name: 'اردو (Urdu)', translator: 'Jalandhry' },
+  'bn-BD': { code: 'bn', edition: 'bn.bengali', name: 'বাংলা (Bangla)', translator: 'Muhiuddin Khan' },
+  'hi-IN': { code: 'hi', edition: 'hi.hindi', name: 'हिन्दी (Hindi)', translator: 'Farooq & Nadwi' },
+  'ru-RU': { code: 'ru', edition: 'ru.kuliev', name: 'Русский (Russian)', translator: 'Elmir Kuliev' },
+  'zh-CN': { code: 'zh', edition: 'zh.jian', name: '中文 (Chinese)', translator: 'Ma Jian' },
+  'fr-FR': { code: 'fr', edition: 'fr.hamidullah', name: 'Français (French)', translator: 'Hamidullah' },
+  'es-ES': { code: 'es', edition: 'es.cortes', name: 'Español (Spanish)', translator: 'Julio Cortés' },
+  'pt-PT': { code: 'pt', edition: 'pt.elhayek', name: 'Português (Portuguese)', translator: 'El-Hayek' },
+  'it-IT': { code: 'it', edition: 'it.piccardo', name: 'Italiano (Italian)', translator: 'Piccardo' },
+  'tr-TR': { code: 'tr', edition: 'tr.diyanet', name: 'Türkçe (Turkish)', translator: 'Diyanet' },
+  'de-DE': { code: 'de', edition: 'de.bubenheim', name: 'Deutsch (German)', translator: 'Bubenheim & Elyas' },
+  'ko-KR': { code: 'ko', edition: 'ko.korean', name: '한국어 (Korean)', translator: 'Hamid Choi' },
+  'ja-JP': { code: 'ja', edition: 'ja.japanese', name: '日本語 (Japanese)', translator: 'Ryoichi Mita' },
+  'th-TH': { code: 'th', edition: 'th.thai', name: 'ภาษาไทย (Thai)', translator: 'King Fahad Complex' },
+  'ha-NG': { code: 'ha', edition: 'ha.gumi', name: 'Hausa', translator: 'Abubakar Gumi' },
+  'sw-TZ': { code: 'sw', edition: 'sw.barwani', name: 'Kiswahili (Swahili)', translator: 'Ali Muhsin Al-Barwani' },
+  'bs-BA': { code: 'bs', edition: 'bs.korkut', name: 'Bosanski (Bosnian)', translator: 'Besim Korkut' },
+  'sq-AL': { code: 'sq', edition: 'sq.ahmeti', name: 'Shqip (Albanian)', translator: 'Sherif Ahmeti' },
+  'ber-DZ': { code: 'ber', edition: 'ber.mensur', name: 'ⵜⴰⵎⴰⵣⵉⵖⵜ (Amazigh)', translator: 'At Mansour' },
+  'am-ET': { code: 'am', edition: 'am.sadiq', name: 'አማርኛ (Amharic)', translator: 'Sadiq & Sani' },
+  'az-AZ': { code: 'az', edition: 'az.mammadaliyev', name: 'Azərbaycan (Azerbaijani)', translator: 'Mammadaliyev' },
+  'bg-BG': { code: 'bg', edition: 'bg.theophanov', name: 'Български (Bulgarian)', translator: 'Theophanov' },
+  'cs-CZ': { code: 'cs', edition: 'cs.hrbek', name: 'Čeština (Czech)', translator: 'Ivan Hrbek' },
+  'dv-MV': { code: 'dv', edition: 'dv.divehi', name: 'ދިވެހި (Dhivehi)', translator: 'President Office' },
+  'nl-NL': { code: 'nl', edition: 'nl.siregar', name: 'Nederlands (Dutch)', translator: 'Siregar' },
+  'no-NO': { code: 'no', edition: 'no.berg', name: 'Norsk (Norwegian)', translator: 'Einar Berg' },
+  'pl-PL': { code: 'pl', edition: 'pl.bielawskiego', name: 'Polski (Polish)', translator: 'Bielawski' },
+  'ro-RO': { code: 'ro', edition: 'ro.grigore', name: 'Română (Romanian)', translator: 'Grigore' },
+  'sv-SE': { code: 'sv', edition: 'sv.bernstrom', name: 'Svenska (Swedish)', translator: 'Bernström' },
+  'tg-TJ': { code: 'tg', edition: 'tg.ayati', name: 'Тоҷикӣ (Tajik)', translator: 'Ayati' },
+  'ta-IN': { code: 'ta', edition: 'ta.tamil', name: 'தமிழ் (Tamil)', translator: 'Jan Trust' },
+  'tt-RU': { code: 'tt', edition: 'tt.nugman', name: 'Татарча (Tatar)', translator: 'Nugman' },
+  'ug-CN': { code: 'ug', edition: 'ug.saleh', name: 'ئۇيغۇرޗە (Uyghur)', translator: 'Muhammad Saleh' },
+  'uz-UZ': { code: 'uz', edition: 'uz.sodik', name: 'O‘zbekcha (Uzbek)', translator: 'Sodiq' },
+  'ar-SA': { code: 'ar', edition: 'ar.muyassar', name: 'العربية (Arabic)', translator: 'Tafsir Al-Muyassar' },
+  'ku-IQ': { code: 'ckb', edition: 'ku.asan', name: 'کوردی (Kurdish)', translator: 'Burhan Amin' }
 };
 
 // Global translation cache for labels/headers
@@ -432,7 +151,8 @@ const VerseCard = ({
   isLoadingTranslation,
   isPlaying, 
   onPlayTTS, 
-  onStopTTS 
+  onStopTTS,
+  uiLabels
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
@@ -443,16 +163,14 @@ const VerseCard = ({
     if (translatedText) {
       displayText = translatedText;
     } else if (isLoadingTranslation) {
-      displayText = cfg.loadingText || "Memuat terjemahan...";
+      displayText = uiLabels.loadingText || "Memuat terjemahan...";
     }
   }
 
   const handleTanyaAI = (e) => {
     e.stopPropagation();
     onStopTTS();
-    const prompt = cfg.aiPrompt
-      ? cfg.aiPrompt(verse.surah_num, verse.ayat_num, uraianTitle, displayText)
-      : `Jelaskan singkat QS. ${verse.surah_num}:${verse.ayat_num} terkait "${uraianTitle}": "${displayText}"`;
+    const prompt = `Jelaskan singkat QS. ${verse.surah_num}:${verse.ayat_num} terkait "${uraianTitle}": "${displayText}"`;
     window.open(`https://chatgpt.com/?q=${encodeURIComponent(prompt)}`, "_blank");
   };
 
@@ -493,7 +211,7 @@ const VerseCard = ({
               {isLoadingTranslation && selectedLang !== 'id-ID' && !translatedText ? (
                 <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400 animate-pulse font-semibold">
                   <Loader2 className="w-4 h-4 animate-spin" />
-                  <span>{cfg.loadingText}</span>
+                  <span>{uiLabels.loadingText || "Memuat terjemahan..."}</span>
                 </div>
               ) : (
                 displayText
@@ -509,17 +227,17 @@ const VerseCard = ({
                     ? "border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
                     : "border-yellow-500 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-500 hover:text-white dark:hover:text-gray-900"
                 }`}
-                title={isPlaying ? cfg.stopText : cfg.playText}
+                title={isPlaying ? uiLabels.stopText : uiLabels.playText}
               >
                 {isPlaying ? (
                   <>
                     <Square className="w-3.5 h-3.5 animate-pulse" />
-                    <span>{cfg.stopText}</span>
+                    <span>{uiLabels.stopText || "Hentikan"}</span>
                   </>
                 ) : (
                   <>
                     <Volume2 className="w-3.5 h-3.5" />
-                    <span>{cfg.playText}</span>
+                    <span>{uiLabels.playText || "Dengarkan"}</span>
                   </>
                 )}
               </button>
@@ -531,7 +249,7 @@ const VerseCard = ({
                 title="Tanya AI tentang ayat ini"
               >
                 <Bot className="w-3.5 h-3.5" />
-                <span>{cfg.aiText}</span>
+                <span>{uiLabels.aiText || "Tanya AI"}</span>
               </button>
             </div>
           </div>
@@ -569,13 +287,33 @@ const QThematic = () => {
   const [ayahTranslations, setAyahTranslations] = useState({});
   const [isFetchingTranslations, setIsFetchingTranslations] = useState(false);
 
-  // Translated headers & options state
+  // Dynamic UI Translation State
+  const [uiLabels, setUiLabels] = useState({
+    langLabel: 'Bahasa Terjemahan & Suara:',
+    heroBadge: 'qThematic — Al-Qur’an Tematis',
+    heroTitle1: 'Kandungan Al-Qur\'an',
+    heroTitle2: 'Berdasarkan Tema & Pembahasan',
+    heroDesc: 'Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).',
+    labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan', '4. Kelompok Uraian'],
+    placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan', 'Semua Kelompok Uraian'],
+    hint: 'Ketuk kartu untuk melihat teks Arab ayat',
+    prevBtn: 'Sub Tema Sebelumnya',
+    nextBtn: 'Sub Tema Selanjutnya',
+    showVerses: 'Buka Semua',
+    hideVerses: 'Tutup Semua',
+    playText: 'Dengarkan',
+    stopText: 'Hentikan',
+    aiText: 'Tanya AI',
+    loadingText: 'Memuat terjemahan...',
+    emptySelect: 'Silakan pilih kategori di atas untuk melihat ayat.'
+  });
+
   const [subTitleTranslation, setSubTitleTranslation] = useState("");
   const [groupTitleTranslations, setGroupTitleTranslations] = useState({});
   const [optionTranslations, setOptionTranslations] = useState({});
 
   // Audio / TTS state
-  const [playingKey, setPlayingKey] = useState(null); // `${surah}:${ayat}`
+  const [playingKey, setPlayingKey] = useState(null);
   const currentAudioRef = useRef(null);
   const currentUtteranceRef = useRef(null);
 
@@ -635,6 +373,93 @@ const QThematic = () => {
 
     fetchData();
   }, []);
+
+  // Dynamic UI Labels & Static Strings Translation Effect
+  useEffect(() => {
+    const targetLangCode = cfg.code || 'id';
+
+    if (selectedLang === 'id-ID') {
+      setUiLabels({
+        langLabel: 'Bahasa Terjemahan & Suara:',
+        heroBadge: 'qThematic — Al-Qur’an Tematis',
+        heroTitle1: 'Kandungan Al-Qur\'an',
+        heroTitle2: 'Berdasarkan Tema & Pembahasan',
+        heroDesc: 'Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).',
+        labels: ['1. Tema Utama', '2. Pokok Bahasan', '3. Sub Bahasan', '4. Kelompok Uraian'],
+        placeholders: ['Pilih Tema', 'Pilih Pokok Bahasan', 'Pilih Sub Pokok Bahasan', 'Semua Kelompok Uraian'],
+        hint: 'Ketuk kartu untuk melihat teks Arab ayat',
+        prevBtn: 'Sub Tema Sebelumnya',
+        nextBtn: 'Sub Tema Selanjutnya',
+        showVerses: 'Buka Semua',
+        hideVerses: 'Tutup Semua',
+        playText: 'Dengarkan',
+        stopText: 'Hentikan',
+        aiText: 'Tanya AI',
+        loadingText: 'Memuat terjemahan...',
+        emptySelect: 'Silakan pilih kategori di atas untuk melihat ayat.'
+      });
+      return;
+    }
+
+    const translateStaticUI = async () => {
+      const [
+        langLabel,
+        heroBadge,
+        heroTitle1,
+        heroTitle2,
+        heroDesc,
+        lbl1, lbl2, lbl3, lbl4,
+        pl1, pl2, pl3, pl4,
+        hint, prevBtn, nextBtn, showVerses, hideVerses, playText, stopText, aiText, loadingText, emptySelect
+      ] = await Promise.all([
+        translateTextFree('Bahasa Terjemahan & Suara:', targetLangCode),
+        translateTextFree('qThematic — Al-Qur’an Tematis', targetLangCode),
+        translateTextFree('Kandungan Al-Qur\'an', targetLangCode),
+        translateTextFree('Berdasarkan Tema & Pembahasan', targetLangCode),
+        translateTextFree('Eksplorasi kandungan Al-Qur\'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif berbasis AI (AI explorable).', targetLangCode),
+        translateTextFree('1. Tema Utama', targetLangCode),
+        translateTextFree('2. Pokok Bahasan', targetLangCode),
+        translateTextFree('3. Sub Bahasan', targetLangCode),
+        translateTextFree('4. Kelompok Uraian', targetLangCode),
+        translateTextFree('Pilih Tema', targetLangCode),
+        translateTextFree('Pilih Pokok Bahasan', targetLangCode),
+        translateTextFree('Pilih Sub Pokok Bahasan', targetLangCode),
+        translateTextFree('Semua Kelompok Uraian', targetLangCode),
+        translateTextFree('Ketuk kartu untuk melihat teks Arab ayat', targetLangCode),
+        translateTextFree('Sub Tema Sebelumnya', targetLangCode),
+        translateTextFree('Sub Tema Selanjutnya', targetLangCode),
+        translateTextFree('Buka Semua', targetLangCode),
+        translateTextFree('Tutup Semua', targetLangCode),
+        translateTextFree('Dengarkan', targetLangCode),
+        translateTextFree('Hentikan', targetLangCode),
+        translateTextFree('Tanya AI', targetLangCode),
+        translateTextFree('Memuat terjemahan...', targetLangCode),
+        translateTextFree('Silakan pilih kategori di atas untuk melihat ayat.', targetLangCode)
+      ]);
+
+      setUiLabels({
+        langLabel,
+        heroBadge,
+        heroTitle1,
+        heroTitle2,
+        heroDesc,
+        labels: [lbl1, lbl2, lbl3, lbl4],
+        placeholders: [pl1, pl2, pl3, pl4],
+        hint,
+        prevBtn,
+        nextBtn,
+        showVerses,
+        hideVerses,
+        playText,
+        stopText,
+        aiText,
+        loadingText,
+        emptySelect
+      });
+    };
+
+    translateStaticUI();
+  }, [selectedLang, cfg.code]);
 
   // Cascading dropdown handlers
   const handleTemaChange = (e) => {
@@ -700,10 +525,9 @@ const QThematic = () => {
 
   const toggleAllGroups = () => {
     if (allCollapsedMode) {
-      setCollapsedGroups(new Set()); // Expand all
+      setCollapsedGroups(new Set());
       setAllCollapsedMode(false);
     } else {
-      // Collapse all
       if (selectedTema && selectedPokok && selectedSub) {
         const subData = quranData[selectedTema]?.[selectedPokok]?.[selectedSub] || {};
         const groupKeys = naturalSort(Object.keys(subData));
@@ -813,7 +637,6 @@ const QThematic = () => {
         versesToFetch.map(async (v) => {
           const cacheKey = `${edition}:${v.surah_num}:${v.ayat_num}`;
 
-          // Check if already fetched
           if (ayahTranslations[cacheKey]) {
             results[cacheKey] = ayahTranslations[cacheKey];
             return;
@@ -831,7 +654,7 @@ const QThematic = () => {
             console.warn("Al-Quran Cloud API failed, trying Google Translate fallback...", e);
           }
 
-          // 2. Fallback Google Translate API if Cloud API fails or is unavailable
+          // 2. Fallback Google Translate API
           try {
             const fallbackText = await translateTextFree(v.indo, targetLangCode);
             if (fallbackText) {
@@ -858,6 +681,7 @@ const QThematic = () => {
     if (selectedLang === 'id-ID' || !selectedSub) {
       setSubTitleTranslation("");
       setGroupTitleTranslations({});
+      setOptionTranslations({});
       return;
     }
 
@@ -952,41 +776,36 @@ const QThematic = () => {
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="inline-flex items-center px-4 py-1.5 mb-6 bg-yellow-100 dark:bg-yellow-950/40 text-yellow-800 dark:text-yellow-300 rounded-full text-sm font-semibold tracking-wide gap-2 border border-yellow-200/50 dark:border-yellow-900/30">
             <Sparkles className="w-4 h-4 text-yellow-500" />
-            <span>{cfg.heroBadge || 'qThematic — Al-Qur’an Tematis'}</span>
+            <span>{uiLabels.heroBadge}</span>
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
-            {cfg.heroTitle1 || "Kandungan Al-Qur'an"} <br />
+            {uiLabels.heroTitle1} <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-yellow-600">
-              {cfg.heroTitle2 || "Berdasarkan Tema & Pembahasan"}
+              {uiLabels.heroTitle2}
             </span>
           </h1>
 
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            {cfg.heroDesc}
+            {uiLabels.heroDesc}
           </p>
 
-          {/* Multi-Language Selector Dropdown */}
+          {/* Multi-Language Selector Dropdown with all 39 Languages */}
           <div className="mb-8 flex flex-wrap justify-center items-center gap-2">
             <Globe className="w-4 h-4 text-yellow-500" />
             <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-              {cfg.label}
+              {uiLabels.langLabel}
             </span>
             <select
               value={selectedLang}
               onChange={(e) => setSelectedLang(e.target.value)}
-              className="px-3.5 py-2 rounded-full border border-yellow-500/50 bg-white dark:bg-gray-900 text-xs font-bold text-gray-800 dark:text-gray-200 outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer shadow-xs"
+              className="px-3.5 py-2 rounded-full border border-yellow-500/50 bg-white dark:bg-gray-900 text-xs font-bold text-gray-800 dark:text-gray-200 outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer shadow-xs max-w-xs"
             >
-              <option value="id-ID">Bahasa Indonesia</option>
-              <option value="en-US">English (Saheeh Intl)</option>
-              <option value="ar-SA">العربية (الميسر)</option>
-              <option value="fr-FR">Français (Hamidullah)</option>
-              <option value="de-DE">Deutsch (Bubenheim)</option>
-              <option value="es-ES">Español (Bornez)</option>
-              <option value="tr-TR">Türkçe (Diyanet)</option>
-              <option value="ru-RU">Русский (Кулиев)</option>
-              <option value="zh-CN">中文 (马坚)</option>
-              <option value="ja-JP">日本語</option>
+              {Object.keys(LANG_CONFIG).map((langKey) => (
+                <option key={langKey} value={langKey}>
+                  {LANG_CONFIG[langKey].name} ({LANG_CONFIG[langKey].translator})
+                </option>
+              ))}
             </select>
           </div>
 
@@ -996,14 +815,14 @@ const QThematic = () => {
             {/* 1. Tema Utama */}
             <div className="flex flex-col items-start gap-1">
               <label className="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-                {cfg.labels?.[0] || "1. Tema Utama"}
+                {uiLabels.labels[0]}
               </label>
               <select
                 value={selectedTema}
                 onChange={handleTemaChange}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-250 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-sm font-semibold outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer"
               >
-                <option value="">{cfg.placeholders?.[0] || "Pilih Tema"}</option>
+                <option value="">{uiLabels.placeholders[0]}</option>
                 {temaOptions.map((opt) => (
                   <option key={opt} value={opt}>
                     {optionTranslations[opt] || opt}
@@ -1015,7 +834,7 @@ const QThematic = () => {
             {/* 2. Pokok Bahasan */}
             <div className="flex flex-col items-start gap-1">
               <label className="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-                {cfg.labels?.[1] || "2. Pokok Bahasan"}
+                {uiLabels.labels[1]}
               </label>
               <select
                 value={selectedPokok}
@@ -1023,7 +842,7 @@ const QThematic = () => {
                 disabled={!selectedTema}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-250 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-sm font-semibold outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                <option value="">{cfg.placeholders?.[1] || "Pilih Pokok Bahasan"}</option>
+                <option value="">{uiLabels.placeholders[1]}</option>
                 {pokokOptions.map((opt) => (
                   <option key={opt} value={opt}>
                     {optionTranslations[opt] || opt}
@@ -1035,7 +854,7 @@ const QThematic = () => {
             {/* 3. Sub Bahasan */}
             <div className="flex flex-col items-start gap-1">
               <label className="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-                {cfg.labels?.[2] || "3. Sub Bahasan"}
+                {uiLabels.labels[2]}
               </label>
               <select
                 value={selectedSub}
@@ -1043,7 +862,7 @@ const QThematic = () => {
                 disabled={!selectedPokok}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-250 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-sm font-semibold outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                <option value="">{cfg.placeholders?.[2] || "Pilih Sub Pokok Bahasan"}</option>
+                <option value="">{uiLabels.placeholders[2]}</option>
                 {subOptions.map((opt) => (
                   <option key={opt} value={opt}>
                     {optionTranslations[opt] || opt}
@@ -1055,7 +874,7 @@ const QThematic = () => {
             {/* 4. Kelompok Uraian */}
             <div className="flex flex-col items-start gap-1">
               <label className="text-[11px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
-                {cfg.labels?.[3] || "4. Kelompok Uraian"}
+                {uiLabels.labels[3]}
               </label>
               <select
                 value={selectedUraian}
@@ -1063,7 +882,7 @@ const QThematic = () => {
                 disabled={!selectedSub}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-250 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 text-sm font-semibold outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                <option value="">{cfg.placeholders?.[3] || "Semua Kelompok Uraian"}</option>
+                <option value="">{uiLabels.placeholders[3]}</option>
                 {uraianOptions.map((opt) => (
                   <option key={opt} value={opt}>
                     {optionTranslations[opt] || opt}
@@ -1089,7 +908,7 @@ const QThematic = () => {
           <div className="max-w-md mx-auto text-center py-20 bg-gray-50 dark:bg-gray-800/40 rounded-3xl border border-gray-100 dark:border-gray-800 p-8">
             <HelpCircle className="w-12 h-12 text-yellow-500 mx-auto mb-4 opacity-70" />
             <p className="text-sm font-semibold text-gray-600 dark:text-gray-400">
-              {cfg.emptySelect}
+              {uiLabels.emptySelect}
             </p>
           </div>
         ) : (
@@ -1102,7 +921,7 @@ const QThematic = () => {
                   {subTitleTranslation || selectedSub}
                 </h2>
                 <p className="text-xs sm:text-sm font-semibold text-yellow-600 dark:text-yellow-400">
-                  {cfg.subMeta(displayUraianKeys.length)}
+                  {displayUraianKeys.length} Group Cards
                 </p>
               </div>
 
@@ -1113,7 +932,7 @@ const QThematic = () => {
                   className="px-5 py-2.5 rounded-full border border-yellow-500 hover:bg-yellow-500 hover:text-white dark:hover:text-gray-900 text-yellow-600 dark:text-yellow-400 text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center gap-2 cursor-pointer shadow-xs whitespace-nowrap"
                 >
                   <Layers className="w-4 h-4" />
-                  <span>{allCollapsedMode ? cfg.showVerses : cfg.hideVerses}</span>
+                  <span>{allCollapsedMode ? uiLabels.showVerses : uiLabels.hideVerses}</span>
                 </button>
               </div>
             </div>
@@ -1121,7 +940,7 @@ const QThematic = () => {
             {/* Hint Indicator */}
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-10 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-full text-xs font-semibold tracking-wide border border-gray-200 dark:border-gray-700">
               <Info className="w-4 h-4 text-yellow-500" />
-              <span>{cfg.hint}</span>
+              <span>{uiLabels.hint}</span>
             </div>
 
             {/* List of Uraian Group Cards */}
@@ -1149,7 +968,7 @@ const QThematic = () => {
                         </h3>
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-yellow-100 dark:bg-yellow-950/40 text-yellow-800 dark:text-yellow-300 rounded-full text-xs font-semibold border border-yellow-200/50 dark:border-yellow-900/30">
                           <BookOpen className="w-3.5 h-3.5 text-yellow-500" />
-                          {cfg.groupMeta(verseCount)}
+                          {verseCount} Verses
                         </span>
                       </div>
 
@@ -1192,6 +1011,7 @@ const QThematic = () => {
                                   isPlaying={playingKey === playKey}
                                   onPlayTTS={(txt, s, a) => handlePlayTTS(txt, s, a)}
                                   onStopTTS={stopTTS}
+                                  uiLabels={uiLabels}
                                 />
                               );
                             })}
@@ -1212,7 +1032,7 @@ const QThematic = () => {
                 className="px-5 py-2.5 rounded-full border border-gray-250 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 disabled:opacity-30 disabled:cursor-not-allowed text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center cursor-pointer gap-1.5"
               >
                 <ChevronLeft className="w-3.5 h-3.5" />
-                <span>{cfg.prevBtn}</span>
+                <span>{uiLabels.prevBtn}</span>
               </button>
 
               <button
@@ -1220,7 +1040,7 @@ const QThematic = () => {
                 disabled={!subOptions || subOptions.indexOf(selectedSub) >= subOptions.length - 1}
                 className="px-5 py-2.5 rounded-full border border-gray-250 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 disabled:opacity-30 disabled:cursor-not-allowed text-xs font-bold uppercase tracking-wider transition duration-300 flex items-center cursor-pointer gap-1.5"
               >
-                <span>{cfg.nextBtn}</span>
+                <span>{uiLabels.nextBtn}</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </button>
             </div>
