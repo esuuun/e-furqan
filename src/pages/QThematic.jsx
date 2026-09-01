@@ -65,6 +65,54 @@ const LANG_CONFIG = {
 // Global translation cache for labels/headers
 const globalTranslationCache = {};
 
+// Helper to detect initial language from localStorage, Google Translate cookies, or browser settings
+const getInitialLanguage = () => {
+  try {
+    // 1. Check saved language preference in localStorage
+    const saved = localStorage.getItem('active_lang') || localStorage.getItem('selected_language') || localStorage.getItem('app_lang');
+    if (saved && LANG_CONFIG[saved]) {
+      return saved;
+    }
+    if (saved) {
+      const matchKey = Object.keys(LANG_CONFIG).find(
+        (k) => k.toLowerCase() === saved.toLowerCase() || LANG_CONFIG[k].code.toLowerCase() === saved.toLowerCase()
+      );
+      if (matchKey) return matchKey;
+    }
+
+    // 2. Check Google Translate cookie ('googtrans') if browser Google Translate widget is used
+    const cookies = document.cookie.split(';');
+    for (let c of cookies) {
+      const [name, val] = c.trim().split('=');
+      if (name === 'googtrans' && val) {
+        const parts = decodeURIComponent(val).split('/');
+        const targetCode = parts[parts.length - 1];
+        if (targetCode) {
+          const matchKey = Object.keys(LANG_CONFIG).find(
+            (k) => LANG_CONFIG[k].code.toLowerCase() === targetCode.toLowerCase()
+          );
+          if (matchKey) return matchKey;
+        }
+      }
+    }
+
+    // 3. Check browser navigator language
+    const navLang = navigator.language || navigator.userLanguage;
+    if (navLang) {
+      if (LANG_CONFIG[navLang]) return navLang;
+      const navCode = navLang.split('-')[0].toLowerCase();
+      const matchKey = Object.keys(LANG_CONFIG).find(
+        (k) => LANG_CONFIG[k].code.toLowerCase() === navCode
+      );
+      if (matchKey) return matchKey;
+    }
+  } catch (e) {
+    console.error("Error detecting initial language:", e);
+  }
+
+  return 'id-ID';
+};
+
 // Free Google Translate API helper for labels/headers and fallback translations
 const translateTextFree = async (text, targetLangCode) => {
   if (!text || targetLangCode === 'id') return text;
@@ -155,7 +203,6 @@ const VerseCard = ({
   uiLabels
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
-  const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
 
   // Determine text to show: If non-Indonesian, show translatedText or loading text
   let displayText = verse.indo;
@@ -282,8 +329,8 @@ const QThematic = () => {
   const [collapsedGroups, setCollapsedGroups] = useState(new Set());
   const [allCollapsedMode, setAllCollapsedMode] = useState(true);
 
-  // Multi-language state
-  const [selectedLang, setSelectedLang] = useState("id-ID");
+  // Multi-language state (Initialized with auto-detected/persisted language)
+  const [selectedLang, setSelectedLang] = useState(getInitialLanguage);
   const [ayahTranslations, setAyahTranslations] = useState({});
   const [isFetchingTranslations, setIsFetchingTranslations] = useState(false);
 
@@ -318,6 +365,33 @@ const QThematic = () => {
   const currentUtteranceRef = useRef(null);
 
   const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+
+  // Handle explicit language change and save to localStorage
+  const handleLanguageChange = (newLang) => {
+    setSelectedLang(newLang);
+    try {
+      localStorage.setItem('active_lang', newLang);
+      localStorage.setItem('selected_language', newLang);
+    } catch (e) {}
+  };
+
+  // Listen to storage or Google Translate cookie changes across tabs or pages
+  useEffect(() => {
+    const checkTranslateOrStorage = () => {
+      const detected = getInitialLanguage();
+      if (detected && detected !== selectedLang) {
+        setSelectedLang(detected);
+      }
+    };
+
+    window.addEventListener('storage', checkTranslateOrStorage);
+    window.addEventListener('focus', checkTranslateOrStorage);
+
+    return () => {
+      window.removeEventListener('storage', checkTranslateOrStorage);
+      window.removeEventListener('focus', checkTranslateOrStorage);
+    };
+  }, [selectedLang]);
 
   // Stop TTS Audio
   const stopTTS = useCallback(() => {
@@ -777,7 +851,7 @@ const QThematic = () => {
             </span>
             <select
               value={selectedLang}
-              onChange={(e) => setSelectedLang(e.target.value)}
+              onChange={(e) => handleLanguageChange(e.target.value)}
               className="px-3.5 py-2 rounded-full border border-yellow-500/50 bg-white dark:bg-gray-900 text-xs font-bold text-gray-800 dark:text-gray-200 outline-none focus:ring-2 focus:ring-yellow-500/50 cursor-pointer shadow-xs max-w-xs"
             >
               {Object.keys(LANG_CONFIG).map((langKey) => (
