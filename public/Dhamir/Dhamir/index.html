@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark" class="notranslate" translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google" content="notranslate">
+  <meta name="googlebot" content="notranslate">
+  <title id="docTitle">Kamus Jamid Mabny | Kamus & Rujukan Ayat Interaktif Al-Qur'an</title>
+  <meta name="description" content="Aplikasi interaktif analisis kata Dhamir (Kata Ganti) dan Isim Mawshul (Kata Sambung) dalam Al-Qur'an. Pilih Bentuk Kata dan Nomor Kata untuk melihat lafaz Arab, arti, frekuensi, dan rujukan ayat secara lengkap.">
+  <meta name="keywords" content="jamid mabny, dhamir, mawshul, isim mawshul, al-quran, bahasa arab, kata ganti, kata sambung, grammar arab, nahwu, frekuensi quran, quranic pronouns">
+  <link rel="stylesheet" href="style.css?v=3.5">
+</head>
+<body class="notranslate" translate="no">
+  <!-- Islamic Geometric Background Overlay -->
+  <div class="islamic-bg-pattern" aria-hidden="true"></div>
+
+  <div class="container">
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="brand-icon-wrapper" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <path d="M12 6v6"></path>
+            <path d="M9 9h6"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 id="brandTitle" class="brand-title">Kamus <span>Jamid Mabny</span></h1>
+          <p id="brandSubtitle" class="brand-subtitle">Kamus Interaktif Bentuk Kata & Nomor Kata</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="lang-selector-group">
+          <div class="lang-selector-top-row">
+            <span id="labelLangSelect" class="lang-control-label">Bahasa Terjemahan & Suara:</span>
+            <div class="lang-select-box">
+              <select id="langSelect" class="lang-dropdown" aria-label="Pilih Bahasa Terjemahan & Suara">
+                <optgroup label="🌏 Asia Tenggara & Asia Timur">
+                  <option value="id">ID Bahasa Indonesia</option>
+                  <option value="ms">MY Bahasa Melayu</option>
+                  <option value="th">TH ภาษาไทย (Thai)</option>
+                  <option value="zh">ZH 中文 (Chinese)</option>
+                  <option value="ja">JP 日本語 (Japanese)</option>
+                  <option value="ko">KR 한국어 (Korean)</option>
+                  <option value="ug">CN ئۇيغۇرچە (Uyghur)</option>
+                </optgroup>
+
+                <optgroup label="🕌 Timur Tengah, Asia Tengah & Kaukasus">
+                  <option value="fa">IR فارسی (Persian)</option>
+                  <option value="ku">IQ کوردی (Kurdish)</option>
+                  <option value="ur">PK اردو (Urdu)</option>
+                  <option value="tr">TR Türkçe (Turkish)</option>
+                  <option value="az">AZ Azərbaycan (Azerbaijani)</option>
+                  <option value="uz">UZ O'zbekcha (Uzbek)</option>
+                  <option value="tg">TJ Тоҷикӣ (Tajik)</option>
+                  <option value="tt">RU Татарча (Tatar)</option>
+                </optgroup>
+
+                <optgroup label="🪷 Asia Selatan & Samudra Hindia">
+                  <option value="hi">IN हिन्दी (Hindi)</option>
+                  <option value="bn">BD বাংলা (Bangla)</option>
+                  <option value="ta">IN தமிழ் (Tamil)</option>
+                  <option value="dv">MV ދިވެހި (Dhivehi)</option>
+                </optgroup>
+
+                <optgroup label="🌍 Afrika">
+                  <option value="ha">NG Hausa</option>
+                  <option value="sw">TZ Kiswahili (Swahili)</option>
+                  <option value="am">ET አማርኛ (Amharic)</option>
+                  <option value="ber">DZ Tamaziɣt (Amazigh)</option>
+                </optgroup>
+
+                <optgroup label="🏛️ Eropa Barat, Utara, Tengah & Timur">
+                  <option value="en">GB English</option>
+                  <option value="fr">FR Français (French)</option>
+                  <option value="de">DE Deutsch (German)</option>
+                  <option value="es">ES Español (Spanish)</option>
+                  <option value="pt">PT Português (Portuguese)</option>
+                  <option value="nl">NL Nederlands (Dutch)</option>
+                  <option value="it">IT Italiano (Italian)</option>
+                  <option value="ru">RU Русский (Russian)</option>
+                  <option value="bs">BA Bosanski (Bosnian)</option>
+                  <option value="sq">AL Shqip (Albanian)</option>
+                  <option value="bg">BG Български (Bulgarian)</option>
+                  <option value="cs">CZ Čeština (Czech)</option>
+                  <option value="no">NO Norsk (Norwegian)</option>
+                  <option value="pl">PL Polski (Polish)</option>
+                  <option value="ro">RO Română (Romanian)</option>
+                  <option value="sv">SV Svenska (Swedish)</option>
+                </optgroup>
+              </select>
+              <div class="select-chevron" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="translation-source-badge">
+            <svg class="info-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span id="translationSourceText">Terjemahan: <strong>Kementerian Agama RI (Kemenag)</strong></span>
+          </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="btn btn-outline btn-icon" title="Ubah Tema Gelap / Terang" aria-label="Ubah Tema">
+          <span id="themeIcon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dictionary Selector Switcher Tabs -->
+    <div class="dict-selector-bar" role="tablist" aria-label="Pilih Kamus">
+      <button type="button" id="tabDictJamid" class="dict-tab active" data-dict="jamid" role="tab" aria-selected="true">
+        <span class="dict-tab-icon">📚</span>
+        <span id="labelTabJamid" class="dict-tab-title">Kamus Jamid Mabny</span>
+        <span id="badgeTabJamid" class="dict-tab-badge">7 Bentuk Kata</span>
+      </button>
+      <button type="button" id="tabDictHarf" class="dict-tab" data-dict="harf" role="tab" aria-selected="false">
+        <span class="dict-tab-icon">📖</span>
+        <span id="labelTabHarf" class="dict-tab-title">Kamus Harf Ghair 'Amil</span>
+        <span id="badgeTabHarf" class="dict-tab-badge">17 Bentuk Harf</span>
+      </button>
+      <button type="button" id="tabDictHarfAmil" class="dict-tab" data-dict="harf_amil" role="tab" aria-selected="false">
+        <span class="dict-tab-icon">🖋️</span>
+        <span id="labelTabHarfAmil" class="dict-tab-title">Kamus Harf 'Amil</span>
+        <span id="badgeTabHarfAmil" class="dict-tab-badge">6 Bentuk Harf</span>
+      </button>
+      <button type="button" id="tabDictMusytaq" class="dict-tab" data-dict="musytaq" role="tab" aria-selected="false">
+        <span class="dict-tab-icon">🌿</span>
+        <span id="labelTabMusytaq" class="dict-tab-title">Kamus Musytaq</span>
+        <span id="badgeTabMusytaq" class="dict-tab-badge">80 Akar Kata</span>
+      </button>
+    </div>
+
+    <!-- Main Interactive Controls Card -->
+    <section class="control-card">
+      <!-- Standard Dropdown Grid (for Jamid, Harf Ghair Amil, Harf Amil) -->
+      <div id="standardDropdownGrid" class="dropdown-grid">
+        <!-- Dropdown 1: Bentuk Kata -->
+        <div class="custom-select-wrapper">
+          <select id="bentukKataSelect" class="form-select" aria-label="Pilih Bentuk Kata">
+            <option value="" selected>Pilih Bentuk Kata</option>
+          </select>
+          <div class="select-chevron" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Dropdown 2: Nomor Kata -->
+        <div class="custom-select-wrapper">
+          <select id="noKataSelect" class="form-select" aria-label="Pilih Nomor Kata" disabled>
+            <option value="" selected>Pilih Nomor Kata</option>
+          </select>
+          <div class="select-chevron" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Musytaq Dropdown Grid (2 Controls: Pilih Level, Nomor Akar & Akar) -->
+      <div id="musytaqDropdownGrid" class="dropdown-grid" style="display: none;">
+        <!-- Dropdown 1: Pilih Level -->
+        <div class="custom-select-wrapper">
+          <select id="musytaqLevelSelect" class="form-select" aria-label="Pilih Level">
+            <option value="1" selected>Level 1 (80 Akar Kata)</option>
+          </select>
+          <div class="select-chevron" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Dropdown 2: Nomor Akar & Akar -->
+        <div class="custom-select-wrapper">
+          <select id="musytaqAkarSelect" class="form-select" aria-label="Pilih Nomor Akar & Akar">
+            <option value="" selected>Pilih Nomor Akar & Akar</option>
+          </select>
+          <div class="select-chevron" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Active Spotlight Card & Ayat References -->
+    <main>
+      <!-- Standard Spotlight Card (for Jamid & Harf) -->
+      <section id="spotlightCard" class="spotlight-card animate-fade-in" style="display: none;">
+        <div class="spotlight-header">
+          <div class="spotlight-badge-group">
+            <span id="badgeBentukKata" class="badge badge-gold">1. Dhamir</span>
+            <span id="badgeNoKata" class="badge badge-emerald">No. Kata: 1a</span>
+            <span id="badgeJenis" class="badge badge-cyan">Munfashil</span>
+          </div>
+        </div>
+
+        <div class="spotlight-body">
+          <!-- Arabic Word and Meaning Box -->
+          <div class="arabic-display-box notranslate" translate="no">
+            <div id="arabicWordDisplay" class="arabic-word-large font-arabic notranslate" translate="no">هُوَ</div>
+            <div id="wordLatinDisplay" class="word-latin-badge notranslate" translate="no">Huwa</div>
+            <div id="wordMeaningDisplay" class="word-meaning">DIA (LK)</div>
+            <div id="wordMeaningSub" class="word-meaning-sub">Dia (1 orang laki-laki)</div>
+          </div>
+
+          <!-- Metrics and Grammar Information -->
+          <div class="details-info-box">
+            <div class="stat-metric-card">
+              <div>
+                <div id="labelFreqTitle" class="metric-label">Frekuensi dalam Al-Qur'an</div>
+                <div id="frekSubtitle" style="font-size:0.75rem; color:var(--text-dim); margin-top:2px;">Frekuensi Kemunculan</div>
+              </div>
+              <div id="frekValueDisplay" class="metric-value">481 ×</div>
+            </div>
+
+            <div class="stat-metric-card">
+              <div>
+                <div id="labelTotalAyatTitle" class="metric-label">Total Referensi Ayat</div>
+                <div id="labelTotalAyatSub" style="font-size:0.75rem; color:var(--text-dim); margin-top:2px;">Tersedia dalam Dataset</div>
+              </div>
+              <div id="totalAyatBadge" class="metric-value" style="color:var(--text-gold);">3 Ayat</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Surah & Ayat References Output Section (for Jamid & Harf) -->
+      <section id="referencesSection" class="references-section" style="display: none;">
+        <div class="section-header">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <h2 id="ayatSectionTitle" class="section-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>Daftar Surat & Ayat yang Keluar</span>
+            </h2>
+          </div>
+
+          <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
+            <div class="search-box-wrapper">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input id="ayatSearchInput" type="text" class="form-input" placeholder="Cari nama surat / ayat..." aria-label="Cari surat atau ayat">
+            </div>
+          </div>
+        </div>
+
+        <!-- Ayat Cards Grid Container -->
+        <div id="ayatGridContainer" class="ayat-grid">
+          <!-- Dynamically populated by JS -->
+        </div>
+
+        <!-- Empty State Container -->
+        <div id="emptyStateContainer" class="empty-state" style="display: none;">
+          <div class="empty-state-icon">📖</div>
+          <div id="emptyStateText" class="empty-state-text">Tidak ada surat atau ayat yang cocok dengan kata pencarian tersebut.</div>
+        </div>
+      </section>
+
+      <!-- Kamus Musytaq Display View (Spotlight, Morphology & Full Tasrif Browser) -->
+      <section id="musytaqDisplaySection" class="musytaq-section animate-fade-in" style="display: none;">
+        <!-- Musytaq Hero Spotlight Card -->
+        <div class="spotlight-card">
+          <div class="spotlight-header">
+            <div class="spotlight-badge-group">
+              <span id="musytaqBadgeLevel" class="badge badge-gold">Level 1</span>
+              <span id="musytaqBadgeAkar" class="badge badge-emerald">No. 1 (ق و ل)</span>
+            </div>
+            
+            <div class="spotlight-actions">
+              <button id="btnMusytaqAiAsk" type="button" class="btn btn-outline btn-ai-sparkle" title="Tanya AI seputar akar kata ini">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L14.4 7.6L20 10L14.4 12.4L12 18L9.6 12.4L4 10L9.6 7.6L12 2Z"/>
+                </svg>
+                <span>Tanya AI</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="spotlight-body spotlight-body-metrics">
+            <!-- Metrics & Root Information Box -->
+            <div class="details-info-box musytaq-metrics-full">
+              <div class="stat-metric-card">
+                <div>
+                  <div id="labelMusytaqMetricRoot" class="metric-label">Akar & Bentuk Dasar (Masdar)</div>
+                  <div id="musytaqRootMeaning" style="font-size:0.78rem; color:var(--text-dim); margin-top:2px;">Arti Akar: KATA / UCAP</div>
+                </div>
+                <div id="musytaqRootDisplay" class="metric-value font-arabic" style="font-size:1.45rem; color:var(--text-gold);">ق و ل (قَوْل)</div>
+              </div>
+
+              <div class="stat-metric-card">
+                <div>
+                  <div id="labelMusytaqMetricFreq" class="metric-label">Frekuensi Kemunculan Akar</div>
+                  <div id="labelMusytaqMetricFreqSub" style="font-size:0.78rem; color:var(--text-dim); margin-top:2px;">Frekuensi dalam Al-Qur'an</div>
+                </div>
+                <div id="musytaqFreqDisplay" class="metric-value">1.722 ×</div>
+              </div>
+
+              <div class="stat-metric-card">
+                <div>
+                  <div id="labelMusytaqMetricTasrif" class="metric-label">Total Variasi Tasrif</div>
+                  <div id="labelMusytaqMetricTasrifSub" style="font-size:0.78rem; color:var(--text-dim); margin-top:2px;">Tersedia untuk Akar Ini</div>
+                </div>
+                <div id="musytaqTotalTasrifBadge" class="metric-value" style="color:var(--text-accent);">51 Bentuk</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Tasrif Browser Section -->
+        <div class="tasrif-browser-section">
+          <div class="section-header">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <h2 class="section-title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+                <span id="musytaqTasrifTableTitle">Daftar Lengkap Seluruh Bentuk Tasrif Akar: ق و ل</span>
+              </h2>
+            </div>
+
+            <!-- Search in Tasrif Table -->
+            <div class="search-box-wrapper">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input id="musytaqSearchInput" type="text" class="form-input" placeholder="Cari lafaz / arti / kode tasrif..." aria-label="Cari bentuk tasrif">
+            </div>
+          </div>
+
+          <!-- Filter Category Chips -->
+          <div class="tasrif-filter-chips" id="musytaqCategoryChips">
+            <button type="button" class="tasrif-chip active" data-cat="madhi"><span id="chipMadhiText">Fi'il Madhi</span> (<span id="countCatMadhi">0</span>)</button>
+            <button type="button" class="tasrif-chip" data-cat="mudhari"><span id="chipMudhariText">Fi'il Mudhari'</span> (<span id="countCatMudhari">0</span>)</button>
+            <button type="button" class="tasrif-chip" data-cat="amr"><span id="chipAmrText">Fi'il Amr</span> (<span id="countCatAmr">0</span>)</button>
+            <button type="button" class="tasrif-chip" data-cat="masdar"><span id="chipMasdarText">Masdar</span> (<span id="countCatMasdar">0</span>)</button>
+            <button type="button" class="tasrif-chip" data-cat="isim"><span id="chipIsimText">Isim Fa'il / Sifat</span> (<span id="countCatIsim">0</span>)</button>
+          </div>
+
+          <!-- Tasrif Items Grid -->
+          <div id="musytaqTasrifGrid" class="musytaq-grid">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Empty State for Search -->
+          <div id="musytaqEmptyState" class="empty-state" style="display: none;">
+            <div class="empty-state-icon">🔍</div>
+            <div id="musytaqEmptyStateText" class="empty-state-text">Tidak ada bentuk tasrif yang cocok dengan kata pencarian tersebut.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- AI Assistant Modal Dialog -->
+  <div id="aiModal" class="ai-modal-backdrop" aria-hidden="true">
+    <div class="ai-modal-dialog animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="aiModalTitle">
+      <div class="ai-modal-header">
+        <div class="ai-modal-header-title-group">
+          <div class="ai-sparkle-badge" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L14.4 7.6L20 10L14.4 12.4L12 18L9.6 12.4L4 10L9.6 7.6L12 2Z"/>
+              <path d="M19 15L20.2 17.8L23 19L20.2 20.2L19 23L17.8 20.2L15 19L17.8 17.8L19 15Z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 id="aiModalTitle" class="ai-modal-title">Tanya Asisten AI Al-Qur'an</h3>
+            <p id="aiModalSubtitle" class="ai-modal-subtitle">Analisis Nahwu, I'rab & Tafsir Kata Terpilih</p>
+          </div>
+        </div>
+        <button id="aiModalCloseBtn" type="button" class="ai-modal-close-btn" title="Tutup Dialog" aria-label="Tutup Dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="ai-modal-body">
+        <!-- Verse Preview Snippet -->
+        <div class="ai-verse-preview-box notranslate" translate="no">
+          <div id="aiModalArabicVerse" class="ai-verse-arabic font-arabic notranslate" translate="no" dir="rtl"></div>
+          <div id="aiModalTranslation" class="ai-verse-translation"></div>
+        </div>
+
+        <!-- Topic Selection Tabs -->
+        <div class="ai-topic-selection">
+          <label id="labelAiTopic" class="ai-topic-label">Pilih Topik Analisis AI:</label>
+          <div class="ai-topic-chips" id="aiTopicChips">
+            <button type="button" class="ai-topic-chip active" data-topic="nahwu">🔍 Kaidah Nahwu & I'rab</button>
+            <button type="button" class="ai-topic-chip" data-topic="tafsir">📖 Tafsir & Makna Ayat</button>
+            <button type="button" class="ai-topic-chip" data-topic="balaghah">✨ Keindahan Balaghah</button>
+          </div>
+        </div>
+
+        <!-- Generated Prompt Text Area Preview -->
+        <div class="ai-prompt-preview-container">
+          <label id="labelPromptPreview" class="ai-topic-label">Prompt Tanya AI (Siap Digunakan):</label>
+          <textarea id="aiPromptTextarea" class="ai-prompt-textarea" rows="4" aria-label="Prompt Tanya AI"></textarea>
+        </div>
+      </div>
+
+      <div class="ai-modal-footer">
+        <button id="btnOpenGemini" type="button" class="btn-ai-action btn-gemini" title="Buka & Tanya di Google Gemini">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+            <polygon points="12 6 14.5 10.5 19.5 11.2 16 14.6 16.8 19.5 12 17 7.2 19.5 8 14.6 4.5 11.2 9.5 10.5 12 6"/>
+          </svg>
+          <span id="labelOpenGemini">Google Gemini</span>
+        </button>
+
+        <button id="btnOpenChatGpt" type="button" class="btn-ai-action btn-chatgpt" title="Buka & Tanya di ChatGPT">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span id="labelOpenChatGpt">ChatGPT</span>
+        </button>
+
+        <button id="btnCopyPrompt" type="button" class="btn-ai-action btn-copy-prompt" title="Salin Prompt ke Clipboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span id="labelCopyPrompt">Salin Prompt</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast-msg" role="status" aria-live="polite">
+    Pesan Notifikasi
+  </div>
+
+  <!-- Scripts -->
+  <script src="dhamir_data.js?v=4.0"></script>
+  <script src="harf_data.js?v=4.0"></script>
+  <script src="harf_amil_data.js?v=4.0"></script>
+  <script src="musytaq_data.js?v=4.0"></script>
+  <script src="app.js?v=4.0"></script>
+</body>
+</html>

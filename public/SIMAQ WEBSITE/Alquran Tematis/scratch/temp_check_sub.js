@@ -1,0 +1,4389 @@
+
+
+        const LANG_UI_MAP = {
+            'en': {
+                'Jelajah Tematis': 'Thematic Explorer',
+                'Cari Surat & Ayat': 'Search Surah & Ayah',
+                'Cari Surat & Nomor Ayat': 'Search Surah & Ayah Number',
+                'Cari Kata (Uraian & Ayat)': 'Search by Keyword',
+                'Pencarian Kata: Uraian & Ayat': 'Keyword Search: Topics & Verses',
+                'Pilih Surat & Nomor Ayat': 'Select Surah & Ayah Number',
+                'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat yang Anda pilih secara instan': 'Instantly discover the Theme, Main Subject, and Sub-topic of your selected verse',
+                'Cari topik bahasan/uraian tematis dan teks terjemahan ayat berdasarkan kata kunci secara instan': 'Search thematic description topics and verse translation texts instantly',
+                'Cari topik uraian tematis dan teks terjemahan ayat secara instan': 'Search thematic description topics and verse translation texts instantly',
+                'Ketik nama surat & ayat langsung atau pilih dari daftar untuk melihat klasifikasi tematiknya secara instan': 'Type surah & ayah name directly or pick from list to instantly view its thematic classification',
+                'Ketik nama surat & ayat (contoh: Al-Baqarah 255, 36:82, Yasin 82, Kahfi 10, An-Nas)...': 'Type surah & ayah name (e.g. Al-Baqarah 255, 36:82, Yasin 82, Kahfi 10, An-Nas)...',
+                'Ketik kata pencarian (contoh: sabar, riba, shalat, taubat, rezeki, surga)...': 'Type search keyword (e.g. patience, usury, prayer, repentance, sustenance, paradise)...',
+                'Cari': 'Search',
+                'Surat Al-Qur\'an (1–114):': 'Quran Surah (1–114):',
+                'Nomor Ayat:': 'Ayah Number:',
+                '-- Pilih Surat --': '-- Select Surah --',
+                'Pilih Ayat': 'Select Ayah',
+                'Pilih Tema': 'Select Theme',
+                'Pilih Pokok Bahasan': 'Select Main Subject',
+                'Pilih Sub Pokok Bahasan': 'Select Sub-topic',
+                'Buka Semua Uraian': 'Expand All',
+                'Tutup Semua Uraian': 'Collapse All',
+                'Huruf Arab:': 'Arabic Font:',
+                '⚡ Akses Cepat:': '⚡ Quick Access:',
+                'Filter Hasil:': 'Filter Results:',
+                'Semua Hasil': 'All Results',
+                'Hanya Uraian Tematis': 'Thematic Topics Only',
+                'Hanya Teks Terjemahan Ayat': 'Verse Translations Only',
+                '💡 Kata Kunci Populer:': '💡 Popular Keywords:',
+                'Sabar': 'Patience',
+                'Riba': 'Usury',
+                'Shalat': 'Prayer',
+                'Taubat': 'Repentance',
+                'Rezeki': 'Sustenance',
+                'Surga': 'Paradise',
+                'Neraka': 'Hellfire',
+                'Orang Tua': 'Parents',
+                'Sedekah': 'Charity',
+                'Kiamat': 'Doomsday',
+                'Syukur': 'Gratitude',
+                'Ketik kata kunci di atas atau pilih salah satu kata populer untuk mencari uraian tematis dan ayat Al-Qur\'an.': 'Type search keyword above or select a popular keyword to find thematic topics and Quranic verses.',
+                'Buka Topik Tematis Ini': 'Open This Thematic Topic',
+                'Dengarkan': 'Listen',
+                'Tanya AI': 'Ask AI',
+                'Salin': 'Copy',
+                'Salin Ayat': 'Copy Ayah',
+                'Bagikan': 'Share',
+                'Salin Link': 'Copy Link',
+                'Salin Link Sub': 'Copy Sub-topic Link',
+                'Tersalin!': 'Copied!',
+                'Bagikan ke WhatsApp': 'Share to WhatsApp',
+                '🔍 Buka di Pencarian Ayat': '🔍 Open in Verse Search',
+                'Buka Tematik ➡️': 'Open Thematic ➡️',
+                'Menampilkan': 'Displaying',
+                'Kelompok Uraian Flash Card': 'Flash Card Groups',
+                'Ayat Al-Qur\'an': 'Quran Verses',
+                'Quran Verses': 'Quran Verses',
+                'Klasifikasi Al-Qur\'an Tematis': 'Thematic Quran Classification',
+                'Buka di Halaman Tematik': 'Open in Thematic View',
+                'Cari Ayat': 'Search Ayah',
+                'Tema:': 'Theme:',
+                'Pokok:': 'Subject:',
+                'Sub Pokok:': 'Sub-topic:',
+                'Tema Besar:': 'Main Theme:',
+                'Pokok Bahasan:': 'Main Subject:',
+                'Sub Pokok Bahasan:': 'Sub-topic:',
+                'Uraian Khusus:': 'Specific Context:',
+                'Belum Ada Pengelompokan Tematik Khusus': 'No Specific Thematic Classification Yet',
+                'Tidak Ditemukan dalam Indeks Tematis': 'Not Found in Thematic Index',
+                'Silakan pilih kategori di atas untuk melihat ayat.': 'Please select a category above to view verses.',
+                '🔍 Hasil pencarian untuk:': '🔍 Search results for:',
+                'Uraian Tematis': 'Thematic Topics',
+                'Topik & Uraian Tematis Terkait': 'Related Thematic Topics',
+                'Topik Ditemukan': 'Topics Found',
+                'Ayat-Ayat Al-Qur\'an Terkait': 'Related Quranic Verses',
+                'Ayat Ditemukan': 'Verses Found',
+                'Tidak ditemukan hasil untuk kata kunci': 'No results found for keyword',
+                'Saran: Periksa kembali ejaan kata, gunakan kata dasar (misal sabar, bukan bersabarlah), atau coba kata populer di atas.': 'Tip: Check spelling, use root words (e.g. patience, prayer), or try the popular keywords above.',
+                'Silakan masukkan minimal 2 huruf untuk melakukan pencarian.': 'Please enter at least 2 characters to search.'
+            },
+            'ar': {
+                'Jelajah Tematis': 'التصفح الموضوعي',
+                'Cari Surat & Ayat': 'البحث بالسورة والآية',
+                'Cari Surat & Nomor Ayat': 'البحث بالسورة ورقم الآية',
+                'Cari Kata (Uraian & Ayat)': 'البحث بالكلمات',
+                'Pencarian Kata: Uraian & Ayat': 'البحث بالكلمات: الموضوعات والآيات',
+                'Pilih Surat & Nomor Ayat': 'اختر السورة ورقم الآية',
+                'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat yang Anda pilih secara instan': 'تعرف على الموضوع والمحور الرئيسي والفرعي للآية المختارة فوراً',
+                'Cari topik bahasan/uraian tematis dan teks terjemahan ayat berdasarkan kata kunci secara instan': 'ابحث في موضوعات التفسير ونصوص الآيات فورياً بواسطة الكلمات المفتاحية',
+                'Cari topik uraian tematis dan teks terjemahan ayat secara instan': 'ابحث في موضوعات التفسير ونصوص الآيات فورياً',
+                'Ketik nama surat & ayat langsung atau pilih dari daftar untuk melihat klasifikasi tematiknya secara instan': 'اكتب اسم السورة والآية أو اختر من القائمة لعرض التصنيف الموضوعي فوراً',
+                'Ketik nama surat & ayat (contoh: Al-Baqarah 255, 36:82, Yasin 82, Kahfi 10, An-Nas)...': 'اكتب اسم السورة والآية (مثال: البقرة 255، 36:82، يس 82، الكهف 10)...',
+                'Ketik kata pencarian (contoh: sabar, riba, shalat, taubat, rezeki, surga)...': 'اكتب كلمة البحث (مثال: الصبر، الربا، الصلاة، التوبة، الرزق، الجنة)...',
+                'Cari': 'بحث',
+                'Filter Hasil:': 'تصفية النتائج:',
+                'Semua Hasil': 'جميع النتائج',
+                'Hanya Uraian Tematis': 'الموضوعات فقط',
+                'Hanya Teks Terjemahan Ayat': 'نصوص الآيات فقط',
+                '💡 Kata Kunci Populer:': '💡 كلمات شائعة:',
+                'Sabar': 'الصبر',
+                'Riba': 'الربا',
+                'Shalat': 'الصلاة',
+                'Taubat': 'التوبة',
+                'Rezeki': 'الرزق',
+                'Surga': 'الجنة',
+                'Neraka': 'النار',
+                'Orang Tua': 'الوالدين',
+                'Sedekah': 'الصدقة',
+                'Kiamat': 'القيامة',
+                'Syukur': 'الشكر',
+                'Ketik kata kunci di atas atau pilih salah satu kata populer untuk mencari uraian tematis dan ayat Al-Qur\'an.': 'اكتب كلمة البحث أعلاه أو اختر إحدى الكلمات الشائعة للبحث في الموضوعات وآيات القرآن الكريم.',
+                'Surat Al-Qur\'an (1–114):': 'سور القرآن الكريم (1–114):',
+                'Nomor Ayat:': 'رقم الآية:',
+                '-- Pilih Surat --': '-- اختر السورة --',
+                'Pilih Ayat': 'اختر الآية',
+                'Pilih Tema': 'اختر الموضوع',
+                'Pilih Pokok Bahasan': 'اختر المحور الرئيسي',
+                'Pilih Sub Pokok Bahasan': 'اختر المحور الفرعي',
+                'Buka Semua Uraian': 'توسيع الكل',
+                'Tutup Semua Uraian': 'طي الكل',
+                'Huruf Arab:': 'حجم الخط:',
+                '⚡ Akses Cepat:': '⚡ وصول سريع:',
+                'Klasifikasi Al-Qur\'an Tematis': 'التصنيف الموضوعي للقرآن الكريم',
+                'Buka di Halaman Tematik': 'عرض في الصفحة الموضوعية',
+                'Buka Topik Tematis Ini': 'فتح هذا الموضوع',
+                'Salin Ayat': 'نسخ الآية',
+                'Salin': 'نسخ',
+                'Dengarkan': 'استماع',
+                'Tanya AI': 'اسأل الذكاء الاصطناعي',
+                'Bagikan': 'مشاركة',
+                'Salin Link': 'نسخ الرابط',
+                'Salin Link Sub': 'نسخ رابط المحور الفرعي',
+                'Tersalin!': 'تم النسخ!',
+                'Bagikan ke WhatsApp': 'مشاركة عبر واتساب',
+                'Cari Ayat': 'بحث عن الآية',
+                'Tema Besar:': 'الموضوع الرئيسي:',
+                'Pokok Bahasan:': 'المحور الأساسي:',
+                'Sub Pokok Bahasan:': 'المحور الفرعي:',
+                'Uraian Khusus:': 'البيان التفصيلي:',
+                'Belum Ada Pengelompokan Tematik Khusus': 'لا يوجد تصنيف موضوعي محدد حتى الآن',
+                'Tidak Ditemukan dalam Indeks Tematis': 'غير مدرج في الفهرس الموضوعي',
+                'Silakan pilih kategori di atas untuk melihat ayat.': 'يرجى اختيار الفئة أعلاه لعرض الآيات.',
+                '🔍 Hasil pencarian untuk:': '🔍 نتائج البحث عن:',
+                'Uraian Tematis': 'الموضوعات الموضوعية',
+                'Topik & Uraian Tematis Terkait': 'الموضوعات والبيانات ذات الصلة',
+                'Topik Ditemukan': 'موضوعات تم العثور عليها',
+                'Ayat-Ayat Al-Qur\'an Terkait': 'آيات قرآنية ذات صلة',
+                'Ayat Ditemukan': 'آيات تم العثور عليها',
+                'Tidak ditemukan hasil untuk kata kunci': 'لم يتم العثور على نتائج للكلمة',
+                'Silakan masukkan minimal 2 huruf untuk melakukan pencarian.': 'يرجى إدخال حرفين على الأقل للبحث.'
+            },
+            'ms': {
+                'Jelajah Tematis': 'Jelajah Tematik',
+                'Cari Surat & Ayat': 'Cari Surah & Ayat',
+                'Cari Surat & Nomor Ayat': 'Cari Surah & Nombor Ayat',
+                'Cari Kata (Uraian & Ayat)': 'Cari Kata Kunci',
+                'Pencarian Kata: Uraian & Ayat': 'Carian Kata Kunci: Huraian & Ayat',
+                'Pilih Surat & Nomor Ayat': 'Pilih Surah & Nombor Ayat',
+                'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat yang Anda pilih secara instan': 'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat pilihan anda secara pantas',
+                'Cari topik bahasan/uraian tematis dan teks terjemahan ayat berdasarkan kata kunci secara instan': 'Cari topik huraian tematik dan teks terjemahan ayat berdasarkan kata kunci secara pantas',
+                'Cari topik uraian tematis dan teks terjemahan ayat secara instan': 'Cari topik huraian tematik dan teks terjemahan ayat secara pantas',
+                'Ketik nama surat & ayat langsung atau pilih dari daftar untuk melihat klasifikasi tematiknya secara instan': 'Taip nama surah & ayat atau pilih daripada senarai untuk melihat klasifikasi tematiknya secara pantas',
+                'Ketik nama surat & ayat (contoh: Al-Baqarah 255, 36:82, Yasin 82, Kahfi 10, An-Nas)...': 'Taip nama surah & ayat (contoh: Al-Baqarah 255, 36:82, Yasin 82, Kahfi 10)...',
+                'Ketik kata pencarian (contoh: sabar, riba, shalat, taubat, rezeki, surga)...': 'Taip kata carian (contoh: sabar, riba, solat, taubat, rezeki, syurga)...',
+                'Cari': 'Cari',
+                'Filter Hasil:': 'Tapis Hasil:',
+                'Semua Hasil': 'Semua Hasil',
+                'Hanya Uraian Tematis': 'Hanya Huraian Tematik',
+                'Hanya Teks Terjemahan Ayat': 'Hanya Terjemahan Ayat',
+                '💡 Kata Kunci Populer:': '💡 Kata Kunci Popular:',
+                'Sabar': 'Sabar',
+                'Riba': 'Riba',
+                'Shalat': 'Solat',
+                'Taubat': 'Taubat',
+                'Rezeki': 'Rezeki',
+                'Surga': 'Syurga',
+                'Neraka': 'Neraka',
+                'Orang Tua': 'Ibu Bapa',
+                'Sedekah': 'Sedekah',
+                'Kiamat': 'Kiamat',
+                'Syukur': 'Syukur',
+                'Ketik kata kunci di atas atau pilih salah satu kata populer untuk mencari uraian tematis dan ayat Al-Qur\'an.': 'Taip kata kunci di atas atau pilih perkataan popular untuk mencari huraian tematik dan ayat Al-Quran.',
+                'Surat Al-Qur\'an (1–114):': 'Surah Al-Quran (1–114):',
+                'Nomor Ayat:': 'Nombor Ayat:',
+                '-- Pilih Surat --': '-- Pilih Surah --',
+                'Pilih Ayat': 'Pilih Ayat',
+                'Pilih Tema': 'Pilih Tema',
+                'Pilih Pokok Bahasan': 'Pilih Pokok Bahasan',
+                'Pilih Sub Pokok Bahasan': 'Pilih Sub Pokok Bahasan',
+                'Buka Semua Uraian': 'Buka Semua Huraian',
+                'Tutup Semua Uraian': 'Tutup Semua Huraian',
+                'Huruf Arab:': 'Fon Arab:',
+                '⚡ Akses Cepat:': '⚡ Akses Pantas:',
+                'Klasifikasi Al-Qur\'an Tematis': 'Klasifikasi Al-Quran Tematik',
+                'Buka di Halaman Tematik': 'Buka di Halaman Tematik',
+                'Buka Topik Tematis Ini': 'Buka Topik Tematik Ini',
+                'Salin Ayat': 'Salin Ayat',
+                'Salin': 'Salin',
+                'Dengarkan': 'Dengar',
+                'Tanya AI': 'Tanya AI',
+                'Bagikan': 'Kongsi',
+                'Salin Link': 'Salin Pautan',
+                'Salin Link Sub': 'Salin Pautan Sub Pokok',
+                'Tersalin!': 'Disalin!',
+                'Bagikan ke WhatsApp': 'Kongsi ke WhatsApp',
+                'Cari Ayat': 'Cari Ayat',
+                'Tema Besar:': 'Tema Utama:',
+                'Pokok Bahasan:': 'Pokok Bahasan:',
+                'Sub Pokok Bahasan:': 'Sub Pokok Bahasan:',
+                'Uraian Khusus:': 'Huraian Khusus:',
+                'Belum Ada Pengelompokan Tematik Khusus': 'Belum Ada Pengelompokan Tematik Khusus',
+                'Tidak Ditemukan dalam Indeks Tematis': 'Tidak Ditemui dalam Indeks Tematik',
+                'Silakan pilih kategori di atas untuk melihat ayat.': 'Sila pilih kategori di atas untuk melihat ayat.'
+            },
+            'ur': {
+                'Jelajah Tematis': 'موضوعاتی مطالعہ',
+                'Cari Surat & Ayat': 'سورۃ اور آیت تلاش کریں',
+                'Cari Surat & Nomor Ayat': 'سورۃ اور آیت نمبر تلاش کریں',
+                'Cari Kata (Uraian & Ayat)': 'الفاظ سے تلاش',
+                'Pencarian Kata: Uraian & Ayat': 'الفاظ کی تلاش: موضوعات اور آیات',
+                'Pilih Surat & Nomor Ayat': 'سورۃ اور آیت کا نمبر منتخب کریں',
+                'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat yang Anda pilih secara instan': 'اپنی منتخب کردہ آیت کا موضوع، مرکزی اور ذیلی عنوان فوراً جانیں',
+                'Cari topik bahasan/uraian tematis dan teks terjemahan ayat berdasarkan kata kunci secara instan': 'موضوعاتی عنوانات اور آیت کا ترجمہ تلاش کریں',
+                'Cari': 'تلاش',
+                'Filter Hasil:': 'نتائج فلٹر کریں:',
+                'Semua Hasil': 'تمام نتائج',
+                'Hanya Uraian Tematis': 'صرف موضوعات',
+                'Hanya Teks Terjemahan Ayat': 'صرف آیات کا ترجمہ',
+                '💡 Kata Kunci Populer:': '💡 مقبول الفاظ:',
+                'Sabar': 'صبر',
+                'Riba': 'سود',
+                'Shalat': 'نماز',
+                'Taubat': 'توبہ',
+                'Rezeki': 'رزق',
+                'Surga': 'جنت',
+                'Neraka': 'جہنم',
+                'Orang Tua': 'والدین',
+                'Sedekah': 'صدقہ',
+                'Kiamat': 'قیامت',
+                'Syukur': 'شکر',
+                'Surat Al-Qur\'an (1–114):': 'قرآن کی سورتیں (1–114):',
+                'Nomor Ayat:': 'آیت نمبر:',
+                '-- Pilih Surat --': '-- سورۃ منتخب کریں --',
+                'Pilih Ayat': 'آیت منتخب کریں',
+                'Klasifikasi Al-Qur\'an Tematis': 'قرآنی موضوعاتی درجہ بندی',
+                'Buka di Halaman Tematik': 'موضوعاتی صفحہ پر دیکھیں',
+                'Salin Ayat': 'آیت کاپی کریں',
+                'Salin': 'کاپی',
+                'Dengarkan': 'سنیں',
+                'Tanya AI': 'AI سے پوچھیں',
+                'Cari Ayat': 'آیت تلاش کریں',
+                'Tema Besar:': 'مرکزی موضوع:',
+                'Pokok Bahasan:': 'بنیادی عنوان:',
+                'Sub Pokok Bahasan:': 'ذیلی موضوع:',
+                'Uraian Khusus:': 'تفصیلی وضاحت:'
+            },
+            'tr': {
+                'Jelajah Tematis': 'Konusal Gezinti',
+                'Cari Surat & Ayat': 'Sure ve Ayet Ara',
+                'Cari Surat & Nomor Ayat': 'Sure ve Ayet Numarası Ara',
+                'Cari Kata (Uraian & Ayat)': 'Kelimeye Göre Ara',
+                'Pencarian Kata: Uraian & Ayat': 'Kelime Araması: Konular ve Ayetler',
+                'Pilih Surat & Nomor Ayat': 'Sure ve Ayet Numarası Seçin',
+                'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat yang Anda pilih secara instan': 'Seçtiğiniz ayetin Tema, Ana Konu ve Alt Konularını anında öğrenin',
+                'Cari topik bahasan/uraian tematis dan teks terjemahan ayat berdasarkan kata kunci secara instan': 'Anahtar kelimelerle tematik konuları ve ayet meallerini anında arayın',
+                'Cari': 'Ara',
+                'Filter Hasil:': 'Sonuçları Filtrele:',
+                'Semua Hasil': 'Tüm Sonuçlar',
+                'Hanya Uraian Tematis': 'Sadece Konular',
+                'Hanya Teks Terjemahan Ayat': 'Sadece Ayet Mealleri',
+                '💡 Kata Kunci Populer:': '💡 Popüler Kelimeler:',
+                'Sabar': 'Sabır',
+                'Riba': 'Faiz',
+                'Shalat': 'Namaz',
+                'Taubat': 'Tövbe',
+                'Rezeki': 'Rızık',
+                'Surga': 'Cennet',
+                'Neraka': 'Cehennem',
+                'Orang Tua': 'Anne Baba',
+                'Sedekah': 'Sadaka',
+                'Kiamat': 'Kıyamet',
+                'Syukur': 'Şükür',
+                'Surat Al-Qur\'an (1–114):': 'Kur\'an Sureleri (1–114):',
+                'Nomor Ayat:': 'Ayet Numarası:',
+                '-- Pilih Surat --': '-- Sure Seçin --',
+                'Pilih Ayat': 'Ayet Seçin',
+                'Klasifikasi Al-Qur\'an Tematis': 'Tematik Kur\'an Sınıflandırması',
+                'Buka di Halaman Tematik': 'Tematik Sayfada Aç',
+                'Salin Ayat': 'Ayeti Kopyala',
+                'Salin': 'Kopyala',
+                'Dengarkan': 'Dinle',
+                'Tanya AI': 'Yapay Zekaya Sor',
+                'Cari Ayat': 'Ayet Ara',
+                'Tema Besar:': 'Ana Tema:',
+                'Pokok Bahasan:': 'Ana Konu:',
+                'Sub Pokok Bahasan:': 'Alt Konu:',
+                'Uraian Khusus:': 'Özel Açıklama:'
+            },
+            'fr': {
+                'Jelajah Tematis': 'Exploration thématique',
+                'Cari Surat & Ayat': 'Chercher Sourate & Verset',
+                'Cari Surat & Nomor Ayat': 'Chercher Sourate & Numéro de Verset',
+                'Cari Kata (Uraian & Ayat)': 'Recherche par mot-clé',
+                'Pencarian Kata: Uraian & Ayat': 'Recherche par mot-clé : Thèmes & Versets',
+                'Pilih Surat & Nomor Ayat': 'Sélectionner la sourate et le verset',
+                'Ketahui Tema, Pokok Bahasan, dan Sub Pokok Bahasan ayat yang Anda pilih secara instan': 'Découvrez instantanément le thème et les sous-thèmes du verset sélectionné',
+                'Cari topik bahasan/uraian tematis dan teks terjemahan ayat berdasarkan kata kunci secara instan': 'Recherchez instantanément des thèmes et des traductions de versets par mot-clé',
+                'Cari': 'Rechercher',
+                'Filter Hasil:': 'Filtrer les résultats :',
+                'Semua Hasil': 'Tous les résultats',
+                'Hanya Uraian Tematis': 'Thèmes uniquement',
+                'Hanya Teks Terjemahan Ayat': 'Traductions de versets uniquement',
+                '💡 Kata Kunci Populer:': '💡 Mots-clés populaires :',
+                'Sabar': 'Patience',
+                'Riba': 'Usure / Riba',
+                'Shalat': 'Prière',
+                'Taubat': 'Repentance',
+                'Rezeki': 'Subsistance',
+                'Surga': 'Paradis',
+                'Neraka': 'Enfer',
+                'Orang Tua': 'Parents',
+                'Sedekah': 'Aumône',
+                'Kiamat': 'Fin des temps',
+                'Syukur': 'Gratitude',
+                'Surat Al-Qur\'an (1–114):': 'Sourates du Coran (1–114):',
+                'Nomor Ayat:': 'Numéro du verset:',
+                '-- Pilih Surat --': '-- Choisir une sourate --',
+                'Pilih Ayat': 'Choisir le verset',
+                'Klasifikasi Al-Qur\'an Tematis': 'Classification thématique du Coran',
+                'Buka di Halaman Tematik': 'Ouvrir dans la vue thématique',
+                'Salin Ayat': 'Copier le verset',
+                'Salin': 'Copier',
+                'Dengarkan': 'Écouter',
+                'Tanya AI': 'Demander à l\'IA',
+                'Cari Ayat': 'Chercher verset',
+                'Tema Besar:': 'Thème principal:',
+                'Pokok Bahasan:': 'Sujet principal:',
+                'Sub Pokok Bahasan:': 'Sous-thème:',
+                'Uraian Khusus:': 'Contexte spécifique:'
+            }
+        };
+
+        let quranData = {};
+        const ayahTranslationCache = {};
+
+        const LANG_CONFIG = {
+            'id-ID': {
+                code: 'id',
+                edition: 'id.indonesian',
+                label: 'Bahasa Terjemahan & Suara:',
+                translatorLabel: 'Terjemahan:',
+                translator: 'Kementerian Agama RI (Kemenag)',
+                hint: '<span>✨</span> Klik pada kartu untuk membalik dan melihat teks Arabnya',
+                prevBtn: '⬅️ Sub Bahasan Sebelum',
+                nextBtn: 'Sub Bahasan Berikutnya ➡️',
+                subMeta: count => `Menampilkan ${count} Kelompok Uraian Flash Card`,
+                groupMeta: count => `<span>📖 ${count} Ayat Al-Qur'an</span>`,
+                hideVerses: 'Hide Ayat',
+                showVerses: 'Show Ayat',
+                playText: ' Dengarkan',
+                stopText: ' Stop',
+                aiText: ' Tanya AI',
+                copyText: ' Salin Teks Ini',
+                copiedText: ' Tersalin!',
+                copyTitle: 'Salin Teks Terjemahan',
+                loadingText: 'Menerjemahkan...',
+                errorText: 'Gagal menerjemahkan',
+                connErrorText: 'Error koneksi',
+                emptySelect: 'Silakan pilih kategori di atas untuk melihat ayat.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Jelaskan singkat QS. ${surah}:${ayat} terkait "${uraian}": "${text}"`
+            },
+            'ms-MY': {
+                code: 'ms',
+                edition: 'ms.basmeih',
+                label: 'Bahasa Terjemahan & Suara:',
+                translatorLabel: 'Terjemahan:',
+                translator: 'Sheikh Abdullah Muhammad Basmeih',
+                hint: '<span>✨</span> Klik pada kad untuk membalikkan dan melihat teks Arab',
+                prevBtn: '⬅️ Sub Bahasan Sebelum',
+                nextBtn: 'Sub Bahasan Seterusnya ➡️',
+                subMeta: count => `Memaparkan ${count} Kumpulan Huraian Flash Card`,
+                groupMeta: count => `<span>📖 ${count} Ayat Al-Quran</span>`,
+                hideVerses: 'Sembunyi Ayat',
+                showVerses: 'Papar Ayat',
+                playText: ' Dengar',
+                stopText: ' Berhenti',
+                aiText: ' Tanya AI',
+                copyText: ' Salin Teks Ini',
+                copiedText: ' Disalin!',
+                copyTitle: 'Salin Teks Terjemahan',
+                loadingText: 'Menterjemah...',
+                errorText: 'Gagal menterjemah',
+                connErrorText: 'Ralat sambungan',
+                emptySelect: 'Sila pilih kategori di atas untuk melihat ayat.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Terangkan secara ringkas QS. ${surah}:${ayat} berkaitan "${uraian}": "${text}"`
+            },
+            'en-US': {
+                code: 'en',
+                edition: 'en.sahih',
+                label: 'Translation & Voice Language:',
+                translatorLabel: 'Translator:',
+                translator: 'Saheeh International',
+                hint: '<span>✨</span> Click on card to flip and view Arabic text',
+                prevBtn: '⬅️ Previous Sub Topic',
+                nextBtn: 'Next Sub Topic ➡️',
+                subMeta: count => `Displaying ${count} Flash Card Groups`,
+                groupMeta: count => `<span>📖 ${count} Quran Verses</span>`,
+                hideVerses: 'Hide Verses',
+                showVerses: 'Show Verses',
+                playText: ' Listen',
+                stopText: ' Stop',
+                aiText: ' Ask AI',
+                copyText: ' Copy This Text',
+                copiedText: ' Copied!',
+                copyTitle: 'Copy Translation Text',
+                loadingText: 'Translating...',
+                errorText: 'Failed to translate',
+                connErrorText: 'Connection error',
+                emptySelect: 'Please select a category above to view verses.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Briefly explain Quran ${surah}:${ayat} regarding "${uraian}": "${text}"`
+            },
+            'ur-PK': {
+                code: 'ur',
+                edition: 'ur.jalandhry',
+                label: 'ترجمہ اور آواز کی زبان:',
+                translatorLabel: 'مترجم:',
+                translator: 'Fateh Muhammad Jalandhry (جالندھری)',
+                hint: '<span>✨</span> عربی متن دیکھنے کے لیے کارڈ پر کلک کریں',
+                prevBtn: '⬅️ پچھلا ذیلی موضوع',
+                nextBtn: 'اگلا ذیلی موضوع ➡️',
+                subMeta: count => `${count} فلیش کارڈ گروپس دکھائے جا رہے ہیں`,
+                groupMeta: count => `<span>📖 ${count} قرآنی آیات</span>`,
+                hideVerses: 'آیات چھپائیں',
+                showVerses: 'آیات دکھائیں',
+                playText: ' سنیں',
+                stopText: ' روکیں',
+                aiText: ' AI سے پوچھیں',
+                copyText: ' یہ متن کاپی کریں',
+                copiedText: ' کاپی ہو گیا!',
+                copyTitle: 'ترجمہ کا متن کاپی کریں',
+                loadingText: 'ترجمہ کیا جا رہا ہے...',
+                errorText: 'ترجمہ ناکام رہا',
+                connErrorText: 'کنکشن کی خرابی',
+                emptySelect: 'آیات دیکھنے کے لیے براہ کرم اوپر دی گئی کیٹیگری منتخب کریں۔',
+                cssClass: 'lang-ur',
+                aiPrompt: (surah, ayat, uraian, text) => `قرآن ${surah}:${ayat} کی مختصراً وضاحت کریں برائے "${uraian}": "${text}"`
+            },
+            'bn-BD': {
+                code: 'bn',
+                edition: 'bn.bengali',
+                label: 'অনুবাদ ও ভয়েস ভাষা:',
+                translatorLabel: 'অনুবাদক:',
+                translator: 'Maulana Muhiuddin Khan (মুহিউদ্দীন খান)',
+                hint: '<span>✨</span> আরবি পাঠ দেখতে কার্ডটিতে ক্লিক করুন',
+                prevBtn: '⬅️ পূর্ববর্তী উপ-বিষয়',
+                nextBtn: 'পরবর্তী উপ-বিষয় ➡️',
+                subMeta: count => `${count}টি ফ্ল্যাশ কার্ড গ্রুপ দেখানো হচ্ছে`,
+                groupMeta: count => `<span>📖 ${count}টি কোরআনের আয়াত</span>`,
+                hideVerses: 'আয়াত লুকান',
+                showVerses: 'আয়াত দেখান',
+                playText: ' শুনুন',
+                stopText: ' থামুন',
+                aiText: ' AI কে জিজ্ঞাসা করুন',
+                copyText: ' এই পাঠটি অনুলিপি করুন',
+                copiedText: ' অনুলিপি করা হয়েছে!',
+                copyTitle: 'অনুবাদ টেক্সট কপি করুন',
+                loadingText: 'অনুবাদ করা হচ্ছে...',
+                errorText: 'অনুবাদ ব্যর্থ হয়েছে',
+                connErrorText: 'সংযোগ ত্রুটি',
+                emptySelect: 'আয়াত দেখতে উপরে বিভাগ নির্বাচন করুন।',
+                cssClass: 'lang-bn',
+                aiPrompt: (surah, ayat, uraian, text) => `সংক্ষেপে ব্যাখ্যা করুন কোরআন ${surah}:${ayat} প্রসঙ্গ "${uraian}": "${text}"`
+            },
+            'hi-IN': {
+                code: 'hi',
+                edition: 'hi.hindi',
+                label: 'अनुवाद और आवाज़ की भाषा:',
+                translatorLabel: 'अनुवादक:',
+                translator: 'Suhel Farooq Khan & Saifur Rahman Nadwi',
+                hint: '<span>✨</span> अरबी पाठ देखने के लिए कार्ड पर क्लिक करें',
+                prevBtn: '⬅️ पिछला उप-विषय',
+                nextBtn: 'अगला उप-विषय ➡️',
+                subMeta: count => `${count} फ़्लैश कार्ड समूह दिखाए जा रहे हैं`,
+                groupMeta: count => `<span>📖 ${count} क़ुरआन की आयतें</span>`,
+                hideVerses: 'आयतें छिपाएं',
+                showVerses: 'आयतें दिखाएं',
+                playText: ' सुनें',
+                stopText: ' रोकें',
+                aiText: ' AI से पूछें',
+                copyText: ' यह पाठ कॉपी करें',
+                copiedText: ' कॉपी हो गया!',
+                copyTitle: 'अनुवाद पाठ कॉपी करें',
+                loadingText: 'अनुवाद हो रहा है...',
+                errorText: 'अनुवाद विफल रहा',
+                connErrorText: 'कनेक्शन त्रुटि',
+                emptySelect: 'आयतें देखने के लिए कृपया ऊपर एक श्रेणी चुनें।',
+                cssClass: 'lang-hi',
+                aiPrompt: (surah, ayat, uraian, text) => `संक्षेप में समझाइए क़ुरआन ${surah}:${ayat} संदर्भ "${uraian}": "${text}"`
+            },
+            'ru-RU': {
+                code: 'ru',
+                edition: 'ru.kuliev',
+                label: 'Язык перевода и озвучки:',
+                translatorLabel: 'Переводчик:',
+                translator: 'Elmir Kuliev (Эльмир Кулиев)',
+                hint: '<span>✨</span> Нажмите на карточку, чтобы перевернуть и увидеть арабский текст',
+                prevBtn: '⬅️ Предыдущая подтема',
+                nextBtn: 'Следующая подтема ➡️',
+                subMeta: count => `Отображение ${count} групп карточек`,
+                groupMeta: count => `<span>📖 ${count} аятов Корана</span>`,
+                hideVerses: 'Скрыть аяты',
+                showVerses: 'Показать аяты',
+                playText: ' Слушать',
+                stopText: ' Стоп',
+                aiText: ' Спросить у ИИ',
+                copyText: ' Копировать этот текст',
+                copiedText: ' Скопировано!',
+                copyTitle: 'Копировать текст перевода',
+                loadingText: 'Перевод...',
+                errorText: 'Ошибка перевода',
+                connErrorText: 'Ошибка подключения',
+                emptySelect: 'Пожалуйста, выберите категорию выше для просмотра аятов.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Кратко объясните Коран ${surah}:${ayat} по теме "${uraian}": "${text}"`
+            },
+            'zh-CN': {
+                code: 'zh-CN',
+                edition: 'zh.jian',
+                label: '翻译与语音语言：',
+                translatorLabel: '译者：',
+                translator: 'Muhammad Ma Jian (马坚)',
+                hint: '<span>✨</span> 点击卡片翻转以查看阿拉伯语原文',
+                prevBtn: '⬅️ 上一个子主题',
+                nextBtn: '下一个子主题 ➡️',
+                subMeta: count => `显示 ${count} 个闪卡分类`,
+                groupMeta: count => `<span>📖 ${count} 节古兰经经文</span>`,
+                hideVerses: '隐藏经文',
+                showVerses: '显示经文',
+                playText: ' 朗读',
+                stopText: ' 停止',
+                aiText: ' 询问 AI',
+                copyText: ' 复制此文本',
+                copiedText: ' 已复制！',
+                copyTitle: '复制译文',
+                loadingText: '正在翻译...',
+                errorText: '翻译失败',
+                connErrorText: '网络连接错误',
+                emptySelect: '请在上方选择分类以查看经文。',
+                cssClass: 'lang-zh',
+                aiPrompt: (surah, ayat, uraian, text) => `简要解释古兰经 ${surah}:${ayat} 关于 "${uraian}"： "${text}"`
+            },
+            'fr-FR': {
+                code: 'fr',
+                edition: 'fr.hamidullah',
+                label: 'Langue de traduction et voix :',
+                translatorLabel: 'Traducteur :',
+                translator: 'Dr. Muhammad Hamidullah',
+                hint: '<span>✨</span> Cliquez sur la carte pour tourner et voir le texte arabe',
+                prevBtn: '⬅️ Sous-sujet précédent',
+                nextBtn: 'Sous-sujet suivant ➡️',
+                subMeta: count => `Affichage de ${count} groupes de cartes`,
+                groupMeta: count => `<span>📖 ${count} Versets du Coran</span>`,
+                hideVerses: 'Masquer les versets',
+                showVerses: 'Afficher les versets',
+                playText: ' Écouter',
+                stopText: ' Arrêter',
+                aiText: ' Demander à l\'IA',
+                loadingText: 'Traduction...',
+                errorText: 'Échec de la traduction',
+                connErrorText: 'Erreur de connexion',
+                emptySelect: 'Veuillez sélectionner une catégorie ci-dessus pour afficher les versets.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Expliquez brièvement le Coran ${surah}:${ayat} concernant "${uraian}" : "${text}"`
+            },
+            'es-ES': {
+                code: 'es',
+                edition: 'es.cortes',
+                label: 'Idioma de traducción y voz:',
+                translatorLabel: 'Traductor:',
+                translator: 'Julio Cortés',
+                hint: '<span>✨</span> Haz clic en la tarjeta para girarla y ver el texto en árabe',
+                prevBtn: '⬅️ Subtema anterior',
+                nextBtn: 'Subtema siguiente ➡️',
+                subMeta: count => `Mostrando ${count} Grupos de Tarjetas`,
+                groupMeta: count => `<span>📖 ${count} Versículos del Corán</span>`,
+                hideVerses: 'Ocultar versículos',
+                showVerses: 'Mostrar versículos',
+                playText: ' Escuchar',
+                stopText: ' Detener',
+                aiText: ' Preguntar a la IA',
+                copyText: ' Copiar este texto',
+                copiedText: ' ¡Copiado!',
+                copyTitle: 'Copiar texto de traducción',
+                copyText: ' Copier ce texte',
+                copiedText: ' Copié !',
+                copyTitle: 'Copier le texte de la traduction',
+                loadingText: 'Traduciendo...',
+                errorText: 'Error al traducir',
+                connErrorText: 'Error de conexión',
+                emptySelect: 'Seleccione una categoría arriba para ver los versículos.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Explique brevemente el Corán ${surah}:${ayat} sobre "${uraian}": "${text}"`
+            },
+            'pt-PT': {
+                code: 'pt',
+                edition: 'pt.elhayek',
+                label: 'Idioma de tradução e voz:',
+                translatorLabel: 'Tradutor:',
+                translator: 'Prof. Samir El-Hayek',
+                hint: '<span>✨</span> Clique no cartão para virar e ver o texto em árabe',
+                prevBtn: '⬅️ Subtópico Anterior',
+                nextBtn: 'Próximo Subtópico ➡️',
+                subMeta: count => `Exibindo ${count} Grupos de Flash Cards`,
+                groupMeta: count => `<span>📖 ${count} Versículos do Alcorão</span>`,
+                hideVerses: 'Ocultar Versículos',
+                showVerses: 'Mostrar Versículos',
+                playText: ' Ouvir',
+                stopText: ' Parar',
+                aiText: ' Perguntar à IA',
+                copyText: ' Copiar este texto',
+                copiedText: ' Copiado!',
+                copyTitle: 'Copiar texto da tradução',
+                loadingText: 'Traduzindo...',
+                errorText: 'Falha ao traduzir',
+                connErrorText: 'Erro de conexão',
+                emptySelect: 'Selecione uma categoria acima para visualizar os versículos.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Explique brevemente o Alcorão ${surah}:${ayat} sobre "${uraian}": "${text}"`
+            },
+            'it-IT': {
+                code: 'it',
+                edition: 'it.piccardo',
+                label: 'Lingua di traduzione e voce:',
+                translatorLabel: 'Traduzione:',
+                translator: 'Hamza Roberto Piccardo',
+                hint: '<span>✨</span> Clicca sulla scheda per girarla e vedere il testo in arabo',
+                prevBtn: '⬅️ Sotto-argomento precedente',
+                nextBtn: 'Sotto-argomento successivo ➡️',
+                subMeta: count => `Visualizzazione di ${count} gruppi di flash card`,
+                groupMeta: count => `<span>📖 ${count} Versetti del Corano</span>`,
+                hideVerses: 'Nascondi versetti',
+                showVerses: 'Mostra versetti',
+                playText: ' Ascolta',
+                stopText: ' Ferma',
+                aiText: ' Chiedi all\'IA',
+                loadingText: 'Traduzione in corso...',
+                errorText: 'Traduzione non riuscita',
+                connErrorText: 'Errore di connessione',
+                emptySelect: 'Seleziona una categoria sopra per visualizzare i versetti.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Spiega brevemente il Corano ${surah}:${ayat} riguardo a "${uraian}": "${text}"`
+            },
+            'tr-TR': {
+                code: 'tr',
+                edition: 'tr.diyanet',
+                label: 'Çeviri ve Ses Dili:',
+                translatorLabel: 'Çevirmen:',
+                translator: 'Diyanet İşleri Başkanlığı',
+                hint: '<span>✨</span> Arapça metni görmek ve kartı çevirmek için tıklayın',
+                prevBtn: '⬅️ Önceki Alt Konu',
+                nextBtn: 'Sonraki Alt Konu ➡️',
+                subMeta: count => `${count} Bilgi Kartı Grubu Gösteriliyor`,
+                groupMeta: count => `<span>📖 ${count} Kur'an Ayeti</span>`,
+                hideVerses: 'Ayetleri Gizle',
+                showVerses: 'Ayetleri Göster',
+                playText: ' Dinle',
+                stopText: ' Durdur',
+                aiText: ' Yapay Zekaya Sor',
+                copyText: ' Bu Metni Kopyala',
+                copiedText: ' Kopyalandı!',
+                copyTitle: 'Çeviri Metnini Kopyala',
+                copyText: ' Copia questo testo',
+                copiedText: ' Copiato!',
+                copyTitle: 'Copia il testo della traduzione',
+                loadingText: 'Çevriliyor...',
+                errorText: 'Çeviri başarısız',
+                connErrorText: 'Bağlantı hatası',
+                emptySelect: 'Ayetleri görmek için lütfen yukarıdan bir kategori seçin.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Kur'an ${surah}:${ayat} ayetini "${uraian}" konusu bağlamında kısaca açıklayın: "${text}"`
+            },
+            'de-DE': {
+                code: 'de',
+                edition: 'de.bubenheim',
+                label: 'Übersetzungs- & Audiosprache:',
+                translatorLabel: 'Übersetzer:',
+                translator: 'Frank Bubenheim & Dr. Nadeem Elyas',
+                hint: '<span>✨</span> Auf die Karte klicken, um den arabischen Text anzuzeigen',
+                prevBtn: '⬅️ Vorheriges Unterthema',
+                nextBtn: 'Nächstes Unterthema ➡️',
+                subMeta: count => `${count} Karteikartengruppen werden angezeigt`,
+                groupMeta: count => `<span>📖 ${count} Koranverse</span>`,
+                hideVerses: 'Verse ausblenden',
+                showVerses: 'Verse anzeigen',
+                playText: ' Anhören',
+                stopText: ' Stopp',
+                aiText: ' KI fragen',
+                copyText: ' Diesen Text kopieren',
+                copiedText: ' Kopiert!',
+                copyTitle: 'Übersetzungstext kopieren',
+                loadingText: 'Übersetzen...',
+                errorText: 'Übersetzung fehlgeschlagen',
+                connErrorText: 'Verbindungsfehler',
+                emptySelect: 'Bitte wählen Sie oben eine Kategorie aus, um Verse anzuzeigen.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Erklären Sie kurz Koran ${surah}:${ayat} im Zusammenhang mit "${uraian}": "${text}"`
+            },
+            'ko-KR': {
+                code: 'ko',
+                edition: 'ko.korean',
+                label: '번역 및 음성 언어:',
+                translatorLabel: '번역자:',
+                translator: 'Dr. Hamid Choi (최영길 / Choi Yeong-kil)',
+                hint: '<span>✨</span> 카드를 클릭하여 뒤집고 아랍어 원문을 확인하세요',
+                prevBtn: '⬅️ 이전 소주제',
+                nextBtn: '다음 소주제 ➡️',
+                subMeta: count => `${count}개 플래시 카드 그룹 표시 중`,
+                groupMeta: count => `<span>📖 ${count}개 쿠란 구절</span>`,
+                hideVerses: '구절 숨기기',
+                showVerses: '구절 표시',
+                playText: ' 듣기',
+                stopText: ' 정지',
+                aiText: ' AI 질문',
+                copyText: ' 이 텍스트 복사',
+                copiedText: ' 복사됨!',
+                copyTitle: '번역 텍스트 복사',
+                loadingText: '번역 중...',
+                errorText: '번역 실패',
+                connErrorText: '연결 오류',
+                emptySelect: '구절을 보려면 상단에서 카테고리를 선택하세요.',
+                cssClass: 'lang-ko',
+                aiPrompt: (surah, ayat, uraian, text) => `쿠란 ${surah}:${ayat} "${uraian}" 주제와 관련하여 간략히 설명해 주세요: "${text}"`
+            },
+            'ja-JP': {
+                code: 'ja',
+                edition: 'ja.japanese',
+                label: '翻訳と言語音声：',
+                translatorLabel: '翻訳者：',
+                translator: 'Umar Ryoichi Mita (三田 了一)',
+                hint: '<span>✨</span> カードをクリックして裏返し、アラビア語の原文を表示',
+                prevBtn: '⬅️ 前のサブトピック',
+                nextBtn: '次のサブトピック ➡️',
+                subMeta: count => `${count} 個のフラッシュカードグループを表示中`,
+                groupMeta: count => `<span>📖 ${count} 節のコーラン</span>`,
+                hideVerses: '節を非表示',
+                showVerses: '節を表示',
+                playText: ' 音声再生',
+                stopText: ' 停止',
+                aiText: ' AIに質問',
+                copyText: ' このテキストをコピー',
+                copiedText: ' コピー完了！',
+                copyTitle: '翻訳テキストをコピー',
+                loadingText: '翻訳中...',
+                errorText: '翻訳に失敗しました',
+                connErrorText: '接続エラー',
+                emptySelect: '節を表示するには、上のカテゴリを選択してください。',
+                cssClass: 'lang-ja',
+                aiPrompt: (surah, ayat, uraian, text) => `コーラン第${surah}章${ayat}節について「${uraian}」の文脈で簡潔に説明してください: 「${text}」`
+            },
+            'th-TH': {
+                code: 'th',
+                edition: 'th.thai',
+                label: 'ภาษาคำแปลและเสียง:',
+                translatorLabel: 'การแปล:',
+                translator: 'ศูนย์กษัตริย์ฟะฮัดเพื่อการพิมพ์อัลกุรอาน (King Fahad Quran Complex)',
+                hint: '<span>✨</span> คลิกที่การ์ดเพื่อพลิกดูข้อความภาษาอาหรับ',
+                prevBtn: '⬅️ หัวข้อย่อยก่อนหน้า',
+                nextBtn: 'หัวข้อย่อยถัดไป ➡️',
+                subMeta: count => `กำลังแสดง ${count} กลุ่มหัวข้อย่อยแฟลชการ์ด`,
+                groupMeta: count => `<span>📖 ${count} อายะฮ์อัลกุรอาน</span>`,
+                hideVerses: 'ซ่อนอายะฮ์',
+                showVerses: 'แสดงอายะฮ์',
+                playText: ' ฟังเสียง',
+                stopText: ' หยุด',
+                aiText: ' ถาม AI',
+                copyText: ' คัดลอกข้อความนี้',
+                copiedText: ' คัดลอกแล้ว!',
+                copyTitle: 'คัดลอกข้อความคำแปล',
+                loadingText: 'กำลังแปล...',
+                errorText: 'การแปลล้มเหลว',
+                connErrorText: 'ข้อผิดพลาดในการเชื่อมต่อ',
+                emptySelect: 'โปรดเลือกหมวดหมู่ด้านบนเพื่อดูอายะฮ์',
+                cssClass: 'lang-th',
+                aiPrompt: (surah, ayat, uraian, text) => `อธิบายสั้นๆ เกี่ยวกับอัลกุรอาน ซูเราะฮ์ที่ ${surah}:${ayat} ในหัวข้อ "${uraian}": "${text}"`
+            },
+            'ha-NG': {
+                code: 'ha',
+                edition: 'ha.gumi',
+                label: 'Harshen Fassara da Murya:',
+                translatorLabel: 'Mai fassara:',
+                translator: 'Sheikh Abubakar Mahmoud Gumi',
+                hint: '<span>✨</span> Danna katin domin juyawa da ganin rubutun Larabci',
+                prevBtn: '⬅️ Karamin Take Na Baya',
+                nextBtn: 'Karamin Take Na Gaba ➡️',
+                subMeta: count => `Ana nuna rukunan katunan ${count}`,
+                groupMeta: count => `<span>📖 Ayoyin Alƙur\'ani ${count}</span>`,
+                hideVerses: 'Ɓoye Ayoyi',
+                showVerses: 'Nuna Ayoyi',
+                playText: ' Saurara',
+                stopText: ' Tsaya',
+                aiText: ' Tambayi AI',
+                copyText: ' Kwafi Wannan Rubutun',
+                copiedText: ' An kwafa!',
+                copyTitle: 'Kwafi Rubutun Fassara',
+                loadingText: 'Ana fassarawa...',
+                errorText: 'Fassara ta gaza',
+                connErrorText: 'Matsalar haɗi',
+                emptySelect: 'Da fatan za a zaɓi rukuni a sama don duba ayoyi.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Bayyana a takaice Alƙur\'ani ${surah}:${ayat} dangane da "${uraian}": "${text}"`
+            },
+            'sw-TZ': {
+                code: 'sw',
+                edition: 'sw.barwani',
+                label: 'Lugha ya Tafsiri na Sauti:',
+                translatorLabel: 'Mfasiri:',
+                translator: 'Sheikh Ali Muhsin Al-Barwani',
+                hint: '<span>✨</span> Bofya kwenye kadi ili kuigeuza na kuona maandishi ya Kiarabu',
+                prevBtn: '⬅️ Mada Ndogo Iliyotangulia',
+                nextBtn: 'Mada Ndogo Inayofuata ➡️',
+                subMeta: count => `Inaonyesha Vikundi ${count} vya Flash Cards`,
+                groupMeta: count => `<span>📖 Aya ${count} za Qur\'ani</span>`,
+                hideVerses: 'Ficha Aya',
+                showVerses: 'Onyesha Aya',
+                playText: ' Sikiliza',
+                stopText: ' Simamisha',
+                aiText: ' Uliza AI',
+                copyText: ' Nakili Maandishi Haya',
+                copiedText: ' Imenakiliwa!',
+                copyTitle: 'Nakili Maandishi ya Tafsiri',
+                loadingText: 'Inatafsiri...',
+                errorText: 'Imeshindwa kutafsiri',
+                connErrorText: 'Hitilafu ya muunganisho',
+                emptySelect: 'Tafadhali chagua kitengo hapo juu ili kuona aya.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Eleza kwa ufupi Qur'ani ${surah}:${ayat} kuhusu "${uraian}": "${text}"`
+            },
+            'bs-BA': {
+                code: 'bs',
+                edition: 'bs.korkut',
+                label: 'Jezik prijevoda i glasa:',
+                translatorLabel: 'Prevodilac:',
+                translator: 'Besim Korkut',
+                hint: '<span>✨</span> Kliknite na karticu da biste je okrenuli i vidjeli arapski tekst',
+                prevBtn: '⬅️ Prethodna podtema',
+                nextBtn: 'Sljedeća podtema ➡️',
+                subMeta: count => `Prikazano ${count} grupa flash kartica`,
+                groupMeta: count => `<span>📖 ${count} kur\'anskih ajeta</span>`,
+                hideVerses: 'Sakrij ajete',
+                showVerses: 'Prikaži ajete',
+                playText: ' Slušaj',
+                stopText: ' Zaustavi',
+                aiText: ' Pitaj AI',
+                copyText: ' Kopiraj ovaj tekst',
+                copiedText: ' Kopirano!',
+                copyTitle: 'Kopiraj tekst prijevoda',
+                loadingText: 'Prevođenje...',
+                errorText: 'Prevođenje nije uspjelo',
+                connErrorText: 'Greška u povezivanju',
+                emptySelect: 'Molimo odaberite kategoriju iznad da biste vidjeli ajete.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Ukratko objasnite Kur\'an ${surah}:${ayat} u vezi "${uraian}": "${text}"`
+            },
+            'sq-AL': {
+                code: 'sq',
+                edition: 'sq.ahmeti',
+                label: 'Gjuha e përkthimit dhe zërit:',
+                translatorLabel: 'Përkthyesi:',
+                translator: 'H. Sherif Ahmeti',
+                hint: '<span>✨</span> Klikoni mbi kartë për ta kthyer dhe parë tekstin arabisht',
+                prevBtn: '⬅️ Nëntema e mëparshme',
+                nextBtn: 'Nëntema tjetër ➡️',
+                subMeta: count => `Po shfaqen ${count} grupe kartash`,
+                groupMeta: count => `<span>📖 ${count} Ajete Kur\'anore</span>`,
+                hideVerses: 'Fshih Ajetet',
+                showVerses: 'Shfaq Ajetet',
+                playText: ' Dëgjo',
+                stopText: ' Ndalo',
+                aiText: ' Pyet AI',
+                copyText: ' Kopjo këtë tekst',
+                copiedText: ' U kopjua!',
+                copyTitle: 'Kopjo tekstin e përkthimit',
+                loadingText: 'Duke përkthyer...',
+                errorText: 'Dështoi përkthimi',
+                connErrorText: 'Gabim lidhjeje',
+                emptySelect: 'Ju lutemi zgjidhni një kategori më lart për të parë ajetet.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Shpjegoni shkurt Kur\'anin ${surah}:${ayat} lidhur me "${uraian}": "${text}"`
+            },
+            'ber-DZ': {
+                code: 'ber',
+                edition: 'ber.mensur',
+                label: 'ⵜⵓⵜⵍⴰⵢⵜ ⴷ ⵜⴰⵖⴻⵛⵜ ⵏ ⵜⵙⵓⵇⵉⵍⵜ:',
+                translatorLabel: 'ⵜⴰⵙⵓⵇⵉⵍⵜ:',
+                translator: 'Ramdane At Mansour (At Mensur)',
+                hint: '<span>✨</span> ⴽⵏⴻⴷ ⵖⴻⴼ ⵜⴽⴰⵔⴹⴰ ⵉⵡⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵜⵉⴷⵜⴻⵔⵔⴻⴹ ⵓ ⴰⴷ ⵜⵡⴰⵍⵉⴹ ⴰⴹⵔⵉⵙ ⴰⵄⵔⴰⴱ',
+                prevBtn: '⬅️ ⴰⵙⴽⴰⵙⵉ ⴰⵇⴱⵓⵔ',
+                nextBtn: 'ⴰⵙⴽⴰⵙⵉ ⵉⴷ ⵉⵜⴻⴷⴷⵓⵏ ➡️',
+                subMeta: count => `ⵢⴻⵜⵜⴱⴻⴳⴳⵉⵏⴷ ${count} ⵜⴰⵔⴱⴰⵄⵜ ⵏ ⵓⵙⴻⴼⵀⴻⵎ ⵏ ⵜⴽⴰⵔⴹⴰ ⵏ ⴼⵍⴰⵙⵀ`,
+                groupMeta: count => `<span>📖 ${count} ⴰⵢⴰⵜ ⵏ ⵍⵇⵓⵔⴰⵏ</span>`,
+                hideVerses: 'ⴼⴼⴻⵔ ⴰⵢⴰⵜ',
+                showVerses: 'ⵙⴽⴻⵏⴷ ⴰⵢⴰⵜ',
+                playText: ' ⵙⵙⴻⴼⵍⴻⴷ',
+                stopText: ' ⵃⴻⴱⵙⴻⵜ',
+                aiText: ' ⵢⴻⵙⵜⴻⵇⵙⴰ AI',
+                copyText: ' ⵏⵖⴻⵍ ⴰⴹⵔⵉⵙ-ⴰ',
+                copiedText: ' ⵢⴻⵜⵜⵡⴰⵏⵖⴻⵍ!',
+                copyTitle: 'ⵏⵖⴻⵍ ⴰⴹⵔⵉⵙ ⵏ ⵜⵙⵓⵇⵉⵍⵜ',
+                loadingText: 'ⴰⵙⵓⵇⴻⵍ...',
+                errorText: 'ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵜⵜⵡⴰⵙⵓⵇⴻⵍ',
+                connErrorText: 'ⵜⵓⵛⵛⴹⴰ ⵏ ⵜⵓⵇⵇⵏⴰ',
+                emptySelect: 'ⵜⵜⵅⵉⵍⴽ, ⴼⵔⴻⵏ ⵢⵉⵡⴻⵜ ⵏ ⵜⴰⴳⴳⴰⵢⵜ ⵙ ⵓⴼⴻⵍⵍⴰ ⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵡⴰⵍⵉⴹ ⵉⵎⴻⵙⵍⴰⵢⴻⵏ.',
+                cssClass: 'lang-ber',
+                aiPrompt: (surah, ayat, uraian, text) => `ⵙⵙⴻⴼⵀⴻⵎⴷ ⵙ ⵜⵖⵓⵔⵉ ⵜⴰⵡⴻⵣⵍⴰⵏⵜ ⵍⵇⵓⵔⴰⵏ ${surah}:${ayat} ⵉⵥⵍⵉⵏ ⵙ "${uraian}": "${text}"`
+            },
+            'am-ET': {
+                code: 'am',
+                edition: 'am.sadiq',
+                label: 'ቋንቋ እና ድምጽ ትርጉም፡',
+                translatorLabel: 'ትርጉም፡-',
+                translator: 'Muhammed Sadiq & Muhammed Sani Habib (ሳዲቅ & ሳኒ ሐቢብ)',
+                hint: '<span>✨</span> ካርዱን ለመገልበጥ እና የአረብኛ ጽሁፍን ለማየት ካርዱን ጠቅ ያድርጉ',
+                prevBtn: '⬅️ ቀዳሚ ንዑስ ውይይት',
+                nextBtn: 'ቀጣይ ንዑስ ውይይት ➡️',
+                subMeta: count => `ያሳያል ${count} የፍላሽ ካርድ መግለጫ ቡድን`,
+                groupMeta: count => `<span>📖 ${count} የቁርዓን አንቀጾች</span>`,
+                hideVerses: 'ጥቅስ ደብቅ',
+                showVerses: 'ጥቅስ አሳይ',
+                playText: ' ያዳምጡ',
+                stopText: ' ተወ',
+                aiText: ' AI ጠይቅ',
+                copyText: ' ይህንን ጽሑፍ ቅዳ',
+                copiedText: ' ተቀድቷል!',
+                copyTitle: 'የትርጉም ጽሑፍ ቅዳ',
+                loadingText: 'በመተርጎም ላይ...',
+                errorText: 'መተርጎም አልተሳካም።',
+                connErrorText: 'የግንኙነት ስህተት',
+                emptySelect: 'ጥቅሶችን ለማየት እባክህ አንድ ምድብ ምረጥ።',
+                cssClass: 'lang-am',
+                aiPrompt: (surah, ayat, uraian, text) => `ቁርኣን ${surah}:${ayat} ስለ "${uraian}" በአጭሩ አብራራ፡ "${text}"`
+            },
+            'az-AZ': {
+                code: 'az',
+                edition: 'az.mammadaliyev',
+                label: 'Tərcümə Dili və Səs:',
+                translatorLabel: 'Tərcümə:',
+                translator: 'Vasim Məmmədəliyev & Ziya Bünyadov',
+                hint: '<span>✨</span> Kartı çevirmək və ərəb mətninə baxmaq üçün üzərinə klikləyin',
+                prevBtn: '⬅️ Əvvəlki Alt Müzakirə',
+                nextBtn: 'Növbəti Alt Müzakirə ➡️',
+                subMeta: count => `${count} Məlumat Kartı Qrupu göstərilir`,
+                groupMeta: count => `<span>📖 ${count} Quran Ayəsi</span>`,
+                hideVerses: 'Ayələri gizlət',
+                showVerses: 'Ayələri göstər',
+                playText: ' Qulaq as',
+                stopText: ' Dayan',
+                aiText: ' AI-dan soruş',
+                copyText: ' Bu mətni kopyalayın',
+                copiedText: ' Kopyalandı!',
+                copyTitle: 'Tərcümə mətnini kopyalayın',
+                loadingText: 'Tərcümə edilir...',
+                errorText: 'Tərcümə etmək alınmadı',
+                connErrorText: 'Bağlantı xətası',
+                emptySelect: 'Ayələrə baxmaq üçün yuxarıdakı kateqoriyanı seçin.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Quran ${surah}:${ayat} ayəsini "${uraian}" mövzusu kontekstində qısaca izah edin: "${text}"`
+            },
+            'bg-BG': {
+                code: 'bg',
+                edition: 'bg.theophanov',
+                label: 'Език на превода и глас:',
+                translatorLabel: 'Преводач:',
+                translator: 'Tzvetan Theophanov (Цветан Теофанов)',
+                hint: '<span>✨</span> Кликнете върху картата, за да я обърнете и видите арабския текст',
+                prevBtn: '⬅️ Предишна подтема',
+                nextBtn: 'Следваща подтема ➡️',
+                subMeta: count => `Показване на ${count} групи карти`,
+                groupMeta: count => `<span>📖 ${count} знамения (аяти) от Корана</span>`,
+                hideVerses: 'Скриване на аятите',
+                showVerses: 'Показване на аятите',
+                playText: ' Слушай',
+                stopText: ' Спри',
+                aiText: ' Попитай AI',
+                copyText: ' Копирай този текст',
+                copiedText: ' Копирано!',
+                copyTitle: 'Копирай текста на превода',
+                loadingText: 'Превежда се...',
+                errorText: 'Неуспешен превод',
+                connErrorText: 'Грешка при свързване',
+                emptySelect: 'Моля, изберете категория по-горе, за да видите стиховете.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Обяснете накратко Коран ${surah}:${ayat} по темата "${uraian}": "${text}"`
+            },
+            'cs-CZ': {
+                code: 'cs',
+                edition: 'cs.hrbek',
+                label: 'Jazyk překladu a hlasu:',
+                translatorLabel: 'Překladatel:',
+                translator: 'Ivan Hrbek (Preklad I. Hrbek)',
+                hint: '<span>✨</span> Kliknutím na kartu ji otočíte a zobrazíte arabský text',
+                prevBtn: '⬅️ Předchozí podtéma',
+                nextBtn: 'Další podtéma ➡️',
+                subMeta: count => `Zobrazení ${count} skupin kartiček`,
+                groupMeta: count => `<span>📖 ${count} koránských veršů</span>`,
+                hideVerses: 'Skrýt verše',
+                showVerses: 'Zobrazit verše',
+                playText: ' Poslouchat',
+                stopText: ' Zastavit',
+                aiText: ' Zeptejte se AI',
+                copyText: ' Zkopírovat tento text',
+                copiedText: ' Zkopírováno!',
+                copyTitle: 'Zkopírovat text překladu',
+                loadingText: 'Překládá se...',
+                errorText: 'Překlad se nezdařil',
+                connErrorText: 'Chyba připojení',
+                emptySelect: 'Pro zobrazení veršů prosím vyberte výše uvedenou kategorii.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Stručně vysvětlete Korán ${surah}:${ayat} v souvislosti s tématem "${uraian}": "${text}"`
+            },
+            'dv-MV': {
+                code: 'dv',
+                edition: 'dv.divehi',
+                label: 'ތަރުޖަމާ ބަހާއި އަޑު:',
+                translatorLabel: 'ތަރުޖަމާ:',
+                translator: 'Office of the President of Maldives (ދިވެހި ރައީސުލްޖުމްހޫރިއްޔާގެ އޮފީސް)',
+                hint: '<span>✨</span> ކާޑަށް ފިތާލުމުން ކާޑު އަނބުރާލާފައި ޢަރަބި ލިޔުން ފެންނާނެއެވެ',
+                prevBtn: '⬅️ ކުރީގެ ސަބް ޑިސްކަޝަން',
+                nextBtn: 'ދެން އޮންނަ ސަބް ޑިސްކަޝަން ➡️',
+                subMeta: count => `${count} ފްލެޝް ކާޑް ގްރޫޕް ދައްކާލައެވެ`,
+                groupMeta: count => `<span>📖 ${count} ޤުރުއާނުގެ އާޔަތް</span>`,
+                hideVerses: 'އާޔަތްތައް ފޮރުވާ',
+                showVerses: 'އާޔަތްތައް ދައްކާ',
+                playText: ' އަޑުއަހާ',
+                stopText: ' ހުއްޓާ',
+                aiText: ' AI އާ ސުވާލުކުރޭ',
+                copyText: ' މި ލިޔުން ކޮޕީކުރޭ',
+                copiedText: ' ކޮޕީ ކުރެވިއްޖެ!',
+                copyTitle: 'ތަރުޖަމާގެ ލިޔުން ކޮޕީކުރޭ',
+                loadingText: 'ތަރުޖަމާ ކުރަމުން...',
+                errorText: 'ތަރުޖަމާ ކުރަން ނާކާމިޔާބުވިއެވެ',
+                connErrorText: 'ކަނެކްޝަން އެރަރ',
+                emptySelect: 'އާޔަތްތައް ބަލާލުމަށް މަތީގައިވާ ކެޓަގަރީއެއް ހޮވުން އެދެމެވެ.',
+                cssClass: 'lang-dv',
+                aiPrompt: (surah, ayat, uraian, text) => `ކުރުކޮށް ޤުރުއާން ${surah}:${ayat} ބަޔާންކޮށްދީ "${uraian}" އާ ގުޅޭގޮތުން: "${text}"`
+            },
+            'nl-NL': {
+                code: 'nl',
+                edition: 'nl.siregar',
+                label: 'Vertaaltaal en stem:',
+                translatorLabel: 'Vertaling:',
+                translator: 'Sofian S. Siregar',
+                hint: '<span>✨</span> Klik op de kaart om om te draaien en de Arabische tekst te zien',
+                prevBtn: '⬅️ Vorig subonderwerp',
+                nextBtn: 'Volgend subonderwerp ➡️',
+                subMeta: count => `Weergave van ${count} flashcardgroepen`,
+                groupMeta: count => `<span>📖 ${count} Koranverzen</span>`,
+                hideVerses: 'Verzen verbergen',
+                showVerses: 'Verzen tonen',
+                playText: ' Luisteren',
+                stopText: ' Stoppen',
+                aiText: ' Vraag AI',
+                copyText: ' Kopieer deze tekst',
+                copiedText: ' Gekopieerd!',
+                copyTitle: 'Kopieer vertaaltekst',
+                loadingText: 'Vertalen...',
+                errorText: 'Vertaling mislukt',
+                connErrorText: 'Verbindingsfout',
+                emptySelect: 'Selecteer hierboven een categorie om verzen te bekijken.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Leg kort Koran ${surah}:${ayat} uit met betrekking tot "${uraian}": "${text}"`
+            },
+            'no-NO': {
+                code: 'no',
+                edition: 'no.berg',
+                label: 'Oversettelse og stemmespråk:',
+                translatorLabel: 'Oversetter:',
+                translator: 'Einar Berg',
+                hint: '<span>✨</span> Klikk på kortet for å snu og se den arabiske teksten',
+                prevBtn: '⬅️ Forrige deltema',
+                nextBtn: 'Neste deltema ➡️',
+                subMeta: count => `Viser ${count} grupper med flashkort`,
+                groupMeta: count => `<span>📖 ${count} koranvers</span>`,
+                hideVerses: 'Skjul vers',
+                showVerses: 'Vis vers',
+                playText: ' Lytt',
+                stopText: ' Stopp',
+                aiText: ' Spør AI',
+                copyText: ' Kopier denne teksten',
+                copiedText: ' Kopiert!',
+                copyTitle: 'Kopier oversettelsestekst',
+                loadingText: 'Oversetter...',
+                errorText: 'Kunne ikke oversette',
+                connErrorText: 'Tilkoblingsfeil',
+                emptySelect: 'Vennligst velg en kategori ovenfor for å se versene.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Forklar kort Koranen ${surah}:${ayat} angående "${uraian}": "${text}"`
+            },
+            'pl-PL': {
+                code: 'pl',
+                edition: 'pl.bielawskiego',
+                label: 'Język tłumaczenia i głosu:',
+                translatorLabel: 'Tłumaczenie:',
+                translator: 'Józef Bielawski',
+                hint: '<span>✨</span> Kliknij kartę, aby odwrócić i zobaczyć tekst arabski',
+                prevBtn: '⬅️ Poprzedni podtemat',
+                nextBtn: 'Następny podtemat ➡️',
+                subMeta: count => `Wyświetlanie ${count} grup fiszek`,
+                groupMeta: count => `<span>📖 ${count} wersetów Koranu</span>`,
+                hideVerses: 'Ukryj wersety',
+                showVerses: 'Pokaż wersety',
+                playText: ' Słuchaj',
+                stopText: ' Zatrzymaj',
+                aiText: ' Zapytaj AI',
+                copyText: ' Skopiuj ten tekst',
+                copiedText: ' Skopiowano!',
+                copyTitle: 'Skopiuj tekst tłumaczenia',
+                loadingText: 'Tłumaczenie...',
+                errorText: 'Błąd tłumaczenia',
+                connErrorText: 'Błąd połączenia',
+                emptySelect: 'Wybierz kategorię powyżej, aby wyświetlić wersety.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Wyjaśnij krótko Koran ${surah}:${ayat} w kontekście "${uraian}": "${text}"`
+            },
+            'ro-RO': {
+                code: 'ro',
+                edition: 'ro.grigore',
+                label: 'Limba de traducere și voce:',
+                translatorLabel: 'Traducere:',
+                translator: 'George Grigore',
+                hint: '<span>✨</span> Faceți clic pe card pentru a-l întoarce și a vedea textul în arabă',
+                prevBtn: '⬅️ Subiectul secundar anterior',
+                nextBtn: 'Subiectul secundar următor ➡️',
+                subMeta: count => `Se afișează ${count} grupuri de flashcard-uri`,
+                groupMeta: count => `<span>📖 ${count} Versete Coranice</span>`,
+                hideVerses: 'Ascunde versetele',
+                showVerses: 'Afișează versetele',
+                playText: ' Ascultă',
+                stopText: ' Oprește',
+                aiText: ' Întreabă AI',
+                copyText: ' Copiază acest text',
+                copiedText: ' Copiat!',
+                copyTitle: 'Copiază textul traducerii',
+                loadingText: 'Se traduce...',
+                errorText: 'Traducerea a eșuat',
+                connErrorText: 'Eroare de conexiune',
+                emptySelect: 'Vă rugăm să selectați o categorie de mai sus pentru a vedea versetele.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Explicați pe scurt Coranul ${surah}:${ayat} în contextul "${uraian}": "${text}"`
+            },
+            'sv-SE': {
+                code: 'sv',
+                edition: 'sv.bernstrom',
+                label: 'Översättnings- och röstspråk:',
+                translatorLabel: 'Översättning:',
+                translator: 'Knut Bernström',
+                hint: '<span>✨</span> Klicka på kortet för att vända och se den arabiska texten',
+                prevBtn: '⬅️ Föregående underämne',
+                nextBtn: 'Nästa underämne ➡️',
+                subMeta: count => `Visar ${count} grupper med flashkort`,
+                groupMeta: count => `<span>📖 ${count} koranverser</span>`,
+                hideVerses: 'Dölj verser',
+                showVerses: 'Visa verser',
+                playText: ' Lyssna',
+                stopText: ' Stopp',
+                aiText: ' Fråga AI',
+                copyText: ' Kopiera denna text',
+                copiedText: ' Kopierat!',
+                copyTitle: 'Kopiera översättningstext',
+                loadingText: 'Översätter...',
+                errorText: 'Kunde inte översätta',
+                connErrorText: 'Anslutningsfel',
+                emptySelect: 'Vänligen välj en kategori ovan för att visa verser.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Förklara kort Koranen ${surah}:${ayat} angående "${uraian}": "${text}"`
+            },
+            'tg-TJ': {
+                code: 'tg',
+                edition: 'tg.ayati',
+                label: 'Забони тарҷума ва овоз:',
+                translatorLabel: 'Тарҷума:',
+                translator: 'Абдулмуҳаммад Оятӣ (AbdolMohammad Ayati)',
+                hint: '<span>✨</span> Барои гардондан ва дидани матни арабӣ ба корт клик кунед',
+                prevBtn: '⬅️ Мавзӯи фаръии қаблӣ',
+                nextBtn: 'Мавзӯи фаръии навбатӣ ➡️',
+                subMeta: count => `Намоиши ${count} гурӯҳи кортҳои флеш`,
+                groupMeta: count => `<span>📖 ${count} ояти Қуръон</span>`,
+                hideVerses: 'Пинҳон кардани оятҳо',
+                showVerses: 'Нишон додани оятҳо',
+                playText: ' Гӯш кардан',
+                stopText: ' Қатъ',
+                aiText: ' Аз AI пурсед',
+                copyText: ' Ин матнро нусхабардорӣ кунед',
+                copiedText: ' Нусхабардорӣ шуд!',
+                copyTitle: 'Нусхабардории матни тарҷума',
+                loadingText: 'Тарҷума шуда истодааст...',
+                errorText: 'Тарҷума ноком шуд',
+                connErrorText: 'Хатои пайвастшавӣ',
+                emptySelect: 'Лутфан барои дидани оятҳо аз боло як категорияро интихоб кунед.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Қуръон ${surah}:${ayat}-ро вобаста ба мавзӯи "${uraian}" мухтасар шарҳ диҳед: "${text}"`
+            },
+            'ta-IN': {
+                code: 'ta',
+                edition: 'ta.tamil',
+                label: 'மொழிபெயர்ப்பு மற்றும் குரல் மொழி:',
+                translatorLabel: 'மொழிபெயர்ப்பு:',
+                translator: 'ஜான் டிரஸ்ட் (Jan Trust Foundation)',
+                hint: '<span>✨</span> அரபு உரையைப் பார்க்க அட்டையைத் திருப்ப கிளிக் செய்யவும்',
+                prevBtn: '⬅️ முந்தைய துணைத் தலைப்பு',
+                nextBtn: 'அடுத்த துணைத் தலைப்பு ➡️',
+                subMeta: count => `${count} ஃபிளாஷ் கார்டு குழுக்கள் காட்டப்படுகின்றன`,
+                groupMeta: count => `<span>📖 ${count} குர்ஆன் வசனங்கள்</span>`,
+                hideVerses: 'வசனங்களை மறை',
+                showVerses: 'வசனங்களைக் காட்டு',
+                playText: ' கேட்க',
+                stopText: ' நிறுத்து',
+                aiText: ' AI-யிடம் கேளுங்கள்',
+                copyText: ' இந்த உரையை நகலெடுக்கவும்',
+                copiedText: ' நகலெடுக்கப்பட்டது!',
+                copyTitle: 'மொழிபெயர்ப்பு உரையை நகலெடுக்கவும்',
+                loadingText: 'மொழிபெயர்க்கிறது...',
+                errorText: 'மொழிபெயர்ப்பு தோல்வியடைந்தது',
+                connErrorText: 'இணைப்பு பிழை',
+                emptySelect: 'வசனங்களைப் பார்க்க மேலே உள்ள வகையைத் தேர்ந்தெடுக்கவும்.',
+                cssClass: 'lang-ta',
+                aiPrompt: (surah, ayat, uraian, text) => `குர்ஆன் ${surah}:${ayat} தலைப்பு "${uraian}" தொடர்பாக சுருக்கமாக விளக்குங்கள்: "${text}"`
+            },
+            'tt-RU': {
+                code: 'tt',
+                edition: 'tt.nugman',
+                label: 'Тәрҗемә һәм тавыш теле:',
+                translatorLabel: 'Тәрҗемә:',
+                translator: 'Якуб ибн Нугман (Yakub Ibn Nugman)',
+                hint: '<span>✨</span> Гарәпчә текстын күрү өчен карточкага басыгыз',
+                prevBtn: '⬅️ Алдагы астема',
+                nextBtn: 'Чираттагы астема ➡️',
+                subMeta: count => `Күрсәтелә ${count} флеш-карта төркеме`,
+                groupMeta: count => `<span>📖 ${count} Коръән аяте</span>`,
+                hideVerses: 'Аятьләрне яшерү',
+                showVerses: 'Аятьләрне күрсәтү',
+                playText: ' Тыңлау',
+                stopText: ' Туктату',
+                aiText: ' AI-дан сорарга',
+                copyText: ' Бу текстны күчермәләү',
+                copiedText: ' Күчермәләнде!',
+                copyTitle: 'Тәрҗемә текстын күчермәләү',
+                loadingText: 'Тәрҗемә ителә...',
+                errorText: 'Тәрҗемә итеп булмады',
+                connErrorText: 'Бәйләнеш хатасы',
+                emptySelect: 'Аятьләрне карау өчен югарыдагы категорияне сайлагыз.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Коръән ${surah}:${ayat} аятен "${uraian}" темасы буенча кыскача аңлатыгыз: "${text}"`
+            },
+            'ug-CN': {
+                code: 'ug',
+                edition: 'ug.saleh',
+                label: 'تەرجىمە ۋە ئاۋاز تىلى:',
+                translatorLabel: 'تەرجىمە:',
+                translator: 'مۇھەممەد سالىھ (Muhammad Saleh)',
+                hint: '<span>✨</span> ئەرەبچە تېكىستنى كۆرۈش ئۈچۈن كارتىنى چېكىپ ئۆرۈڭ',
+                prevBtn: '⬅️ ئالدىنقى تارماق تېما',
+                nextBtn: 'كېيىنكى تارماق تېما ➡️',
+                subMeta: count => `${count} گۇرۇپپا كارتىلار كۆرسىتىلىۋاتىدۇ`,
+                groupMeta: count => `<span>📖 ${count} قۇرئان ئايىتى</span>`,
+                hideVerses: 'ئايەتلەرنى يوشۇرۇش',
+                showVerses: 'ئايەتلەرنى كۆرسىتىش',
+                playText: ' ئاڭلاش',
+                stopText: ' توختىتىش',
+                aiText: ' AI دىن سوراش',
+                copyText: ' بۇ تېكىستنى كۆچۈرۈش',
+                copiedText: ' كۆچۈرۈلدى!',
+                copyTitle: 'تەرجىمە تېكىستىنى كۆچۈرۈش',
+                loadingText: 'تەرجىمە قىلىنىۋاتىدۇ...',
+                errorText: 'تەرجىمە مەغلۇپ بولدى',
+                connErrorText: 'ئۇلىنىش خاتالىقى',
+                emptySelect: 'ئايەتلەرنى كۆرۈش ئۈچۈن يۇقىرىدىكى سەھىپىنى تاللاڭ.',
+                cssClass: 'lang-ug',
+                aiPrompt: (surah, ayat, uraian, text) => `قۇرئان ${surah}:${ayat} نى "${uraian}" تېمىسى بويىچە قىسقىچە چۈشەندۈرۈپ بېرىڭ: "${text}"`
+            },
+            'ar-SA': {
+                code: 'ar',
+                edition: 'ar.muyassar',
+                label: 'لغة الترجمة والصوت:',
+                translatorLabel: 'التفسير:',
+                translator: 'Majma\' Malik Fahd (Tafsir Al-Muyassar)',
+                hint: '<span>✨</span> انقر على البطاقة لقلبها ومشاهدة النص القرآني',
+                prevBtn: '⬅️ الموضوع الفرعي السابق',
+                nextBtn: 'الموضوع الفرعي التالي ➡️',
+                subMeta: count => `عرض ${count} من مجموعات البطاقات`,
+                groupMeta: count => `<span>📖 ${count} آيات من القرآن الكريم</span>`,
+                hideVerses: 'إخفاء الآيات',
+                showVerses: 'إظهار الآيات',
+                playText: ' استماع',
+                stopText: ' إيقاف',
+                aiText: ' اسأل الذكاء الاصطناعي',
+                copyText: ' نسخ هذا النص',
+                copiedText: ' تم النسخ!',
+                copyTitle: 'نسخ نص الترجمة والتفسير',
+                loadingText: 'جارٍ التحميل...',
+                errorText: 'فشل في جلب التفسير',
+                connErrorText: 'خطأ في الاتصال',
+                emptySelect: 'يرجى اختيار الفئة أعلاه لعرض الآيات.',
+                cssClass: 'lang-ar',
+                aiPrompt: (surah, ayat, uraian, text) => `اشرح بإيجاز سورة ${surah}:${ayat} المتعلقة بموضوع "${uraian}": "${text}"`
+            },
+            'ku-IQ': {
+                code: 'ckb',
+                edition: 'ku.asan',
+                label: 'زمانی وەرگێڕان و دەنگ:',
+                translatorLabel: 'وەرگێڕان:',
+                translator: 'تەفسیری ئاسان (Burhan Muhammad-Amin)',
+                hint: '<span>✨</span> کلیک لەسەر کارتەکە بکە بۆ وەرگەڕاندن و بینینی دەقی عەرەبی',
+                prevBtn: '⬅️ بابەتی پێشوو',
+                nextBtn: 'بابەتی دواتر ➡️',
+                subMeta: count => `پێشاندانی ${count} گرووپی فلاش کارت`,
+                groupMeta: count => `<span>📖 ${count} ئایەتی قورئان</span>`,
+                hideVerses: 'شاردنەوەی ئایەتەکان',
+                showVerses: 'پێشاندانی ئایەتەکان',
+                playText: ' گوێبگرە',
+                stopText: ' ڕاگرتن',
+                aiText: ' لە AI بپرسە',
+                copyText: ' ئەم دەقە کۆپی بکە',
+                copiedText: ' کۆپی کرا!',
+                copyTitle: 'کۆپیکردنی دەقی وەرگێڕان',
+                loadingText: 'وەرگێڕان دەکرێت...',
+                errorText: 'وەرگێڕان سەرکەوتوو نەبوو',
+                connErrorText: 'هەڵەی پەیوەندی',
+                emptySelect: 'تکایە لە سەرەوە پۆلێک هەڵبژێرە بۆ بینینی ئایەتەکان.',
+                cssClass: 'lang-ku',
+                aiPrompt: (surah, ayat, uraian, text) => `بە کورتی قورئان ${surah}:${ayat} سەبارەت بە "${uraian}" ڕوون بکەرەوە: "${text}"`
+            },
+            'uz-UZ': {
+                code: 'uz',
+                edition: 'uz.sodik',
+                label: 'Tarjima va ovoz tili:',
+                translatorLabel: 'Tarjima:',
+                translator: 'Shayx Muhammad Sodiq Muhammad Yusuf (Муҳаммад Содиқ)',
+                hint: '<span>✨</span> Arabcha matnni koʻrish uchun kartani bosing',
+                prevBtn: '⬅️ Oldingi mavzu',
+                nextBtn: 'Keyingi mavzu ➡️',
+                subMeta: count => `${count} ta flesh-karta guruhi koʻrsatilmoqda`,
+                groupMeta: count => `<span>📖 ${count} Qurʼon oyatlari</span>`,
+                hideVerses: 'Oyatlarni yashirish',
+                showVerses: 'Oyatlarni koʻrsatish',
+                playText: ' Tinglash',
+                stopText: ' Toʻxtatish',
+                aiText: ' AI-dan soʻrash',
+                copyText: ' Ushbu matnni nusxalash',
+                copiedText: ' Nusxalandi!',
+                copyTitle: 'Tarjima matnini nusxalash',
+                loadingText: 'Tarjima qilinmoqda...',
+                errorText: 'Tarjima qilib boʻlmadi',
+                connErrorText: 'Ulanishda xatolik',
+                emptySelect: 'Oyatlarni koʻrish uchun yuqoridagi toifani tanlang.',
+                cssClass: '',
+                aiPrompt: (surah, ayat, uraian, text) => `Qurʼon ${surah}:${ayat} oyatini "${uraian}" mavzusi kontekstida qisqacha tushuntirib bering: "${text}"`
+            }
+        };
+
+                // Initialize persistent translation cache from localStorage
+        let translationCache = {};
+        try {
+            const savedTransCache = localStorage.getItem('quran_theme_trans_cache');
+            if (savedTransCache) {
+                translationCache = JSON.parse(savedTransCache);
+            }
+        } catch (e) {
+            console.warn("Could not read quran_theme_trans_cache:", e);
+        }
+
+        function saveTranslationCache() {
+            try {
+                localStorage.setItem('quran_theme_trans_cache', JSON.stringify(translationCache));
+            } catch (e) {
+                // If quota exceeded, clear older half
+                console.warn("Storage quota warning for translation cache:", e);
+            }
+        }
+
+        async function translateTextFree(text, targetLangCode) {
+            if (!text || targetLangCode === 'id') return text;
+            const cacheKey = `${targetLangCode}:${text.trim()}`;
+            if (translationCache[cacheKey]) return translationCache[cacheKey];
+
+            // 1. Check if dictionary map has exact match
+            const dict = LANG_UI_MAP[targetLangCode];
+            if (dict && dict[text.trim()]) {
+                translationCache[cacheKey] = dict[text.trim()];
+                return dict[text.trim()];
+            }
+
+            // 2. Separate numbering prefix (e.g., "14.1.1.1. " from "Manusia Diciptakan Dari Tanah")
+            const prefixMatch = text.match(/^([\d.]+\s*)(.*)$/);
+            const prefix = prefixMatch ? prefixMatch[1] : '';
+            let queryText = prefixMatch ? prefixMatch[2].trim() : text.trim();
+
+            if (!queryText) return text;
+
+            // Pre-processing
+            queryText = queryText.replace(/\(Bakhil\)/gi, '(Al-Bakhil)');
+
+            let translated = null;
+
+            // PROVIDER 1: Google Translate using official dict-chrome-ex client (highly reliable, no 429 captcha)
+            try {
+                const url = `https://translate.googleapis.com/translate_a/single?client=dict-chrome-ex&sl=id&tl=${targetLangCode}&dt=t&q=${encodeURIComponent(queryText)}`;
+                const res = await fetch(url);
+                const textResp = await res.text();
+                if (textResp && textResp.startsWith('[')) {
+                    const data = JSON.parse(textResp);
+                    if (data && data[0] && Array.isArray(data[0])) {
+                        translated = data[0].map(item => item[0]).join('');
+                    }
+                }
+            } catch (e) {
+                console.warn("Provider 1 (Google dict) failed, trying fallback...", e);
+            }
+
+            // PROVIDER 2: MyMemory Translation API fallback (if Google rate-limits or network fails)
+            if (!translated) {
+                try {
+                    const myMemoryUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(queryText)}&langpair=id|${targetLangCode}`;
+                    const res = await fetch(myMemoryUrl);
+                    const data = await res.json();
+                    if (data && data.responseData && data.responseData.translatedText) {
+                        let mmText = data.responseData.translatedText;
+                        // Clean HTML entities if any
+                        mmText = mmText.replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&');
+                        mmText = mmText.replace(/^[+*() ]+|[+*() ]+$/g, '');
+                        if (mmText && !mmText.toLowerCase().includes('quota exceeded')) {
+                            translated = mmText;
+                        }
+                    }
+                } catch (err) {
+                    console.warn("Provider 2 (MyMemory) failed:", err);
+                }
+            }
+
+            if (translated) {
+                // Post-processing corrections
+                translated = translated
+                    .replace(/\bKakhil\b/gi, 'Bakhil')
+                    .replace(/الكخيل/g, 'البخيل')
+                    .replace(/کاخیل/g, 'البخيل');
+
+                const finalResult = prefix + translated;
+                translationCache[cacheKey] = finalResult;
+                saveTranslationCache();
+                return finalResult;
+            }
+
+            // If all failed, return original
+            return text;
+        }
+
+                async function translateDropdowns() {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLangCode = cfg.code;
+            
+            const labelEl = document.querySelector('label[for="tts-language"]');
+            if (labelEl && cfg.label) {
+                labelEl.textContent = cfg.label;
+            }
+
+            const dict = LANG_UI_MAP[targetLangCode] || {};
+
+            const selects = [document.getElementById('select-tema'), document.getElementById('select-pokok'), document.getElementById('select-sub')];
+            
+            for (let select of selects) {
+                if (!select) continue;
+                for (let option of select.options) {
+                    if (!option.hasAttribute('data-original')) {
+                        option.setAttribute('data-original', option.textContent);
+                    }
+                    const originalText = option.getAttribute('data-original');
+                    if (!originalText) continue;
+                    
+                    if (targetLangCode === 'id') {
+                        option.textContent = originalText;
+                    } else if (dict[originalText]) {
+                        option.textContent = dict[originalText];
+                    } else {
+                        const cacheKey = `${targetLangCode}:${originalText.trim()}`;
+                        if (translationCache[cacheKey]) {
+                            option.textContent = translationCache[cacheKey];
+                        } else {
+                            // Translate asynchronously
+                            translateTextFree(originalText, targetLangCode).then(translated => {
+                                if (option) option.textContent = translated;
+                            });
+                        }
+                    }
+                }
+            }
+        }
+
+        function naturalCompare(a, b) {
+            return (a || '').toString().localeCompare((b || '').toString(), undefined, { numeric: true, sensitivity: 'base' });
+        }
+
+        function naturalSort(arr) {
+            return [...arr].sort(naturalCompare);
+        }
+
+        const elTema = document.getElementById('select-tema');
+        const elPokok = document.getElementById('select-pokok');
+        const elSub = document.getElementById('select-sub');
+        const elContent = document.getElementById('content-area');
+        const elHint = document.getElementById('hint-text');
+
+        function updateTranslatorInfo() {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const infoTextEl = document.getElementById('translator-info-text');
+            if (infoTextEl && cfg.translator) {
+                const label = cfg.translatorLabel || 'Terjemahan:';
+                infoTextEl.innerHTML = `${label} <strong>${cfg.translator}</strong>`;
+            }
+        }
+
+        function initData(data) {
+            quranData = data;
+            buildVerseIndex();
+            initSurahAyatSearch();
+            const savedLang = localStorage.getItem('active_lang');
+            const elTts = document.getElementById('tts-language');
+            if (savedLang && elTts && elTts.querySelector(`option[value="${savedLang}"]`)) {
+                elTts.value = savedLang;
+            }
+            populateSelect(elTema, naturalSort(Object.keys(data)), "Pilih Tema");
+            translateDropdowns();
+            updateTranslatorInfo();
+            translatePageContent();
+            checkAutoNav();
+        }
+
+        // Fetch Data
+        fetch('data.json?t=' + new Date().getTime())
+            .then(res => res.json())
+            .then(data => {
+                initData(data);
+            })
+            .catch(err => {
+                console.warn("Fetch data.json failed (likely file:// protocol). Trying data.js fallback...", err);
+                if (typeof window.quranData !== 'undefined' && Object.keys(window.quranData).length > 0) {
+                    initData(window.quranData);
+                } else {
+                    const script = document.createElement('script');
+                    script.src = 'data.js';
+                    script.onload = () => {
+                        if (typeof window.quranData !== 'undefined' && Object.keys(window.quranData).length > 0) {
+                            initData(window.quranData);
+                        } else {
+                            elContent.innerHTML = `<div class="empty-state" style="color:#ef4444;">Gagal memuat data.json. Pastikan Anda menjalankan server lokal (misalnya live server) atau file data.js tersedia.</div>`;
+                        }
+                    };
+                    script.onerror = () => {
+                        elContent.innerHTML = `<div class="empty-state" style="color:#ef4444;">Gagal memuat data.json. Pastikan Anda menjalankan server lokal (misalnya live server).</div>`;
+                    };
+                    document.head.appendChild(script);
+                }
+            });
+
+        function saveCurrentState() {
+            if (elTema && elTema.value) sessionStorage.setItem('active_tema', elTema.value);
+            if (elPokok && elPokok.value) sessionStorage.setItem('active_pokok', elPokok.value);
+            if (elSub && elSub.value) sessionStorage.setItem('active_sub', elSub.value);
+            const langSelect = document.getElementById('tts-language');
+            if (langSelect && langSelect.value) localStorage.setItem('active_lang', langSelect.value);
+        }
+
+        function getParsedUrlParams() {
+            let searchStr = window.location.search ? window.location.search.substring(1) : '';
+            let hashStr = window.location.hash ? window.location.hash.substring(1) : '';
+            if (hashStr.includes('?')) {
+                const parts = hashStr.split('?');
+                hashStr = parts[0] + '&' + parts[1];
+            }
+            return new URLSearchParams(searchStr + (searchStr && hashStr ? '&' : '') + hashStr);
+        }
+
+        function findUraianPath(uraianQuery) {
+            if (!uraianQuery || !allThematicUraianList || !allThematicUraianList.length) return null;
+            const cleanQ = decodeURIComponent(uraianQuery).trim().toLowerCase();
+            if (!cleanQ) return null;
+
+            // 1. Exact match
+            let match = allThematicUraianList.find(item => item.uraian.toLowerCase() === cleanQ);
+            if (match) return match;
+
+            // 2. Starts with (e.g. "1.1.1.1" or "1.1.1.1." or code prefix)
+            match = allThematicUraianList.find(item => item.uraian.toLowerCase().startsWith(cleanQ));
+            if (match) return match;
+
+            // 3. Substring match
+            match = allThematicUraianList.find(item => item.uraian.toLowerCase().includes(cleanQ));
+            if (match) return match;
+
+            return null;
+        }
+
+        function getUraianDeepLink(uraianTitle, tema, pokok, sub) {
+            if (!tema || !pokok || !sub) {
+                const found = findUraianPath(uraianTitle);
+                if (found) {
+                    tema = found.tema;
+                    pokok = found.pokok;
+                    sub = found.sub;
+                    uraianTitle = found.uraian;
+                }
+            }
+            const hash = `tema=${encodeURIComponent(tema || '')}&pokok=${encodeURIComponent(pokok || '')}&sub=${encodeURIComponent(sub || '')}&uraian=${encodeURIComponent(uraianTitle)}`;
+            const baseUrl = window.location.href.split('#')[0].split('?')[0];
+            return `${baseUrl}#${hash}`;
+        }
+
+        function copyUraianLink(btn, event, encodedTitle) {
+            if (event) event.stopPropagation();
+            const uraianTitle = decodeURIComponent(encodedTitle);
+            const link = getUraianDeepLink(uraianTitle, elTema ? elTema.value : '', elPokok ? elPokok.value : '', elSub ? elSub.value : '');
+
+            const onCopiedSuccess = () => {
+                showAIToast("Link Uraian berhasil disalin ke clipboard!");
+                if (btn) {
+                    const origHTML = btn.innerHTML;
+                    btn.classList.add('copied');
+                    btn.innerHTML = `
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Tersalin!</span>
+                    `;
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                        btn.innerHTML = origHTML;
+                    }, 2000);
+                }
+            };
+
+            const fallbackCopy = (text) => {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                try {
+                    document.execCommand('copy');
+                    onCopiedSuccess();
+                } catch(e) {
+                    console.error("Fallback copy failed:", e);
+                }
+                document.body.removeChild(ta);
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(link).then(onCopiedSuccess).catch(() => fallbackCopy(link));
+            } else {
+                fallbackCopy(link);
+            }
+        }
+
+        function shareUraianWhatsApp(event, encodedTitle) {
+            if (event) event.stopPropagation();
+            const uraianTitle = decodeURIComponent(encodedTitle);
+            const found = findUraianPath(uraianTitle);
+            const tema = found ? found.tema : (elTema ? elTema.value : '');
+            const pokok = found ? found.pokok : (elPokok ? elPokok.value : '');
+            const sub = found ? found.sub : (elSub ? elSub.value : '');
+            const vCount = found ? found.verseCount : 0;
+            const link = getUraianDeepLink(uraianTitle, tema, pokok, sub);
+
+            const message = `*Al-Qur'an Tematis*\n\n` +
+                `📖 *Uraian:* ${uraianTitle}\n` +
+                (tema ? `🏷️ *Tema:* ${tema}\n` : '') +
+                (pokok ? `📂 *Pokok:* ${pokok}\n` : '') +
+                (sub ? `📑 *Sub Pokok:* ${sub}\n` : '') +
+                (vCount > 0 ? `📊 *Jumlah Ayat:* ${vCount} ayat\n\n` : '\n') +
+                `Pelajari selengkapnya di tautan berikut:\n${link}`;
+
+            const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        function findSubPath(subQuery) {
+            if (!subQuery || !allThematicSubList || !allThematicSubList.length) return null;
+            const cleanQ = decodeURIComponent(subQuery).trim().toLowerCase();
+            if (!cleanQ) return null;
+
+            // 1. Exact match
+            let match = allThematicSubList.find(item => item.sub.toLowerCase() === cleanQ);
+            if (match) return match;
+
+            // 2. Starts with (e.g. "1.1.1" or "1.1.1." or code prefix)
+            match = allThematicSubList.find(item => item.sub.toLowerCase().startsWith(cleanQ));
+            if (match) return match;
+
+            // 3. Substring match (e.g. "waris" or "tauhid")
+            match = allThematicSubList.find(item => item.sub.toLowerCase().includes(cleanQ));
+            if (match) return match;
+
+            return null;
+        }
+
+        function getSubDeepLink(subTitle, tema, pokok) {
+            if (!tema || !pokok) {
+                const found = findSubPath(subTitle);
+                if (found) {
+                    tema = found.tema;
+                    pokok = found.pokok;
+                    subTitle = found.sub;
+                }
+            }
+            const hash = `tema=${encodeURIComponent(tema || '')}&pokok=${encodeURIComponent(pokok || '')}&sub=${encodeURIComponent(subTitle)}`;
+            const baseUrl = window.location.href.split('#')[0].split('?')[0];
+            return `${baseUrl}#${hash}`;
+        }
+
+        function copySubLink(btn, event, encodedSubTitle) {
+            if (event) event.stopPropagation();
+            const subTitle = decodeURIComponent(encodedSubTitle);
+            const link = getSubDeepLink(subTitle, elTema ? elTema.value : '', elPokok ? elPokok.value : '');
+
+            const onCopiedSuccess = () => {
+                showAIToast("Link Sub Pokok Bahasan berhasil disalin ke clipboard!");
+                if (btn) {
+                    const origHTML = btn.innerHTML;
+                    btn.classList.add('copied');
+                    btn.innerHTML = `
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        <span>Tersalin!</span>
+                    `;
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                        btn.innerHTML = origHTML;
+                    }, 2000);
+                }
+            };
+
+            const fallbackCopy = (text) => {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                try {
+                    document.execCommand('copy');
+                    onCopiedSuccess();
+                } catch(e) {
+                    console.error("Fallback copy failed:", e);
+                }
+                document.body.removeChild(ta);
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(link).then(onCopiedSuccess).catch(() => fallbackCopy(link));
+            } else {
+                fallbackCopy(link);
+            }
+        }
+
+        function shareSubWhatsApp(event, encodedSubTitle) {
+            if (event) event.stopPropagation();
+            const subTitle = decodeURIComponent(encodedSubTitle);
+            const found = findSubPath(subTitle);
+            const tema = found ? found.tema : (elTema ? elTema.value : '');
+            const pokok = found ? found.pokok : (elPokok ? elPokok.value : '');
+            const uCount = found ? found.uraianCount : (quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][subTitle] ? Object.keys(quranData[tema][pokok][subTitle]).length : 0);
+            const vCount = found ? found.verseCount : 0;
+            const link = getSubDeepLink(subTitle, tema, pokok);
+
+            const message = `*Al-Qur'an Tematis*\n\n` +
+                `📑 *Sub Pokok Bahasan:* ${subTitle}\n` +
+                (tema ? `🏷️ *Tema:* ${tema}\n` : '') +
+                (pokok ? `📂 *Pokok:* ${pokok}\n` : '') +
+                (uCount > 0 ? `📊 *Jumlah Uraian:* ${uCount} topik` + (vCount > 0 ? ` (${vCount} ayat)\n\n` : `\n\n`) : '\n') +
+                `Pelajari selengkapnya di tautan berikut:\n${link}`;
+
+            const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        function navigateToSubTopic(tema, pokok, sub) {
+            stopTTS();
+            switchMainMode('thematic');
+
+            elTema.value = tema;
+            resetSelect(elSub, "Pilih Sub Pokok Bahasan");
+            if (quranData[tema]) {
+                populateSelect(elPokok, naturalSort(Object.keys(quranData[tema])), "Pilih Pokok Bahasan");
+                elPokok.value = pokok;
+                if (quranData[tema][pokok]) {
+                    populateSelect(elSub, naturalSort(Object.keys(quranData[tema][pokok])), "Pilih Sub Pokok Bahasan");
+                    elSub.value = sub;
+                    saveCurrentState();
+                    renderContentAll(tema, pokok, sub);
+
+                    setTimeout(() => {
+                        const banner = document.querySelector('.sub-header-banner-card');
+                        if (banner) {
+                            banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            banner.classList.add('sub-highlight-pulse');
+                            setTimeout(() => banner.classList.remove('sub-highlight-pulse'), 3500);
+                        }
+                    }, 150);
+                }
+            }
+        }
+
+        function checkAutoNav() {
+            if (!quranData || !Object.keys(quranData).length) return;
+
+            const params = getParsedUrlParams();
+
+            // 1. Check verse deep link (#surat=2&ayat=255)
+            const s = parseInt(params.get('surat'));
+            const a = parseInt(params.get('ayat'));
+            if (s && a) {
+                setTimeout(() => lookupVerseInSearch(s, a), 100);
+                return;
+            }
+
+            // 2. Check Uraian deep link
+            let paramUraian = params.get('uraian');
+            let paramSub = params.get('sub');
+            const rawHash = (window.location.hash || '').replace(/^#/, '').trim();
+            if (!paramUraian && !paramSub && rawHash && !rawHash.includes('=') && !rawHash.includes('&')) {
+                const uMatch = findUraianPath(rawHash);
+                if (uMatch) {
+                    paramUraian = decodeURIComponent(rawHash);
+                } else {
+                    const sMatch = findSubPath(rawHash);
+                    if (sMatch) {
+                        paramSub = decodeURIComponent(rawHash);
+                    }
+                }
+            }
+
+            if (paramUraian) {
+                let targetTema = params.get('tema');
+                let targetPokok = params.get('pokok');
+                let targetSub = params.get('sub');
+                let targetUraian = decodeURIComponent(paramUraian);
+
+                if (!targetTema || !targetPokok || !targetSub || !quranData[targetTema] || !quranData[targetTema][targetPokok] || !quranData[targetTema][targetPokok][targetSub]) {
+                    const resolved = findUraianPath(targetUraian);
+                    if (resolved) {
+                        targetTema = resolved.tema;
+                        targetPokok = resolved.pokok;
+                        targetSub = resolved.sub;
+                        targetUraian = resolved.uraian;
+                    }
+                }
+
+                if (targetTema && targetPokok && targetSub && quranData[targetTema] && quranData[targetTema][targetPokok] && quranData[targetTema][targetPokok][targetSub]) {
+                    setTimeout(() => {
+                        navigateToThematicTopic(targetTema, targetPokok, targetSub, targetUraian);
+                    }, 50);
+                    return;
+                }
+            }
+
+            // 3. Check Sub Pokok Bahasan deep link
+            if (paramSub) {
+                let targetTema = params.get('tema');
+                let targetPokok = params.get('pokok');
+                let targetSub = decodeURIComponent(paramSub);
+
+                if (!targetTema || !targetPokok || !quranData[targetTema] || !quranData[targetTema][targetPokok] || !quranData[targetTema][targetPokok][targetSub]) {
+                    const resolved = findSubPath(targetSub);
+                    if (resolved) {
+                        targetTema = resolved.tema;
+                        targetPokok = resolved.pokok;
+                        targetSub = resolved.sub;
+                    }
+                }
+
+                if (targetTema && targetPokok && targetSub && quranData[targetTema] && quranData[targetTema][targetPokok] && quranData[targetTema][targetPokok][targetSub]) {
+                    setTimeout(() => {
+                        navigateToSubTopic(targetTema, targetPokok, targetSub);
+                    }, 50);
+                    return;
+                }
+            }
+
+            // 4. Saved state from sessionStorage
+            const savedTema = sessionStorage.getItem('active_tema');
+            const savedPokok = sessionStorage.getItem('active_pokok');
+            const savedSub = sessionStorage.getItem('active_sub');
+
+            if (savedTema && quranData[savedTema]) {
+                elTema.value = savedTema;
+                populateSelect(elPokok, naturalSort(Object.keys(quranData[savedTema])), "Pilih Pokok Bahasan");
+                if (savedPokok && quranData[savedTema][savedPokok]) {
+                    elPokok.value = savedPokok;
+                    populateSelect(elSub, naturalSort(Object.keys(quranData[savedTema][savedPokok])), "Pilih Sub Pokok Bahasan");
+                    if (savedSub && quranData[savedTema][savedPokok][savedSub]) {
+                        elSub.value = savedSub;
+                        renderContentAll(savedTema, savedPokok, savedSub);
+                        return;
+                    }
+                }
+            }
+
+            // 5. Default initial state
+            const temaKeys = naturalSort(Object.keys(quranData));
+            if (temaKeys.length > 0) {
+                const firstTema = temaKeys[0];
+                elTema.value = firstTema;
+                const pokokKeys = naturalSort(Object.keys(quranData[firstTema] || {}));
+                populateSelect(elPokok, pokokKeys, "Pilih Pokok Bahasan");
+                if (pokokKeys.length > 0) {
+                    const firstPokok = pokokKeys[0];
+                    elPokok.value = firstPokok;
+                    const subKeys = naturalSort(Object.keys(quranData[firstTema][firstPokok] || {}));
+                    populateSelect(elSub, subKeys, "Pilih Sub Pokok Bahasan");
+                    if (subKeys.length > 0) {
+                        const firstSub = subKeys[0];
+                        elSub.value = firstSub;
+                        renderContentAll(firstTema, firstPokok, firstSub);
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('hashchange', checkAutoNav);
+
+        // Helpers
+        function populateSelect(element, options, defaultText) {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLang = cfg.code;
+            const dict = LANG_UI_MAP[targetLang] || {};
+            const defLabel = dict[defaultText] || defaultText;
+
+            element.innerHTML = `<option value="" data-original="${defaultText}">${defLabel}</option>`;
+            options.forEach(opt => {
+                const el = document.createElement('option');
+                el.value = opt;
+                el.setAttribute('data-original', opt);
+                // Check if already in cache
+                const cacheKey = `${targetLang}:${opt.trim()}`;
+                if (targetLang !== 'id' && translationCache[cacheKey]) {
+                    el.textContent = translationCache[cacheKey];
+                } else {
+                    el.textContent = opt;
+                }
+                element.appendChild(el);
+            });
+            element.disabled = false;
+        }
+
+        function resetSelect(element, defaultText) {
+            element.innerHTML = `<option value="">${defaultText}</option>`;
+            element.disabled = true;
+        }
+
+        // Event Listeners
+        elTema.addEventListener('change', () => {
+            const val = elTema.value;
+            resetSelect(elSub, "Pilih Sub Pokok Bahasan");
+            clearContent();
+            
+            if (val && quranData[val]) {
+                populateSelect(elPokok, naturalSort(Object.keys(quranData[val])), "Pilih Pokok Bahasan");
+            } else {
+                resetSelect(elPokok, "Pilih Pokok Bahasan");
+            }
+            translateDropdowns();
+        });
+
+        elPokok.addEventListener('change', () => {
+            const tema = elTema.value;
+            const pokok = elPokok.value;
+            clearContent();
+
+            if (pokok && quranData[tema] && quranData[tema][pokok]) {
+                populateSelect(elSub, naturalSort(Object.keys(quranData[tema][pokok])), "Pilih Sub Pokok Bahasan");
+            } else {
+                resetSelect(elSub, "Pilih Sub Pokok Bahasan");
+            }
+            translateDropdowns();
+        });
+
+        elSub.addEventListener('change', () => {
+            const tema = elTema.value;
+            const pokok = elPokok.value;
+            const sub = elSub.value;
+            clearContent();
+
+            if (sub && quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub]) {
+                saveCurrentState();
+                renderContentAll(tema, pokok, sub);
+                try {
+                    const newUrl = getSubDeepLink(sub, tema, pokok);
+                    history.replaceState(null, '', newUrl);
+                } catch(e) {}
+            }
+            translateDropdowns();
+        });
+
+        let currentAudio = null;
+        let onlineAudioQueue = [];
+        let isAudioPlaying = false;
+        let activeTtsButton = null;
+        let currentUtterance = null;
+        let speechSentences = [];
+        let availableVoices = [];
+
+        function loadVoices() {
+            if (typeof window.speechSynthesis !== 'undefined') {
+                availableVoices = window.speechSynthesis.getVoices() || [];
+            }
+        }
+        loadVoices();
+        if (typeof window.speechSynthesis !== 'undefined' && window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        function hasLocalVoice(langCode) {
+            if (!availableVoices || availableVoices.length === 0) {
+                loadVoices();
+            }
+            if (!availableVoices || availableVoices.length === 0) return false;
+            const code = (langCode || '').toLowerCase().split('-')[0];
+            return availableVoices.some(v => {
+                const vl = (v.lang || '').toLowerCase().replace('_', '-');
+                return vl.startsWith(code) || ((code === 'no' || code === 'nb') && (vl.startsWith('no') || vl.startsWith('nb')));
+            });
+        }
+
+        function getBestVoice(selectedLang) {
+            if (!availableVoices || availableVoices.length === 0) {
+                loadVoices();
+            }
+            if (!availableVoices || availableVoices.length === 0) return null;
+
+            const exactCode = (selectedLang || '').toLowerCase().replace('_', '-');
+            const shortCode = exactCode.split('-')[0];
+
+            // 1. Ambil seluruh voice yang cocok dengan bahasa terpilih
+            const langVoices = availableVoices.filter(v => {
+                const vl = (v.lang || '').toLowerCase().replace('_', '-');
+                return vl === exactCode || vl.startsWith(shortCode) || ((shortCode === 'no' || shortCode === 'nb') && (vl.startsWith('no') || vl.startsWith('nb')));
+            });
+
+            if (langVoices.length === 0) return null;
+
+            // 2. KONSISTENSI 1 JENIS SUARA: Prioritaskan Suara Perempuan (Female / Natural)
+            // (Contoh: Microsoft Gadis, Microsoft Jenny, Google Bahasa Indonesia, Aria, Zira, Iselin, Nora, dll.)
+            const femaleVoice = langVoices.find(v => 
+                /gadis|jenny|aria|sonia|zira|siti|yasmin|amira|ayumi|yuna|xiaoxiao|denise|katja|elena|elsa|isabella|chiara|alice|bianca|carla|federica|lucia|premwadee|achara|iselin|nora|astrid|ingrid|liv|anne|kari|paulina|maja|zofia|ewa|agnieszka|alina|carmen|ioana|simona|maria|hillevi|hedda|elin|sofie|klara|alva|vani|latha|priya|siri|madina|dilnura|nodira|sevara|female|woman|natural/i.test(v.name)
+            );
+            if (femaleVoice) return femaleVoice;
+
+            // 3. Prioritaskan penyedia kualitas tinggi (Google / Microsoft / Apple)
+            const providerVoice = langVoices.find(v => /google|microsoft|apple/i.test(v.name));
+            if (providerVoice) return providerVoice;
+
+            // 4. Default ke suara pertama yang tersedia
+            return langVoices[0];
+        }
+
+        function stopTTS(event) {
+            if (event && event.stopPropagation) event.stopPropagation(); // Mencegah flip card
+            
+            isAudioPlaying = false;
+            speechSentences = [];
+            onlineAudioQueue = [];
+
+            if (currentUtterance) {
+                currentUtterance.onend = null;
+                currentUtterance.onerror = null;
+                currentUtterance = null;
+            }
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+            }
+            if (currentAudio) {
+                currentAudio.onended = null;
+                currentAudio.onerror = null;
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+                currentAudio = null;
+            }
+            
+            if (activeTtsButton) {
+                resetPlayButtonState(activeTtsButton);
+                activeTtsButton = null;
+            }
+
+            document.querySelectorAll('.play-btn.is-playing').forEach(btn => {
+                resetPlayButtonState(btn);
+            });
+        }
+
+        function setPlayButtonPlayingState(btn) {
+            if (!btn) return;
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+            const spinnerSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path></svg>`;
+            btn.innerHTML = spinnerSvg + (cfg.stopText || cfg.playText);
+            btn.classList.add('is-playing');
+            btn.setAttribute('title', 'Klik untuk menghentikan suara');
+        }
+
+        function resetPlayButtonState(btn) {
+            if (!btn) return;
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+            const svg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+            btn.innerHTML = svg + cfg.playText;
+            btn.classList.remove('is-playing');
+            btn.setAttribute('title', 'Dengarkan Terjemahan');
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
+        }
+
+        function splitTextIntoChunks(text, maxLen = 120) {
+            if (!text) return [];
+            if (text.length <= maxLen) return [text];
+
+            const regex = /([^.?!,;:\n\u06d4\u0964]+[.?!,;:\n\u06d4\u0964]+|[^.?!,;:\n\u06d4\u0964]+$)/g;
+            const parts = text.match(regex) || [text];
+            const chunks = [];
+            let current = '';
+
+            for (let part of parts) {
+                part = part.trim();
+                if (!part) continue;
+                if ((current + ' ' + part).trim().length <= maxLen) {
+                    current = (current ? current + ' ' + part : part).trim();
+                } else {
+                    if (current) chunks.push(current);
+                    if (part.length > maxLen) {
+                        const words = part.split(/\s+/);
+                        current = '';
+                        for (let w of words) {
+                            if ((current + ' ' + w).trim().length <= maxLen) {
+                                current = (current ? current + ' ' + w : w).trim();
+                            } else {
+                                if (current) chunks.push(current);
+                                current = w;
+                            }
+                        }
+                    } else {
+                        current = part;
+                    }
+                }
+            }
+            if (current) chunks.push(current);
+            return chunks;
+        }
+
+        function playOnlineTTSQueue(chunks, langCode, button) {
+            if (!chunks || chunks.length === 0) {
+                stopTTS();
+                return;
+            }
+            onlineAudioQueue = [...chunks];
+            isAudioPlaying = true;
+            activeTtsButton = button;
+
+            setPlayButtonPlayingState(button);
+
+            function playNext() {
+                if (!isAudioPlaying || onlineAudioQueue.length === 0) {
+                    stopTTS();
+                    return;
+                }
+                const chunk = onlineAudioQueue.shift();
+                const url = `https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${encodeURIComponent(langCode)}&q=${encodeURIComponent(chunk)}`;
+                
+                if (currentAudio) {
+                    currentAudio.onended = null;
+                    currentAudio.onerror = null;
+                    currentAudio.pause();
+                }
+
+                currentAudio = new Audio(url);
+                currentAudio.onended = () => {
+                    if (isAudioPlaying) playNext();
+                };
+                currentAudio.onerror = (err) => {
+                    console.warn("Online audio playback failed:", err);
+                    if (isAudioPlaying) playNext();
+                };
+                currentAudio.play().catch(e => {
+                    console.warn("Audio play() interrupted or rejected:", e);
+                    if (isAudioPlaying && e.name !== 'AbortError') playNext();
+                });
+            }
+
+            playNext();
+        }
+
+        function playNativeSpeechQueue(sentences, selectedLang, langCode, button) {
+            speechSentences = [...sentences];
+            isAudioPlaying = true;
+            activeTtsButton = button;
+
+            setPlayButtonPlayingState(button);
+
+            if (window.speechSynthesis) {
+                window.speechSynthesis.cancel();
+                if (window.speechSynthesis.paused) {
+                    window.speechSynthesis.resume();
+                }
+            }
+
+            let failedCount = 0;
+            const chosenVoice = getBestVoice(selectedLang);
+
+            function playNext() {
+                if (!isAudioPlaying || speechSentences.length === 0) {
+                    stopTTS();
+                    return;
+                }
+
+                const sentence = speechSentences.shift();
+                const utterance = new SpeechSynthesisUtterance(sentence);
+                currentUtterance = utterance;
+                utterance.lang = selectedLang;
+                if (chosenVoice) {
+                    utterance.voice = chosenVoice;
+                }
+                utterance.rate = 0.92;
+                utterance.pitch = 1.0;
+
+                let done = false;
+                utterance.onend = () => {
+                    if (!isAudioPlaying) return;
+                    if (!done) {
+                        done = true;
+                        currentUtterance = null;
+                        if (isAudioPlaying) playNext();
+                    }
+                };
+
+                utterance.onerror = (e) => {
+                    console.warn("SpeechSynthesis utterance error:", e);
+                    // Jika dihentikan manual atau dibatalkan, jangan alihkan ke online TTS
+                    if (!isAudioPlaying || e.error === 'interrupted' || e.error === 'canceled') {
+                        currentUtterance = null;
+                        return;
+                    }
+                    failedCount++;
+                    if (!done) {
+                        done = true;
+                        currentUtterance = null;
+                        // Jika gagal pada kalimat pertama karena tidak didukung, alihkan ke online TTS
+                        if (failedCount === 1 && isAudioPlaying) {
+                            speechSentences.unshift(sentence);
+                            playOnlineTTSQueue(speechSentences, langCode, button);
+                            return;
+                        }
+                        if (isAudioPlaying) playNext();
+                    }
+                };
+
+                window.speechSynthesis.speak(utterance);
+            }
+
+            playNext();
+        }
+
+        function playTTS(button, event) {
+            if (event) event.stopPropagation(); // Mencegah flip card saat tombol diklik
+            
+            // Jika tombol yang sama sedang memutar (atau tombol memiliki status is-playing), klik sekali lagi akan otomatis berhenti
+            if (isAudioPlaying && (activeTtsButton === button || button.classList.contains('is-playing'))) {
+                stopTTS();
+                return;
+            }
+
+            stopTTS(); // Hentikan suara yang sedang berjalan di tempat lain
+
+            // Hentikan pemutaran audio tilawah alquran jika sedang aktif
+            document.querySelectorAll('audio').forEach(a => {
+                if (!a.paused) a.pause();
+            });
+
+            const card = button.closest('.flip-card-front');
+            let text = '';
+            if (card) {
+                const textEl = card.querySelector('.translation-text');
+                if (textEl && textEl.textContent) {
+                    text = textEl.textContent.trim();
+                }
+            }
+            if (!text) {
+                text = decodeURIComponent(button.getAttribute('data-text') || '');
+            }
+            if (!text) return;
+
+            const langSelect = document.getElementById('tts-language');
+            const selectedLang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[selectedLang] || LANG_CONFIG['id-ID'];
+            const langCode = cfg.code;
+
+            const chunks = splitTextIntoChunks(text, 140);
+            if (chunks.length === 0) return;
+
+            // Jika ada suara bawaan browser (seperti Bahasa Indonesia, Inggris), gunakan SpeechSynthesis native empuk.
+            // Jika TIDAK ADA suara bawaan di sistem untuk bahasa ini (seperti Urdu, Bangla, Turki di Windows), gunakan Online TTS agar PASTI berbunyi lancar!
+            if (window.speechSynthesis && hasLocalVoice(selectedLang)) {
+                playNativeSpeechQueue(chunks, selectedLang, langCode, button);
+            } else {
+                playOnlineTTSQueue(chunks, langCode, button);
+            }
+        }
+
+
+
+        /* ==========================================================================
+           TANYA AI: Zero-Hallucination Guided Quran Assistant Implementation
+           ========================================================================== */
+        let currentAIContext = {
+            surahNum: 2,
+            surahName: "Al-Baqarah",
+            ayatNum: 255,
+            arabText: "",
+            indoText: "",
+            tema: "Nama dan Sifat Allah",
+            pokok: "Kekuasaan Allah",
+            sub: "Ayat Kursi",
+            uraian: "Keagungan Allah Meliputi Langit dan Bumi"
+        };
+        let currentAIMode = 'tadabbur';
+
+        function tanyaAI(button, event, customTitle) {
+            if (event) event.stopPropagation();
+            stopTTS();
+
+            let surahNum = 1, ayatNum = 1, surahName = "", arabText = "", indoText = "";
+            let tema = elTema ? elTema.value : "";
+            let pokok = elPokok ? elPokok.value : "";
+            let sub = elSub ? elSub.value : "";
+            let uraian = customTitle || "";
+
+            // Check where the click came from:
+            const flipFront = button ? button.closest('.flip-card-front') : null;
+            const searchCard = button ? button.closest('.search-verse-card') : null;
+            const keywordCard = button ? button.closest('.keyword-verse-card') : null;
+
+            if (flipFront) {
+                surahNum = parseInt(flipFront.getAttribute('data-surah')) || 1;
+                ayatNum = parseInt(flipFront.getAttribute('data-ayat')) || 1;
+                indoText = decodeURIComponent(flipFront.getAttribute('data-indo') || "");
+                const textEl = flipFront.querySelector('.translation-text');
+                if (textEl) indoText = textEl.textContent.trim();
+
+                const flipBack = flipFront.parentElement ? flipFront.parentElement.querySelector('.flip-card-back') : null;
+                if (flipBack) arabText = flipBack.textContent.trim();
+
+                const groupCard = button.closest('.uraian-group-card');
+                if (groupCard) {
+                    const tEl = groupCard.querySelector('.group-title');
+                    if (tEl) uraian = tEl.textContent.trim();
+                }
+            } else if (searchCard) {
+                surahNum = currentSearchSurah;
+                ayatNum = currentSearchAyat;
+                const arabEl = searchCard.querySelector('.search-arabic-box');
+                const transEl = searchCard.querySelector('.search-translation-box');
+                if (arabEl) arabText = arabEl.textContent.trim();
+                if (transEl) indoText = transEl.textContent.trim();
+
+                const key = `${surahNum}:${ayatNum}`;
+                if (verseThematicIndex[key] && verseThematicIndex[key].topics && verseThematicIndex[key].topics.length > 0) {
+                    const top = verseThematicIndex[key].topics[0];
+                    tema = top.tema;
+                    pokok = top.pokok;
+                    sub = top.sub;
+                    uraian = top.uraian;
+                }
+            } else if (keywordCard) {
+                surahNum = parseInt(keywordCard.getAttribute('data-surah')) || 1;
+                ayatNum = parseInt(keywordCard.getAttribute('data-ayat')) || 1;
+                const arabEl = keywordCard.querySelector('.keyword-arabic-box');
+                const transEl = keywordCard.querySelector('.keyword-trans-box');
+                if (arabEl) arabText = arabEl.textContent.trim();
+                if (transEl) indoText = transEl.textContent.trim();
+
+                const key = `${surahNum}:${ayatNum}`;
+                if (verseThematicIndex[key] && verseThematicIndex[key].topics && verseThematicIndex[key].topics.length > 0) {
+                    const top = verseThematicIndex[key].topics[0];
+                    tema = top.tema;
+                    pokok = top.pokok;
+                    sub = top.sub;
+                    uraian = top.uraian;
+                }
+            }
+
+            const surahInfo = SURAH_LIST.find(s => s.no == surahNum);
+            surahName = surahInfo ? surahInfo.name : `Surat ${surahNum}`;
+
+            if (!arabText && verseThematicIndex[`${surahNum}:${ayatNum}`]) {
+                arabText = verseThematicIndex[`${surahNum}:${ayatNum}`].arab;
+            }
+            if (!indoText && verseThematicIndex[`${surahNum}:${ayatNum}`]) {
+                indoText = verseThematicIndex[`${surahNum}:${ayatNum}`].indo;
+            }
+
+            openTanyaAIModal({
+                surahNum,
+                surahName,
+                ayatNum,
+                arabText: arabText || "Teks Arab Al-Qur'an",
+                indoText: indoText || "Terjemahan ayat Al-Qur'an",
+                tema: tema || "Al-Qur'an Tematis",
+                pokok: pokok || "Kandungan Al-Qur'an",
+                sub: sub || "Tadabbur Ayat",
+                uraian: uraian || `Kajian QS. ${surahName}: ${ayatNum}`
+            });
+        }
+
+        function openTanyaAIModal(context) {
+            currentAIContext = context;
+            const modal = document.getElementById('modal-tanya-ai');
+            if (!modal) return;
+
+            // Render verse context
+            const ctxEl = document.getElementById('ai-verse-context');
+            if (ctxEl) {
+                ctxEl.innerHTML = `
+                    <div class="ai-context-verse-header">
+                        <div class="ai-context-verse-title">QS. ${context.surahName} [${context.surahNum}] : Ayat ${context.ayatNum}</div>
+                        <span class="thematic-match-badge" style="font-size: 0.78rem;">🏷️ ${context.tema || "Al-Qur'an Tematis"}</span>
+                    </div>
+                    <div class="ai-context-arabic">${context.arabText}</div>
+                    <div class="ai-context-translation">"${context.indoText}"</div>
+                    <div class="ai-context-thematic-tag">
+                        📂 <strong>Topik Bahasan:</strong> ${context.uraian || context.sub || context.pokok}
+                    </div>
+                `;
+            }
+
+            // Set default mode
+            setAIMode('tadabbur');
+
+            // Render instant summary text
+            const sumTextEl = document.getElementById('ai-instant-summary-text');
+            if (sumTextEl) {
+                sumTextEl.innerHTML = `
+                    Ayat <strong>QS. ${context.surahName}: ${context.ayatNum}</strong> terklasifikasi secara shahih dalam tema <em>"${context.tema}"</em> pada bahasan <em>"${context.uraian}"</em>. Intisari ayat menegaskan petunjuk keimanan, keteladanan, serta hukum yang kokoh bagi umat beriman tanpa keraguan.
+                `;
+            }
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeTanyaAIModal() {
+            const modal = document.getElementById('modal-tanya-ai');
+            if (modal) modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function closeTanyaAIModalOnBackdrop(e) {
+            if (e.target && e.target.id === 'modal-tanya-ai') {
+                closeTanyaAIModal();
+            }
+        }
+
+        function setAIMode(mode) {
+            currentAIMode = mode;
+            const tabs = ['tadabbur', 'asbab', 'mufradat', 'custom'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`ai-tab-${t}`);
+                if (btn) {
+                    if (t === mode) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                }
+            });
+
+            const customWrap = document.getElementById('ai-custom-input-wrap');
+            if (customWrap) {
+                customWrap.style.display = (mode === 'custom') ? 'block' : 'none';
+                if (mode === 'custom') {
+                    const inp = document.getElementById('ai-custom-question-input');
+                    if (inp) inp.focus();
+                }
+            }
+
+            updateAIPromptPreview();
+        }
+
+        function generateZeroHallucinationPrompt() {
+            const ctx = currentAIContext;
+            let specificInstruction = "";
+
+            if (currentAIMode === 'tadabbur') {
+                specificInstruction = `FOKUS KAJIAN: Tadabbur Tematis & Pelajaran Hidup\nJelaskan secara mendalam hikmah, tadabbur, dan pelajaran praktis dari QS. ${ctx.surahName}:${ctx.ayatNum} dalam konteks tema '${ctx.tema}' dan uraian '${ctx.uraian}'. Sertakan aplikasi konkret dalam kehidupan seorang mukmin masa kini.`;
+            } else if (currentAIMode === 'asbab') {
+                specificInstruction = `FOKUS KAJIAN: Asbabun Nuzul Shahih\nSebutkan sebab turunnya (Asbabun Nuzul) QS. ${ctx.surahName}:${ctx.ayatNum} HANYA jika bersumber dari riwayat yang shahih/hasan (sebutkan nama perawi haditsnya, misal Bukhari, Muslim, Ahmad, atau At-Tirmidzi). JIKA ayat ini tidak memiliki asbabun nuzul riwayat shahih khusus, nyatakan secara tegas bahwa ayat ini turun secara ibtida'i (permulaan) tanpa sebab riwayat khusus.`;
+            } else if (currentAIMode === 'mufradat') {
+                specificInstruction = `FOKUS KAJIAN: Analisis Kebahasaan & Mufradat (Kosakata)\nBedah kosakata kunci dalam teks Arab QS. ${ctx.surahName}:${ctx.ayatNum} secara morfologis (akar kata/wazan/makna asal) dan terangkan keindahan balaghah (keagungan bahasa Al-Qur'an) yang terkandung di dalamnya.`;
+            } else if (currentAIMode === 'custom') {
+                const customInput = document.getElementById('ai-custom-question-input');
+                const customQ = (customInput && customInput.value.trim()) ? customInput.value.trim() : `Jelaskan penjelasan komprehensif QS. ${ctx.surahName}:${ctx.ayatNum}`;
+                specificInstruction = `PERTANYAAN PENGGUNA TENTANG AYAT INI:\n"${customQ}"\nJawab pertanyaan di atas dengan berlandaskan secara mutlak pada dalil nash ayat ini dan tafsir mu'tabar.`;
+            }
+
+            return `[SISTEM AL-QUR'AN BERINTEGRITAS ILMIAH TINGGI - PROTOKOL ZERO HALLUCINATION]
+Anda adalah asisten Al-Qur'an terpercaya yang beroperasi dengan PRINSIP ZERO HALLUCINATION (Bebas Halusinasi & Nol Spekulasi).
+
+DATA RUJUKAN RESMI:
+- Surat & Ayat: QS. ${ctx.surahName} [Surat Ke-${ctx.surahNum}] : Ayat ${ctx.ayatNum}
+- Teks Arab Asli: ${ctx.arabText}
+- Terjemahan Resmi Kemenag RI: "${ctx.indoText}"
+- Klasifikasi Al-Qur'an Tematis:
+  * Tema Besar: ${ctx.tema}
+  * Pokok Bahasan: ${ctx.pokok}
+  * Sub Pokok Bahasan: ${ctx.sub}
+  * Uraian Khusus: ${ctx.uraian}
+
+ATURAN KETAT ZERO-HALLUCINATION:
+1. RUJUKAN MUTLAK: Seluruh jawaban WAJIB bersumber secara ketat dari nash ayat di atas, hadits-hadits shahih/hasan mu'tabar (Shahih Bukhari, Shahih Muslim, Sunan Abu Dawud, Jami At-Tirmidzi), dan kitab tafsir mu'tabar (Tafsir Ibnu Katsir, Tafsir At-Thabari, Tafsir Al-Qurthubi, Tafsir Al-Jalalain, atau Tafsir Tematis Kemenag RI).
+2. DILARANG MENGARANG: Dilarang keras mengarang riwayat, asbabun nuzul fiktif, sanad palsu, atau nomor ayat lain yang tidak pasti. Jika suatu riwayat tidak memiliki dalil shahih, nyatakan secara transparan: "Tidak terdapat riwayat shahih mengenai hal ini, Wallahu a'lam".
+3. KONSISTENSI TEMATIK: Hubungkan penafsiran dengan konteks tema "${ctx.tema}" dan uraian khusus "${ctx.uraian}".
+4. SISTEMATIKA JAWABAN:
+   a. Makna Ringkas & Kosakata Kunci (Mufradat Arab)
+   b. Asbabun Nuzul (Hanya jika riwayat shahih; jika tidak ada, tegaskan tidak ada sebab khusus)
+   c. Intisari Petunjuk Hukum / Akidah / Akhlak
+   d. Faidah Praktis & Tadabbur Tematis untuk Kehidupan
+   e. Penutup: Wallahu A'lam Bish-Shawab
+
+${specificInstruction}`;
+        }
+
+        function updateAIPromptPreview() {
+            const previewBox = document.getElementById('ai-prompt-preview-box');
+            if (previewBox) {
+                previewBox.textContent = generateZeroHallucinationPrompt();
+            }
+        }
+
+        function togglePromptPreview() {
+            const previewBox = document.getElementById('ai-prompt-preview-box');
+            if (previewBox) {
+                previewBox.classList.toggle('expanded');
+            }
+        }
+
+        function toggleInstantSummary() {
+            const card = document.getElementById('ai-instant-summary-card');
+            if (card) {
+                card.style.display = (card.style.display === 'none' || !card.style.display) ? 'block' : 'none';
+            }
+        }
+
+        function showAIToast(message) {
+            const toast = document.getElementById('ai-toast');
+            const msgEl = document.getElementById('ai-toast-message');
+            if (!toast) return;
+            if (msgEl) msgEl.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2800);
+        }
+
+        function copyAIPrompt() {
+            const prompt = generateZeroHallucinationPrompt();
+            navigator.clipboard.writeText(prompt).then(() => {
+                showAIToast("Prompt Zero-Hallucination Berhasil Disalin!");
+            }).catch(err => {
+                console.error("Gagal menyalin prompt:", err);
+            });
+        }
+
+        function openAIPlatform(platform) {
+            const prompt = generateZeroHallucinationPrompt();
+            const encoded = encodeURIComponent(prompt);
+
+            if (platform === 'chatgpt') {
+                window.open(`https://chatgpt.com/?q=${encoded}`, '_blank');
+            } else if (platform === 'gemini') {
+                // Copy to clipboard for easy pasting and open Gemini
+                navigator.clipboard.writeText(prompt);
+                showAIToast("Prompt disalin ke clipboard! Membuka Google Gemini...");
+                setTimeout(() => {
+                    window.open('https://gemini.google.com/app', '_blank');
+                }, 400);
+            } else if (platform === 'claude') {
+                navigator.clipboard.writeText(prompt);
+                showAIToast("Prompt disalin ke clipboard! Membuka Claude...");
+                setTimeout(() => {
+                    window.open('https://claude.ai/new', '_blank');
+                }, 400);
+            }
+        }
+
+        /* ==========================================================================
+           FITUR 1: Smart Search Bar & Autocomplete (Cari Surat & Ayat)
+           ========================================================================== */
+        let smartSearchDebounceTimer = null;
+
+        function normalizeSearchText(str) {
+            return (str || '')
+                .toLowerCase()
+                .replace(/['’`-]/g, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function onSmartSearchInput(query) {
+            const clearBtn = document.getElementById('btn-clear-smart-search');
+            if (clearBtn) clearBtn.style.display = query.trim() ? 'flex' : 'none';
+
+            clearTimeout(smartSearchDebounceTimer);
+            smartSearchDebounceTimer = setTimeout(() => {
+                processSmartSearchQuery(query);
+            }, 180);
+        }
+
+        function clearSmartSearch() {
+            const inp = document.getElementById('smart-surah-ayat-input');
+            const dropdown = document.getElementById('smart-search-suggestions');
+            const clearBtn = document.getElementById('btn-clear-smart-search');
+            if (inp) {
+                inp.value = '';
+                inp.focus();
+            }
+            if (clearBtn) clearBtn.style.display = 'none';
+            if (dropdown) dropdown.style.display = 'none';
+        }
+
+        function processSmartSearchQuery(query) {
+            const dropdown = document.getElementById('smart-search-suggestions');
+            if (!dropdown) return;
+
+            const q = query.trim();
+            if (!q) {
+                dropdown.style.display = 'none';
+                return;
+            }
+
+            // Patterns:
+            // 1. "2:255" or "2 255" or "2-255"
+            const numMatch = q.match(/^(\d+)\s*[:\s-]\s*(\d+)$/);
+            // 2. "Al-Baqarah 255" or "Baqarah:255"
+            const nameNumMatch = q.match(/^([a-zA-Z'’`\s-]+?)\s*[:\s-]\s*(\d+)$/);
+
+            let suggestions = [];
+
+            if (numMatch) {
+                const sNum = parseInt(numMatch[1]);
+                const aNum = parseInt(numMatch[2]);
+                const sInfo = SURAH_LIST.find(s => s.no == sNum);
+                if (sInfo && aNum >= 1 && aNum <= sInfo.ayat) {
+                    suggestions.push({
+                        surahNum: sNum,
+                        surahName: sInfo.name,
+                        ayatNum: aNum,
+                        arab: sInfo.arab,
+                        badge: `${sInfo.ayat} Ayat`,
+                        label: `QS. ${sInfo.name} [${sNum}] : Ayat ${aNum}`
+                    });
+                }
+            } else if (nameNumMatch) {
+                const rawName = normalizeSearchText(nameNumMatch[1]);
+                const aNum = parseInt(nameNumMatch[2]);
+                const matchedSurahs = SURAH_LIST.filter(s => {
+                    const norm = normalizeSearchText(s.name);
+                    return norm.includes(rawName);
+                });
+
+                matchedSurahs.forEach(s => {
+                    if (aNum >= 1 && aNum <= s.ayat) {
+                        suggestions.push({
+                            surahNum: s.no,
+                            surahName: s.name,
+                            ayatNum: aNum,
+                            arab: s.arab,
+                            badge: `Ayat ${aNum}`,
+                            label: `QS. ${s.name} [${s.no}] : Ayat ${aNum}`
+                        });
+                    }
+                });
+            } else {
+                // Just text or single number
+                const rawQ = normalizeSearchText(q);
+                const asNumber = parseInt(q);
+
+                // Check surah matches
+                SURAH_LIST.forEach(s => {
+                    const norm = normalizeSearchText(s.name);
+                    const matchName = norm.includes(rawQ);
+                    const matchNo = (asNumber && s.no === asNumber);
+                    if (matchName || matchNo) {
+                        suggestions.push({
+                            surahNum: s.no,
+                            surahName: s.name,
+                            ayatNum: 1,
+                            arab: s.arab,
+                            badge: `${s.ayat} Ayat`,
+                            label: `QS. ${s.name} [${s.no}] — Ayat 1 s/d ${s.ayat}`
+                        });
+                        // Also suggest Ayat Kursi if Al-Baqarah
+                        if (s.no === 2 && 'ayat kursi'.includes(rawQ)) {
+                            suggestions.unshift({
+                                surahNum: 2,
+                                surahName: "Al-Baqarah",
+                                ayatNum: 255,
+                                arab: "البقرة",
+                                badge: "Ayat Kursi",
+                                label: `QS. Al-Baqarah [2] : Ayat 255 (Ayat Kursi)`
+                            });
+                        }
+                    }
+                });
+            }
+
+            if (suggestions.length === 0) {
+                dropdown.innerHTML = `
+                    <div style="padding: 0.85rem 1rem; color: #94a3b8; font-size: 0.9rem; text-align: center;">
+                        Tidak ditemukan surat/ayat untuk "<strong>${escapeHtml(q)}</strong>".<br>
+                        <span style="font-size: 0.8rem; color: #64748b;">Contoh format: <em>Al-Baqarah 255</em>, <em>36:82</em>, <em>Kahfi 10</em></span>
+                    </div>
+                `;
+                dropdown.style.display = 'block';
+                return;
+            }
+
+            let html = '';
+            suggestions.slice(0, 8).forEach((item, idx) => {
+                html += `
+                    <div class="suggestion-item ${idx === 0 ? 'active' : ''}" onclick="selectSmartSuggestion(${item.surahNum}, ${item.ayatNum})">
+                        <div class="suggestion-left">
+                            <span class="suggestion-badge">${item.badge}</span>
+                            <span>${escapeHtml(item.label)}</span>
+                        </div>
+                        <span class="suggestion-arabic">${item.arab}</span>
+                    </div>
+                `;
+            });
+
+            dropdown.innerHTML = html;
+            dropdown.style.display = 'block';
+        }
+
+        function onSmartSearchKeydown(e) {
+            const dropdown = document.getElementById('smart-search-suggestions');
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                if (dropdown && dropdown.style.display !== 'none') {
+                    const firstItem = dropdown.querySelector('.suggestion-item');
+                    if (firstItem) {
+                        firstItem.click();
+                        return;
+                    }
+                }
+                const inp = document.getElementById('smart-surah-ayat-input');
+                if (inp && inp.value.trim()) {
+                    processSmartSearchQuery(inp.value.trim());
+                    const firstItem = dropdown ? dropdown.querySelector('.suggestion-item') : null;
+                    if (firstItem) firstItem.click();
+                }
+            } else if (e.key === 'Escape') {
+                if (dropdown) dropdown.style.display = 'none';
+            }
+        }
+
+        function selectSmartSuggestion(surahNum, ayatNum) {
+            const dropdown = document.getElementById('smart-search-suggestions');
+            const input = document.getElementById('smart-surah-ayat-input');
+            if (dropdown) dropdown.style.display = 'none';
+
+            currentSearchSurah = surahNum;
+            currentSearchAyat = ayatNum;
+
+            const selectSurah = document.getElementById('select-search-surah');
+            const selectAyat = document.getElementById('select-search-ayat');
+
+            if (selectSurah) selectSurah.value = surahNum;
+            populateAyatDropdown(surahNum);
+            if (selectAyat) selectAyat.value = ayatNum;
+            updateStepperButtons();
+
+            const surahInfo = SURAH_LIST.find(s => s.no == surahNum);
+            if (input && surahInfo) {
+                input.value = `${surahInfo.name} ${ayatNum}`;
+            }
+
+            renderSearchVerseResult(surahNum, ayatNum);
+            scrollToSearchCard();
+        }
+
+        function selectQuickVerse(surahNum, ayatNum) {
+            stopTTS();
+            switchMainMode('search');
+            selectSmartSuggestion(surahNum, ayatNum);
+        }
+
+        function scrollToSearchCard() {
+            setTimeout(() => {
+                const el = document.getElementById('search-content-area');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+
+        /* ==========================================================================
+           FITUR 2: Pencarian Kata Kunci (Uraian & Teks Ayat)
+           ========================================================================== */
+        const KEYWORD_SYNONYMS = {
+            'patience': 'sabar',
+            'patient': 'sabar',
+            'usury': 'riba',
+            'interest': 'riba',
+            'prayer': 'shalat',
+            'prayers': 'shalat',
+            'repentance': 'taubat',
+            'provision': 'rezeki',
+            'sustenance': 'rezeki',
+            'paradise': 'surga',
+            'heaven': 'surga',
+            'hell': 'neraka',
+            'hellfire': 'neraka',
+            'parents': 'orang tua',
+            'parent': 'orang tua',
+            'father': 'orang tua',
+            'mother': 'orang tua',
+            'charity': 'sedekah',
+            'alms': 'sedekah',
+            'doomsday': 'kiamat',
+            'judgment': 'kiamat',
+            'resurrection': 'kiamat',
+            'gratitude': 'syukur',
+            'grateful': 'syukur',
+            'fasting': 'puasa',
+            'human': 'manusia',
+            'creation': 'penciptaan'
+        };
+
+        function getI18nText(key) {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLang = cfg.code;
+            if (targetLang === 'id') return key;
+            const dict = LANG_UI_MAP[targetLang];
+            if (dict && dict[key]) return dict[key];
+            return key;
+        }
+
+        let keywordFilterMode = 'all'; // 'all', 'uraian', 'ayat'
+        let keywordDebounceTimer = null;
+        let lastSearchedKeyword = "";
+
+        function onKeywordInput(val) {
+            const clearBtn = document.getElementById('btn-clear-keyword-search');
+            if (clearBtn) clearBtn.style.display = val.trim() ? 'flex' : 'none';
+
+            clearTimeout(keywordDebounceTimer);
+            if (!val.trim()) {
+                clearKeywordSearch();
+                return;
+            }
+
+            keywordDebounceTimer = setTimeout(() => {
+                executeKeywordSearch();
+            }, 300);
+        }
+
+        function clearKeywordSearch() {
+            const input = document.getElementById('keyword-search-input');
+            const clearBtn = document.getElementById('btn-clear-keyword-search');
+            const area = document.getElementById('keyword-content-area');
+
+            if (input) {
+                input.value = '';
+                input.focus();
+            }
+            if (clearBtn) clearBtn.style.display = 'none';
+            lastSearchedKeyword = "";
+
+            if (area) {
+                area.innerHTML = `
+                    <div class="empty-state">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1rem; display: block; color: var(--accent); opacity: 0.8;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Ketik kata kunci di atas atau pilih salah satu kata populer untuk mencari uraian tematis dan ayat Al-Qur'an.
+                    </div>
+                `;
+            }
+        }
+
+        function setKeywordFilter(filter) {
+            keywordFilterMode = filter;
+            ['all', 'uraian', 'ayat'].forEach(f => {
+                const btn = document.getElementById(`filter-pill-${f}`);
+                if (btn) {
+                    if (f === filter) btn.classList.add('active');
+                    else btn.classList.remove('active');
+                }
+            });
+
+            if (lastSearchedKeyword) {
+                executeKeywordSearch();
+            }
+        }
+
+        function searchKeywordTag(tag) {
+            switchMainMode('keyword');
+            const input = document.getElementById('keyword-search-input');
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLang = cfg.code;
+
+            let searchVal = tag;
+            if (targetLang !== 'id') {
+                const dict = LANG_UI_MAP[targetLang];
+                const capTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+                if (dict && dict[capTag]) {
+                    searchVal = dict[capTag].toLowerCase();
+                }
+            }
+
+            if (input) input.value = searchVal;
+            const clearBtn = document.getElementById('btn-clear-keyword-search');
+            if (clearBtn) clearBtn.style.display = 'flex';
+            executeKeywordSearch();
+        }
+
+        function highlightKeyword(text, keyword) {
+            if (!text || !keyword) return text || '';
+            const safeKeyword = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(`(${safeKeyword})`, 'gi');
+            return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function executeKeywordSearch() {
+            stopTTS();
+            const input = document.getElementById('keyword-search-input');
+            const area = document.getElementById('keyword-content-area');
+            if (!input || !area) return;
+
+            const q = input.value.trim();
+            if (!q || q.length < 2) {
+                const minCharText = getI18nText("Silakan masukkan minimal 2 huruf untuk melakukan pencarian.");
+                area.innerHTML = `<div class="empty-state">${minCharText}</div>`;
+                return;
+            }
+
+            lastSearchedKeyword = q;
+            const qLower = q.toLowerCase();
+            const synonym = KEYWORD_SYNONYMS[qLower] || "";
+
+            // 1. Search in all Uraian topics (matching query or synonym, plus cached translations)
+            let matchedUraian = [];
+            if (keywordFilterMode === 'all' || keywordFilterMode === 'uraian') {
+                allThematicUraianList.forEach(item => {
+                    const uMatch = item.uraian.toLowerCase().includes(qLower) || (synonym && item.uraian.toLowerCase().includes(synonym));
+                    const sMatch = item.sub.toLowerCase().includes(qLower) || (synonym && item.sub.toLowerCase().includes(synonym));
+                    const pMatch = item.pokok.toLowerCase().includes(qLower) || (synonym && item.pokok.toLowerCase().includes(synonym));
+                    const tMatch = item.tema.toLowerCase().includes(qLower) || (synonym && item.tema.toLowerCase().includes(synonym));
+
+                    if (uMatch || sMatch || pMatch || tMatch) {
+                        matchedUraian.push(item);
+                    }
+                });
+            }
+
+            // 2. Search in all Verses (Indonesian translation, Arabic, and any cached verse translations)
+            let matchedVerses = [];
+            if (keywordFilterMode === 'all' || keywordFilterMode === 'ayat') {
+                allThematicVersesList.forEach(verse => {
+                    const indoMatch = (verse.indo && verse.indo.toLowerCase().includes(qLower)) || (synonym && verse.indo && verse.indo.toLowerCase().includes(synonym));
+                    const nameMatch = verse.surah_name && verse.surah_name.toLowerCase().includes(qLower);
+                    const arabMatch = verse.arab && verse.arab.includes(q);
+
+                    if (indoMatch || nameMatch || arabMatch) {
+                        matchedVerses.push(verse);
+                    }
+                });
+            }
+
+            renderKeywordSearchResults(q, matchedUraian, matchedVerses);
+        }
+
+                function renderKeywordSearchResults(keyword, matchedUraian, matchedVerses) {
+            const area = document.getElementById('keyword-content-area');
+            if (!area) return;
+
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLang = cfg.code;
+
+            const totalUraian = matchedUraian.length;
+            const totalVerses = matchedVerses.length;
+            const grandTotal = totalUraian + totalVerses;
+
+            const lblSearchFor = getI18nText("🔍 Hasil pencarian untuk:");
+            const lblUraianBadge = getI18nText("Uraian Tematis");
+            const lblVersesBadge = getI18nText("Ayat Al-Qur'an");
+            const lblSecTopics = getI18nText("📝 Topik & Uraian Tematis Terkait");
+            const lblTopicsFound = getI18nText("Topik Ditemukan");
+            const lblSecVerses = getI18nText("📖 Ayat-Ayat Al-Qur'an Terkait");
+            const lblVersesFound = getI18nText("Ayat Ditemukan");
+            const lblOpenTopic = getI18nText("Buka Topik Tematis Ini");
+            const lblListen = getI18nText("Dengarkan");
+            const lblAskAI = getI18nText("Tanya AI");
+            const lblCopy = getI18nText("Salin");
+            const lblShare = getI18nText("Bagikan");
+            const lblOpenSearch = getI18nText("🔍 Buka di Pencarian Ayat");
+            const lblOpenThematic = getI18nText("Buka Tematik ➡️");
+            const lblTheme = getI18nText("Tema:");
+            const lblSubject = getI18nText("Pokok:");
+            const lblSubtopic = getI18nText("Sub Pokok:");
+
+            if (grandTotal === 0) {
+                const notFoundText = getI18nText("Tidak ditemukan hasil untuk kata kunci");
+                const tipText = getI18nText("Saran: Periksa kembali ejaan kata, gunakan kata dasar (misal sabar, bukan bersabarlah), atau coba kata populer di atas.");
+                area.innerHTML = `
+                    <div class="empty-state" style="padding: 3rem 1.5rem;">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1rem; display: block; color: #ef4444; opacity: 0.8;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        ${notFoundText} "<strong>${escapeHtml(keyword)}</strong>".
+                        <div style="font-size: 0.88rem; color: #94a3b8; margin-top: 0.75rem;">
+                            ${tipText}
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            let markup = `
+                <div class="keyword-stats-banner">
+                    <div class="keyword-stats-info">
+                        <span>${lblSearchFor} <strong>"${escapeHtml(keyword)}"</strong></span>
+                    </div>
+                    <div class="keyword-stats-badges">
+                        ${keywordFilterMode !== 'ayat' ? `<span class="thematic-match-badge" style="background: rgba(20, 184, 166, 0.15); border-color: rgba(20, 184, 166, 0.4); color: #5eead4;">📝 ${totalUraian} ${lblUraianBadge}</span>` : ''}
+                        ${keywordFilterMode !== 'uraian' ? `<span class="thematic-match-badge" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">📖 ${totalVerses} ${lblVersesBadge}</span>` : ''}
+                    </div>
+                </div>
+            `;
+
+            // SECTION 1: Uraian Tematis
+            if (keywordFilterMode !== 'ayat' && totalUraian > 0) {
+                markup += `
+                    <div class="keyword-section-title">
+                        <span>${lblSecTopics}</span>
+                        <span class="badge">${totalUraian} ${lblTopicsFound}</span>
+                    </div>
+                    <div class="keyword-uraian-grid">
+                `;
+
+                matchedUraian.slice(0, 40).forEach((u, uIdx) => {
+                    const uId = `kw-u-${uIdx}`;
+                    markup += `
+                        <div class="keyword-uraian-card">
+                            <div class="keyword-uraian-header">
+                                <div class="keyword-uraian-title" id="${uId}-title" data-original="${escapeHtml(u.uraian)}">${highlightKeyword(escapeHtml(u.uraian), keyword)}</div>
+                                <span class="keyword-verse-count-badge">${u.verseCount} ${lblVersesBadge}</span>
+                            </div>
+                            <div class="keyword-uraian-path">
+                                <div>🏷️ <strong>${lblTheme}</strong> <span id="${uId}-tema" data-original="${escapeHtml(u.tema)}">${highlightKeyword(escapeHtml(u.tema), keyword)}</span></div>
+                                <div>📂 <strong>${lblSubject}</strong> <span id="${uId}-pokok" data-original="${escapeHtml(u.pokok)}">${highlightKeyword(escapeHtml(u.pokok), keyword)}</span></div>
+                                <div>📑 <strong>${lblSubtopic}</strong> <span id="${uId}-sub" data-original="${escapeHtml(u.sub)}">${highlightKeyword(escapeHtml(u.sub), keyword)}</span></div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <button class="btn-jump-thematic" style="padding: 0.6rem 1.1rem; font-size: 0.88rem; flex: 1;" onclick="navigateToThematicTopic('${u.tema.replace(/'/g, "\\'")}', '${u.pokok.replace(/'/g, "\\'")}', '${u.sub.replace(/'/g, "\\'")}', '${u.uraian.replace(/'/g, "\\'")}', ${u.sampleVerses[0] ? u.sampleVerses[0].surah_num : 1}, ${u.sampleVerses[0] ? u.sampleVerses[0].ayat_num : 1})">
+                                    <span>${lblOpenTopic}</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </button>
+                                <button class="uraian-action-btn uraian-copy-btn" style="padding: 0.6rem 0.9rem;" onclick="copyUraianLink(this, event, '${encodeURIComponent(u.uraian)}')" title="Salin Deep Link">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                    <span data-i18n-orig="Salin Link">Salin Link</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                if (totalUraian > 40) {
+                    markup += `<div style="text-align: center; color: #94a3b8; font-size: 0.88rem; padding: 1rem;">Menampilkan 40 dari ${totalUraian} topik.</div>`;
+                }
+
+                markup += `</div>`;
+            }
+
+            // SECTION 2: Verses
+            if (keywordFilterMode !== 'uraian' && totalVerses > 0) {
+                markup += `
+                    <div class="keyword-section-title" style="margin-top: 3.5rem;">
+                        <span>${lblSecVerses}</span>
+                        <span class="badge">${totalVerses} ${lblVersesFound}</span>
+                    </div>
+                `;
+
+                matchedVerses.slice(0, 50).forEach((v, vIdx) => {
+                    const topic = (v.topics && v.topics.length > 0) ? v.topics[0] : null;
+                    const vCardId = `kw-v-${vIdx}`;
+
+                    markup += `
+                        <div class="keyword-verse-card" id="${vCardId}" data-surah="${v.surah_num}" data-ayat="${v.ayat_num}">
+                            <div class="keyword-verse-header">
+                                <div class="keyword-verse-title">QS. ${v.surah_name} [${v.surah_num}] : Ayat ${v.ayat_num}</div>
+                                <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                                    ${topic ? `<span class="thematic-match-badge kw-topic-badge" style="font-size: 0.78rem;" data-original="${escapeHtml(topic.uraian)}">🏷️ ${escapeHtml(topic.uraian)}</span>` : ''}
+                                    ${v.audio ? `
+                                    <audio controls style="height: 30px; border-radius: 999px;">
+                                        <source src="${v.audio}" type="audio/mpeg">
+                                    </audio>
+                                    ` : ''}
+                                </div>
+                            </div>
+
+                            <div class="search-arabic-box keyword-arabic-box" style="font-size: 2rem; margin-bottom: 1.25rem;">
+                                ${highlightKeyword(v.arab, keyword)} <span class="verse-end-sign">۝${toArabicDigits(v.ayat_num)}</span>
+                            </div>
+
+                            <div class="search-translation-box keyword-trans-box translation-text" style="margin-bottom: 1.25rem;" data-original="${escapeHtml(v.indo)}">
+                                ${highlightKeyword(escapeHtml(v.indo), keyword)}
+                            </div>
+
+                            <div class="search-actions-bar">
+                                <div class="search-action-btns-left">
+                                    <button class="tts-button play-btn" data-text="${encodeURIComponent(v.indo)}" onclick="playTTS(this, event)" title="${lblListen}">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                                        ${lblListen}
+                                    </button>
+                                    <button class="tts-button ai-btn" style="color: #8b5cf6; border-color: #8b5cf6; background-color: rgba(139, 92, 246, 0.1);" onclick="tanyaAI(this, event, 'QS. ${v.surah_name}: ${v.ayat_num}')" title="${lblAskAI}">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                        ${lblAskAI}
+                                    </button>
+                                    <button class="tts-button copy-btn" onclick="copyAyatText(this, event, '${v.surah_name}', ${v.surah_num}, ${v.ayat_num})" title="${lblCopy}">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                        ${lblCopy}
+                                    </button>
+                                    <button class="tts-button" style="color: #25d366; border-color: rgba(37, 211, 102, 0.4); background-color: rgba(37, 211, 102, 0.1);" onclick="shareAyatWhatsApp('${v.surah_name}', ${v.surah_num}, ${v.ayat_num})" title="${lblShare}">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                        ${lblShare}
+                                    </button>
+                                </div>
+                                <div class="search-action-btns-right">
+                                    <button class="nav-action-btn secondary-btn" style="padding: 0.5rem 1rem; font-size: 0.88rem;" onclick="lookupVerseInSearch(${v.surah_num}, ${v.ayat_num}, event)">
+                                        ${lblOpenSearch}
+                                    </button>
+                                    ${topic ? `
+                                    <button class="nav-action-btn next-btn" style="padding: 0.5rem 1rem; font-size: 0.88rem;" onclick="navigateToThematicTopic('${topic.tema.replace(/'/g, "\\'")}', '${topic.pokok.replace(/'/g, "\\'")}', '${topic.sub.replace(/'/g, "\\'")}', '${topic.uraian.replace(/'/g, "\\'")}', ${v.surah_num}, ${v.ayat_num})">
+                                        ${lblOpenThematic}
+                                    </button>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                if (totalVerses > 50) {
+                    markup += `<div style="text-align: center; color: #94a3b8; font-size: 0.88rem; padding: 1rem;">Menampilkan 50 dari ${totalVerses} ayat.</div>`;
+                }
+            }
+
+            area.innerHTML = markup;
+
+            // If in non-Indonesian mode, translate dynamic titles and verses in results
+            if (targetLang !== 'id') {
+                translatePageContent();
+            }
+        }
+
+
+        function clearContent() {
+            stopTTS();
+            elContent.innerHTML = `<div class="empty-state">Silakan pilih kategori di atas untuk melihat ayat.</div>`;
+            elHint.style.display = 'none';
+            const navContainer = document.getElementById('bottom-nav-container');
+            if (navContainer) navContainer.style.display = 'none';
+        }
+
+        function prevSub() {
+            stopTTS();
+            if (!elSub || elSub.disabled) return;
+            const curIdx = elSub.selectedIndex;
+            if (curIdx > 1) {
+                elSub.selectedIndex = curIdx - 1;
+                elSub.dispatchEvent(new Event('change'));
+                scrollToContent();
+            }
+        }
+
+        function nextSub() {
+            stopTTS();
+            // 1. Next Sub in current Pokok
+            if (elSub && !elSub.disabled && elSub.selectedIndex < elSub.options.length - 1) {
+                elSub.selectedIndex = elSub.selectedIndex + 1;
+                elSub.dispatchEvent(new Event('change'));
+                scrollToContent();
+                return;
+            }
+
+            // 2. Next Pokok Bahasan
+            if (elPokok && !elPokok.disabled && elPokok.selectedIndex < elPokok.options.length - 1) {
+                elPokok.selectedIndex = elPokok.selectedIndex + 1;
+                elPokok.dispatchEvent(new Event('change'));
+                setTimeout(() => {
+                    if (elSub.options.length > 1) {
+                        elSub.selectedIndex = 1;
+                        elSub.dispatchEvent(new Event('change'));
+                        scrollToContent();
+                    }
+                }, 100);
+                return;
+            }
+
+            // 3. Next Tema
+            if (elTema && elTema.selectedIndex < elTema.options.length - 1) {
+                elTema.selectedIndex = elTema.selectedIndex + 1;
+                elTema.dispatchEvent(new Event('change'));
+                setTimeout(() => {
+                    if (elPokok.options.length > 1) {
+                        elPokok.selectedIndex = 1;
+                        elPokok.dispatchEvent(new Event('change'));
+                        setTimeout(() => {
+                            if (elSub.options.length > 1) {
+                                elSub.selectedIndex = 1;
+                                elSub.dispatchEvent(new Event('change'));
+                                scrollToContent();
+                            }
+                        }, 100);
+                    }
+                }, 100);
+            }
+        }
+
+        function prevUraian() { prevSub(); }
+        function nextUraian() { nextSub(); }
+
+        function scrollToContent() {
+            setTimeout(() => {
+                const elContent = document.getElementById('content-area');
+                if (elContent) {
+                    window.scrollTo({ top: elContent.offsetTop - 20, behavior: 'smooth' });
+                }
+            }, 80);
+        }
+
+        function updateNavButtonState() {
+            const btnPrev = document.getElementById('btn-prev-uraian');
+            if (btnPrev && elSub) {
+                btnPrev.disabled = (elSub.selectedIndex <= 1);
+            }
+        }
+
+        function toggleSingleGroup(groupIdx, event) {
+            if (event && event.target && (event.target.closest('button') || event.target.closest('audio') || event.target.closest('.flip-card'))) {
+                return;
+            }
+            const card = document.getElementById(`group-${groupIdx}`);
+            if (!card) return;
+            card.classList.toggle('is-collapsed');
+
+            if (!card.classList.contains('is-collapsed')) {
+                const titleEl = card.querySelector('.group-title');
+                if (titleEl) {
+                    const origTitle = titleEl.getAttribute('data-original') || titleEl.textContent.trim();
+                    try {
+                        const newUrl = getUraianDeepLink(origTitle, elTema ? elTema.value : '', elPokok ? elPokok.value : '', elSub ? elSub.value : '');
+                        history.replaceState(null, '', newUrl);
+                    } catch(e) {}
+                }
+            }
+
+            const groupCards = Array.from(document.querySelectorAll('.uraian-group-card'));
+            const anyExpandedWithVerses = groupCards.some(c => {
+                if (c.classList.contains('is-collapsed')) return false;
+                const meta = c.querySelector('.group-meta');
+                const count = meta ? parseInt(meta.getAttribute('data-count') || '0') : 0;
+                return count > 0;
+            });
+
+            if (anyExpandedWithVerses) {
+                elHint.style.display = 'flex';
+            } else {
+                elHint.style.display = 'none';
+            }
+        }
+
+        function generateUraianGroupMarkup(uraianTitle, data, groupIdx) {
+            let markup = `
+                <div class="uraian-group-card is-collapsed" id="group-${groupIdx}">
+                    <div class="group-header-banner" onclick="toggleSingleGroup(${groupIdx}, event)" title="Klik untuk Buka / Tutup Kelompok Ini">
+                        <div class="group-header-left">
+                            <h3 class="group-title" data-original="${uraianTitle}">${uraianTitle}</h3>
+                            <div class="group-meta" data-count="${data && data.verses ? data.verses.length : 0}">
+                                <span>📖 ${data && data.verses ? data.verses.length : 0} Ayat Al-Qur'an</span>
+                            </div>
+                        </div>
+                        <div class="group-header-actions">
+                            <button class="uraian-action-btn uraian-copy-btn" onclick="copyUraianLink(this, event, '${encodeURIComponent(uraianTitle)}')" title="Salin Deep Link Uraian Ini">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                <span data-i18n-orig="Salin Link">Salin Link</span>
+                            </button>
+                            <button class="uraian-action-btn uraian-wa-btn" onclick="shareUraianWhatsApp(event, '${encodeURIComponent(uraianTitle)}')" title="Bagikan ke WhatsApp">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                <span>WA</span>
+                            </button>
+                            <div class="group-toggle-icon" title="Buka / Tutup Kelompok">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-cards-container">
+            `;
+
+            if (data.is_lihat_juga) {
+                markup += `<div class="empty-state" style="padding: 1.5rem; text-align: left; background: rgba(30, 41, 59, 0.4); border-radius: 12px; margin-top: 1rem;">ℹ️ Lihat juga bahasan terkait pada referensi utama.</div>`;
+            } else if (!data.verses || data.verses.length === 0) {
+                markup += `<div class="empty-state" style="padding: 1.5rem; text-align: center;">Tidak ada ayat untuk kelompok uraian ini.</div>`;
+            } else {
+                data.verses.forEach(v => {
+                    markup += `
+                        <div class="verse-item-wrapper" style="margin-bottom: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+                                <div class="verse-title" style="margin-bottom: 0;">${v.surah_name} [${v.surah_num}]: ${v.ayat_num}</div>
+                                ${v.audio ? `
+                                <audio controls style="height: 32px; border-radius: 999px;">
+                                    <source src="${v.audio}" type="audio/mpeg">
+                                </audio>
+                                ` : ''}
+                            </div>
+                            <div class="flip-card" onclick="this.classList.toggle('flipped')">
+                                <div class="flip-card-inner">
+                                    <div class="flip-card-front" data-surah="${v.surah_num}" data-ayat="${v.ayat_num}" data-indo="${encodeURIComponent(v.indo)}">
+                                        <div class="translation-text" style="width: 100%;">${v.indo}</div>
+                                        <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+                                            <button class="tts-button play-btn" data-text="${encodeURIComponent(v.indo)}" onclick="playTTS(this, event)" title="Dengarkan Terjemahan">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                                                Dengarkan
+                                            </button>
+                                            <button class="tts-button ai-btn" style="color: #8b5cf6; border-color: #8b5cf6; background-color: rgba(139, 92, 246, 0.1);" onclick="tanyaAI(this, event, '${uraianTitle.replace(/'/g, "\\'")}')" title="Tanya AI tentang ayat ini">
+                                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                                Tanya AI
+                                            </button>
+                                            <button class="tts-button" style="color: #38bdf8; border-color: #38bdf8; background-color: rgba(56, 189, 248, 0.1);" onclick="lookupVerseInSearch(${v.surah_num}, ${v.ayat_num}, event)" title="Lihat di Pencari Surat & Ayat">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                                <span data-i18n-orig="Cari Ayat">Cari Ayat</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="flip-card-back">${v.arab}</div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            markup += `
+                    </div>
+                </div>
+            `;
+            return markup;
+        }
+
+        function renderContentAll(tema, pokok, sub) {
+            saveCurrentState();
+            const subData = quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub];
+            if (!subData) return;
+            const keys = naturalSort(Object.keys(subData));
+            let html = `
+                <div class="sub-header-banner-card">
+                    <div class="sub-header-info">
+                        <h2 class="sub-header-title" data-original="${sub}">${sub}</h2>
+                        <div class="sub-header-meta" data-count="${keys.length}">Menampilkan ${keys.length} Kelompok Uraian Flash Card</div>
+                    </div>
+                    <div class="sub-header-actions">
+                        <button class="uraian-action-btn sub-copy-btn" onclick="copySubLink(this, event, '${encodeURIComponent(sub)}')" title="Salin Deep Link Sub Pokok Bahasan Ini">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            <span data-i18n-orig="Salin Link Sub">Salin Link Sub</span>
+                        </button>
+                        <button class="uraian-action-btn uraian-wa-btn" onclick="shareSubWhatsApp(event, '${encodeURIComponent(sub)}')" title="Bagikan ke WhatsApp">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>WA</span>
+                        </button>
+                        <button id="btn-toggle-all-groups" class="toggle-verses-btn" onclick="toggleAllGroups()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+                            <span id="toggle-all-text" data-i18n-orig="Buka Semua Uraian">Buka Semua Uraian</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const navContainer = document.getElementById('bottom-nav-container');
+            let totalVerses = 0;
+
+            keys.forEach((uraianTitle, idx) => {
+                const data = subData[uraianTitle];
+                html += generateUraianGroupMarkup(uraianTitle, data, idx);
+                if (data && data.verses) totalVerses += data.verses.length;
+            });
+
+            elHint.style.display = 'none';
+
+            if (totalVerses > 0) {
+                if (navContainer) navContainer.style.display = 'block';
+            } else {
+                if (navContainer) navContainer.style.display = 'none';
+            }
+
+            elContent.innerHTML = html;
+            updateNavButtonState();
+            translatePageContent();
+        }
+
+        function renderContentSingle(tema, pokok, sub, uraianTitle) {
+            saveCurrentState();
+            const subData = quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub];
+            if (!subData || !subData[uraianTitle]) return;
+
+            const data = subData[uraianTitle];
+            const navContainer = document.getElementById('bottom-nav-container');
+
+            let html = generateUraianGroupMarkup(uraianTitle, data, 0);
+
+            elHint.style.display = 'none';
+
+            if (data.verses && data.verses.length > 0) {
+                if (navContainer) navContainer.style.display = 'block';
+            } else {
+                if (navContainer) navContainer.style.display = 'none';
+            }
+
+            elContent.innerHTML = html;
+            updateNavButtonState();
+            translatePageContent();
+        }
+
+        const elTtsLanguage = document.getElementById('tts-language');
+        if (elTtsLanguage) {
+            elTtsLanguage.addEventListener('change', () => {
+                stopTTS();
+                saveCurrentState();
+                translatePageContent();
+                translateDropdowns();
+                updateTranslatorInfo();
+            });
+        }
+
+        async function translatePageContent() {
+            const langSelect = document.getElementById('tts-language');
+            const lang = langSelect ? langSelect.value : 'id-ID';
+            const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+            const targetLangCode = cfg.code;
+
+            updateTranslatorInfo();
+
+            // 1. Petunjuk / Hint
+            const elHint = document.getElementById('hint-text');
+            if (elHint) {
+                elHint.innerHTML = cfg.hint;
+            }
+
+            // 2. Tombol Navigasi Bawah
+            const btnPrev = document.getElementById('btn-prev-uraian');
+            const btnNext = document.getElementById('btn-next-uraian');
+            if (btnPrev) btnPrev.textContent = cfg.prevBtn;
+            if (btnNext) btnNext.textContent = cfg.nextBtn;
+
+            // 3. Judul Sub Header & Meta
+            const subTitleEls = document.querySelectorAll('.sub-header-title');
+            subTitleEls.forEach(async el => {
+                const orig = el.getAttribute('data-original');
+                if (orig) {
+                    if (targetLangCode === 'id') el.textContent = orig;
+                    else el.textContent = await translateTextFree(orig, targetLangCode);
+                }
+            });
+
+            const subMetaEls = document.querySelectorAll('.sub-header-meta');
+            subMetaEls.forEach(el => {
+                const count = el.getAttribute('data-count');
+                el.textContent = cfg.subMeta(count);
+            });
+
+            // 4. Judul Kelompok Uraian & Meta Jumlah Ayat
+            const groupTitleEls = document.querySelectorAll('.group-title');
+            groupTitleEls.forEach(async el => {
+                const orig = el.getAttribute('data-original');
+                if (orig) {
+                    if (targetLangCode === 'id') el.textContent = orig;
+                    else el.textContent = await translateTextFree(orig, targetLangCode);
+                }
+            });
+
+            const groupMetaEls = document.querySelectorAll('.group-meta');
+            groupMetaEls.forEach(el => {
+                const count = el.getAttribute('data-count');
+                el.textContent = cfg.groupMeta(count);
+            });
+
+            // 5. Tombol aksi di depan kartu
+            const playBtns = document.querySelectorAll('.play-btn');
+            playBtns.forEach(btn => {
+                if (btn.classList.contains('is-playing')) {
+                    const spinnerSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path></svg>`;
+                    btn.innerHTML = spinnerSvg + cfg.playText;
+                } else {
+                    const svg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+                    btn.innerHTML = svg + cfg.playText;
+                }
+            });
+
+            const aiBtns = document.querySelectorAll('.ai-btn');
+            aiBtns.forEach(btn => {
+                const svg = btn.querySelector('svg') ? btn.querySelector('svg').outerHTML : '';
+                btn.innerHTML = svg + cfg.aiText;
+            });
+
+            // 5b. Terjemahkan Mode Tabs & Elemen UI Lainnya (data-i18n-orig)
+            const i18nElements = document.querySelectorAll('[data-i18n-orig]');
+            i18nElements.forEach(async el => {
+                const orig = el.getAttribute('data-i18n-orig');
+                if (!orig) return;
+                if (targetLangCode === 'id') {
+                    el.textContent = orig;
+                } else {
+                    const dict = LANG_UI_MAP[targetLangCode];
+                    if (dict && dict[orig]) {
+                        el.textContent = dict[orig];
+                    } else {
+                        el.textContent = await translateTextFree(orig, targetLangCode);
+                    }
+                }
+            });
+
+            // 5b2. Terjemahkan Placeholders Input (data-i18n-placeholder)
+            const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+            placeholderElements.forEach(async el => {
+                const orig = el.getAttribute('data-i18n-placeholder');
+                if (!orig) return;
+                if (targetLangCode === 'id') {
+                    el.placeholder = orig;
+                } else {
+                    const dict = LANG_UI_MAP[targetLangCode];
+                    if (dict && dict[orig]) {
+                        el.placeholder = dict[orig];
+                    } else {
+                        el.placeholder = await translateTextFree(orig, targetLangCode);
+                    }
+                }
+            });
+
+            // 5c. Terjemahkan hierarki tematik pada kartu hasil pencarian
+            const thematicStepVals = document.querySelectorAll('.thematic-step .step-val');
+            thematicStepVals.forEach(async el => {
+                const orig = el.getAttribute('data-original') || el.textContent;
+                if (!el.hasAttribute('data-original')) el.setAttribute('data-original', orig);
+                if (orig) {
+                    if (targetLangCode === 'id') {
+                        el.textContent = orig;
+                    } else {
+                        el.textContent = await translateTextFree(orig, targetLangCode);
+                    }
+                }
+            });
+
+            // 5d. Terjemahkan badge jumlah pembahasan tematik
+            const countBadge = document.querySelector('.thematic-count-badge');
+            if (countBadge) {
+                const count = parseInt(countBadge.getAttribute('data-count') || '0');
+                if (count > 0) {
+                    if (targetLangCode === 'id') {
+                        countBadge.textContent = `Ditemukan dalam ${count} Pembahasan Tematis`;
+                    } else if (targetLangCode === 'en') {
+                        countBadge.textContent = `Found in ${count} Thematic Topics`;
+                    } else if (targetLangCode === 'ar') {
+                        countBadge.textContent = `موجود في ${count} مواضيع موضوعية`;
+                    } else {
+                        const prefix = await translateTextFree('Ditemukan dalam', targetLangCode);
+                        const suffix = await translateTextFree('Pembahasan Tematis', targetLangCode);
+                        countBadge.textContent = `${prefix} ${count} ${suffix}`;
+                    }
+                } else {
+                    const emptyText = 'Tidak Ditemukan dalam Indeks Tematis';
+                    if (targetLangCode === 'id') {
+                        countBadge.textContent = emptyText;
+                    } else {
+                        countBadge.textContent = await translateTextFree(emptyText, targetLangCode);
+                    }
+                }
+            }
+
+            // 5e. Terjemahkan kartu hasil pencarian kata kunci (Uraian, Path, dan Badge)
+            const kwUraianElements = document.querySelectorAll('.keyword-uraian-title, .keyword-uraian-path span[data-original], .kw-topic-badge[data-original]');
+            kwUraianElements.forEach(async el => {
+                const orig = el.getAttribute('data-original');
+                if (!orig) return;
+                if (targetLangCode === 'id') {
+                    el.textContent = orig;
+                } else {
+                    const dict = LANG_UI_MAP[targetLangCode];
+                    if (dict && dict[orig]) {
+                        el.textContent = dict[orig];
+                    } else {
+                        el.textContent = await translateTextFree(orig, targetLangCode);
+                    }
+                }
+            });
+
+            // 6. Terjemahan Ayat pada Kartu Flip (di bagian depan), Hasil Pencarian Ayat, dan Hasil Pencarian Kata Kunci
+            const cards = document.querySelectorAll('.flip-card-front, .search-card-front, .keyword-verse-card');
+            if (lang === 'id-ID') {
+                cards.forEach(card => {
+                    const origIndo = card.getAttribute('data-indo') ? decodeURIComponent(card.getAttribute('data-indo')) : '';
+                    const textEl = card.querySelector('.translation-text');
+                    const text = origIndo || (textEl ? textEl.getAttribute('data-original') || '' : '');
+                    if (textEl && text) {
+                        textEl.className = 'translation-text' + (textEl.classList.contains('keyword-trans-box') ? ' keyword-trans-box' : '');
+                        textEl.textContent = text;
+                    }
+                    const playBtn = card.querySelector('.play-btn');
+                    if (playBtn && text) playBtn.setAttribute('data-text', encodeURIComponent(text));
+                });
+                return;
+            }
+            
+            const edition = cfg.edition;
+            const cssClass = cfg.cssClass ? ' ' + cfg.cssClass : '';
+            
+            const promises = Array.from(cards).map(async card => {
+                const surah = card.getAttribute('data-surah');
+                const ayat = card.getAttribute('data-ayat');
+                const textEl = card.querySelector('.translation-text');
+                const playBtn = card.querySelector('.play-btn');
+                
+                if (textEl) {
+                    textEl.className = 'translation-text' + (textEl.classList.contains('keyword-trans-box') ? ' keyword-trans-box' : '') + cssClass;
+                }
+                
+                const cacheKey = `${edition}:${surah}:${ayat}`;
+                if (ayahTranslationCache[cacheKey]) {
+                    const translatedText = ayahTranslationCache[cacheKey];
+                    if (textEl) textEl.textContent = translatedText;
+                    if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+                    return;
+                }
+                
+                if (textEl) textEl.textContent = cfg.loadingText;
+                
+                try {
+                    const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surah}:${ayat}/${edition}`);
+                    const json = await res.json();
+                    if (json && json.data && json.data.text) {
+                        const translatedText = json.data.text;
+                        ayahTranslationCache[cacheKey] = translatedText;
+                        if (textEl) textEl.textContent = translatedText;
+                        if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+                    } else {
+                        if (textEl) textEl.textContent = cfg.errorText;
+                    }
+                } catch (e) {
+                    console.error(e);
+                    if (textEl) textEl.textContent = cfg.connErrorText;
+                }
+            });
+            await Promise.all(promises);
+        }
+
+        /* ==========================================================================
+           FITUR PILIH SURAT & AYAT (PENCARIAN TEMATIK TERBALIK)
+           ========================================================================== */
+        const SURAH_LIST = [{"no": 1, "name": "Al-Fatihah", "arab": "الفاتحة", "ayat": 7, "type": "Mekah"}, {"no": 2, "name": "Al-Baqarah", "arab": "البقرة", "ayat": 286, "type": "Madinah"}, {"no": 3, "name": "Ali 'Imran", "arab": "اٰل عمران", "ayat": 200, "type": "Madinah"}, {"no": 4, "name": "An-Nisa'", "arab": "النساۤء", "ayat": 176, "type": "Madinah"}, {"no": 5, "name": "Al-Ma'idah", "arab": "الماۤئدة", "ayat": 120, "type": "Madinah"}, {"no": 6, "name": "Al-An'am", "arab": "الانعام", "ayat": 165, "type": "Mekah"}, {"no": 7, "name": "Al-A'raf", "arab": "الاعراف", "ayat": 206, "type": "Mekah"}, {"no": 8, "name": "Al-Anfal", "arab": "الانفال", "ayat": 75, "type": "Madinah"}, {"no": 9, "name": "At-Taubah", "arab": "التوبة", "ayat": 129, "type": "Madinah"}, {"no": 10, "name": "Yunus", "arab": "يونس", "ayat": 109, "type": "Mekah"}, {"no": 11, "name": "Hud", "arab": "هود", "ayat": 123, "type": "Mekah"}, {"no": 12, "name": "Yusuf", "arab": "يوسف", "ayat": 111, "type": "Mekah"}, {"no": 13, "name": "Ar-Ra'd", "arab": "الرّعد", "ayat": 43, "type": "Madinah"}, {"no": 14, "name": "Ibrahim", "arab": "ابرٰهيم", "ayat": 52, "type": "Mekah"}, {"no": 15, "name": "Al-Hijr", "arab": "الحجر", "ayat": 99, "type": "Mekah"}, {"no": 16, "name": "An-Nahl", "arab": "النحل", "ayat": 128, "type": "Mekah"}, {"no": 17, "name": "Al-Isra'", "arab": "الاسراۤء", "ayat": 111, "type": "Mekah"}, {"no": 18, "name": "Al-Kahf", "arab": "الكهف", "ayat": 110, "type": "Mekah"}, {"no": 19, "name": "Maryam", "arab": "مريم", "ayat": 98, "type": "Mekah"}, {"no": 20, "name": "Taha", "arab": "طٰهٰ", "ayat": 135, "type": "Mekah"}, {"no": 21, "name": "Al-Anbiya'", "arab": "الانبياۤء", "ayat": 112, "type": "Mekah"}, {"no": 22, "name": "Al-Hajj", "arab": "الحج", "ayat": 78, "type": "Madinah"}, {"no": 23, "name": "Al-Mu'minun", "arab": "المؤمنون", "ayat": 118, "type": "Mekah"}, {"no": 24, "name": "An-Nur", "arab": "النّور", "ayat": 64, "type": "Madinah"}, {"no": 25, "name": "Al-Furqan", "arab": "الفرقان", "ayat": 77, "type": "Mekah"}, {"no": 26, "name": "Asy-Syu'ara'", "arab": "الشعراۤء", "ayat": 227, "type": "Mekah"}, {"no": 27, "name": "An-Naml", "arab": "النمل", "ayat": 93, "type": "Mekah"}, {"no": 28, "name": "Al-Qasas", "arab": "القصص", "ayat": 88, "type": "Mekah"}, {"no": 29, "name": "Al-'Ankabut", "arab": "العنكبوت", "ayat": 69, "type": "Mekah"}, {"no": 30, "name": "Ar-Rum", "arab": "الرّوم", "ayat": 60, "type": "Mekah"}, {"no": 31, "name": "Luqman", "arab": "لقمٰن", "ayat": 34, "type": "Mekah"}, {"no": 32, "name": "As-Sajdah", "arab": "السّجدة", "ayat": 30, "type": "Mekah"}, {"no": 33, "name": "Al-Ahzab", "arab": "الاحزاب", "ayat": 73, "type": "Madinah"}, {"no": 34, "name": "Saba'", "arab": "سبأ", "ayat": 54, "type": "Mekah"}, {"no": 35, "name": "Fatir", "arab": "فاطر", "ayat": 45, "type": "Mekah"}, {"no": 36, "name": "Yasin", "arab": "يٰسۤ", "ayat": 83, "type": "Mekah"}, {"no": 37, "name": "As-Saffat", "arab": "الصّٰۤفّٰت", "ayat": 182, "type": "Mekah"}, {"no": 38, "name": "Sad", "arab": "ص", "ayat": 88, "type": "Mekah"}, {"no": 39, "name": "Az-Zumar", "arab": "الزمر", "ayat": 75, "type": "Mekah"}, {"no": 40, "name": "Ghafir", "arab": "غافر", "ayat": 85, "type": "Mekah"}, {"no": 41, "name": "Fussilat", "arab": "فصّلت", "ayat": 54, "type": "Mekah"}, {"no": 42, "name": "Asy-Syura", "arab": "الشورى", "ayat": 53, "type": "Mekah"}, {"no": 43, "name": "Az-Zukhruf", "arab": "الزخرف", "ayat": 89, "type": "Mekah"}, {"no": 44, "name": "Ad-Dukhan", "arab": "الدخان", "ayat": 59, "type": "Mekah"}, {"no": 45, "name": "Al-Jasiyah", "arab": "الجاثية", "ayat": 37, "type": "Mekah"}, {"no": 46, "name": "Al-Ahqaf", "arab": "الاحقاف", "ayat": 35, "type": "Mekah"}, {"no": 47, "name": "Muhammad", "arab": "محمّد", "ayat": 38, "type": "Madinah"}, {"no": 48, "name": "Al-Fath", "arab": "الفتح", "ayat": 29, "type": "Madinah"}, {"no": 49, "name": "Al-Hujurat", "arab": "الحجرٰت", "ayat": 18, "type": "Madinah"}, {"no": 50, "name": "Qaf", "arab": "ق", "ayat": 45, "type": "Mekah"}, {"no": 51, "name": "Az-Zariyat", "arab": "الذّٰريٰت", "ayat": 60, "type": "Mekah"}, {"no": 52, "name": "At-Tur", "arab": "الطور", "ayat": 49, "type": "Mekah"}, {"no": 53, "name": "An-Najm", "arab": "النجم", "ayat": 62, "type": "Mekah"}, {"no": 54, "name": "Al-Qamar", "arab": "القمر", "ayat": 55, "type": "Mekah"}, {"no": 55, "name": "Ar-Rahman", "arab": "الرحمن", "ayat": 78, "type": "Madinah"}, {"no": 56, "name": "Al-Waqi'ah", "arab": "الواقعة", "ayat": 96, "type": "Mekah"}, {"no": 57, "name": "Al-Hadid", "arab": "الحديد", "ayat": 29, "type": "Madinah"}, {"no": 58, "name": "Al-Mujadilah", "arab": "المجادلة", "ayat": 22, "type": "Madinah"}, {"no": 59, "name": "Al-Hasyr", "arab": "الحشر", "ayat": 24, "type": "Madinah"}, {"no": 60, "name": "Al-Mumtahanah", "arab": "الممتحنة", "ayat": 13, "type": "Madinah"}, {"no": 61, "name": "As-Saff", "arab": "الصّفّ", "ayat": 14, "type": "Madinah"}, {"no": 62, "name": "Al-Jumu'ah", "arab": "الجمعة", "ayat": 11, "type": "Madinah"}, {"no": 63, "name": "Al-Munafiqun", "arab": "المنٰفقون", "ayat": 11, "type": "Madinah"}, {"no": 64, "name": "At-Tagabun", "arab": "التغابن", "ayat": 18, "type": "Madinah"}, {"no": 65, "name": "At-Talaq", "arab": "الطلاق", "ayat": 12, "type": "Madinah"}, {"no": 66, "name": "At-Tahrim", "arab": "التحريم", "ayat": 12, "type": "Madinah"}, {"no": 67, "name": "Al-Mulk", "arab": "الملك", "ayat": 30, "type": "Mekah"}, {"no": 68, "name": "Al-Qalam", "arab": "القلم", "ayat": 52, "type": "Mekah"}, {"no": 69, "name": "Al-Haqqah", "arab": "الحاۤقّة", "ayat": 52, "type": "Mekah"}, {"no": 70, "name": "Al-Ma'arij", "arab": "المعارج", "ayat": 44, "type": "Mekah"}, {"no": 71, "name": "Nuh", "arab": "نوح", "ayat": 28, "type": "Mekah"}, {"no": 72, "name": "Al-Jinn", "arab": "الجن", "ayat": 28, "type": "Mekah"}, {"no": 73, "name": "Al-Muzzammil", "arab": "المزّمّل", "ayat": 20, "type": "Mekah"}, {"no": 74, "name": "Al-Muddassir", "arab": "المدّثّر", "ayat": 56, "type": "Mekah"}, {"no": 75, "name": "Al-Qiyamah", "arab": "القيٰمة", "ayat": 40, "type": "Mekah"}, {"no": 76, "name": "Al-Insan", "arab": "الانسان", "ayat": 31, "type": "Madinah"}, {"no": 77, "name": "Al-Mursalat", "arab": "المرسلٰت", "ayat": 50, "type": "Mekah"}, {"no": 78, "name": "An-Naba'", "arab": "النبأ", "ayat": 40, "type": "Mekah"}, {"no": 79, "name": "An-Nazi'at", "arab": "النّٰزعٰت", "ayat": 46, "type": "Mekah"}, {"no": 80, "name": "'Abasa", "arab": "عبس", "ayat": 42, "type": "Mekah"}, {"no": 81, "name": "At-Takwir", "arab": "التكوير", "ayat": 29, "type": "Mekah"}, {"no": 82, "name": "Al-Infitar", "arab": "الانفطار", "ayat": 19, "type": "Mekah"}, {"no": 83, "name": "Al-Mutaffifin", "arab": "المطفّفين", "ayat": 36, "type": "Mekah"}, {"no": 84, "name": "Al-Insyiqaq", "arab": "الانشقاق", "ayat": 25, "type": "Mekah"}, {"no": 85, "name": "Al-Buruj", "arab": "البروج", "ayat": 22, "type": "Mekah"}, {"no": 86, "name": "At-Tariq", "arab": "الطارق", "ayat": 17, "type": "Mekah"}, {"no": 87, "name": "Al-A'la", "arab": "الاعلى", "ayat": 19, "type": "Mekah"}, {"no": 88, "name": "Al-Gasyiyah", "arab": "الغاشية", "ayat": 26, "type": "Mekah"}, {"no": 89, "name": "Al-Fajr", "arab": "الفجر", "ayat": 30, "type": "Mekah"}, {"no": 90, "name": "Al-Balad", "arab": "البلد", "ayat": 20, "type": "Mekah"}, {"no": 91, "name": "Asy-Syams", "arab": "الشمس", "ayat": 15, "type": "Mekah"}, {"no": 92, "name": "Al-Lail", "arab": "الّيل", "ayat": 21, "type": "Mekah"}, {"no": 93, "name": "Ad-Duha", "arab": "الضحى", "ayat": 11, "type": "Mekah"}, {"no": 94, "name": "Al-Insyirah", "arab": "الشرح", "ayat": 8, "type": "Mekah"}, {"no": 95, "name": "At-Tin", "arab": "التين", "ayat": 8, "type": "Mekah"}, {"no": 96, "name": "Al-'Alaq", "arab": "العلق", "ayat": 19, "type": "Mekah"}, {"no": 97, "name": "Al-Qadr", "arab": "القدر", "ayat": 5, "type": "Mekah"}, {"no": 98, "name": "Al-Bayyinah", "arab": "البيّنة", "ayat": 8, "type": "Madinah"}, {"no": 99, "name": "Az-Zalzalah", "arab": "الزلزلة", "ayat": 8, "type": "Madinah"}, {"no": 100, "name": "Al-'Adiyat", "arab": "العٰديٰت", "ayat": 11, "type": "Mekah"}, {"no": 101, "name": "Al-Qari'ah", "arab": "القارعة", "ayat": 11, "type": "Mekah"}, {"no": 102, "name": "At-Takasur", "arab": "التكاثر", "ayat": 8, "type": "Mekah"}, {"no": 103, "name": "Al-'Asr", "arab": "العصر", "ayat": 3, "type": "Mekah"}, {"no": 104, "name": "Al-Humazah", "arab": "الهمزة", "ayat": 9, "type": "Mekah"}, {"no": 105, "name": "Al-Fil", "arab": "الفيل", "ayat": 5, "type": "Mekah"}, {"no": 106, "name": "Quraisy", "arab": "قريش", "ayat": 4, "type": "Mekah"}, {"no": 107, "name": "Al-Ma'un", "arab": "الماعون", "ayat": 7, "type": "Mekah"}, {"no": 108, "name": "Al-Kausar", "arab": "الكوثر", "ayat": 3, "type": "Mekah"}, {"no": 109, "name": "Al-Kafirun", "arab": "الكٰفرون", "ayat": 6, "type": "Mekah"}, {"no": 110, "name": "An-Nasr", "arab": "النصر", "ayat": 3, "type": "Madinah"}, {"no": 111, "name": "Al-Lahab", "arab": "اللهب", "ayat": 5, "type": "Mekah"}, {"no": 112, "name": "Al-Ikhlas", "arab": "الاخلاص", "ayat": 4, "type": "Mekah"}, {"no": 113, "name": "Al-Falaq", "arab": "الفلق", "ayat": 5, "type": "Madinah"}, {"no": 114, "name": "An-Nas", "arab": "الناس", "ayat": 6, "type": "Madinah"}];
+
+        let verseThematicIndex = {};
+        let currentSearchSurah = 2; // Default Al-Baqarah
+        let currentSearchAyat = 255; // Default Ayat Kursi
+        let surahApiCache = {};
+        let activeMainMode = 'thematic';
+
+        let allThematicUraianList = [];
+        let allThematicVersesList = [];
+        let allThematicSubList = [];
+
+        function buildVerseIndex() {
+            verseThematicIndex = {};
+            allThematicUraianList = [];
+            allThematicSubList = [];
+            if (!quranData) return;
+            for (const [tema, pbs] of Object.entries(quranData)) {
+                for (const [pb, spbs] of Object.entries(pbs)) {
+                    for (const [spb, urs] of Object.entries(spbs)) {
+                        let subVerseCount = 0;
+                        for (const [ur, urData] of Object.entries(urs)) {
+                            const vList = (urData && urData.verses) ? urData.verses : [];
+                            subVerseCount += vList.length;
+                            allThematicUraianList.push({
+                                tema: tema,
+                                pokok: pb,
+                                sub: spb,
+                                uraian: ur,
+                                verseCount: vList.length,
+                                sampleVerses: vList.slice(0, 3)
+                            });
+                            if (vList.length > 0) {
+                                vList.forEach(v => {
+                                    const key = `${v.surah_num}:${v.ayat_num}`;
+                                    if (!verseThematicIndex[key]) {
+                                        verseThematicIndex[key] = {
+                                            surah_name: v.surah_name,
+                                            surah_num: v.surah_num,
+                                            ayat_num: v.ayat_num,
+                                            arab: v.arab,
+                                            indo: v.indo,
+                                            audio: v.audio,
+                                            topics: []
+                                        };
+                                    }
+                                    verseThematicIndex[key].topics.push({
+                                        tema: tema,
+                                        pokok: pb,
+                                        sub: spb,
+                                        uraian: ur
+                                    });
+                                });
+                            }
+                        }
+                        allThematicSubList.push({
+                            tema: tema,
+                            pokok: pb,
+                            sub: spb,
+                            uraianCount: Object.keys(urs).length,
+                            verseCount: subVerseCount
+                        });
+                    }
+                }
+            }
+            allThematicVersesList = Object.values(verseThematicIndex);
+            console.log(`[VerseIndex] Indexed ${allThematicVersesList.length} unique verses, ${allThematicSubList.length} sub-topics, and ${allThematicUraianList.length} thematic topics.`);
+        }
+        function switchMainMode(mode) {
+            stopTTS();
+            activeMainMode = mode;
+            const tabThematic = document.getElementById('tab-btn-thematic');
+            const tabSearch = document.getElementById('tab-btn-search');
+            const tabKeyword = document.getElementById('tab-btn-keyword');
+            const thematicNav = document.getElementById('thematic-nav-container');
+            const searchNav = document.getElementById('search-nav-container');
+            const keywordNav = document.getElementById('keyword-nav-container');
+            const thematicView = document.getElementById('thematic-view-wrapper');
+            const searchView = document.getElementById('search-view-wrapper');
+            const keywordView = document.getElementById('keyword-view-wrapper');
+
+            // Reset all active states
+            [tabThematic, tabSearch, tabKeyword].forEach(t => t && t.classList.remove('active'));
+            [thematicNav, searchNav, keywordNav, thematicView, searchView, keywordView].forEach(el => el && (el.style.display = 'none'));
+
+            if (mode === 'thematic') {
+                if (tabThematic) tabThematic.classList.add('active');
+                if (thematicNav) thematicNav.style.display = 'flex';
+                if (thematicView) thematicView.style.display = 'block';
+            } else if (mode === 'search') {
+                if (tabSearch) tabSearch.classList.add('active');
+                if (searchNav) searchNav.style.display = 'block';
+                if (searchView) searchView.style.display = 'block';
+
+                // Render current search verse if not already rendered
+                if (!document.getElementById('current-rendered-verse')) {
+                    renderSearchVerseResult(currentSearchSurah, currentSearchAyat);
+                }
+            } else if (mode === 'keyword') {
+                if (tabKeyword) tabKeyword.classList.add('active');
+                if (keywordNav) keywordNav.style.display = 'block';
+                if (keywordView) keywordView.style.display = 'block';
+                const kwInput = document.getElementById('keyword-search-input');
+                if (kwInput && !kwInput.value.trim()) {
+                    kwInput.focus();
+                }
+            }
+            translatePageContent();
+        }
+
+        function initSurahAyatSearch() {
+            const selectSurah = document.getElementById('select-search-surah');
+            if (!selectSurah) return;
+            populateSurahDropdown(SURAH_LIST);
+
+            // Set initial value
+            selectSurah.value = currentSearchSurah;
+            populateAyatDropdown(currentSearchSurah);
+            const selectAyat = document.getElementById('select-search-ayat');
+            if (selectAyat) selectAyat.value = currentSearchAyat;
+            updateStepperButtons();
+        }
+
+        function populateSurahDropdown(list) {
+            const selectSurah = document.getElementById('select-search-surah');
+            if (!selectSurah) return;
+            const currentVal = selectSurah.value;
+            selectSurah.innerHTML = '<option value="">-- Pilih Surat (1-114) --</option>';
+            list.forEach(s => {
+                const opt = document.createElement('option');
+                opt.value = s.no;
+                opt.textContent = `${s.no}. ${s.name} (${s.arab}) — ${s.ayat} Ayat [${s.type}]`;
+                selectSurah.appendChild(opt);
+            });
+            if (currentVal && list.some(s => s.no == currentVal)) {
+                selectSurah.value = currentVal;
+            }
+        }
+
+
+        function populateAyatDropdown(surahNum) {
+            const selectAyat = document.getElementById('select-search-ayat');
+            if (!selectAyat) return;
+            const surahInfo = SURAH_LIST.find(s => s.no == surahNum);
+            if (!surahInfo) {
+                selectAyat.innerHTML = '<option value="">Pilih Ayat</option>';
+                selectAyat.disabled = true;
+                return;
+            }
+            selectAyat.innerHTML = `<option value="">-- Pilih Ayat (1-${surahInfo.ayat}) --</option>`;
+            for (let i = 1; i <= surahInfo.ayat; i++) {
+                const opt = document.createElement('option');
+                opt.value = i;
+                opt.textContent = `Ayat ${i}`;
+                selectAyat.appendChild(opt);
+            }
+            selectAyat.disabled = false;
+        }
+
+        function onSearchSurahChange() {
+            stopTTS();
+            const selectSurah = document.getElementById('select-search-surah');
+            const selectAyat = document.getElementById('select-search-ayat');
+            if (!selectSurah || !selectSurah.value) return;
+            currentSearchSurah = parseInt(selectSurah.value);
+            populateAyatDropdown(currentSearchSurah);
+            currentSearchAyat = 1;
+            if (selectAyat) selectAyat.value = 1;
+            updateStepperButtons();
+            renderSearchVerseResult(currentSearchSurah, currentSearchAyat);
+        }
+
+        function onSearchAyatChange() {
+            stopTTS();
+            const selectAyat = document.getElementById('select-search-ayat');
+            if (!selectAyat || !selectAyat.value) return;
+            currentSearchAyat = parseInt(selectAyat.value);
+            updateStepperButtons();
+            renderSearchVerseResult(currentSearchSurah, currentSearchAyat);
+        }
+
+        function stepAyat(delta) {
+            stopTTS();
+            const surahInfo = SURAH_LIST.find(s => s.no == currentSearchSurah);
+            if (!surahInfo) return;
+            let targetAyat = currentSearchAyat + delta;
+            if (targetAyat < 1) targetAyat = 1;
+            if (targetAyat > surahInfo.ayat) targetAyat = surahInfo.ayat;
+            if (targetAyat === currentSearchAyat) return;
+
+            currentSearchAyat = targetAyat;
+            const selectAyat = document.getElementById('select-search-ayat');
+            if (selectAyat) selectAyat.value = currentSearchAyat;
+            updateStepperButtons();
+            renderSearchVerseResult(currentSearchSurah, currentSearchAyat);
+        }
+
+        function updateStepperButtons() {
+            const btnPrev = document.getElementById('btn-ayat-prev');
+            const btnNext = document.getElementById('btn-ayat-next');
+            const surahInfo = SURAH_LIST.find(s => s.no == currentSearchSurah);
+            const totalAyat = surahInfo ? surahInfo.ayat : 1;
+
+            if (btnPrev) btnPrev.disabled = (currentSearchAyat <= 1);
+            if (btnNext) btnNext.disabled = (currentSearchAyat >= totalAyat);
+
+            // Sync direct input box and hint
+            const inputDirect = document.getElementById('input-search-ayat-num');
+            if (inputDirect) {
+                inputDirect.max = totalAyat;
+                inputDirect.value = currentSearchAyat;
+            }
+            const hint = document.getElementById('ayat-range-hint');
+            if (hint) {
+                hint.textContent = `(1–${totalAyat})`;
+            }
+
+            // Sync URL hash
+            if (activeMainMode === 'search') {
+                history.replaceState(null, '', `#surat=${currentSearchSurah}&ayat=${currentSearchAyat}`);
+            }
+        }
+
+        function toArabicDigits(num) {
+            const digits = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
+            return String(num).replace(/\d/g, d => digits[d]);
+        }
+
+        async function renderSearchVerseResult(surahNum, ayatNum) {
+            const searchArea = document.getElementById('search-content-area');
+            if (!searchArea) return;
+
+            const key = `${surahNum}:${ayatNum}`;
+            const surahInfo = SURAH_LIST.find(s => s.no == surahNum) || { no: surahNum, name: `Surat ${surahNum}`, arab: '', ayat: 1, type: '' };
+            const indexedData = verseThematicIndex[key];
+
+            let verseObj = null;
+
+            if (indexedData) {
+                verseObj = {
+                    surah_num: indexedData.surah_num,
+                    surah_name: indexedData.surah_name || surahInfo.name,
+                    ayat_num: indexedData.ayat_num,
+                    arab: indexedData.arab,
+                    indo: indexedData.indo,
+                    audio: indexedData.audio,
+                    topics: indexedData.topics || []
+                };
+            } else {
+                // Fallback fetching for verses not in thematic excel
+                searchArea.innerHTML = `
+                    <div class="empty-state" style="padding: 3rem 2rem;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin" style="margin: 0 auto 1rem auto; display: block; color: var(--accent);"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path></svg>
+                        Memuat data QS. ${surahInfo.name} [${surahNum}]: ${ayatNum}...
+                    </div>
+                `;
+                verseObj = await fetchAyahFallback(surahNum, ayatNum, surahInfo);
+            }
+
+            if (!verseObj) {
+                searchArea.innerHTML = `<div class="empty-state" style="color: #ef4444;">Gagal memuat ayat QS. ${surahInfo.name} [${surahNum}]: ${ayatNum}. Silakan periksa koneksi internet Anda.</div>`;
+                return;
+            }
+
+            const topics = (verseThematicIndex[key] && verseThematicIndex[key].topics) ? verseThematicIndex[key].topics : [];
+            const topicsCount = topics.length;
+
+            let markup = `
+                <div id="current-rendered-verse" class="search-verse-card">
+                    <div class="search-verse-header">
+                        <div class="search-verse-title-wrap">
+                            <h2 class="search-verse-title">QS. ${surahInfo.name} [${surahNum}] : Ayat ${ayatNum}</h2>
+                            <div class="search-verse-meta">${surahInfo.arab} • ${surahInfo.type} • Total ${surahInfo.ayat} Ayat</div>
+                        </div>
+                        <div class="search-verse-badges">
+                            <span class="search-badge">${surahInfo.type}</span>
+                            ${topicsCount > 0 ? `<span class="search-badge" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: #fbbf24;">📑 ${topicsCount} Tema Terkait</span>` : '<span class="search-badge" style="background: rgba(100, 116, 139, 0.15); border-color: rgba(100, 116, 139, 0.3); color: #94a3b8;">Belum diindeks</span>'}
+                            ${verseObj.audio ? `
+                            <audio controls style="height: 32px; border-radius: 999px; margin-left: 0.5rem;">
+                                <source src="${verseObj.audio}" type="audio/mpeg">
+                            </audio>
+                            ` : ''}
+                        </div>
+                    </div>
+
+                    <div class="search-arabic-box">
+                        ${verseObj.arab} <span class="verse-end-sign">۝${toArabicDigits(ayatNum)}</span>
+                    </div>
+
+                    <div class="search-card-front" data-surah="${surahNum}" data-ayat="${ayatNum}" data-indo="${encodeURIComponent(verseObj.indo)}">
+                        <div class="search-translation-box translation-text">${verseObj.indo}</div>
+
+                        <div class="search-actions-bar">
+                            <div class="search-action-btns-left">
+                                <button class="tts-button play-btn" data-text="${encodeURIComponent(verseObj.indo)}" onclick="playTTS(this, event)" title="Dengarkan Terjemahan Suara">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+                                    Dengarkan
+                                </button>
+                                <button class="tts-button ai-btn" style="color: #8b5cf6; border-color: #8b5cf6; background-color: rgba(139, 92, 246, 0.1);" onclick="tanyaAI(this, event, 'QS. ${surahInfo.name}: ${ayatNum}')" title="Tanya AI Tafsir Ayat Ini">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                    Tanya AI
+                                </button>
+                                <button class="tts-button copy-btn" onclick="copyAyatText(this, event, '${surahInfo.name}', ${surahNum}, ${ayatNum})" title="Salin Teks Arab & Terjemahan">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    <span data-i18n-orig="Salin Ayat">Salin Ayat</span>
+                                </button>
+                                <button class="tts-button" style="color: #25d366; border-color: rgba(37, 211, 102, 0.4); background-color: rgba(37, 211, 102, 0.1);" onclick="shareAyatWhatsApp('${surahInfo.name}', ${surahNum}, ${ayatNum})" title="Bagikan Ayat ke WhatsApp">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                    <span data-i18n-orig="Bagikan">Bagikan</span>
+                                </button>
+                            </div>
+                            <div class="search-action-btns-right">
+                                <button class="nav-action-btn secondary-btn" style="padding: 0.5rem 1rem; font-size: 0.88rem;" onclick="stepAyat(-1)" ${ayatNum <= 1 ? 'disabled' : ''}>
+                                    ◀ Ayat ${ayatNum - 1}
+                                </button>
+                                <button class="nav-action-btn next-btn" style="padding: 0.5rem 1rem; font-size: 0.88rem;" onclick="stepAyat(1)" ${ayatNum >= surahInfo.ayat ? 'disabled' : ''}>
+                                    Ayat ${ayatNum + 1} ▶
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Hasil Klasifikasi Tematis -->
+                <div class="thematic-results-section">
+                    <div class="thematic-results-header">
+                        <h3 class="thematic-results-title">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <span data-i18n-orig="Klasifikasi Al-Qur'an Tematis">Klasifikasi Al-Qur'an Tematis</span>
+                        </h3>
+                        <span class="thematic-count-badge" data-count="${topicsCount}">
+                            ${topicsCount > 0 ? `Ditemukan dalam ${topicsCount} Pembahasan Tematis` : 'Tidak Ditemukan dalam Indeks Tematis'}
+                        </span>
+                    </div>
+            `;
+
+            if (topicsCount === 0) {
+                markup += `
+                    <div class="thematic-empty-card">
+                        <div class="empty-icon">📖</div>
+                        <div class="empty-title">Belum Ada Pengelompokan Tematik Khusus</div>
+                        <div class="empty-desc">
+                            Ayat ini belum diklasifikasikan ke dalam 17 tema Al-Qur'an Tematis saat ini. 
+                            Anda tetap dapat membaca teks Arab, mendengarkan lantunan murottal, dan menelaah arti terjemahan serta tafsir AI di atas.
+                        </div>
+                    </div>
+                `;
+            } else {
+                topics.forEach((t, idx) => {
+                    markup += `
+                        <div class="thematic-match-card">
+                            <div class="thematic-match-top-row">
+                                <span class="thematic-match-badge">🏷️ Pembahasan Tematis #${idx + 1}</span>
+                            </div>
+                            <div class="thematic-path">
+                                <div class="thematic-step tema-step">
+                                    <span class="step-label" data-i18n-orig="Tema Besar:">🏷️ Tema Besar:</span>
+                                    <span class="step-val" data-original="${t.tema}">${t.tema}</span>
+                                </div>
+                                <div class="thematic-step pokok-step">
+                                    <span class="step-label" data-i18n-orig="Pokok Bahasan:">📂 Pokok Bahasan:</span>
+                                    <span class="step-val" data-original="${t.pokok}">${t.pokok}</span>
+                                </div>
+                                <div class="thematic-step sub-step">
+                                    <span class="step-label" data-i18n-orig="Sub Pokok Bahasan:">📑 Sub Pokok Bahasan:</span>
+                                    <span class="step-val" data-original="${t.sub}">${t.sub}</span>
+                                </div>
+                                <div class="thematic-step uraian-step">
+                                    <span class="step-label" data-i18n-orig="Uraian Khusus:">📝 Uraian Khusus:</span>
+                                    <span class="step-val" data-original="${t.uraian}">${t.uraian}</span>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <button class="btn-jump-thematic" style="flex: 1;" onclick="navigateToThematicTopic('${t.tema.replace(/'/g, "\\'") }', '${t.pokok.replace(/'/g, "\\'") }', '${t.sub.replace(/'/g, "\\'") }', '${t.uraian.replace(/'/g, "\\'") }', ${surahNum}, ${ayatNum})">
+                                    <span data-i18n-orig="Buka di Halaman Tematik">Buka di Halaman Tematik</span>
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </button>
+                                <button class="uraian-action-btn uraian-copy-btn" onclick="copyUraianLink(this, event, '${encodeURIComponent(t.uraian)}')" title="Salin Deep Link">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                    <span data-i18n-orig="Salin Link">Salin Link</span>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+
+            markup += `</div>`;
+            searchArea.innerHTML = markup;
+
+            // Trigger translation if non-Indonesian language is selected
+            translatePageContent();
+        }
+
+        async function fetchAyahFallback(surahNum, ayatNum, surahInfo) {
+            if (surahApiCache[surahNum]) {
+                const sData = surahApiCache[surahNum];
+                const aData = sData.ayat ? sData.ayat.find(a => a.nomorAyat == ayatNum) : null;
+                if (aData) {
+                    return {
+                        surah_num: surahNum,
+                        surah_name: surahInfo.name,
+                        ayat_num: ayatNum,
+                        arab: aData.teksArab,
+                        indo: aData.teksIndonesia,
+                        audio: aData.audio ? aData.audio['05'] || '' : '',
+                        topics: []
+                    };
+                }
+            }
+
+            // Fetch from API equran.id
+            try {
+                const res = await fetch(`https://equran.id/api/v2/surat/${surahNum}`);
+                const json = await res.json();
+                if (json && json.data) {
+                    surahApiCache[surahNum] = json.data;
+                    const aData = json.data.ayat ? json.data.ayat.find(a => a.nomorAyat == ayatNum) : null;
+                    if (aData) {
+                        return {
+                            surah_num: surahNum,
+                            surah_name: surahInfo.name,
+                            ayat_num: ayatNum,
+                            arab: aData.teksArab,
+                            indo: aData.teksIndonesia,
+                            audio: aData.audio ? aData.audio['05'] || '' : '',
+                            topics: []
+                        };
+                    }
+                }
+            } catch (e) {
+                console.warn("Fallback equran.id fetch failed, trying alquran.cloud:", e);
+            }
+
+            // Second fallback: api.alquran.cloud
+            try {
+                const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surahNum}:${ayatNum}/editions/quran-uthmani,id.indonesian,ar.alafasy`);
+                const json = await res.json();
+                if (json && json.data && json.data.length >= 2) {
+                    return {
+                        surah_num: surahNum,
+                        surah_name: surahInfo.name,
+                        ayat_num: ayatNum,
+                        arab: json.data[0].text,
+                        indo: json.data[1].text,
+                        audio: json.data[2] ? json.data[2].audio : '',
+                        topics: []
+                    };
+                }
+            } catch (err) {
+                console.error("All ayah fallbacks failed:", err);
+            }
+
+            return null;
+        }
+
+        function navigateToThematicTopic(tema, pokok, sub, uraian, surahNum, ayatNum) {
+            stopTTS();
+            switchMainMode('thematic');
+
+            // 1. Set Tema
+            elTema.value = tema;
+            resetSelect(elSub, "Pilih Sub Pokok Bahasan");
+            if (quranData[tema]) {
+                populateSelect(elPokok, naturalSort(Object.keys(quranData[tema])), "Pilih Pokok Bahasan");
+                elPokok.value = pokok;
+                if (quranData[tema][pokok]) {
+                    populateSelect(elSub, naturalSort(Object.keys(quranData[tema][pokok])), "Pilih Sub Pokok Bahasan");
+                    elSub.value = sub;
+                    saveCurrentState();
+                    renderContentAll(tema, pokok, sub);
+
+                    // 2. Open group card & highlight verse
+                    setTimeout(() => {
+                        const groupCards = document.querySelectorAll('.uraian-group-card');
+                        let targetGroup = null;
+                        groupCards.forEach(card => {
+                            const titleEl = card.querySelector('.group-title');
+                            if (titleEl) {
+                                const orig = (titleEl.getAttribute('data-original') || titleEl.textContent || '').trim();
+                                if (orig === uraian || orig.toLowerCase() === uraian.toLowerCase()) {
+                                    targetGroup = card;
+                                    card.classList.remove('is-collapsed');
+                                }
+                            }
+                        });
+
+                        setTimeout(() => {
+                            let targetVerse = null;
+                            if (targetGroup && surahNum && ayatNum) {
+                                const verseWrappers = targetGroup.querySelectorAll('.verse-item-wrapper');
+                                verseWrappers.forEach(vw => {
+                                    const front = vw.querySelector('.flip-card-front');
+                                    if (front && parseInt(front.getAttribute('data-surah')) === surahNum && parseInt(front.getAttribute('data-ayat')) === ayatNum) {
+                                        targetVerse = vw;
+                                    }
+                                });
+                            }
+
+                            const elToScroll = targetVerse || targetGroup;
+                            if (elToScroll) {
+                                elToScroll.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                if (targetVerse) {
+                                    targetVerse.classList.add('verse-highlight-pulse');
+                                    setTimeout(() => targetVerse.classList.remove('verse-highlight-pulse'), 3500);
+                                } else if (targetGroup) {
+                                    targetGroup.classList.add('uraian-highlight-pulse');
+                                    setTimeout(() => targetGroup.classList.remove('uraian-highlight-pulse'), 3500);
+                                }
+                            }
+
+                            if (targetGroup) {
+                                const meta = targetGroup.querySelector('.group-meta');
+                                const count = meta ? parseInt(meta.getAttribute('data-count') || '0') : 0;
+                                if (count > 0 && elHint) {
+                                    elHint.style.display = 'flex';
+                                }
+                            }
+                        }, 200);
+                    }, 150);
+                }
+            }
+        }
+
+        function lookupVerseInSearch(surahNum, ayatNum, event) {
+            if (event) event.stopPropagation();
+            stopTTS();
+            currentSearchSurah = surahNum;
+            currentSearchAyat = ayatNum;
+
+            switchMainMode('search');
+
+            const selectSurah = document.getElementById('select-search-surah');
+            const selectAyat = document.getElementById('select-search-ayat');
+
+            if (selectSurah) selectSurah.value = surahNum;
+            populateAyatDropdown(surahNum);
+            if (selectAyat) selectAyat.value = ayatNum;
+            updateStepperButtons();
+
+            renderSearchVerseResult(surahNum, ayatNum);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function copyAyatText(btn, event, surahName, surahNum, ayatNum) {
+            if (event) event.stopPropagation();
+            const card = btn.closest('.search-verse-card');
+            if (!card) return;
+            const arabEl = card.querySelector('.search-arabic-box');
+            const transEl = card.querySelector('.search-translation-box');
+            const arab = arabEl ? arabEl.textContent.trim() : '';
+            const trans = transEl ? transEl.textContent.trim() : '';
+
+            const copyText = `QS. ${surahName} [${surahNum}]: ${ayatNum}\n\n${arab}\n\nArtinya:\n"${trans}"`;
+            navigator.clipboard.writeText(copyText).then(() => {
+                const origHtml = btn.innerHTML;
+                btn.innerHTML = `
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#5eead4;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Tersalin!
+                `;
+                btn.style.borderColor = '#14b8a6';
+                btn.style.color = '#5eead4';
+                setTimeout(() => {
+                    btn.innerHTML = origHtml;
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                console.error("Copy failed:", err);
+            });
+        }
+
+        /* ==========================================================================
+           JavaScript Helpers: Font Scaler, Direct Ayat Input, Toggle All, Share
+           ========================================================================== */
+        const FONT_SCALES = ['1.7rem', '1.95rem', '2.2rem', '2.55rem', '3.0rem'];
+        let currentFontScaleIdx = 2; // Default 2.2rem
+
+        function initFontScale() {
+            const saved = localStorage.getItem('arabic_font_scale_idx');
+            if (saved !== null) {
+                const idx = parseInt(saved);
+                if (idx >= 0 && idx < FONT_SCALES.length) {
+                    currentFontScaleIdx = idx;
+                    applyFontScale();
+                }
+            }
+        }
+
+        function applyFontScale() {
+            const size = FONT_SCALES[currentFontScaleIdx];
+            document.documentElement.style.setProperty('--arabic-font-size', size);
+            localStorage.setItem('arabic_font_scale_idx', currentFontScaleIdx);
+        }
+
+        function changeFontSize(delta) {
+            let next = currentFontScaleIdx + delta;
+            if (next < 0) next = 0;
+            if (next >= FONT_SCALES.length) next = FONT_SCALES.length - 1;
+            currentFontScaleIdx = next;
+            applyFontScale();
+        }
+
+        function resetFontSize() {
+            currentFontScaleIdx = 2;
+            applyFontScale();
+        }
+
+        function onDirectAyatInput() {
+            const input = document.getElementById('input-search-ayat-num');
+            if (!input) return;
+            const surahInfo = SURAH_LIST.find(s => s.no == currentSearchSurah);
+            const maxAyat = surahInfo ? surahInfo.ayat : 286;
+            let val = parseInt(input.value);
+            if (isNaN(val) || val < 1) val = 1;
+            if (val > maxAyat) val = maxAyat;
+
+            input.value = val;
+            currentSearchAyat = val;
+
+            const selectAyat = document.getElementById('select-search-ayat');
+            if (selectAyat) selectAyat.value = val;
+            updateStepperButtons();
+            renderSearchVerseResult(currentSearchSurah, currentSearchAyat);
+        }
+
+        function toggleAllGroups() {
+            const groupCards = document.querySelectorAll('.uraian-group-card');
+            const toggleBtn = document.getElementById('btn-toggle-all-groups');
+            if (!groupCards.length) return;
+
+            const anyCollapsed = Array.from(groupCards).some(c => c.classList.contains('is-collapsed'));
+
+            groupCards.forEach(c => {
+                if (anyCollapsed) {
+                    c.classList.remove('is-collapsed');
+                } else {
+                    c.classList.add('is-collapsed');
+                }
+            });
+
+            if (toggleBtn) {
+                const langSelect = document.getElementById('tts-language');
+                const lang = langSelect ? langSelect.value : 'id-ID';
+                const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+                const targetLangCode = cfg.code;
+
+                if (anyCollapsed) {
+                    toggleBtn.classList.add('collapsed-mode');
+                    const text = (targetLangCode === 'id') ? 'Tutup Semua Uraian' : (targetLangCode === 'en' ? 'Collapse All' : 'Tutup Semua Uraian');
+                    toggleBtn.innerHTML = `
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 11 12 6 7 11"></polyline><polyline points="17 18 12 13 7 18"></polyline></svg>
+                        <span id="toggle-all-text" data-i18n-orig="Tutup Semua Uraian">${text}</span>
+                    `;
+                } else {
+                    toggleBtn.classList.remove('collapsed-mode');
+                    const text = (targetLangCode === 'id') ? 'Buka Semua Uraian' : (targetLangCode === 'en' ? 'Expand All' : 'Buka Semua Uraian');
+                    toggleBtn.innerHTML = `
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+                        <span id="toggle-all-text" data-i18n-orig="Buka Semua Uraian">${text}</span>
+                    `;
+                }
+            }
+
+            const elHint = document.getElementById('hint-text');
+            if (elHint) {
+                elHint.style.display = anyCollapsed ? 'flex' : 'none';
+            }
+        }
+
+        function shareAyatWhatsApp(surahName, surahNum, ayatNum) {
+            const card = document.getElementById('current-rendered-verse');
+            if (!card) return;
+            const arabEl = card.querySelector('.search-arabic-box');
+            const transEl = card.querySelector('.search-translation-box');
+            const arab = arabEl ? arabEl.textContent.trim() : '';
+            const trans = transEl ? transEl.textContent.trim() : '';
+            const pageUrl = window.location.origin + window.location.pathname + `#surat=${surahNum}&ayat=${ayatNum}`;
+            
+            const msg = `📖 *QS. ${surahName} [${surahNum}] : Ayat ${ayatNum}*\n\n${arab}\n\n*Artinya:*\n"${trans}"\n\n🔗 *Al-Qur'an Tematis:*\n${pageUrl}`;
+            const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(msg)}`;
+            window.open(waUrl, '_blank');
+        }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('btn-back-to-top');
+            if (btn) {
+                if (window.scrollY > 350) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            }
+        });
+
+        // Initialize font scale on startup
+        initFontScale();
+
+    

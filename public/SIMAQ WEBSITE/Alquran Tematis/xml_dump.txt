@@ -1,0 +1,101 @@
+--- Paragraph 0 ---
+
+--- Paragraph 1 ---
+
+--- Paragraph 2 ---
+
+--- Paragraph 3 ---
+Text: Al Maaidah [5]: 103 – 104
+Style: Heading3
+
+--- Paragraph 4 ---
+Style: Heading3
+
+--- Paragraph 5 ---
+Text: Al An`am [6]: 136
+Style: Heading3
+
+--- Paragraph 6 ---
+Text: Al An`am [6]: 138 – 139
+Style: Heading3
+
+--- Paragraph 7 ---
+Text: Al An`am [6]: 143 – 144
+Style: Heading3
+
+--- Paragraph 8 ---
+Text: An Nahl [16]: 56
+Style: Heading3
+
+--- Paragraph 9 ---
+Style: Heading3
+
+--- Paragraph 10 ---
+Text: Al An`am [6]: 137
+Style: Heading3
+
+--- Paragraph 11 ---
+Text: Al An`am [6]: 140
+Style: Heading3
+
+--- Paragraph 12 ---
+Style: Heading3
+
+--- Paragraph 13 ---
+Text: An Nahl [16]: 57 – 62
+Style: Heading3
+
+--- Paragraph 14 ---
+Text: Az Zukhruf [43]: 15 – 22
+Style: Heading3
+
+--- Paragraph 15 ---
+
+--- Paragraph 16 ---
+Text: Al A'raaf [7]: 28
+Style: Heading3
+
+--- Paragraph 17 ---
+Text: Al Anfaal [8]: 35
+Style: Heading3
+
+--- Paragraph 18 ---
+Style: Heading3
+
+--- Paragraph 19 ---
+Text: An Najm [53]: 19 – 25
+Style: Heading3
+
+--- Paragraph 20 ---
+Style: Heading3
+
+--- Paragraph 21 ---
+Text: An Najm [53]: 26 – 28
+Style: Heading3
+
+--- Paragraph 22 ---
+Style: Heading3
+
+--- Paragraph 23 ---
+Style: Heading3
+
+--- Paragraph 24 ---
+Text: Quraisy [106]: 1 – 4
+Style: Heading3
+
+--- Paragraph 25 ---
+Style: Heading3
+
+--- Paragraph 26 ---
+Text: Al Fiil [105]: 1 – 5
+Style: Heading3
+
+--- Paragraph 27 ---
+Style: Heading3
+
+--- Paragraph 28 ---
+Style: Heading3
+
+--- Paragraph 29 ---
+Style: Heading3
+

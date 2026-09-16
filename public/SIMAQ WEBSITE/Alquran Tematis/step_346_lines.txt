@@ -1,0 +1,29 @@
+Created At: 2026-09-07T07:27:37+07:00
+Completed At: 2026-09-07T07:27:37+07:00
+File Path: `file:///d:/Alquran%20Tematis%20New%20Version%20terbaru/index.html`
+Total Lines: 6266
+Total Bytes: 324923
+Showing lines 5680 to 5700
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+5680:             } else if (mode === 'keyword') {
+5681:                 if (tabKeyword) tabKeyword.classList.add('active');
+5682:                 if (keywordNav) keywordNav.style.display = 'block';
+5683:                 if (keywordView) keywordView.style.display = 'block';
+5684:                 const kwInput = document.getElementById('keyword-search-input');
+5685:                 if (kwInput && !kwInput.value.trim()) {
+5686:                     kwInput.focus();
+5687:                 }
+5688:             }
+5689:         }
+5690: 
+5691:         function initSurahAyatSearch() {
+5692:             const selectSurah = document.getElementById('select-search-surah');
+5693:             if (!selectSurah) return;
+5694:             populateSurahDropdown(SURAH_LIST);
+5695: 
+5696:             // Set initial value
+5697:             selectSurah.value = currentSearchSurah;
+5698:             populateAyatDropdown(currentSearchSurah);
+5699:             const selectAyat = document.getElementById('select-search-ayat');
+5700:             if (selectAyat) selectAyat.value = currentSearchAyat;
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

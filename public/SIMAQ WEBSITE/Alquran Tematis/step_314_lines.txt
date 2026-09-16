@@ -1,0 +1,409 @@
+Created At: 2026-09-07T07:25:47+07:00
+Completed At: 2026-09-07T07:25:47+07:00
+File Path: `file:///d:/Alquran%20Tematis%20New%20Version%20terbaru/index.html`
+Total Lines: 6065
+Total Bytes: 310843
+Showing lines 5000 to 5400
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+5000: 
+5001:         function scrollToContent() {
+5002:             setTimeout(() => {
+5003:                 const elContent = document.getElementById('content-area');
+5004:                 if (elContent) {
+5005:                     window.scrollTo({ top: elContent.offsetTop - 20, behavior: 'smooth' });
+5006:                 }
+5007:             }, 80);
+5008:         }
+5009: 
+5010:         function updateNavButtonState() {
+5011:             const btnPrev = document.getElementById('btn-prev-uraian');
+5012:             if (btnPrev && elSub) {
+5013:                 btnPrev.disabled = (elSub.selectedIndex <= 1);
+5014:             }
+5015:         }
+5016: 
+5017:         function toggleSingleGroup(groupIdx, event) {
+5018:             if (event && event.target && (event.target.closest('button') || event.target.closest('audio') || event.target.closest('.flip-card'))) {
+5019:                 return;
+5020:             }
+5021:             const card = document.getElementById(`group-${groupIdx}`);
+5022:             if (!card) return;
+5023:             card.classList.toggle('is-collapsed');
+5024: 
+5025:             const groupCards = Array.from(document.querySelectorAll('.uraian-group-card'));
+5026:             const anyExpandedWithVerses = groupCards.some(c => {
+5027:                 if (c.classList.contains('is-collapsed')) return false;
+5028:                 const meta = c.querySelector('.group-meta');
+5029:                 const count = meta ? parseInt(meta.getAttribute('data-count') || '0') : 0;
+5030:                 return count > 0;
+5031:             });
+5032: 
+5033:             if (anyExpandedWithVerses) {
+5034:                 elHint.style.display = 'flex';
+5035:             } else {
+5036:                 elHint.style.display = 'none';
+5037:             }
+5038:         }
+5039: 
+5040:         function generateUraianGroupMarkup(uraianTitle, data, groupIdx) {
+5041:             let markup = `
+5042:                 <div class="uraian-group-card is-collapsed" id="group-${groupIdx}">
+5043:                     <div class="group-header-banner" onclick="toggleSingleGroup(${groupIdx}, event)" title="Klik untuk Buka / Tutup Kelompok Ini">
+5044:                         <div class="group-header-left">
+5045:                             <h3 class="group-title" data-original="${uraianTitle}">${uraianTitle}</h3>
+5046:                             <div class="group-meta" data-count="${data && data.verses ? data.verses.length : 0}">
+5047:                                 <span>📖 ${data && data.verses ? data.verses.length : 0} Ayat Al-Qur'an</span>
+5048:                             </div>
+5049:                         </div>
+5050:                         <div class="group-toggle-icon" title="Buka / Tutup Kelompok">
+5051:                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+5052:                                 <polyline points="6 9 12 15 18 9"></polyline>
+5053:                             </svg>
+5054:                         </div>
+5055:                     </div>
+5056:                     <div class="group-cards-container">
+5057:             `;
+5058: 
+5059:             if (data.is_lihat_juga) {
+5060:                 markup += `<div class="empty-state" style="padding: 1.5rem; text-align: left; background: rgba(30, 41, 59, 0.4); border-radius: 12px; margin-top: 1rem;">ℹ️ Lihat juga bahasan terkait pada referensi utama.</div>`;
+5061:             } else if (!data.verses || data.verses.length === 0) {
+5062:                 markup += `<div class="empty-state" style="padding: 1.5rem; text-align: center;">Tidak ada ayat untuk kelompok uraian ini.</div>`;
+5063:             } else {
+5064:                 data.verses.forEach(v => {
+5065:                     markup += `
+5066:                         <div class="verse-item-wrapper" style="margin-bottom: 2rem;">
+5067:                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; flex-wrap: wrap; gap: 0.5rem;">
+5068:                                 <div class="verse-title" style="margin-bottom: 0;">${v.surah_name} [${v.surah_num}]: ${v.ayat_num}</div>
+5069:                                 ${v.audio ? `
+5070:                                 <audio controls style="height: 32px; border-radius: 999px;">
+5071:                                     <source src="${v.audio}" type="audio/mpeg">
+5072:                                 </audio>
+5073:                                 ` : ''}
+5074:                             </div>
+5075:                             <div class="flip-card" onclick="this.classList.toggle('flipped')">
+5076:                                 <div class="flip-card-inner">
+5077:                                     <div class="flip-card-front" data-surah="${v.surah_num}" data-ayat="${v.ayat_num}" data-indo="${encodeURIComponent(v.indo)}">
+5078:                                         <div class="translation-text" style="width: 100%;">${v.indo}</div>
+5079:                                         <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+5080:                                             <button class="tts-button play-btn" data-text="${encodeURIComponent(v.indo)}" onclick="playTTS(this, event)" title="Dengarkan Terjemahan">
+5081:                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+5082:                                                 Dengarkan
+5083:                                             </button>
+5084:                                             <button class="tts-button ai-btn" style="color: #8b5cf6; border-color: #8b5cf6; background-color: rgba(139, 92, 246, 0.1);" onclick="tanyaAI(this, event, '${uraianTitle.replace(/'/g, "\\'")}')" title="Tanya AI tentang ayat ini">
+5085:                                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+5086:                                                 Tanya AI
+5087:                                             </button>
+5088:                                             <button class="tts-button" style="color: #38bdf8; border-color: #38bdf8; background-color: rgba(56, 189, 248, 0.1);" onclick="lookupVerseInSearch(${v.surah_num}, ${v.ayat_num}, event)" title="Lihat di Pencari Surat & Ayat">
+5089:                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+5090:                                                 <span data-i18n-orig="Cari Ayat">Cari Ayat</span>
+5091:                                             </button>
+5092:                                         </div>
+5093:                                     </div>
+5094:                                     <div class="flip-card-back">${v.arab}</div>
+5095:                                 </div>
+5096:                             </div>
+5097:                         </div>
+5098:                     `;
+5099:                 });
+5100:             }
+5101: 
+5102:             markup += `
+5103:                     </div>
+5104:                 </div>
+5105:             `;
+5106:             return markup;
+5107:         }
+5108: 
+5109:         function renderContentAll(tema, pokok, sub) {
+5110:             saveCurrentState();
+5111:             const subData = quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub];
+5112:             if (!subData) return;
+5113:             const keys = naturalSort(Object.keys(subData));
+5114:             
+5115:             let html = `
+5116:                 <div class="sub-header-banner-card">
+5117:                     <div class="sub-header-info">
+5118:                         <h2 class="sub-header-title" data-original="${sub}">${sub}</h2>
+5119:                         <div class="sub-header-meta" data-count="${keys.length}">Menampilkan ${keys.length} Kelompok Uraian Flash Card</div>
+5120:                     </div>
+5121:                     <div class="sub-header-actions">
+5122:                         <button id="btn-toggle-all-groups" class="toggle-verses-btn" onclick="toggleAllGroups()">
+5123:                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 13 12 18 17 13"></polyline><polyline points="7 6 12 11 17 6"></polyline></svg>
+5124:                             <span id="toggle-all-text" data-i18n-orig="Buka Semua Uraian">Buka Semua Uraian</span>
+5125:                         </button>
+5126:                     </div>
+5127:                 </div>
+5128:             `;
+5129: 
+5130:             const navContainer = document.getElementById('bottom-nav-container');
+5131:             let totalVerses = 0;
+5132: 
+5133:             keys.forEach((uraianTitle, idx) => {
+5134:                 const data = subData[uraianTitle];
+5135:                 html += generateUraianGroupMarkup(uraianTitle, data, idx);
+5136:                 if (data && data.verses) totalVerses += data.verses.length;
+5137:             });
+5138: 
+5139:             elHint.style.display = 'none';
+5140: 
+5141:             if (totalVerses > 0) {
+5142:                 if (navContainer) navContainer.style.display = 'block';
+5143:             } else {
+5144:                 if (navContainer) navContainer.style.display = 'none';
+5145:             }
+5146: 
+5147:             elContent.innerHTML = html;
+5148:             updateNavButtonState();
+5149:             translatePageContent();
+5150:         }
+5151: 
+5152:         function renderContentSingle(tema, pokok, sub, uraianTitle) {
+5153:             saveCurrentState();
+5154:             const subData = quranData[tema] && quranData[tema][pokok] && quranData[tema][pokok][sub];
+5155:             if (!subData || !subData[uraianTitle]) return;
+5156: 
+5157:             const data = subData[uraianTitle];
+5158:             const navContainer = document.getElementById('bottom-nav-container');
+5159: 
+5160:             let html = generateUraianGroupMarkup(uraianTitle, data, 0);
+5161: 
+5162:             elHint.style.display = 'none';
+5163: 
+5164:             if (data.verses && data.verses.length > 0) {
+5165:                 if (navContainer) navContainer.style.display = 'block';
+5166:             } else {
+5167:                 if (navContainer) navContainer.style.display = 'none';
+5168:             }
+5169: 
+5170:             elContent.innerHTML = html;
+5171:             updateNavButtonState();
+5172:             translatePageContent();
+5173:         }
+5174: 
+5175:         const elTtsLanguage = document.getElementById('tts-language');
+5176:         if (elTtsLanguage) {
+5177:             elTtsLanguage.addEventListener('change', () => {
+5178:                 stopTTS();
+5179:                 saveCurrentState();
+5180:                 translatePageContent();
+5181:                 translateDropdowns();
+5182:                 updateTranslatorInfo();
+5183:             });
+5184:         }
+5185: 
+5186:         async function translatePageContent() {
+5187:             const langSelect = document.getElementById('tts-language');
+5188:             const lang = langSelect ? langSelect.value : 'id-ID';
+5189:             const cfg = LANG_CONFIG[lang] || LANG_CONFIG['id-ID'];
+5190:             const targetLangCode = cfg.code;
+5191: 
+5192:             updateTranslatorInfo();
+5193: 
+5194:             // 1. Petunjuk / Hint
+5195:             const elHint = document.getElementById('hint-text');
+5196:             if (elHint) {
+5197:                 elHint.innerHTML = cfg.hint;
+5198:             }
+5199: 
+5200:             // 2. Tombol Navigasi Bawah
+5201:             const btnPrev = document.getElementById('btn-prev-uraian');
+5202:             const btnNext = document.getElementById('btn-next-uraian');
+5203:             if (btnPrev) btnPrev.textContent = cfg.prevBtn;
+5204:             if (btnNext) btnNext.textContent = cfg.nextBtn;
+5205: 
+5206:             // 3. Judul Sub Header & Meta
+5207:             const subTitleEls = document.querySelectorAll('.sub-header-title');
+5208:             subTitleEls.forEach(async el => {
+5209:                 const orig = el.getAttribute('data-original');
+5210:                 if (orig) {
+5211:                     if (targetLangCode === 'id') el.textContent = orig;
+5212:                     else el.textContent = await translateTextFree(orig, targetLangCode);
+5213:                 }
+5214:             });
+5215: 
+5216:             const subMetaEls = document.querySelectorAll('.sub-header-meta');
+5217:             subMetaEls.forEach(el => {
+5218:                 const count = el.getAttribute('data-count');
+5219:                 el.textContent = cfg.subMeta(count);
+5220:             });
+5221: 
+5222:             // 4. Judul Kelompok Uraian & Meta Jumlah Ayat
+5223:             const groupTitleEls = document.querySelectorAll('.group-title');
+5224:             groupTitleEls.forEach(async el => {
+5225:                 const orig = el.getAttribute('data-original');
+5226:                 if (orig) {
+5227:                     if (targetLangCode === 'id') el.textContent = orig;
+5228:                     else el.textContent = await translateTextFree(orig, targetLangCode);
+5229:                 }
+5230:             });
+5231: 
+5232:             const groupMetaEls = document.querySelectorAll('.group-meta');
+5233:             groupMetaEls.forEach(el => {
+5234:                 const count = el.getAttribute('data-count');
+5235:                 el.innerHTML = cfg.groupMeta(count);
+5236:             });
+5237: 
+5238:             // 5. Tombol aksi di depan kartu
+5239:             const playBtns = document.querySelectorAll('.play-btn');
+5240:             playBtns.forEach(btn => {
+5241:                 if (btn.classList.contains('is-playing')) {
+5242:                     const spinnerSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10" stroke-opacity="0.3"></circle><path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor"></path></svg>`;
+5243:                     btn.innerHTML = spinnerSvg + cfg.playText;
+5244:                 } else {
+5245:                     const svg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>`;
+5246:                     btn.innerHTML = svg + cfg.playText;
+5247:                 }
+5248:             });
+5249: 
+5250:             const aiBtns = document.querySelectorAll('.ai-btn');
+5251:             aiBtns.forEach(btn => {
+5252:                 const svg = btn.querySelector('svg') ? btn.querySelector('svg').outerHTML : '';
+5253:                 btn.innerHTML = svg + cfg.aiText;
+5254:             });
+5255: 
+5256:             // 5b. Terjemahkan Mode Tabs & Elemen UI Lainnya (data-i18n-orig)
+5257:             const i18nElements = document.querySelectorAll('[data-i18n-orig]');
+5258:             i18nElements.forEach(async el => {
+5259:                 const orig = el.getAttribute('data-i18n-orig');
+5260:                 if (!orig) return;
+5261:                 if (targetLangCode === 'id') {
+5262:                     el.textContent = orig;
+5263:                 } else {
+5264:                     const dict = LANG_UI_MAP[targetLangCode];
+5265:                     if (dict && dict[orig]) {
+5266:                         el.textContent = dict[orig];
+5267:                     } else {
+5268:                         el.textContent = await translateTextFree(orig, targetLangCode);
+5269:                     }
+5270:                 }
+5271:             });
+5272: 
+5273:             // 5b2. Terjemahkan Placeholders Input (data-i18n-placeholder)
+5274:             const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
+5275:             placeholderElements.forEach(async el => {
+5276:                 const orig = el.getAttribute('data-i18n-placeholder');
+5277:                 if (!orig) return;
+5278:                 if (targetLangCode === 'id') {
+5279:                     el.placeholder = orig;
+5280:                 } else {
+5281:                     const dict = LANG_UI_MAP[targetLangCode];
+5282:                     if (dict && dict[orig]) {
+5283:                         el.placeholder = dict[orig];
+5284:                     } else {
+5285:                         el.placeholder = await translateTextFree(orig, targetLangCode);
+5286:                     }
+5287:                 }
+5288:             });
+5289: 
+5290:             // 5c. Terjemahkan hierarki tematik pada kartu hasil pencarian
+5291:             const thematicStepVals = document.querySelectorAll('.thematic-step .step-val');
+5292:             thematicStepVals.forEach(async el => {
+5293:                 const orig = el.getAttribute('data-original') || el.textContent;
+5294:                 if (!el.hasAttribute('data-original')) el.setAttribute('data-original', orig);
+5295:                 if (orig) {
+5296:                     if (targetLangCode === 'id') {
+5297:                         el.textContent = orig;
+5298:                     } else {
+5299:                         el.textContent = await translateTextFree(orig, targetLangCode);
+5300:                     }
+5301:                 }
+5302:             });
+5303: 
+5304:             // 5d. Terjemahkan badge jumlah pembahasan tematik
+5305:             const countBadge = document.querySelector('.thematic-count-badge');
+5306:             if (countBadge) {
+5307:                 const count = parseInt(countBadge.getAttribute('data-count') || '0');
+5308:                 if (count > 0) {
+5309:                     if (targetLangCode === 'id') {
+5310:                         countBadge.textContent = `Ditemukan dalam ${count} Pembahasan Tematis`;
+5311:                     } else if (targetLangCode === 'en') {
+5312:                         countBadge.textContent = `Found in ${count} Thematic Topics`;
+5313:                     } else if (targetLangCode === 'ar') {
+5314:                         countBadge.textContent = `موجود في ${count} مواضيع موضوعية`;
+5315:                     } else {
+5316:                         const prefix = await translateTextFree('Ditemukan dalam', targetLangCode);
+5317:                         const suffix = await translateTextFree('Pembahasan Tematis', targetLangCode);
+5318:                         countBadge.textContent = `${prefix} ${count} ${suffix}`;
+5319:                     }
+5320:                 } else {
+5321:                     const emptyText = 'Tidak Ditemukan dalam Indeks Tematis';
+5322:                     if (targetLangCode === 'id') {
+5323:                         countBadge.textContent = emptyText;
+5324:                     } else {
+5325:                         countBadge.textContent = await translateTextFree(emptyText, targetLangCode);
+5326:                     }
+5327:                 }
+5328:             }
+5329: 
+5330:             // 6. Terjemahan Ayat pada Kartu Flip (di bagian depan)
+5331:             const cards = document.querySelectorAll('.flip-card-front, .search-card-front');
+5332:             if (lang === 'id-ID') {
+5333:                 cards.forEach(card => {
+5334:                     const text = decodeURIComponent(card.getAttribute('data-indo'));
+5335:                     const textEl = card.querySelector('.translation-text');
+5336:                     if (textEl) {
+5337:                         textEl.className = 'translation-text';
+5338:                         textEl.textContent = text;
+5339:                     }
+5340:                     const playBtn = card.querySelector('.play-btn');
+5341:                     if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(text));
+5342:                 });
+5343:                 return;
+5344:             }
+5345:             
+5346:             const edition = cfg.edition;
+5347:             const cssClass = cfg.cssClass ? ' ' + cfg.cssClass : '';
+5348:             
+5349:             const promises = Array.from(cards).map(async card => {
+5350:                 const surah = card.getAttribute('data-surah');
+5351:                 const ayat = card.getAttribute('data-ayat');
+5352:                 const textEl = card.querySelector('.translation-text');
+5353:                 const playBtn = card.querySelector('.play-btn');
+5354:                 
+5355:                 if (textEl) {
+5356:                     textEl.className = 'translation-text' + cssClass;
+5357:                 }
+5358:                 
+5359:                 const cacheKey = `${edition}:${surah}:${ayat}`;
+5360:                 if (ayahTranslationCache[cacheKey]) {
+5361:                     const translatedText = ayahTranslationCache[cacheKey];
+5362:                     if (textEl) textEl.textContent = translatedText;
+5363:                     if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+5364:                     return;
+5365:                 }
+5366:                 
+5367:                 if (textEl) textEl.textContent = cfg.loadingText;
+5368:                 
+5369:                 try {
+5370:                     const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surah}:${ayat}/${edition}`);
+5371:                     const json = await res.json();
+5372:                     if (json && json.data && json.data.text) {
+5373:                         const translatedText = json.data.text;
+5374:                         ayahTranslationCache[cacheKey] = translatedText;
+5375:                         if (textEl) textEl.textContent = translatedText;
+5376:                         if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+5377:                     } else {
+5378:                         if (textEl) textEl.textContent = cfg.errorText;
+5379:                     }
+5380:                 } catch (e) {
+5381:                     console.error(e);
+5382:                     if (textEl) textEl.textContent = cfg.connErrorText;
+5383:                 }
+5384:             });
+5385:             await Promise.all(promises);
+5386:         }
+5387: 
+5388:         /* ==========================================================================
+5389:            FITUR PILIH SURAT & AYAT (PENCARIAN TEMATIK TERBALIK)
+5390:            ========================================================================== */
+5391:         const SURAH_LIST = [{"no": 1, "name": "Al-Fatihah", "arab": "الفاتحة", "ayat": 7, "type": "Mekah"}, {"no": 2, "name": "Al-Baqarah", "arab": "البقرة", "ayat": 286, "type": "Madinah"}, {"no": 3, "name": "Ali 'Imran", "arab": "اٰل عمران", "ayat": 200, "type": "Madinah"}, {"no": 4, "name": "An-Nisa'", "arab": "النساۤء", "ayat": 176, "type": "Madinah"}, {"no": 5, "name": "Al-Ma'idah", "arab": "الماۤئدة", "ayat": 120, "type": "Madinah"}, {"no": 6, "name": "Al-An'am", "arab": "الانعام", "ayat": 165, "type": "Mekah"}, {"no": 7, "name": "Al-A'raf", "arab": "الاعراف", "ayat": 206, "type": "Mekah"}, {"no": 8, "name": "Al-Anfal", "arab": "الانفال", "ayat": 75, "type": "Madinah"}, {"no": 9, "name": "At-Taubah", "arab": "التوبة", "ayat": 129, "type": "Madinah"}, {"no": 10, "name": "Yunus", "arab": "يونس", "ayat": 109, "type": "Mekah"}, {"no": 11, "name": "Hud", "arab": "هود", "ayat": 123, "type": "Mekah"}, {"no": 12, "name": "Yusuf", "arab": "يوسف", "ayat": 111, "type": "Mekah"}, {"no": 13, "name": "Ar-Ra'd", "arab": "الرّعد", "ayat": 43, "type": "Madinah"}, {"no": 14, "name": "Ibrahim", "arab": "ابرٰهيم", "ayat": 52, "type": "Mekah"}, {"no": 15, "name": "Al-Hijr", "arab": "الحجر", "ayat": 99, "type": "Mekah"}, {"no": 16, "name": "An-Nahl", "arab": "النحل", "ayat": 128, "type": "Mekah"}, {"no": 17, "name": "Al-Isra'", "arab": "الاسراۤء", "ayat": 111, "type": "Mekah"}, {"no": 18, "name": "Al-Kahf", "arab": "الكهف", "ayat": 110, "type": "Mekah"}, {"no": 19, "name": "Maryam", "arab": "مريم", "ayat": 98, "type": "Mekah"}, {"no": 20, "name": "Taha", "arab": "طٰهٰ", "ayat": 135, "type": "Mekah"}, {"no": 21, "name": "Al-Anbiya'", "arab": "الانبياۤء", "ayat": 112, "type": "Mekah"}, {"no": 22, "name": "Al-Hajj", "arab": "الحج", "ayat": 78, "type": "Madinah"}, {"no": 23, "name": "Al-Mu'minun", "arab": "المؤمنون", "ayat": 118, "type": "Mekah"}, {"no": 24, "name": "An-Nur", "arab": "النّور", "ayat": 64, "type": "Madinah"}, {"no": 25, "name": "Al-Furqan", "arab": "الفرقان", "ayat": 77, "type": "Mekah"}, {"no": 26, "name": "Asy-Syu'ara'", "arab": "الشعراۤء", "ayat": 227, "type": "Mekah"}, {"no": 27, "name": "An-Naml", "arab": "النمل", "ayat": 93, "type": "Mekah"}, {"no": 28, "name": "Al-Qasas", "arab": "القصص", "ayat": 88, "type": "Mekah"}, {"no": 29, "name": "Al-'Ankabut", "arab": "العنكبوت", "ayat": 69, "type": "Mekah"}, {"no": 30, "name": "Ar-Rum", "arab": "الرّوم", "ayat": 60, "type": "Mekah"}, {"no": 31, "name": "Luqman", "arab": "لقمٰن", "ayat": 34, "type": "Mekah"}, {"no": 32, "name": "As-Sajdah", "arab": "السّجدة", "ayat": 30, "type": "Mekah"}, {"no": 33, "name": "Al-Ahzab", "arab": "الاحزاب", "ayat": 73, "type": "Madinah"}, {"no": 34, "name": "Saba'", "arab": "سبأ", "ayat": 54, "type": "Mekah"}, {"no": 35, "name": "Fatir", "arab": "فاطر", "ayat": 45, "type": "Mekah"}, {"no": 36, "name": "Yasin", "arab": "يٰسۤ", "ayat": 83, "type": "Mekah"}, {"no": 37, "name": "As-Saffat", "arab": "الصّٰۤفّٰت", "ayat": 182, "type": "Mekah"}, {"no": 38, "name": "Sad", "arab": "ص", "ayat": 88, "type": "Mekah"}, {"no": 39, "name": "Az-Zumar", "arab": "الزمر", "ayat": 75, "type": "Mekah"}, {"no": 40, "name": "Ghafir", "arab": "غافر", "ayat": 85, "type": "Mekah"}, {"no": 41, "name": "Fussilat", "arab": "فصّلت", "ayat": 54, "type": "Mekah"}, {"no": 42, "name": "Asy-Syura", "arab": "الشورى", "ayat": 53, "type": "Mekah"}, {"no": 43, "name": "Az-Zukhruf", "arab": "الزخرف", "ayat": 89, "type": "Mekah"}, {"no": 44, "name": "Ad-Dukhan", "arab": "الدخان", "ayat": 59, "type": "Mekah"}, {"no": 45, "name": "Al-Jasiyah", "arab": "الجاثية", "ayat": 37, "type": "Mekah"}, {"no": 46, "name": "Al-Ahqaf", "arab": "الاحقاف", "ayat": 35, "type": "Mekah"}, {"no": 47, "name": "Muhammad", "arab": "محمّد", "ayat": 38, "type": "Madinah"}, {"no": 48, "name": "Al-Fath", "arab": "الفتح", "ayat": 29, "type": "Madinah"}, {"no": 49, "name": "Al-Hujurat", "arab": "الحجرٰت", "ayat": 18, "type": "Madinah"}, {"no": 50, "name": "Qaf", "arab": "ق", "ayat": 45, "type": "Mekah"}, {"no": 51, "name": "Az-Zariyat", "arab": "الذّٰريٰت", "ayat": 60, "type": "Mekah"}, {"no": 52, "name": "At-Tur", "arab": "الطور", "ayat": 49, "type": "Mekah"}, {"no": 53, "name": "An-Najm", "arab": "النجم", "ayat": 62, "type": "Mekah"}, {"no": 54, "name": "Al-Qamar", "arab": "القمر", "ayat": 55, "type": "Mekah"}, {"no": 55, "name": "Ar-Rahman", "arab": "الرحمن", "ayat": 78, "type": "Madinah"}, {"no": 56, "name": "Al-Waqi'ah", "arab": "الواقعة", "ayat": 96, "type": "Mekah"}, {"no": 57, "name": "Al-Hadid", "arab": "الحديد", "ayat": 29, "type": "Madinah"}, {"no": 58, "name": "Al-Mujadilah", "arab": "المجادلة", "ayat": 22, "type": "Madinah"}, {"no": 59, "name": "Al-Hasyr", "arab": "الحشر", "ayat": 24, "type": "Madinah"}, {"no": 60, "name": "Al-Mumtahanah", "arab": "الممتحنة", "ayat": 13, "type": "Madinah"}, {"no": 61, "name": "As-Saff", "arab": "الصّفّ", "ayat": 14, "type": "Madinah"}, {"no": 62, "name": "Al-Jumu'ah", "arab": "الجمعة", "ayat": 11, "type": "Madinah"}, {"no": 63, "name": "Al-Munafiqun", "arab": "المنٰفقون", "ayat": 11, "type": "Madinah"}, {"no": 64, "name": "At-Tagabun", "arab": "التغابن", "ayat": 18, "type": "Madinah"}, {"no": 65, "name": "At-Talaq", "arab": "الطلاق", "ayat": 12, "type": "Madinah"}, {"no": 66, "name": "At-Tahrim", "arab": "التحريم", "ayat": 12, "type": "Madinah"}, {"no": 67, "name": "Al-Mulk", "arab": "الملك", "ayat": 30, "type": "Mekah"}, {"no": 68, "name": "Al-Qalam", "arab": "القلم", "ayat": 52, "type": "Mekah"}, {"no": 69, "name": "Al-Haqqah", "arab": "الحاۤقّة", "ayat": 52, "type": "Mekah"}, {"no": 70, "name": "Al-Ma'arij", "arab": "المعارج", "ayat": 44, "type": "Mekah"}, {"no": 71, "name": "Nuh", "arab": "نوح", "ayat": 28, "type": "Mekah"}, {"no": 72, "name": "Al-Jinn", "arab": "الجن", "ayat": 28, "type": "Mekah"}, {"no": 73, "name": "Al-Muzzammil", "arab": "المزّمّل", "ayat": 20, "type": "Mekah"}, {"no": 74, "name": "Al-Muddassir", "arab": "المدّثّر", "ayat": 56, "type": "Mekah"}, {"no": 75, "name": "Al-Qiyamah", "arab": "القيٰمة", "ayat": 40, "type": "Mekah"}, {"no": 76, "name": "Al-Insan", "arab": "الانسان", "ayat": 31, "type": "Madinah"}, {"no": 77, "name": "Al-Mursalat", "arab": "المرسلٰت", "ayat": 50, "type": "Mekah"}, {"no": 78, "name": "An-Naba'", "arab": "النبأ", "ayat": 40, "type": "Mekah"}, {"no": 79, "name": "An-Nazi'at", "arab": "النّٰزعٰت", "ayat": 46, "type": "Mekah"}, {"no": 80, "name": "'Abasa", "arab": "عبس", "ayat": 42, "type": "Mekah"}, {"no": 81, "name": "At-Takwir", "arab": "التكوير", "ayat": 29, "type": "Mekah"}, {"no": 82, "name": "Al-Infitar", "arab": "الانفطار", "ayat": 19, "type": "Mekah"}, {"no": 83, "name": "Al-Mutaffifin", "arab": "المطفّفين", "ayat": 36, "type": "Mekah"}, {"no": 84, "name": "Al-Insyiqaq", "arab": "الانشقاق", "ayat": 25, "type": "Mekah"}, {"no": 85, "name": "Al-Buruj", "arab": "البروج", "ayat": 22, "type": "Mekah"}, {"no": 86, "name": "At-Tariq", "arab": "الطارق", "ayat": 17, "type": "Mekah"}, {"no": 87, "name": "Al-A'la", "arab": "الاعلى", "ayat": 19, "type": "Mekah"}, {"no": 88, "name": "Al-Gasyiyah", "arab": "الغاشية", "ayat": 26, "type": "Mekah"}, {"no": 89, "name": "Al-Fajr", "arab": "الفجر", "ayat": 30, "type": "Mekah"}, {"no": 90, "name": "Al-Balad", "arab": "البلد", "ayat": 20, "type": "Mekah"}, {"no": 91, "name": "Asy-Syams", "arab": "الشمس", "ayat": 15, "type": "Mekah"}, {"no": 92, "name": "Al-Lail", "arab": "الّيل", "ayat": 21, "type": "Mekah"}, {"no": 93, "name": "Ad-Duha", "arab": "الضحى", "ayat": 11, "type": "Mekah"}, {"no": 94, "name": "Al-Insyirah", "arab": "الشرح", "ayat": 8, "type": "Mekah"}, {"no": 95, "name": "At-Tin", "arab": "التين", "ayat": 8, "type": "Mekah"}, {"no": 96, "name": "Al-'Alaq", "arab": "العلق", "ayat": 19, "type": "Mekah"}, {"no": 97, "name": "Al-Qadr", "arab": "القدر", "ayat": 5, "type": "Mekah"}, {"no": 98, "name": "Al-Bayyinah", "arab": "البيّنة", "ayat": 8, "type": "Madinah"}, {"no": 99, "name": "Az-Zalzalah", "arab": "الزلزلة", "ayat": 8, "type": "Madinah"}, {"no": 100, "name": "Al-'Adiyat", "arab": "العٰديٰت", "ayat": 11, "type": "Mekah"}, {"no": 101, "name": "Al-Qari'ah", "arab": "القارعة", "ayat": 11, "type": "Mekah"}, {"no": 102, "name": "At-Takasur", "arab": "التكاثر", "ayat": 8, "type": "Mekah"}, {"no": 103, "name": "Al-'Asr", "arab": "العصر", "ayat": 3, "type": "Mekah"}, {"no": 104, "name": "Al-Humazah", "arab": "الهمزة", "ayat": 9, "type": "Mekah"}, {"no": 105, "name": "Al-Fil", "arab": "الفيل", "ayat": 5, "type": "Mekah"}, {"no": 106, "name": "Quraisy", "arab": "قريش", "ayat": 4, "type": "Mekah"}, {"no": 107, "name": "Al-Ma'un", "arab": "الماعون", "ayat": 7, "type": "Mekah"}, {"no": 108, "name": "Al-Kausar", "arab": "الكوثر", "ayat": 3, "type": "Mekah"}, {"no": 109, "name": "Al-Kafirun", "arab": "الكٰفرون", "ayat": 6, "type": "Mekah"}, {"no": 110, "name": "An-Nasr", "arab": "النصر", "ayat": 3, "type": "Madinah"}, {"no": 111, "name": "Al-Lahab", "arab": "اللهب", "ayat": 5, "type": "Mekah"}, {"no": 112, "name": "Al-Ikhlas", "arab": "الاخلاص", "ayat": 4, "type": "Mekah"}, {"no": 113, "name": "Al-Falaq", "arab": "الفلق", "ayat": 5, "type": "Madinah"}, {"no": 114, "name": "An-Nas", "arab": "الناس", "ayat": 6, "type": "Madinah"}];
+5392: 
+5393:         let verseThematicIndex = {};
+5394:         let currentSearchSurah = 2; // Default Al-Baqarah
+5395:         let currentSearchAyat = 255; // Default Ayat Kursi
+5396:         let surahApiCache = {};
+5397:         let activeMainMode = 'thematic';
+5398: 
+5399:         let allThematicUraianList = [];
+5400:         let allThematicVersesList = [];
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

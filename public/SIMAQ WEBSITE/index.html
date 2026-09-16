@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIMAQ - Ekosistem Pembelajaran Al-Qur'an Terpadu</title>
+  <meta name="description" content="Portal Pembelajaran Al-Qur'an Interaktif: Al-Qur'an Tematis, Mushaf Per Kata (Word-by-Word), dan Kamus Al-Qur'an 39 Bahasa.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #070b13;
+      --bg-surface: #0f172a;
+      --bg-card: rgba(17, 24, 39, 0.75);
+      --bg-card-hover: rgba(30, 41, 59, 0.85);
+      
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(20, 184, 166, 0.3);
+      
+      /* Card 1 Accent: Emerald / Teal */
+      --c1-accent: #10b981;
+      --c1-accent-light: #34d399;
+      --c1-glow: rgba(16, 185, 129, 0.25);
+      --c1-bg-grad: linear-gradient(145deg, rgba(16, 185, 129, 0.12), rgba(15, 23, 42, 0.85));
+
+      /* Card 2 Accent: Sky / Cyan */
+      --c2-accent: #0ea5e9;
+      --c2-accent-light: #38bdf8;
+      --c2-glow: rgba(14, 165, 233, 0.25);
+      --c2-bg-grad: linear-gradient(145deg, rgba(14, 165, 233, 0.12), rgba(15, 23, 42, 0.85));
+
+      /* Card 3 Accent: Amber / Gold */
+      --c3-accent: #f59e0b;
+      --c3-accent-light: #fbbf24;
+      --c3-glow: rgba(245, 158, 11, 0.25);
+      --c3-bg-grad: linear-gradient(145deg, rgba(245, 158, 11, 0.12), rgba(15, 23, 42, 0.85));
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Background Aesthetic: Islamic Geometry & Gradient Lighting */
+    .bg-mesh {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 20% 15%, rgba(16, 185, 129, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 90%, rgba(30, 41, 59, 0.6) 0%, transparent 70%);
+    }
+
+    .bg-pattern {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.035;
+      background-image: radial-gradient(#ffffff 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Main Container */
+    .app-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3.5rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Section */
+    .portal-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+      position: relative;
+      animation: fadeInDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .bismillah {
+      font-family: 'Amiri', serif;
+      font-size: 2rem;
+      color: #fbbf24;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 25px rgba(251, 191, 36, 0.35);
+      user-select: none;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1.1rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 1.25rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .brand-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #10b981;
+      box-shadow: 0 0 10px #10b981;
+      animation: pulseDot 2s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    .main-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.3rem, 5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff 30%, #cbd5e1 70%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .main-title span {
+      background: linear-gradient(135deg, #38bdf8 0%, #10b981 50%, #fbbf24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .main-subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    /* Key Shortcuts Helper */
+    .keyboard-hint-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .key-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--text-subtle);
+    }
+
+    .kbd-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      padding: 2px 7px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      font-family: monospace;
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    /* 3 CARDS GRID */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.85rem;
+      margin-bottom: 3.5rem;
+      position: relative;
+    }
+
+    @media (max-width: 1060px) {
+      .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+
+    /* Card Component */
+    .module-card {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      overflow: hidden;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      opacity: 0.75;
+      transition: all 0.35s ease;
+    }
+
+    .module-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 24px;
+      padding: 1.5px;
+      background: transparent;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      transition: all 0.35s ease;
+    }
+
+    /* Card 1 Specifics: Al-Qur'an Tematis */
+    .card-thematic {
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+    }
+    .card-thematic::before {
+      background: linear-gradient(90deg, #10b981, #34d399);
+    }
+    .card-thematic:hover {
+      background: var(--c1-bg-grad);
+      border-color: rgba(16, 185, 129, 0.45);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px -10px var(--c1-glow), 0 0 20px rgba(16, 185, 129, 0.15);
+    }
+    .card-thematic .card-icon-box {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--c1-accent-light);
+    }
+    .card-thematic .badge-pill {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: #6ee7b7;
+    }
+    .card-thematic .action-btn {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #042f2e;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+    }
+    .card-thematic:hover .action-btn {
+      background: #34d399;
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+    }
+
+    /* Card 2 Specifics: Mushaf Per Kata */
+    .card-mushaf {
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+    .card-mushaf::before {
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+    }
+    .card-mushaf:hover {
+      background: var(--c2-bg-grad);
+      border-color: rgba(14, 165, 233, 0.45);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px -10px var(--c2-glow), 0 0 20px rgba(14, 165, 233, 0.15);
+    }
+    .card-mushaf .card-icon-box {
+      background: rgba(14, 165, 233, 0.12);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      color: var(--c2-accent-light);
+    }
+    .card-mushaf .badge-pill {
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.35);
+      color: #7dd3fc;
+    }
+    .card-mushaf .action-btn {
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      color: #082f49;
+      box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+    }
+    .card-mushaf:hover .action-btn {
+      background: #38bdf8;
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+    }
+
+    /* Card 3 Specifics: Kamus */
+    .card-kamus {
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+    .card-kamus::before {
+      background: linear-gradient(90deg, #f59e0b, #fbbf24);
+    }
+    .card-kamus:hover {
+      background: var(--c3-bg-grad);
+      border-color: rgba(245, 158, 11, 0.45);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px -10px var(--c3-glow), 0 0 20px rgba(245, 158, 11, 0.15);
+    }
+    .card-kamus .card-icon-box {
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--c3-accent-light);
+    }
+    .card-kamus .badge-pill {
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: #fde68a;
+    }
+    .card-kamus .action-btn {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #451a03;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    }
+    .card-kamus:hover .action-btn {
+      background: #fbbf24;
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+    }
+
+    /* Card Inner Elements */
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-icon-box {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .module-card:hover .card-icon-box {
+      transform: scale(1.08) rotate(3deg);
+    }
+
+    .card-number-badge {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.3rem 0.75rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .badge-pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.3rem 0.8rem;
+      border-radius: 9999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin-bottom: 0.45rem;
+      line-height: 1.25;
+    }
+
+    .card-subtitle {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .card-desc {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    /* Chips List */
+    .feature-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .chip-item {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: #cbd5e1;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+    }
+
+    .module-card:hover .chip-item {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+    }
+
+    /* Action Button */
+    .action-btn {
+      width: 100%;
+      padding: 0.95rem 1.25rem;
+      border-radius: 14px;
+      font-size: 0.98rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .action-btn svg {
+      transition: transform 0.25s ease;
+    }
+
+    .module-card:hover .action-btn svg {
+      transform: translateX(4px);
+    }
+
+    /* Protocol Notice / Server Info Bar */
+    .protocol-notice {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 1rem 1.5rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .protocol-notice-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .protocol-notice-left strong {
+      color: #f1f5f9;
+    }
+
+    .launcher-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #38bdf8;
+      padding: 0.45rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .launcher-btn:hover {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: #38bdf8;
+      color: #ffffff;
+    }
+
+    /* Footer */
+    .portal-footer {
+      text-align: center;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-subtle);
+    }
+
+    .portal-footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .portal-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Ambient Backdrop -->
+  <div class="bg-mesh"></div>
+  <div class="bg-pattern"></div>
+
+  <div class="app-wrapper">
+    <!-- Header Section -->
+    <header class="portal-header">
+      <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      
+      <div class="brand-badge">
+        <span class="dot"></span>
+        <span>SIMAQ.CLOUD • Interactive Quran Ecosystem</span>
+      </div>
+
+      <h1 class="main-title">Ekosistem Pembelajaran <span>Al-Qur'an</span></h1>
+      <p class="main-subtitle">
+        Portal terpadu pengkajian Al-Qur'an mendalam: Analisis Tematik Kontekstual, Mushaf Morfologi Kata demi Kata, serta Kamus Gramatika Bahasa Arab 39 Bahasa Dunia.
+      </p>
+
+      <!-- Keyboard shortcut hint -->
+      <div class="keyboard-hint-bar">
+        <span class="key-badge">Tekan <kbd class="kbd-btn">1</kbd> Al-Qur'an Tematis</span>
+        <span class="key-badge">Tekan <kbd class="kbd-btn">2</kbd> Mushaf Per Kata</span>
+        <span class="key-badge">Tekan <kbd class="kbd-btn">3</kbd> Kamus Al-Qur'an</span>
+      </div>
+    </header>
+
+    <!-- 3 CARDS GRID (Sesuai urutan: 1. Alquran Tematis, 2. Mushaf Perkata, 3. Kamus) -->
+    <main class="cards-grid" role="region" aria-label="Menu Utama SIMAQ">
+      
+      <!-- KARTU 1: AL-QUR'AN TEMATIS -->
+      <a href="Alquran Tematis/index.html" class="module-card card-thematic" id="card-tematis" aria-label="Buka Al-Qur'an Tematis">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-box" aria-hidden="true">
+              <!-- Book & Compass Thematic SVG Icon -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                <circle cx="13" cy="10" r="3"/>
+                <line x1="13" y1="7" x2="13" y2="8"/>
+                <line x1="13" y1="12" x2="13" y2="13"/>
+                <line x1="10" y1="10" x2="11" y2="10"/>
+                <line x1="15" y1="10" x2="16" y2="10"/>
+              </svg>
+            </div>
+            <span class="card-number-badge">01</span>
+          </div>
+
+          <span class="badge-pill">Eksplorasi Tematik & Sirah</span>
+          <h2 class="card-title">Al-Qur'an Tematis</h2>
+          <div class="card-subtitle">Tematis Ayat, Sirah Nabi & Audio Dwibahasa</div>
+          
+          <p class="card-desc">
+            Kumpulan ayat-ayat Al-Qur'an yang dikelompokkan secara terstruktur berdasarkan tema kehidupan: Sirah Rasulullah ﷺ, akidah, ibadah, sains, akhlak, dan hukum kontemporer dengan audio tilawah dwibahasa interaktif.
+          </p>
+        </div>
+
+        <div>
+          <div class="feature-chips">
+            <span class="chip-item">📜 Sirah Rasulullah</span>
+            <span class="chip-item">🎧 Audio Dwibahasa</span>
+            <span class="chip-item">🗂️ 17+ Kategori Topik</span>
+            <span class="chip-item">🎴 Mode Flip-Card</span>
+            <span class="chip-item">🔍 Pencarian Ayat Cerdas</span>
+          </div>
+
+          <div class="action-btn">
+            <span>Buka Al-Qur'an Tematis</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- KARTU 2: MUSHAF PER KATA -->
+      <a href="Mushaf/index.html" class="module-card card-mushaf" id="card-mushaf" aria-label="Buka Mushaf Per Kata">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-box" aria-hidden="true">
+              <!-- Word by word Quran Page & Magnifier SVG Icon -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                <circle cx="16" cy="9" r="2.5"/>
+                <path d="m18 11 2 2"/>
+              </svg>
+            </div>
+            <span class="card-number-badge">02</span>
+          </div>
+
+          <span class="badge-pill">Word-by-Word & Morfologi</span>
+          <h2 class="card-title">Mushaf Per Kata</h2>
+          <div class="card-subtitle">Analisis Morfologi, Akar Kata, Nahwu & Shorof</div>
+          
+          <p class="card-desc">
+            Mushaf digital interaktif per kata (*Word by Word*) lengkap 114 surah dan 30 juz. Dilengkapi analisis akar kata (*root word*), jenis dhomir, wazan shorof, i'rab, serta pelafalan audio lafadz kata per kata.
+          </p>
+        </div>
+
+        <div>
+          <div class="feature-chips">
+            <span class="chip-item">📖 114 Surah & 30 Juz</span>
+            <span class="chip-item">🔬 Analisis Nahwu Shorof</span>
+            <span class="chip-item">🌿 Akar Kata (Root Words)</span>
+            <span class="chip-item">🔊 Audio Kata per Kata</span>
+            <span class="chip-item">⚡ Integrasi Kamus Cepat</span>
+          </div>
+
+          <div class="action-btn">
+            <span>Buka Mushaf Per Kata</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- KARTU 3: KAMUS AL-QUR'AN -->
+      <a href="Kamus/index.html" class="module-card card-kamus" id="card-kamus" aria-label="Buka Kamus Al-Qur'an">
+        <div>
+          <div class="card-top">
+            <div class="card-icon-box" aria-hidden="true">
+              <!-- Dictionary, Gramatika & 39 Languages SVG Icon -->
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <path d="M7 7h5"/>
+                <path d="M7 11h8"/>
+                <path d="M7 15h4"/>
+                <path d="M16 14v4"/>
+                <path d="M14 16h4"/>
+              </svg>
+            </div>
+            <span class="card-number-badge">03</span>
+          </div>
+
+          <span class="badge-pill">Gramatika & 39 Bahasa Dunia</span>
+          <h2 class="card-title">Kamus Al-Qur'an</h2>
+          <div class="card-subtitle">Jamid Mabny, Harf 'Amil/Ghair 'Amil & Musytaq</div>
+          
+          <p class="card-desc">
+            Koleksi leksikon dan gramatika komprehensif kosakata Al-Qur'an: Dhamir, Isim Mawshul, Harf 'Amil & Ghair 'Amil, dan Musytaq. Dilengkapi rujukan ayat interaktif, audio tilawah qari, dan terjemahan ke 39 bahasa dunia.
+          </p>
+        </div>
+
+        <div>
+          <div class="feature-chips">
+            <span class="chip-item">🌐 39 Bahasa Terjemahan</span>
+            <span class="chip-item">📚 Jamid, Harf & Musytaq</span>
+            <span class="chip-item">📐 Morfologi & Wazan</span>
+            <span class="chip-item">📊 Frekuensi & Nomor Kata</span>
+            <span class="chip-item">🔊 Audio Qari & Pelafalan</span>
+          </div>
+
+          <div class="action-btn">
+            <span>Buka Kamus Interaktif</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+    </main>
+
+    <!-- Operational status & Server Helper -->
+    <section class="protocol-notice" id="protocolNoticeBar" aria-label="Informasi Penggunaan">
+      <div class="protocol-notice-left">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="16" x2="12" y2="12"/>
+          <line x1="12" y1="8" x2="12.01" y2="8"/>
+        </svg>
+        <span id="protocolNoticeText">
+          <strong>Tips Penggunaan:</strong> Jalankan <code>jalankan_website.bat</code> untuk membuka local server (<code>http://localhost:8000</code>) agar semua modul termasuk Mushaf Per Kata berjalan optimal.
+        </span>
+      </div>
+      <div>
+        <span id="protocolBadge" style="font-size: 0.8rem; color: #64748b;">SIMAQ Website v1.0 • Server Ready</span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+      <p>&copy; 2026 <strong>SIMAQ.CLOUD</strong> — Sistem Informasi & Pembelajaran Al-Qur'an Terpadu.</p>
+      <p style="margin-top: 0.4rem; font-size: 0.8rem;">
+        Menghubungkan kedalaman ilmu Al-Qur'an klasik (*turats*) dengan teknologi interaktif modern.
+      </p>
+    </footer>
+  </div>
+
+  <!-- Interactive Logic: Keyboard Navigation & Dynamic Effects -->
+  <script>
+    // Keyboard navigation: 1 -> Alquran Tematis, 2 -> Mushaf Per Kata, 3 -> Kamus
+    document.addEventListener('keydown', function(e) {
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+
+      if (e.key === '1') {
+        const c1 = document.getElementById('card-tematis');
+        if (c1) {
+          c1.style.transform = 'scale(0.98)';
+          setTimeout(() => c1.click(), 100);
+        }
+      } else if (e.key === '2') {
+        const c2 = document.getElementById('card-mushaf');
+        if (c2) {
+          c2.style.transform = 'scale(0.98)';
+          setTimeout(() => c2.click(), 100);
+        }
+      } else if (e.key === '3') {
+        const c3 = document.getElementById('card-kamus');
+        if (c3) {
+          c3.style.transform = 'scale(0.98)';
+          setTimeout(() => c3.click(), 100);
+        }
+      }
+    });
+
+    // 3D Tilt Micro-animation on Cards
+    const cards = document.querySelectorAll('.module-card');
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const deltaX = (x - centerX) / centerX;
+        const deltaY = (y - centerY) / centerY;
+        
+        const rotateX = -deltaY * 5;
+        const rotateY = deltaX * 5;
+        
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+      });
+    });
+
+    // Check protocol (file:// vs http://)
+    if (window.location.protocol === 'file:') {
+      const noticeBar = document.getElementById('protocolNoticeBar');
+      const noticeText = document.getElementById('protocolNoticeText');
+      const badge = document.getElementById('protocolBadge');
+      if (noticeBar && noticeText) {
+        noticeBar.style.border = '1px solid rgba(245, 158, 11, 0.4)';
+        noticeBar.style.background = 'rgba(245, 158, 11, 0.08)';
+        noticeText.innerHTML = '<strong style="color: #fbbf24;">⚠️ Mode File Langsung Terdeteksi:</strong> Modul <em>Mushaf Per Kata</em> membutuhkan local server agar data ayat tidak diblokir browser. Silakan klik 2x <strong>jalankan_website.bat</strong> di folder SIMAQ WEBSITE.';
+      }
+      if (badge) {
+        badge.innerHTML = '<span style="color:#fbbf24;">● Mode file:/// (Buka via Server disarankan)</span>';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+Created At: 2026-09-07T07:27:35+07:00
+Completed At: 2026-09-07T07:27:35+07:00
+File Path: `file:///d:/Alquran%20Tematis%20New%20Version%20terbaru/index.html`
+Total Lines: 6266
+Total Bytes: 324923
+Showing lines 5630 to 5680
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+5630:                                             audio: v.audio,
+5631:                                             topics: []
+5632:                                         };
+5633:                                     }
+5634:                                     verseThematicIndex[key].topics.push({
+5635:                                         tema: tema,
+5636:                                         pokok: pb,
+5637:                                         sub: spb,
+5638:                                         uraian: ur
+5639:                                     });
+5640:                                 });
+5641:                             }
+5642:                         }
+5643:                     }
+5644:                 }
+5645:             }
+5646:             allThematicVersesList = Object.values(verseThematicIndex);
+5647:             console.log(`[VerseIndex] Indexed ${allThematicVersesList.length} unique verses and ${allThematicUraianList.length} thematic topics.`);
+5648:         }
+5649: 
+5650:         function switchMainMode(mode) {
+5651:             stopTTS();
+5652:             activeMainMode = mode;
+5653:             const tabThematic = document.getElementById('tab-btn-thematic');
+5654:             const tabSearch = document.getElementById('tab-btn-search');
+5655:             const tabKeyword = document.getElementById('tab-btn-keyword');
+5656:             const thematicNav = document.getElementById('thematic-nav-container');
+5657:             const searchNav = document.getElementById('search-nav-container');
+5658:             const keywordNav = document.getElementById('keyword-nav-container');
+5659:             const thematicView = document.getElementById('thematic-view-wrapper');
+5660:             const searchView = document.getElementById('search-view-wrapper');
+5661:             const keywordView = document.getElementById('keyword-view-wrapper');
+5662: 
+5663:             // Reset all active states
+5664:             [tabThematic, tabSearch, tabKeyword].forEach(t => t && t.classList.remove('active'));
+5665:             [thematicNav, searchNav, keywordNav, thematicView, searchView, keywordView].forEach(el => el && (el.style.display = 'none'));
+5666: 
+5667:             if (mode === 'thematic') {
+5668:                 if (tabThematic) tabThematic.classList.add('active');
+5669:                 if (thematicNav) thematicNav.style.display = 'flex';
+5670:                 if (thematicView) thematicView.style.display = 'block';
+5671:             } else if (mode === 'search') {
+5672:                 if (tabSearch) tabSearch.classList.add('active');
+5673:                 if (searchNav) searchNav.style.display = 'block';
+5674:                 if (searchView) searchView.style.display = 'block';
+5675: 
+5676:                 // Render current search verse if not already rendered
+5677:                 if (!document.getElementById('current-rendered-verse')) {
+5678:                     renderSearchVerseResult(currentSearchSurah, currentSearchAyat);
+5679:                 }
+5680:             } else if (mode === 'keyword') {
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

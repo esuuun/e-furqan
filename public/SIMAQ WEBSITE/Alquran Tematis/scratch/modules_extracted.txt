@@ -1,0 +1,36 @@
+=== SEMBILAN PINTU ILMU CONTEXT ===
+ont-bold text-gray-900 dark:text-white leading-tight mb-6",children:["Gerbang Pembelajaran ",y.jsx("br",{}),y.jsx("span",{className:"text-transparent bg-clip-text bg-linear-to-r from-yellow-600 to-yellow-500",children:"Al-Qur’an Interaktif"})," ","Dunia"]}),y.jsx("p",{className:"text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0",children:"Satu platform dengan sembilan pintu ilmu: Tajwid, Tahfidz, Nahwu, Shorof, Mushaf, Data, Video, Sains, dan Tematis. Belajar Al-Qur'an kini lebih mudah dan menyenangkan."})]}),y.jsxs("div",{className:"lg:w-1/2 relative",children:[y.jsx("div",{className:"relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 bg-white dark:bg-gray-800 p-2",children:y.jsx("div",{className:"aspect-video bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center overflow-hidden",children:y.jsx("img",{src:G1,alt:"Preview Aplikasi e-Furqan",className:"w-full h-full object-cover"})})}),y.jsx("div",{className:"absolute -bottom-6 -left-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 hidden md:block",children:y.jsxs("div",{className:"flex items-center gap-3",children:[y.jsx("div",{className:"w-10 h-10 bg-yellow-100 dark:bg-yellow-900/50 rounded-full flex items-center justify-center text-yellow-600 dark:text-yellow-400",children:"✓"}),y.jsxs("div",{children:[y.jsx("p",{className:"text-xs text-gray-500 dark:text-gray-400",children:"Progress Hafalan"}),y.jsx("p",{className:"font-bold text-gray-800 dark:text-gray-200",children:"Juz 30 Selesai"})]})]})})]})]})})]}),W1=({title:o,description:a,link:e,icon:i})=>y.jsxs("div",{className:"group bg-white dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:-translate-y-1 flex flex-col h-full relative overflow-hidden",children:[y.jsx("div",{className:"absolute top-0 right-0 w-32 h-32 bg-yellow-50 dark:bg-yellow-900/20 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"}),y.jsxs("div",{className:"relative z-10",children:[y.jsx("div",{className:"w-14 h-14 bg-yellow-100 dark:bg-yellow-900/50 rounded-xl flex items-center justify-center text-yellow-600 dark:text-yellow-400 mb-6 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300",children:i||y.jsx("svg",{className:"w-7 h-7",fill:"none",stroke:"currentColor",viewBox:"0 0 24 24",children:y.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"})})}),y.jsx("h3",{className:"text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-yello
+
+=== ALL OBJECTS WITH LINKS ===
+
+=== ARRAYS FOUND: 29 ===
+
+--- Array 1 ---
+[{key:"akhiran",label:"Akhiran"},{key:"awalan",label:"Awalan"},{key:"kt_kar",label:"Kata/Akar"},{key:"irab",label:"I'rab / Pola"},{key:"teori",label:"Teori"},{key:"bentuk_kata",label:"Bentuk Kata"},{key:"ilal",label:"I'lal"},{key:"arti",label:"Arti"},{key:"terjemah",label:"Terjemah",fullWidth:!0}]
+
+--- Array 2 ---
+[{key:"type",label:"Jenis Dhomir"},{key:"gender",label:"Jenis Kelamin"},{key:"number",label:"Jumlah"}]
+
+--- Array 3 ---
+[{value:"G",label:"G = Ghaib"},{value:"M",label:"M = Mukhatab"},{value:"T",label:"T = Takallum"}]
+
+--- Array 4 ---
+[{value:"L",label:"L = Laki"},{value:"P",label:"P = Perempuan"}]
+
+--- Array 5 ---
+[{value:"1",label:"1 = Mufrad"},{value:"2",label:"2 = Mutsanna"},{value:"3",label:"3 = Jamak"}]
+
+--- Array 6 ---
+[{key:"zaman",label:"Zaman"},{key:"fungsi",label:"Fungsi"},{key:"irab",label:"I'rab"}]
+
+--- Array 7 ---
+[{value:"MD",label:"MD = Madhi"},{value:"AM",label:"AM = Amar"}]
+
+--- Array 8 ---
+[{value:"MDH",label:"MDH = Madah"},{value:"RJA",label:"RJA = Raja'"},{value:"NFY",label:"NFY = Nafi"},{value:"TLB",label:"TLB = Thalab"}]
+
+--- Array 9 ---
+[{value:"MBN",label:"MBN = Mabni"}]
+
+--- Array 10 ---
+[{key:"zaman",label:"Zaman"},{key:"fungsi",label:"Fungsi"},{key:"irab",label:"I'rab"}]

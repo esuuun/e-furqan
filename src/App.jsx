@@ -7,6 +7,7 @@ import ThemeDetail from "./pages/ThemeDetail";
 import LessonDetail from "./pages/LessonDetail";
 import QTahfidz from "./pages/QTahfidz";
 import QMushaf from "./pages/QMushaf";
+import QKamus from "./pages/QKamus";
 import QNahwu from "./pages/QNahwu";
 import QTajwid from "./pages/QTajwid";
 
@@ -34,6 +35,7 @@ function App() {
         />
         <Route path="/qtahfidz" element={<QTahfidz />} />
         <Route path="/qmushaf" element={<QMushaf />} />
+        <Route path="/qkamus" element={<QKamus />} />
         <Route path="/qtajwid" element={<QTajwid />} />
         <Route path="/qnahwu" element={<QNahwu />} />
         <Route path="/qnahwu/:category/:filename" element={<QNahwu />} />

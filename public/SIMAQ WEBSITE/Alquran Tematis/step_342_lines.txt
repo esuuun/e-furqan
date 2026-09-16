@@ -1,0 +1,109 @@
+Created At: 2026-09-07T07:27:28+07:00
+Completed At: 2026-09-07T07:27:28+07:00
+File Path: `file:///d:/Alquran%20Tematis%20New%20Version%20terbaru/index.html`
+Total Lines: 6266
+Total Bytes: 324923
+Showing lines 5500 to 5600
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+5500:                         el.textContent = await translateTextFree(orig, targetLangCode);
+5501:                     }
+5502:                 }
+5503:             });
+5504: 
+5505:             // 5d. Terjemahkan badge jumlah pembahasan tematik
+5506:             const countBadge = document.querySelector('.thematic-count-badge');
+5507:             if (countBadge) {
+5508:                 const count = parseInt(countBadge.getAttribute('data-count') || '0');
+5509:                 if (count > 0) {
+5510:                     if (targetLangCode === 'id') {
+5511:                         countBadge.textContent = `Ditemukan dalam ${count} Pembahasan Tematis`;
+5512:                     } else if (targetLangCode === 'en') {
+5513:                         countBadge.textContent = `Found in ${count} Thematic Topics`;
+5514:                     } else if (targetLangCode === 'ar') {
+5515:                         countBadge.textContent = `موجود في ${count} مواضيع موضوعية`;
+5516:                     } else {
+5517:                         const prefix = await translateTextFree('Ditemukan dalam', targetLangCode);
+5518:                         const suffix = await translateTextFree('Pembahasan Tematis', targetLangCode);
+5519:                         countBadge.textContent = `${prefix} ${count} ${suffix}`;
+5520:                     }
+5521:                 } else {
+5522:                     const emptyText = 'Tidak Ditemukan dalam Indeks Tematis';
+5523:                     if (targetLangCode === 'id') {
+5524:                         countBadge.textContent = emptyText;
+5525:                     } else {
+5526:                         countBadge.textContent = await translateTextFree(emptyText, targetLangCode);
+5527:                     }
+5528:                 }
+5529:             }
+5530: 
+5531:             // 6. Terjemahan Ayat pada Kartu Flip (di bagian depan)
+5532:             const cards = document.querySelectorAll('.flip-card-front, .search-card-front');
+5533:             if (lang === 'id-ID') {
+5534:                 cards.forEach(card => {
+5535:                     const text = decodeURIComponent(card.getAttribute('data-indo'));
+5536:                     const textEl = card.querySelector('.translation-text');
+5537:                     if (textEl) {
+5538:                         textEl.className = 'translation-text';
+5539:                         textEl.textContent = text;
+5540:                     }
+5541:                     const playBtn = card.querySelector('.play-btn');
+5542:                     if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(text));
+5543:                 });
+5544:                 return;
+5545:             }
+5546:             
+5547:             const edition = cfg.edition;
+5548:             const cssClass = cfg.cssClass ? ' ' + cfg.cssClass : '';
+5549:             
+5550:             const promises = Array.from(cards).map(async card => {
+5551:                 const surah = card.getAttribute('data-surah');
+5552:                 const ayat = card.getAttribute('data-ayat');
+5553:                 const textEl = card.querySelector('.translation-text');
+5554:                 const playBtn = card.querySelector('.play-btn');
+5555:                 
+5556:                 if (textEl) {
+5557:                     textEl.className = 'translation-text' + cssClass;
+5558:                 }
+5559:                 
+5560:                 const cacheKey = `${edition}:${surah}:${ayat}`;
+5561:                 if (ayahTranslationCache[cacheKey]) {
+5562:                     const translatedText = ayahTranslationCache[cacheKey];
+5563:                     if (textEl) textEl.textContent = translatedText;
+5564:                     if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+5565:                     return;
+5566:                 }
+5567:                 
+5568:                 if (textEl) textEl.textContent = cfg.loadingText;
+5569:                 
+5570:                 try {
+5571:                     const res = await fetch(`https://api.alquran.cloud/v1/ayah/${surah}:${ayat}/${edition}`);
+5572:                     const json = await res.json();
+5573:                     if (json && json.data && json.data.text) {
+5574:                         const translatedText = json.data.text;
+5575:                         ayahTranslationCache[cacheKey] = translatedText;
+5576:                         if (textEl) textEl.textContent = translatedText;
+5577:                         if (playBtn) playBtn.setAttribute('data-text', encodeURIComponent(translatedText));
+5578:                     } else {
+5579:                         if (textEl) textEl.textContent = cfg.errorText;
+5580:                     }
+5581:                 } catch (e) {
+5582:                     console.error(e);
+5583:                     if (textEl) textEl.textContent = cfg.connErrorText;
+5584:                 }
+5585:             });
+5586:             await Promise.all(promises);
+5587:         }
+5588: 
+5589:         /* ==========================================================================
+5590:            FITUR PILIH SURAT & AYAT (PENCARIAN TEMATIK TERBALIK)
+5591:            ========================================================================== */
+5592:         const SURAH_LIST = [{"no": 1, "name": "Al-Fatihah", "arab": "الفاتحة", "ayat": 7, "type": "Mekah"}, {"no": 2, "name": "Al-Baqarah", "arab": "البقرة", "ayat": 286, "type": "Madinah"}, {"no": 3, "name": "Ali 'Imran", "arab": "اٰل عمران", "ayat": 200, "type": "Madinah"}, {"no": 4, "name": "An-Nisa'", "arab": "النساۤء", "ayat": 176, "type": "Madinah"}, {"no": 5, "name": "Al-Ma'idah", "arab": "الماۤئدة", "ayat": 120, "type": "Madinah"}, {"no": 6, "name": "Al-An'am", "arab": "الانعام", "ayat": 165, "type": "Mekah"}, {"no": 7, "name": "Al-A'raf", "arab": "الاعراف", "ayat": 206, "type": "Mekah"}, {"no": 8, "name": "Al-Anfal", "arab": "الانفال", "ayat": 75, "type": "Madinah"}, {"no": 9, "name": "At-Taubah", "arab": "التوبة", "ayat": 129, "type": "Madinah"}, {"no": 10, "name": "Yunus", "arab": "يونس", "ayat": 109, "type": "Mekah"}, {"no": 11, "name": "Hud", "arab": "هود", "ayat": 123, "type": "Mekah"}, {"no": 12, "name": "Yusuf", "arab": "يوسف", "ayat": 111, "type": "Mekah"}, {"no": 13, "name": "Ar-Ra'd", "arab": "الرّعد", "ayat": 43, "type": "Madinah"}, {"no": 14, "name": "Ibrahim", "arab": "ابرٰهيم", "ayat": 52, "type": "Mekah"}, {"no": 15, "name": "Al-Hijr", "arab": "الحجر", "ayat": 99, "type": "Mekah"}, {"no": 16, "name": "An-Nahl", "arab": "النحل", "ayat": 128, "type": "Mekah"}, {"no": 17, "name": "Al-Isra'", "arab": "الاسراۤء", "ayat": 111, "type": "Mekah"}, {"no": 18, "name": "Al-Kahf", "arab": "الكهف", "ayat": 110, "type": "Mekah"}, {"no": 19, "name": "Maryam", "arab": "مريم", "ayat": 98, "type": "Mekah"}, {"no": 20, "name": "Taha", "arab": "طٰهٰ", "ayat": 135, "type": "Mekah"}, {"no": 21, "name": "Al-Anbiya'", "arab": "الانبياۤء", "ayat": 112, "type": "Mekah"}, {"no": 22, "name": "Al-Hajj", "arab": "الحج", "ayat": 78, "type": "Madinah"}, {"no": 23, "name": "Al-Mu'minun", "arab": "المؤمنون", "ayat": 118, "type": "Mekah"}, {"no": 24, "name": "An-Nur", "arab": "النّور", "ayat": 64, "type": "Madinah"}, {"no": 25, "name": "Al-Furqan", "arab": "الفرقان", "ayat": 77, "type": "Mekah"}, {"no": 26, "name": "Asy-Syu'ara'", "arab": "الشعراۤء", "ayat": 227, "type": "Mekah"}, {"no": 27, "name": "An-Naml", "arab": "النمل", "ayat": 93, "type": "Mekah"}, {"no": 28, "name": "Al-Qasas", "arab": "القصص", "ayat": 88, "type": "Mekah"}, {"no": 29, "name": "Al-'Ankabut", "arab": "العنكبوت", "ayat": 69, "type": "Mekah"}, {"no": 30, "name": "Ar-Rum", "arab": "الرّوم", "ayat": 60, "type": "Mekah"}, {"no": 31, "name": "Luqman", "arab": "لقمٰن", "ayat": 34, "type": "Mekah"}, {"no": 32, "name": "As-Sajdah", "arab": "السّجدة", "ayat": 30, "type": "Mekah"}, {"no": 33, "name": "Al-Ahzab", "arab": "الاحزاب", "ayat": 73, "type": "Madinah"}, {"no": 34, "name": "Saba'", "arab": "سبأ", "ayat": 54, "type": "Mekah"}, {"no": 35, "name": "Fatir", "arab": "فاطر", "ayat": 45, "type": "Mekah"}, {"no": 36, "name": "Yasin", "arab": "يٰسۤ", "ayat": 83, "type": "Mekah"}, {"no": 37, "name": "As-Saffat", "arab": "الصّٰۤفّٰت", "ayat": 182, "type": "Mekah"}, {"no": 38, "name": "Sad", "arab": "ص", "ayat": 88, "type": "Mekah"}, {"no": 39, "name": "Az-Zumar", "arab": "الزمر", "ayat": 75, "type": "Mekah"}, {"no": 40, "name": "Ghafir", "arab": "غافر", "ayat": 85, "type": "Mekah"}, {"no": 41, "name": "Fussilat", "arab": "فصّلت", "ayat": 54, "type": "Mekah"}, {"no": 42, "name": "Asy-Syura", "arab": "الشورى", "ayat": 53, "type": "Mekah"}, {"no": 43, "name": "Az-Zukhruf", "arab": "الزخرف", "ayat": 89, "type": "Mekah"}, {"no": 44, "name": "Ad-Dukhan", "arab": "الدخان", "ayat": 59, "type": "Mekah"}, {"no": 45, "name": "Al-Jasiyah", "arab": "الجاثية", "ayat": 37, "type": "Mekah"}, {"no": 46, "name": "Al-Ahqaf", "arab": "الاحقاف", "ayat": 35, "type": "Mekah"}, {"no": 47, "name": "Muhammad", "arab": "محمّد", "ayat": 38, "type": "Madinah"}, {"no": 48, "name": "Al-Fath", "arab": "الفتح", "ayat": 29, "type": "Madinah"}, {"no": 49, "name": "Al-Hujurat", "arab": "الحجرٰت", "ayat": 18, "type": "Madinah"}, {"no": 50, "name": "Qaf", "arab": "ق", "ayat": 45, "type": "Mekah"}, {"no": 51, "name": "Az-Zariyat", "arab": "الذّٰريٰت", "ayat": 60, "type": "Mekah"}, {"no": 52, "name": "At-Tur", "arab": "الطور", "ayat": 49, "type": "Mekah"}, {"no": 53, "name": "An-Najm", "arab": "النجم", "ayat": 62, "type": "Mekah"}, {"no": 54, "name": "Al-Qamar", "arab": "القمر", "ayat": 55, "type": "Mekah"}, {"no": 55, "name": "Ar-Rahman", "arab": "الرحمن", "ayat": 78, "type": "Madinah"}, {"no": 56, "name": "Al-Waqi'ah", "arab": "الواقعة", "ayat": 96, "type": "Mekah"}, {"no": 57, "name": "Al-Hadid", "arab": "الحديد", "ayat": 29, "type": "Madinah"}, {"no": 58, "name": "Al-Mujadilah", "arab": "المجادلة", "ayat": 22, "type": "Madinah"}, {"no": 59, "name": "Al-Hasyr", "arab": "الحشر", "ayat": 24, "type": "Madinah"}, {"no": 60, "name": "Al-Mumtahanah", "arab": "الممتحنة", "ayat": 13, "type": "Madinah"}, {"no": 61, "name": "As-Saff", "arab": "الصّفّ", "ayat": 14, "type": "Madinah"}, {"no": 62, "name": "Al-Jumu'ah", "arab": "الجمعة", "ayat": 11, "type": "Madinah"}, {"no": 63, "name": "Al-Munafiqun", "arab": "المنٰفقون", "ayat": 11, "type": "Madinah"}, {"no": 64, "name": "At-Tagabun", "arab": "التغابن", "ayat": 18, "type": "Madinah"}, {"no": 65, "name": "At-Talaq", "arab": "الطلاق", "ayat": 12, "type": "Madinah"}, {"no": 66, "name": "At-Tahrim", "arab": "التحريم", "ayat": 12, "type": "Madinah"}, {"no": 67, "name": "Al-Mulk", "arab": "الملك", "ayat": 30, "type": "Mekah"}, {"no": 68, "name": "Al-Qalam", "arab": "القلم", "ayat": 52, "type": "Mekah"}, {"no": 69, "name": "Al-Haqqah", "arab": "الحاۤقّة", "ayat": 52, "type": "Mekah"}, {"no": 70, "name": "Al-Ma'arij", "arab": "المعارج", "ayat": 44, "type": "Mekah"}, {"no": 71, "name": "Nuh", "arab": "نوح", "ayat": 28, "type": "Mekah"}, {"no": 72, "name": "Al-Jinn", "arab": "الجن", "ayat": 28, "type": "Mekah"}, {"no": 73, "name": "Al-Muzzammil", "arab": "المزّمّل", "ayat": 20, "type": "Mekah"}, {"no": 74, "name": "Al-Muddassir", "arab": "المدّثّر", "ayat": 56, "type": "Mekah"}, {"no": 75, "name": "Al-Qiyamah", "arab": "القيٰمة", "ayat": 40, "type": "Mekah"}, {"no": 76, "name": "Al-Insan", "arab": "الانسان", "ayat": 31, "type": "Madinah"}, {"no": 77, "name": "Al-Mursalat", "arab": "المرسلٰت", "ayat": 50, "type": "Mekah"}, {"no": 78, "name": "An-Naba'", "arab": "النبأ", "ayat": 40, "type": "Mekah"}, {"no": 79, "name": "An-Nazi'at", "arab": "النّٰزعٰت", "ayat": 46, "type": "Mekah"}, {"no": 80, "name": "'Abasa", "arab": "عبس", "ayat": 42, "type": "Mekah"}, {"no": 81, "name": "At-Takwir", "arab": "التكوير", "ayat": 29, "type": "Mekah"}, {"no": 82, "name": "Al-Infitar", "arab": "الانفطار", "ayat": 19, "type": "Mekah"}, {"no": 83, "name": "Al-Mutaffifin", "arab": "المطفّفين", "ayat": 36, "type": "Mekah"}, {"no": 84, "name": "Al-Insyiqaq", "arab": "الانشقاق", "ayat": 25, "type": "Mekah"}, {"no": 85, "name": "Al-Buruj", "arab": "البروج", "ayat": 22, "type": "Mekah"}, {"no": 86, "name": "At-Tariq", "arab": "الطارق", "ayat": 17, "type": "Mekah"}, {"no": 87, "name": "Al-A'la", "arab": "الاعلى", "ayat": 19, "type": "Mekah"}, {"no": 88, "name": "Al-Gasyiyah", "arab": "الغاشية", "ayat": 26, "type": "Mekah"}, {"no": 89, "name": "Al-Fajr", "arab": "الفجر", "ayat": 30, "type": "Mekah"}, {"no": 90, "name": "Al-Balad", "arab": "البلد", "ayat": 20, "type": "Mekah"}, {"no": 91, "name": "Asy-Syams", "arab": "الشمس", "ayat": 15, "type": "Mekah"}, {"no": 92, "name": "Al-Lail", "arab": "الّيل", "ayat": 21, "type": "Mekah"}, {"no": 93, "name": "Ad-Duha", "arab": "الضحى", "ayat": 11, "type": "Mekah"}, {"no": 94, "name": "Al-Insyirah", "arab": "الشرح", "ayat": 8, "type": "Mekah"}, {"no": 95, "name": "At-Tin", "arab": "التين", "ayat": 8, "type": "Mekah"}, {"no": 96, "name": "Al-'Alaq", "arab": "العلق", "ayat": 19, "type": "Mekah"}, {"no": 97, "name": "Al-Qadr", "arab": "القدر", "ayat": 5, "type": "Mekah"}, {"no": 98, "name": "Al-Bayyinah", "arab": "البيّنة", "ayat": 8, "type": "Madinah"}, {"no": 99, "name": "Az-Zalzalah", "arab": "الزلزلة", "ayat": 8, "type": "Madinah"}, {"no": 100, "name": "Al-'Adiyat", "arab": "العٰديٰت", "ayat": 11, "type": "Mekah"}, {"no": 101, "name": "Al-Qari'ah", "arab": "القارعة", "ayat": 11, "type": "Mekah"}, {"no": 102, "name": "At-Takasur", "arab": "التكاثر", "ayat": 8, "type": "Mekah"}, {"no": 103, "name": "Al-'Asr", "arab": "العصر", "ayat": 3, "type": "Mekah"}, {"no": 104, "name": "Al-Humazah", "arab": "الهمزة", "ayat": 9, "type": "Mekah"}, {"no": 105, "name": "Al-Fil", "arab": "الفيل", "ayat": 5, "type": "Mekah"}, {"no": 106, "name": "Quraisy", "arab": "قريش", "ayat": 4, "type": "Mekah"}, {"no": 107, "name": "Al-Ma'un", "arab": "الماعون", "ayat": 7, "type": "Mekah"}, {"no": 108, "name": "Al-Kausar", "arab": "الكوثر", "ayat": 3, "type": "Mekah"}, {"no": 109, "name": "Al-Kafirun", "arab": "الكٰفرون", "ayat": 6, "type": "Mekah"}, {"no": 110, "name": "An-Nasr", "arab": "النصر", "ayat": 3, "type": "Madinah"}, {"no": 111, "name": "Al-Lahab", "arab": "اللهب", "ayat": 5, "type": "Mekah"}, {"no": 112, "name": "Al-Ikhlas", "arab": "الاخلاص", "ayat": 4, "type": "Mekah"}, {"no": 113, "name": "Al-Falaq", "arab": "الفلق", "ayat": 5, "type": "Madinah"}, {"no": 114, "name": "An-Nas", "arab": "الناس", "ayat": 6, "type": "Madinah"}];
+5593: 
+5594:         let verseThematicIndex = {};
+5595:         let currentSearchSurah = 2; // Default Al-Baqarah
+5596:         let currentSearchAyat = 255; // Default Ayat Kursi
+5597:         let surahApiCache = {};
+5598:         let activeMainMode = 'thematic';
+5599: 
+5600:         let allThematicUraianList = [];
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

@@ -1,0 +1,84 @@
+=== ALL EXTRACTED UI HEADINGS & DESCRIPTIONS ===
+- ✨ Platform Pembelajaran Al-Qur'an
+- Al-Qur’an Interaktif
+- Satu platform dengan sembilan pintu ilmu: Tajwid, Tahfidz, Nahwu, Shorof, Mushaf, Data, Video, Sains, dan Tematis. Belajar Al-Qur'an kini lebih mudah dan menyenangkan.
+- Progress Hafalan
+- Platform pembelajaran Al-Qur'an terintegrasi yang memudahkan umat untuk mempelajari, memahami, dan mengamalkan Al-Qur'an.
+- Eksplorasi Dunia Al-Qur'an
+- Pilih modul pembelajaran yang sesuai dengan kebutuhan Anda, mulai dari tajwid hingga sains.
+- Kenapa SIMAQ?
+- Metode Belajar Modern & Interaktif
+- Materi disusun secara sistematis agar mudah dipahami oleh pemula sekalipun.
+- Menghubungkan ayat-ayat Al-Qur'an dengan penemuan ilmiah modern.
+- Siap Memperdalam Ilmu Al-Qur'an?
+- Bergabunglah dengan ribuan pengguna lainnya dan rasakan kemudahan belajar Al-Qur'an dengan teknologi modern.
+- Mulai Sekarang - Gratis
+- Memuat database tematis Al-Qur'an...
+- Materi Pembelajaran
+- PDF tidak tersedia untuk materi ini.
+- Uji Pemahaman Materi
+- Belum ada quiz untuk materi ini.
+- Daftar Materi
+- qTahfidz — Flip Card Memory Game
+- Metode interaktif menghafal dan memahami arti kosakata per lafadz. Pilih surah dan ayat di bawah, lalu ketuk kartu untuk membalik dan mendengarkan lafalnya.
+- 📖 qMushaf Digital
+- Pelajari struktur bahasa Al-Qur'an dengan detail morfologi dan sintaksis yang lengkap.
+- Game Drag & Drop Interaktif
+- Identifikasi sifat kata yang disorot dalam ayat Al-Quran
+- qTajwid — Belajar Membaca
+- Metode interaktif QTajwid yang terbagi menjadi 6 level belajar. Latih kemampuan pelafalan Anda secara menyenangkan melalui berbagai game interaktif.
+- Cari ejaan latin yang tepat berdasarkan aksara Arab yang ditampilkan pada layar.
+- Dengarkan panduan audio pelafalan, lalu cari dan letuskan balon aksara Arab yang sesuai.
+- Rangkai kepingan-kepingan aksara Arab acak menjadi kalimat utuh sesuai ejaan yang diberikan.
+- Pilih Level Belajar
+
+=== MODULES & FEATURES ===
+
+--- QMushaf ---
+[Snippet 1]: })},{title:"Mushaf Nahwu Shorof",description:"Jelajahi mushaf digital interaktif dengan analisis morfologi dan pencarian cepat setiap lafadz.",link:"/qmushaf",icon:y.jsx("svg",{className:"w-7 h-7",fill:"none",stroke:"currentColor",viewBox:"0 0 24 24",children:y.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1
+
+[Snippet 2]: -4 py-1.5 mb-6 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-semibold tracking-wide",children:"📖 qMushaf Digital"}),y.jsx("h1",{className:"text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6",children:"Analisis Kata per Kata"}),y.jsx("p",{className:"text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto",children:"Pelajari struktur bahasa Al-Qur'an dengan detail 
+
+[Snippet 3]: DS,{})}),y.jsx(Je,{path:"/qthematic/:themeSlug/:lessonSlug",element:y.jsx(dj,{})}),y.jsx(Je,{path:"/qtahfidz",element:y.jsx(oj,{})}),y.jsx(Je,{path:"/qmushaf",element:y.jsx(pj,{})}),y.jsx(Je,{path:"/qtajwid",element:y.jsx(fj,{})}),y.jsx(Je,{path:"/qnahwu",element:y.jsx(wb,{})}),y.jsx(Je,{path:"/qnahwu/:category/:filename",element:y.jsx(wb,{})})]})]})}Sx.createRoot(document.getElementById("root")).render(y.jsx(D.StrictMode,{children:y.jsx(jj,{})})
+
+
+--- QTajwid ---
+[Snippet 1]: :text-yellow-500 transition",children:"qThematic"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qTajwid"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qTahfidz"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qNahwu"})})]})]}),y.jsxs("div",{children:[y.jsx("h4",{className:"text-gray-900 da
+
+[Snippet 2]: )},yj=[{id:1,title:"Level 1: Harakat Fathah",desc:"Hijaiyah Tunggal Fathah",subtitle:"Membaca huruf Hijaiyah tunggal berharakat Fathah (a)",pdfPath:"/qtajwid/belajar membaca/Tilawati_1.pdf",data:[{a:"اَ",l:"a"},{a:"بَ",l:"ba"},{a:"تَ",l:"ta"},{a:"ثَ",l:"tsa"},{a:"جَ",l:"ja"},{a:"حَ",l:"ha"},{a:"خَ",l:"kha"},{a:"دَ",l:"da"},{a:"ذَ",l:"dza"},{a:"رَ",l:"ra"},{a:"زَ",l:"za"},{a:"سَ",l:"sa"},{a:"شَ",l:"sya"},{a:"صَ",l:"sha"},{a:"ضَ",l:"dha"},{a:"طَ",l
+
+[Snippet 3]: srah, Dhommah & Tanwin",desc:"Harakat i, u, dan Tanwin",subtitle:"Belajar membaca harakat Kasrah (i), Dhommah (u), dan Tanwin (an, in, un)",pdfPath:"/qtajwid/belajar membaca/Tilawati_2.pdf",data:[{a:"بِ",l:"bi"},{a:"بُ",l:"bu"},{a:"تِ",l:"ti"},{a:"تُ",l:"tu"},{a:"ثِ",l:"tsi"},{a:"ثُ",l:"tsu"},{a:"جِ",l:"ji"},{a:"جُ",l:"ju"},{a:"حِ",l:"hi"},{a:"حُ",l:"hu"},{a:"خِ",l:"khi"},{a:"خُ",l:"khu"},{a:"دِ",l:"di"},{a:"دُ",l:"du"},{a:"رِ",l:"ri"},{a:"رُ",l:
+
+[Snippet 4]: itle:"Level 3: Huruf Sukun, Au & Ai",desc:"Sukun (Mati) & Mad Layyin",subtitle:"Membaca huruf bersukun (mati) serta mad layyin (au dan ai)",pdfPath:"/qtajwid/belajar membaca/Tilawati_3.pdf",data:[{a:"مَلْ",l:"mal"},{a:"سَلْ",l:"sal"},{a:"قُلْ",l:"qul"},{a:"بَلْ",l:"bal"},{a:"تَمْ",l:"tam"},{a:"كَمْ",l:"kam"},{a:"هُمْ",l:"hum"},{a:"كُمْ",l:"kum"},{a:"مَسْ",l:"mas"},{a:"بِسْ",l:"bis"},{a:"يَشْ",l:"yash"},{a:"مُشْ",l:"mush"},{a:"مَرْ",l:"mar"},{a:"ب
+
+[Snippet 5]: i"}]},{id:4,title:"Level 4: Tasydid & Ghunnah",desc:"Penekanan & Dengung",subtitle:"Membaca huruf bertasydid (dobel) dan ghunnah (dengung)",pdfPath:"/qtajwid/belajar membaca/Tilawati_4.pdf",data:[{a:"سَبَّ",l:"sabba"},{a:"حَقَّ",l:"haqqa"},{a:"مَسَّ",l:"massa"},{a:"شَدَّ",l:"syadda"},{a:"رَبَّ",l:"rabba"},{a:"ظَنَّ",l:"zhanna"},{a:"دَقَّ",l:"daqqa"},{a:"عَضَّ",l:"'adhdha"},{a:"إِنَّ",l:"inna"},{a:"أَنَّ",l:"anna"},{a:"ثُمَّ",l:"tsumma"},{a:"عَمَّ
+
+
+--- QTahfidz ---
+[Snippet 1]: er:text-yellow-500 transition",children:"qTajwid"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qTahfidz"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qNahwu"})})]})]}),y.jsxs("div",{children:[y.jsx("h4",{className:"text-gray-900 dark:text-white font-bold text-lg mb-6",children:"Perusahaan"}),y.jsxs("ul",{className:"space-y-4",children:[y.
+
+[Snippet 2]: g-wide gap-2 border border-yellow-200/50 dark:border-yellow-900/30",children:[y.jsx($b,{className:"w-4 h-4 text-yellow-500"}),y.jsx("span",{children:"qTahfidz — Flip Card Memory Game"})]}),y.jsxs("h1",{className:"text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6",children:["Hafalan Al-Qur'an ",y.jsx("br",{}),y.jsx("span",{className:"text-transparent bg-clip-text bg-linear-to-r from-yellow-500 to-yellow-600",children:
+
+[Snippet 3]: ),y.jsx(Je,{path:"/qthematic/:slug",element:y.jsx(DS,{})}),y.jsx(Je,{path:"/qthematic/:themeSlug/:lessonSlug",element:y.jsx(dj,{})}),y.jsx(Je,{path:"/qtahfidz",element:y.jsx(oj,{})}),y.jsx(Je,{path:"/qmushaf",element:y.jsx(pj,{})}),y.jsx(Je,{path:"/qtajwid",element:y.jsx(fj,{})}),y.jsx(Je,{path:"/qnahwu",element:y.jsx(wb,{})}),y.jsx(Je,{path:"/qnahwu/:category/:filename",element:y.jsx(wb,{})})]})]})}Sx.createRoot(document.getElementById("root")).
+
+
+--- QNahwu ---
+[Snippet 1]: r:text-yellow-500 transition",children:"qTahfidz"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qNahwu"})})]})]}),y.jsxs("div",{children:[y.jsx("h4",{className:"text-gray-900 dark:text-white font-bold text-lg mb-6",children:"Perusahaan"}),y.jsxs("ul",{className:"space-y-4",children:[y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"Tentang Kami"})}
+
+[Snippet 2]: "/qtahfidz",element:y.jsx(oj,{})}),y.jsx(Je,{path:"/qmushaf",element:y.jsx(pj,{})}),y.jsx(Je,{path:"/qtajwid",element:y.jsx(fj,{})}),y.jsx(Je,{path:"/qnahwu",element:y.jsx(wb,{})}),y.jsx(Je,{path:"/qnahwu/:category/:filename",element:y.jsx(wb,{})})]})]})}Sx.createRoot(document.getElementById("root")).render(y.jsx(D.StrictMode,{children:y.jsx(jj,{})}));
+
+
+[Snippet 3]: h:"/qmushaf",element:y.jsx(pj,{})}),y.jsx(Je,{path:"/qtajwid",element:y.jsx(fj,{})}),y.jsx(Je,{path:"/qnahwu",element:y.jsx(wb,{})}),y.jsx(Je,{path:"/qnahwu/:category/:filename",element:y.jsx(wb,{})})]})]})}Sx.createRoot(document.getElementById("root")).render(y.jsx(D.StrictMode,{children:y.jsx(jj,{})}));
+
+
+
+--- QThematic ---
+[Snippet 1]: yanan"}),y.jsxs("ul",{className:"space-y-4",children:[y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qThematic"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qTajwid"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yellow-500 transition",children:"qTahfidz"})}),y.jsx("li",{children:y.jsx("a",{href:"#",className:"hover:text-yel
+
+[Snippet 2]: })]})}),$1=[{title:"Alquran Tematis",description:"Belajar kandungan Al-Qur’an secara tematis — ayat demi ayat dibahas menurut tema kehidupan.",link:"/qthematic",icon:y.jsx("svg",{className:"w-7 h-7",fill:"none",stroke:"currentColor",viewBox:"0 0 24 24",children:y.jsx("path",{strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"2",d:"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5
+
+[Snippet 3]: ,A]=D.useState(!0),[M,S]=D.useState(Oc),[v,j]=D.useState({}),[q,T]=D.useState(!1),[B,P]=D.useState({langLabel:"Bahasa Terjemahan & Suara:",heroBadge:"qThematic — Al-Qur’an Tematis",heroTitle1:"Kandungan Al-Qur'an",heroTitle2:"Berdasarkan Tema & Pembahasan",heroDesc:"Eksplorasi kandungan Al-Qur'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna int
+
+[Snippet 4]: an-thematic-new.json:",xa)}i(!1)})()},[]),D.useEffect(()=>{const aa=I.code||"id";if(M==="id-ID"){P({langLabel:"Bahasa Terjemahan & Suara:",heroBadge:"qThematic — Al-Qur’an Tematis",heroTitle1:"Kandungan Al-Qur'an",heroTitle2:"Berdasarkan Tema & Pembahasan",heroDesc:"Eksplorasi kandungan Al-Qur'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna int
+
+[Snippet 5]: });return}(async()=>{const[sa,fa,wa,Sa,qa,La,Ga,yn,Nn,ti,ii,jn,zr,Ei,te,ie,fe,qt,id,rd,ri]=await Promise.all([tn("Bahasa Terjemahan & Suara:",aa),tn("qThematic — Al-Qur’an Tematis",aa),tn("Kandungan Al-Qur'an",aa),tn("Berdasarkan Tema & Pembahasan",aa),tn("Eksplorasi kandungan Al-Qur'an secara tematis terstruktur, didukung multi-bahasa internasional, fitur pelafalan audio murottal & suara terjemahan (audible), serta pendalaman makna interaktif be
