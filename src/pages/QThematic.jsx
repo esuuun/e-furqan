@@ -307,6 +307,58 @@ const UI_STRINGS = {
   }
 };
 
+// WhatsApp share message templates matching SIMAQ
+const WA_TEMPLATES = {
+  id: {
+    appName: "Al-Qur'an Tematis",
+    subHeader: "Sub Pokok Bahasan",
+    tema: "Tema",
+    pokok: "Pokok",
+    subMeta: (uCount, vCount) => `Jumlah Uraian: ${uCount} topik` + (vCount > 0 ? ` (${vCount} ayat)` : ""),
+    learnMore: "Pelajari selengkapnya di tautan berikut:",
+  },
+  en: {
+    appName: "Thematic Quran",
+    subHeader: "Sub-topic",
+    tema: "Theme",
+    pokok: "Topic",
+    subMeta: (uCount, vCount) => `Total Topics: ${uCount} topics` + (vCount > 0 ? ` (${vCount} verses)` : ""),
+    learnMore: "Learn more at the following link:",
+  },
+  ms: {
+    appName: "Al-Quran Tematik",
+    subHeader: "Sub Pokok Bahasan",
+    tema: "Tema",
+    pokok: "Pokok",
+    subMeta: (uCount, vCount) => `Jumlah Huraian: ${uCount} topik` + (vCount > 0 ? ` (${vCount} ayat)` : ""),
+    learnMore: "Ketahui lebih lanjut di pautan berikut:",
+  },
+  ar: {
+    appName: "القرآن الكريم الموضوعي",
+    subHeader: "الموضوع الفرعي",
+    tema: "الموضوع الرئيسي",
+    pokok: "الموضوع",
+    subMeta: (uCount, vCount) => `عدد المواضيع: ${uCount} موضوع` + (vCount > 0 ? ` (${vCount} آية)` : ""),
+    learnMore: "اقرأ المزيد عبر الرابط التالي:",
+  },
+  es: {
+    appName: "Corán Temático",
+    subHeader: "Subtema",
+    tema: "Tema",
+    pokok: "Tema principal",
+    subMeta: (uCount, vCount) => `Total de temas: ${uCount} temas` + (vCount > 0 ? ` (${vCount} versículos)` : ""),
+    learnMore: "Obtenga más información en el siguiente enlace:",
+  },
+  fr: {
+    appName: "Coran Thématique",
+    subHeader: "Sous-sujet",
+    tema: "Thème",
+    pokok: "Sujet principal",
+    subMeta: (uCount, vCount) => `Total des sujets: ${uCount} sujets` + (vCount > 0 ? ` (${vCount} versets)` : ""),
+    learnMore: "En savoir plus sur le lien suivant :",
+  }
+};
+
 // Module-level cache: "edition:surah:ayat" -> text
 const translationCache = {};
 
@@ -425,6 +477,22 @@ const QThematic = () => {
     setPlayingKey(null);
   }, []);
 
+  const getUrlThematicParams = () => {
+    try {
+      const hashStr = window.location.hash ? window.location.hash.replace(/^#/, "") : "";
+      const searchStr = window.location.search ? window.location.search.replace(/^\?/, "") : "";
+      const params = new URLSearchParams(hashStr || searchStr);
+      return {
+        tema: params.get("tema"),
+        pokok: params.get("pokok"),
+        sub: params.get("sub"),
+        lang: params.get("lang"),
+      };
+    } catch (e) {
+      return {};
+    }
+  };
+
   useEffect(() => {
     fetch("/quran-thematic-new.json")
       .then((res) => { if (!res.ok) throw new Error("Gagal memuat"); return res.json(); })
@@ -432,7 +500,32 @@ const QThematic = () => {
         setQuranData(data);
         setIsLoading(false);
         const temas = naturalSort(Object.keys(data));
-        if (temas.length > 0) {
+        if (temas.length === 0) return;
+
+        const urlParams = getUrlThematicParams();
+        if (urlParams.lang && LANG_CONFIG[urlParams.lang]) {
+          setSelectedLang(urlParams.lang);
+        }
+
+        // Restore state from deep link URL if available
+        if (urlParams.tema && data[urlParams.tema]) {
+          setSelectedTema(urlParams.tema);
+          const pokoks = naturalSort(Object.keys(data[urlParams.tema] || {}));
+          if (urlParams.pokok && data[urlParams.tema][urlParams.pokok]) {
+            setSelectedPokok(urlParams.pokok);
+            const subs = naturalSort(Object.keys(data[urlParams.tema][urlParams.pokok] || {}));
+            if (urlParams.sub && data[urlParams.tema][urlParams.pokok][urlParams.sub]) {
+              setSelectedSub(urlParams.sub);
+            } else if (subs.length > 0) {
+              setSelectedSub(subs[0]);
+            }
+          } else if (pokoks.length > 0) {
+            setSelectedPokok(pokoks[0]);
+            const subs = naturalSort(Object.keys(data[urlParams.tema][pokoks[0]] || {}));
+            if (subs.length > 0) setSelectedSub(subs[0]);
+          }
+        } else {
+          // Default to first theme
           const firstTema = temas[0];
           setSelectedTema(firstTema);
           const pokoks = naturalSort(Object.keys(data[firstTema] || {}));
@@ -445,6 +538,17 @@ const QThematic = () => {
       })
       .catch((err) => { console.error("Error loading thematic database:", err); setIsLoading(false); });
   }, []);
+
+  // Synchronize URL hash when selection changes
+  useEffect(() => {
+    if (selectedTema && selectedPokok && selectedSub) {
+      let hash = `tema=${encodeURIComponent(selectedTema)}&pokok=${encodeURIComponent(selectedPokok)}&sub=${encodeURIComponent(selectedSub)}`;
+      if (selectedLang && selectedLang !== "id-ID") {
+        hash += `&lang=${encodeURIComponent(selectedLang)}`;
+      }
+      window.history.replaceState(null, "", `#${hash}`);
+    }
+  }, [selectedTema, selectedPokok, selectedSub, selectedLang]);
 
   const temaOptions = naturalSort(Object.keys(quranData));
   const pokokOptions = selectedTema && quranData[selectedTema] ? naturalSort(Object.keys(quranData[selectedTema])) : [];
@@ -595,9 +699,33 @@ const QThematic = () => {
 
   const shareSubToWhatsApp = () => {
     if (!selectedSub) return;
-    const link = `${window.location.origin}/qthematic`;
-    const text = `*${t("thematicBadge").toUpperCase()} - e-Furqan*\n\n*${t("chooseTema")}:* ${getDisplayTitle(selectedTema)}\n*${t("choosePokok")}:* ${getDisplayTitle(selectedPokok)}\n*${t("chooseSub")}:* ${getDisplayTitle(selectedSub)}\n*Total:* ${t("thematicGroupsCount")(displayUraianKeys.length)}\n\n${link}`;
-    window.location.href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    const tpl = WA_TEMPLATES[currentLangCode] || WA_TEMPLATES.en || WA_TEMPLATES.id;
+
+    const uCount = displayUraianKeys.length;
+    const vCount = displayUraianKeys.reduce(
+      (acc, key) => acc + (currentSubData?.[key]?.verses?.length || 0),
+      0
+    );
+
+    let deepLink = `${window.location.origin}/qthematic#tema=${encodeURIComponent(selectedTema)}&pokok=${encodeURIComponent(selectedPokok)}&sub=${encodeURIComponent(selectedSub)}`;
+    if (selectedLang && selectedLang !== "id-ID") {
+      deepLink += `&lang=${encodeURIComponent(selectedLang)}`;
+    }
+
+    const displaySub = getDisplayTitle(selectedSub);
+    const displayTema = getDisplayTitle(selectedTema);
+    const displayPokok = getDisplayTitle(selectedPokok);
+
+    const message =
+      `*${tpl.appName}*\n\n` +
+      `📑 *${tpl.subHeader}:* ${displaySub}\n` +
+      (displayTema ? `🏷️ *${tpl.tema}:* ${displayTema}\n` : "") +
+      (displayPokok ? `📂 *${tpl.pokok}:* ${displayPokok}\n` : "") +
+      (uCount > 0 ? `📊 *${tpl.subMeta(uCount, vCount)}*\n\n` : "\n") +
+      `${tpl.learnMore}\n${deepLink}`;
+
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+    window.open(waUrl, "_blank");
   };
 
   const getVerseActiveTranslation = (v) => {
