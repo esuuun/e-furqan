@@ -1069,23 +1069,42 @@ ${modeInstruction}`;
                           </div>
                         </div>
 
-                        {/* Flip card with guaranteed top margin */}
-                        <div onClick={() => toggleCardFlip(cardKey)} className="cursor-pointer mt-1" style={{ perspective: "1000px" }}>
-                          <div style={{ position: "relative", transition: "transform 0.7s cubic-bezier(0.34,1.56,0.64,1)", transformStyle: "preserve-3d", transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)", minHeight: "180px" }}>
-                            <div style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }} className="absolute inset-0 flex flex-col justify-center bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-5 sm:p-7">
-                              <div className="absolute top-3 right-3 text-xs text-slate-500 flex items-center gap-1">
-                                <RotateCw className="w-3 h-3 text-yellow-500" /><span className="hidden sm:inline">{t("viewArab")}</span>
+                        {/* Flip card with auto-expanding responsive grid height */}
+                        <div onClick={() => toggleCardFlip(cardKey)} className="cursor-pointer mt-2 w-full" style={{ perspective: "1000px" }}>
+                          <div
+                            style={{
+                              display: "grid",
+                              position: "relative",
+                              width: "100%",
+                              transition: "transform 0.7s cubic-bezier(0.34,1.56,0.64,1)",
+                              transformStyle: "preserve-3d",
+                              transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)",
+                            }}
+                          >
+                            {/* FRONT: Translation */}
+                            <div
+                              style={{
+                                gridArea: "1 / 1 / 2 / 2",
+                                backfaceVisibility: "hidden",
+                                WebkitBackfaceVisibility: "hidden",
+                              }}
+                              className="w-full flex flex-col justify-between bg-gradient-to-br from-slate-900 to-slate-800 border border-slate-700 rounded-2xl p-5 sm:p-7 min-h-[180px] shadow-sm relative"
+                            >
+                              <div className="flex justify-end text-xs text-slate-500 mb-2">
+                                <span className="flex items-center gap-1">
+                                  <RotateCw className="w-3 h-3 text-yellow-500" /><span className="hidden sm:inline">{t("viewArab")}</span>
+                                </span>
                               </div>
                               {isTextLoading ? (
-                                <div className="flex items-center justify-center py-6">
+                                <div className="flex items-center justify-center py-8">
                                   <div className="w-6 h-6 border-2 border-yellow-500/20 border-t-yellow-500 rounded-full animate-spin" />
                                 </div>
                               ) : (
-                                <p className={`text-sm sm:text-base leading-relaxed text-slate-100 italic text-center mb-5 ${selectedLang === "ar-SA" ? "font-arabic text-xl leading-loose" : ""}`} dir={selectedLang === "ar-SA" ? "rtl" : "ltr"}>
+                                <p className={`text-sm sm:text-base leading-relaxed text-slate-100 italic text-center my-auto py-3 break-words ${selectedLang === "ar-SA" ? "font-arabic text-xl leading-loose" : ""}`} dir={selectedLang === "ar-SA" ? "rtl" : "ltr"}>
                                   "{displayText}"
                                 </p>
                               )}
-                              <div className="flex flex-wrap items-center justify-center gap-2" onClick={(e) => e.stopPropagation()}>
+                              <div className="flex flex-wrap items-center justify-center gap-2 pt-4 mt-auto" onClick={(e) => e.stopPropagation()}>
                                 {/* TTS: baca terjemahan sesuai bahasa dipilih */}
                                 <button
                                   onClick={() => handlePlayTTS(displayText, v.surah_num, v.ayat_num)}
@@ -1106,11 +1125,24 @@ ${modeInstruction}`;
                                 </button>
                               </div>
                             </div>
-                            <div style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)", position: "absolute", inset: 0 }} className="flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 border border-yellow-500/40 rounded-2xl p-5 sm:p-7">
-                              <div className="absolute top-3 right-3 text-xs text-slate-500 flex items-center gap-1">
-                                <RotateCw className="w-3 h-3 text-yellow-500" /><span className="hidden sm:inline">{t("viewTrans")}</span>
+
+                            {/* BACK: Arabic */}
+                            <div
+                              style={{
+                                gridArea: "1 / 1 / 2 / 2",
+                                backfaceVisibility: "hidden",
+                                WebkitBackfaceVisibility: "hidden",
+                                transform: "rotateY(180deg)",
+                              }}
+                              className="w-full flex flex-col justify-between bg-gradient-to-br from-slate-900 to-slate-800 border border-yellow-500/40 rounded-2xl p-5 sm:p-7 min-h-[180px] shadow-sm relative"
+                            >
+                              <div className="flex justify-end text-xs text-slate-500 mb-2">
+                                <span className="flex items-center gap-1">
+                                  <RotateCw className="w-3 h-3 text-yellow-500" /><span className="hidden sm:inline">{t("viewTrans")}</span>
+                                </span>
                               </div>
-                              <p className={`${arabicFontClass} font-arabic leading-loose text-right text-slate-100 w-full`} dir="rtl">{v.arab}</p>
+                              <p className={`${arabicFontClass} font-arabic leading-loose text-right text-slate-100 w-full break-words my-auto py-2`} dir="rtl">{v.arab}</p>
+                              <div className="h-4" />
                             </div>
                           </div>
                         </div>
