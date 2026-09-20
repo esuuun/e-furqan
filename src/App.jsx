@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { initGA, trackPageView } from "./utils/analytics";
 import Home from "./pages/Home";
 import QThematic from "./pages/QThematic";
 import ThemeDetail from "./pages/ThemeDetail";
@@ -12,16 +13,22 @@ import QNahwu from "./pages/QNahwu";
 import QTajwid from "./pages/QTajwid";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+    const fullPath = location.pathname + location.search + location.hash;
+    trackPageView(fullPath);
+  }, [location]);
 
   return null;
 }
 
 function App() {
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
