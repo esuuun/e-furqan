@@ -73,7 +73,7 @@ const Navbar = () => {
           >
             Al-Qur'an Tematis
           </Link>
-          <Link
+          {/* <Link
             to="/qmushaf"
             className="text-slate-600 dark:text-slate-300 hover:text-yellow-600 dark:hover:text-yellow-400 font-medium transition text-sm"
           >
@@ -84,7 +84,7 @@ const Navbar = () => {
             className="text-slate-600 dark:text-slate-300 hover:text-yellow-600 dark:hover:text-yellow-400 font-medium transition text-sm"
           >
             Kamus Al-Qur'an
-          </Link>
+          </Link> */}
           <a
             href="/#services"
             className="text-slate-600 dark:text-slate-300 hover:text-yellow-600 dark:hover:text-yellow-400 font-medium transition text-sm"
@@ -176,7 +176,7 @@ const Navbar = () => {
           >
             Al-Qur'an Tematis
           </Link>
-          <Link
+          {/* <Link
             to="/qmushaf"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-slate-700 dark:text-slate-200 hover:text-yellow-600 font-medium text-sm"
@@ -189,7 +189,7 @@ const Navbar = () => {
             className="block py-2 text-slate-700 dark:text-slate-200 hover:text-yellow-600 font-medium text-sm"
           >
             Kamus Al-Qur'an
-          </Link>
+          </Link> */}
           <a
             href="/#services"
             onClick={() => setMobileMenuOpen(false)}
