@@ -1117,9 +1117,9 @@ ${modeInstruction}`;
                                 <button onClick={() => { setAiModalVerse(v); setIsAiModalOpen(true); }} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-purple-500/15 hover:bg-purple-500/25 text-purple-400 border border-purple-500/30 transition">
                                   <Sparkles className="w-3.5 h-3.5" /><span>{t("askAi")}</span>
                                 </button>
-                                <Link to={`/qmushaf?surah=${v.surah_num}&ayah=${v.ayat_num}`} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/15 hover:bg-sky-500/25 text-sky-400 border border-sky-500/30 transition" onClick={(e) => e.stopPropagation()}>
+                                {/* <Link to={`/qmushaf?surah=${v.surah_num}&ayah=${v.ayat_num}`} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/15 hover:bg-sky-500/25 text-sky-400 border border-sky-500/30 transition" onClick={(e) => e.stopPropagation()}>
                                   <BookOpen className="w-3.5 h-3.5" /><span>{t("mushafPerKata")}</span>
-                                </Link>
+                                </Link> */}
                                 <button onClick={() => { navigator.clipboard.writeText(`QS. ${v.surah_name} [${v.surah_num}:${v.ayat_num}]\n\n${v.arab}\n\n"${displayText}"`); showToast(t("copiedVerse")); }} className="p-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white transition" title="Salin">
                                   <Copy className="w-3.5 h-3.5" />
                                 </button>
